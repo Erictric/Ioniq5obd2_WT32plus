@@ -14,9 +14,9 @@ ELM327 myELM327;    //Object for OBD2 device
 bool OBD2connected = false;
 
 void ConnectToOBD2(TFT_eSPI& tft){
-  char strRetries[2];
+  char strRetries[2];  
   ELM_PORT.setPin("1234");
-  ELM_PORT.begin("ESP32", true);    
+  ELM_PORT.begin("ESP32", true);
   
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_GREEN);
@@ -45,7 +45,7 @@ void ConnectToOBD2(TFT_eSPI& tft){
     tft.drawString(strRetries, tft.width() / 2, tft.height() / 2 + 50);        
   }
 
-  if (!myELM327.begin(ELM_PORT,'6')) // select protocol '6'
+  if (!myELM327.begin(ELM_PORT)) // select protocol '6'
   {
     Serial.println("Couldn't connect to OBD scanner - Phase 2");    
     tft.fillScreen(TFT_BLACK);    

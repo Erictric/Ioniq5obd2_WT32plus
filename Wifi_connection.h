@@ -17,6 +17,7 @@ float connect_time = 0;
 bool firstTry = false;
 bool send_enabled = false;
 bool initscan = false;
+//test
 
 void ConnectWifi(TFT_eSPI& tft, uint16_t Wifi_select){
   
