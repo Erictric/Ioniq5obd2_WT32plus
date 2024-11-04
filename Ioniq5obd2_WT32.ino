@@ -1,6 +1,5 @@
-
-/*  KonaEvObd for Hyundai Kona EV + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
-    Version: v3.01
+/*  Ionic5Obd for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
+    Version: v1.00
 
     SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
     Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
@@ -14,7 +13,6 @@
 */
 #include "Arduino.h"
 #include "SafeString.h"
-#include "ELMduino.h"
 #include "EEPROM.h"
 #include <SPI.h>
 #include <TFT_eSPI.h>
@@ -25,8 +23,7 @@
 #include <Adafruit_FT6206.h>
 #include <ESP_Google_Sheet_Client.h>
 #include <TimeLib.h>
-
-#define FIREBASE_USE_PSRAM
+#include "ELMduino.h"
 
 #define DEBUG_PORT Serial
 
@@ -75,7 +72,7 @@ void tokenStatusCallback(TokenInfo info);
 TFT_eSPI tft = TFT_eSPI();  // display class instanciation
 Adafruit_FT6206 ts = Adafruit_FT6206(); // touch screen class instanciation
 
-#define Threshold 40 /* threshold for touch wakeup - Greater the value more the sensitivity */
+#define Threshold 40 /* threshold for touch wakeup - Greater the value[, more the sensitivity */
 #define ST7789_DISPOFF    0x28
 #define ST7789_DISPON   0x29
 #define ST7789_SLPIN    0x10
@@ -83,7 +80,7 @@ Adafruit_FT6206 ts = Adafruit_FT6206(); // touch screen class instanciation
 
 int ledBacklight = 150; // Initial TFT backlight intensity on a scale of 0 to 255. Initial value is 120.
 bool low_backlight = false;
-bool display_off = false;
+bool display_off = true;
 
 /*////// Setting PWM properties, do not change this! /////////*/
 const int pwmFreq = 5000;
@@ -164,7 +161,6 @@ byte StatusWord;
 byte BMS_ign;
 byte StatusWord2;
 byte BMS_relay;
-byte Charging;
 float OPtimemins;
 float OPtimehours;
 float TireFL_P;
@@ -277,7 +273,7 @@ float acc_dist_m10;
 float acc_dist_m20;
 float acc_dist_m20p;
 bool DriveOn = false;
-bool StartWifi = true;
+bool StartWifi = false;
 bool InitRst = false;
 bool TrigRst = false;
 bool kWh_update = false;
@@ -490,18 +486,6 @@ void setup() {
   }
 
   Serial.println("Serial Monitor - STARTED");
-
-  if(psramInit()){
-    Serial.println("\nThe PSRAM is correctly initialized");
-  }
-  else{
-    Serial.println("\nPSRAM does not work");
-  }
-
-  log_d("Total heap: %d", ESP.getHeapSize());
-  log_d("Free heap: %d", ESP.getFreeHeap());
-  log_d("Total PSRAM: %d", ESP.getPsramSize());
-  log_d("Free PSRAM: %d", ESP.getFreePsram());
   
   /*//////////////Initialise Touch screen ////////////////*/
   // Pins 18/19 are SDA/SCL for touch sensor on this device
@@ -527,7 +511,6 @@ void setup() {
   Serial.print("Configuring PWM for TFT backlight... ");
   ledcSetup(pwmLedChannelTFT, pwmFreq, pwmResolution);
   ledcAttachPin(TFT_BL, pwmLedChannelTFT);
-  //ledcAttach(pwmLedChannelTFT, pwmFreq, pwmResolution);
   Serial.println("DONE");
 
   Serial.print("Setting PWM for TFT backlight to default intensity... ");
@@ -552,21 +535,23 @@ void setup() {
 
   if (StartWifi && OBD2connected) {
     ConnectWifi(tft, Wifi_select);
+
+    //Configure time
+    configTime(0, 0, ntpServer);
+  
+    GSheet.printf("ESP Google Sheet Client v%s\n\n", ESP_GOOGLE_SHEET_CLIENT_VERSION);
+  
+    // Set the callback for Google API access token generation status (for debug only)
+    GSheet.setTokenCallback(tokenStatusCallback);
+  
+    // Set the seconds to refresh the auth token before expire (60 to 3540, default is 300 seconds)
+    GSheet.setPrerefreshSeconds(10 * 60);
+  
+    // Begin the access token generation for Google API authentication
+    GSheet.begin(CLIENT_EMAIL, PROJECT_ID, PRIVATE_KEY);
   }   
 
-  //Configure time
-  configTime(0, 0, ntpServer);
-
-  GSheet.printf("ESP Google Sheet Client v%s\n\n", ESP_GOOGLE_SHEET_CLIENT_VERSION);
-
-  // Set the callback for Google API access token generation status (for debug only)
-  GSheet.setTokenCallback(tokenStatusCallback);
-
-  // Set the seconds to refresh the auth token before expire (60 to 3540, default is 300 seconds)
-  GSheet.setPrerefreshSeconds(10 * 60);
-
-  // Begin the access token generation for Google API authentication
-  GSheet.begin(CLIENT_EMAIL, PROJECT_ID, PRIVATE_KEY);
+  
 
   //Setup interrupt on Touch Pad 2 (GPIO2)
   //touchAttachInterrupt(T2, callback, Threshold);
@@ -612,8 +597,7 @@ void setup() {
   acc_dist_m10 = EEPROM.readFloat(128);
   acc_dist_m20 = EEPROM.readFloat(132);
   acc_dist_m20p = EEPROM.readFloat(136);
-  acc_regen = 
-  (140);
+  acc_regen = EEPROM.readFloat(140);
 
   //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
 
@@ -710,6 +694,7 @@ int convertToInt(char* dataFrame, size_t startByte, size_t numberBytes) {
 
 void read_data() {
 
+  Serial.print("pid_counter: ");
   Serial.println(pid_counter);
 
   button();
@@ -723,6 +708,8 @@ void read_data() {
    
     char* payload = myELM327.payload;
     size_t payloadLen = myELM327.recBytes;
+    Serial.print("payloadLen: ");
+    Serial.println(payloadLen);
 
     processPayload(payload, payloadLen, results);
 
@@ -742,7 +729,7 @@ void read_data() {
     BATTv = convertToInt(results.frames[2], 3, 2) * 0.1;
     int CurrentByte1 = convertToInt(results.frames[2], 1, 1);
     int CurrentByte2 = convertToInt(results.frames[2], 2, 1);
-    if (CurrentByte1 > 127) {  // the most significant bit is the sign bit so need to calculate commplement value if true
+    if (CurrentByte1 > 127) {  // the most significant bit is the sign bit so need to calculate commplement value[ if true
       BATTc = -1 * (((255 - CurrentByte1) * 256) + (256 - CurrentByte2)) * 0.1;
     } else {
       BATTc = ((CurrentByte1 * 256) + CurrentByte2) * 0.1;
@@ -763,20 +750,19 @@ void read_data() {
     OPtimemins = convertToInt(results.frames[7], 2, 4) * 0.01666666667;
     OPtimehours = OPtimemins * 0.01666666667;
   }
-  if (BATTc > 0) {
+  if (BATTv > 0) {
+    Serial.println("BMS_ignition is ON");
     ESP_on = true;
-    BMS_ign = true;
-  }
-  if (BATTc < 0) {
-    Charging = true;
   }
   UpdateNetEnergy();
   //pwr_changed += 1;
   
-  if (pid_counter > 8 || !Charging || !BMS_ign){
+  //if (pid_counter > 8 || !BMS_relay){
+  if (pid_counter > 8){
     pid_counter = 0;
   }
-  else if (BMS_ign){
+  else {
+  //else if (BMS_relay){
   // Read remaining PIDs only if BMS relay is ON
     switch (pid_counter) {
       case 1:
@@ -891,7 +877,7 @@ void read_data() {
   
         button();
         myELM327.sendCommand("AT SH 7B3");  //Set Header Aircon
-        if (myELM327.queryPID("220100")) {  // Service and Message PID
+        if (myELM327.queryPID("22B002")) {  // Service and Message PID
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
   
@@ -1386,19 +1372,7 @@ float calc_kwh(float min_SoC, float max_SoC) {
 
 float calc_kwh(float min_SoC, float max_SoC) {
   
-  //double a = 0.0009;
-  //double b = 0.5508 * Calc_kWh_corr;
-  //double a = 0.001;
-  //double b = 0.5408 * Calc_kWh_corr;
-  //double a = 0.00105;
-  //double b = 0.5358 * Calc_kWh_corr;
-  //double a = 0.001025;
-  //double b = 0.5383 * Calc_kWh_corr;
-  //double a = 0.0007;
-  //double b = 0.5708 * Calc_kWh_corr;
-  //double a = 0.000675;
-  //double b = 0.5733 * Calc_kWh_corr;
-  float fullBattCapacity = 66.4;
+  float fullBattCapacity = 77.4;
   float SoC100 = 100;
   double b = 0.5653;
   //double b = 0.5733;
@@ -1414,7 +1388,7 @@ float calc_kwh(float min_SoC, float max_SoC) {
 
 float calc_kwh2(float min_SoC, float max_SoC) {
   /*  */
-  float fullBattCapacity = 66.4;
+  float fullBattCapacity = 77.4;
   float SoC100 = 100;
   double b = 0.47974439;
   double a = ((fullBattCapacity * (SoCratio /100)) - (b * SoC100)) / pow(SoC100,2);  
@@ -2267,7 +2241,7 @@ void page2() {
   strcpy(titre[5], "BmsSoC");
   strcpy(titre[6], "BATTv");
   strcpy(titre[7], "Cell Vdiff");
-  strcpy(titre[8], "Det. Total");
+  strcpy(titre[8], "SpdSelect");
   strcpy(titre[9], "12V SoC");
   value_float[0] = SoC;
   value_float[1] = left_kwh;
@@ -2277,7 +2251,7 @@ void page2() {
   value_float[5] = BmsSoC;
   value_float[6] = BATTv;
   value_float[7] = CellVdiff;
-  value_float[8] = Deter_Min;
+  value_float[8] = SpdSelect;
   value_float[9] = AuxBattSoC;
   
   // set number of decimals for each value to display
@@ -2386,14 +2360,15 @@ void page4() {
 void loop() { 
 
   /*/////// Read each OBDII PIDs /////////////////*/     
-  if ((BMS_ign || Charging || ResetOn) && OBD2connected){
+  //if ((BMS_relay || ResetOn) && OBD2connected){
+  if (OBD2connected){
     pid_counter++;
     read_data();    
   }
-  else if (((millis() - read_timer) > read_data_interval) && OBD2connected){ // if BMS is not On, only scan OBD2 at some intervals
-    read_data();
-    read_timer = millis();            
-  }
+  //else if (((millis() - read_timer) > read_data_interval) && OBD2connected){ // if BMS is not On, only scan OBD2 at some intervals
+  //  read_data();
+  //  read_timer = millis();            
+  //}
   
   /*/////// Check if touch buttons are pressed /////////////////*/
   button();
@@ -2461,7 +2436,8 @@ void loop() {
   
   /*/////// Display Page Number /////////////////*/
 
-  if ((ESP_on || Charging) && SoC != 0 && !sd_condition1) {    
+  //if ((ESP_on || (BMS_relay && Power < 0)) && SoC != 0 && !sd_condition1) {
+  if (ESP_on) {    
     Serial.println(" ESP is ON");
     if (display_off){
       Serial.println("Turning Display ON");
@@ -2510,8 +2486,8 @@ void loop() {
   }
 
   /*/////// Stop ESP /////////////////*/
-   
-  if (!BMS_ign && ESP_on && !Charging)) {  // When car is power off, call stop_esp which saves some data before powering ESP32 down    
+  /* 
+  if (!BMS_ign && ESP_on && (SpdSelect == 'P')) {  // When car is power off, call stop_esp which saves some data before powering ESP32 down    
     shutdown_esp = true;
     if (!SoC_saved) {
       record_code = 5;
@@ -2530,7 +2506,7 @@ void loop() {
     }
   }
 
-  else if (!BMS_ign && data_ready) {  // When the car is off but the BMS does some maintnance check, wait 20 mins before esp32 power down
+  else if (!BMS_ign && BMS_relay && data_ready && ((Power >= 0) || (AuxBattSoC < 75))) {  // When the car is off but the BMS does some maintnance check, wait 20 mins before esp32 power down
     if (!SoC_saved) {
       ESPinitTimer = millis();
       mem_SoC = SoC;
@@ -2540,6 +2516,7 @@ void loop() {
     if (shutdown_timer >= ESPTimerInterval){
       sd_condition1 = true;
     }
+    //sd_condition2 = ((AuxBattSoC > 0) && (AuxBattSoC < 75));
     sd_condition2 = false;
     if (sd_condition1 || sd_condition2) {
 
@@ -2564,7 +2541,7 @@ void loop() {
   }
   else if (display_off && send_enabled){
     stop_esp();
-  }
+  }*/
 
   ResetCurrTrip();  // Check if condition are met to reset current trip
 }
