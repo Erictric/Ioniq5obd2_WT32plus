@@ -104,7 +104,7 @@ float mem_PrevSoC = 0;
 float mem_SoC = 0;
 float mem_Power = 0;
 float mem_LastSoC = 0;
-uint16_t Wifi_select = 0;
+float Wifi_select = 0;
 bool data_ready = false;
 bool code_sent = false;
 bool sd_condition1 = false;
@@ -117,6 +117,7 @@ bool datasent = false;
 bool failsent = false;
 uint16_t nbr_fails = 0;
 uint16_t nbr_notReady = 0;
+uint16_t nbr_saved = 0;
 
 float BattMinT;
 float BattMaxT;
@@ -140,7 +141,7 @@ float Max_Pwr;
 float Max_Reg;
 float SoC;
 float SOH;
-float Deter_Min;
+float PID_kWhLeft;
 int MinDetNb;
 int MaxDetNb;
 float Heater;
@@ -149,7 +150,7 @@ float OUTDOORtemp;
 float INDOORtemp;
 char SpdSelect;
 char* SpdSelected = "X";
-unsigned long Odometer;
+float Odometer;
 float Speed;
 float Motor1rpm;
 float Motor2rpm;
@@ -191,7 +192,7 @@ float Net_Ah = 0;
 float DischAh = 0;
 float RegenAh = 0;
 float TripOdo = 0;
-unsigned long InitOdo = 0;
+float InitOdo = 0;
 float PrevOPtimemins = 0;
 float TripOPtime = 0;
 float CurrTimeInit = 0;
@@ -515,6 +516,49 @@ void setup() {
   /*////// initialize EEPROM with predefined size ////////*/
   EEPROM.begin(148);
 
+  
+  /*////// Get the stored value from last re-initialisation /////*/
+
+  prev_energy = EEPROM.readFloat(0);
+  InitCED = EEPROM.readFloat(4);
+  InitCEC = EEPROM.readFloat(8);
+  InitSoC = EEPROM.readFloat(12);
+  previous_kWh = EEPROM.readFloat(16);
+  //UsedSoC = EEPROM.readFloat(16);
+  InitOdo = EEPROM.readFloat(20);
+  InitCDC = EEPROM.readFloat(24);
+  InitCCC = EEPROM.readFloat(28);
+  old_lost = EEPROM.readFloat(32);
+  old_PIDkWh_100km = EEPROM.readFloat(36);
+  Wifi_select = EEPROM.readFloat(40);
+  PrevOPtimemins = EEPROM.readFloat(44);
+  kWh_corr = EEPROM.readFloat(48);
+  acc_energy = EEPROM.readFloat(52);
+  LastSoC = EEPROM.readFloat(56);
+  nbr_saved = EEPROM.readFloat(60);
+  acc_Ah = EEPROM.readFloat(64);
+  acc_kWh_25 = EEPROM.readFloat(68);
+  acc_kWh_10 = EEPROM.readFloat(72);
+  acc_kWh_0 = EEPROM.readFloat(76);
+  acc_kWh_m10 = EEPROM.readFloat(80);
+  acc_kWh_m20 = EEPROM.readFloat(84);
+  acc_kWh_m20p = EEPROM.readFloat(88);
+  acc_time_25 = EEPROM.readFloat(92);
+  acc_time_10 = EEPROM.readFloat(96);
+  acc_time_0 = EEPROM.readFloat(100);
+  acc_time_m10 = EEPROM.readFloat(104);
+  acc_time_m20 = EEPROM.readFloat(108);
+  acc_time_m20p = EEPROM.readFloat(112);
+  acc_dist_25 = EEPROM.readFloat(116);
+  acc_dist_10 = EEPROM.readFloat(120);
+  acc_dist_0 = EEPROM.readFloat(124);
+  acc_dist_m10 = EEPROM.readFloat(128);
+  acc_dist_m20 = EEPROM.readFloat(132);
+  acc_dist_m20p = EEPROM.readFloat(136);
+  acc_regen = EEPROM.readFloat(140);
+
+  //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
+
   /* uncomment if you need to display Safestring results on Serial Monitor */
   //SafeString::setOutput(Serial);
 
@@ -554,47 +598,6 @@ void setup() {
   //Configure Touchpad as wakeup source
   //esp_sleep_enable_touchpad_wakeup(); // initialize ESP wakeup on Touch activation  
 
-  /*////// Get the stored value from last re-initialisation /////*/
-
-  prev_energy = EEPROM.readFloat(0);
-  InitCED = EEPROM.readFloat(4);
-  InitCEC = EEPROM.readFloat(8);
-  InitSoC = EEPROM.readFloat(12);
-  previous_kWh = EEPROM.readFloat(16);
-  //UsedSoC = EEPROM.readFloat(16);
-  InitOdo = EEPROM.readFloat(20);
-  InitCDC = EEPROM.readFloat(24);
-  InitCCC = EEPROM.readFloat(28);
-  old_lost = EEPROM.readFloat(32);
-  old_PIDkWh_100km = EEPROM.readFloat(36);
-  Wifi_select = EEPROM.readFloat(40);
-  PrevOPtimemins = EEPROM.readFloat(44);
-  kWh_corr = EEPROM.readFloat(48);
-  acc_energy = EEPROM.readFloat(52);
-  LastSoC = EEPROM.readFloat(56);
-  
-  acc_Ah = EEPROM.readFloat(64);
-  acc_kWh_25 = EEPROM.readFloat(68);
-  acc_kWh_10 = EEPROM.readFloat(72);
-  acc_kWh_0 = EEPROM.readFloat(76);
-  acc_kWh_m10 = EEPROM.readFloat(80);
-  acc_kWh_m20 = EEPROM.readFloat(84);
-  acc_kWh_m20p = EEPROM.readFloat(88);
-  acc_time_25 = EEPROM.readFloat(92);
-  acc_time_10 = EEPROM.readFloat(96);
-  acc_time_0 = EEPROM.readFloat(100);
-  acc_time_m10 = EEPROM.readFloat(104);
-  acc_time_m20 = EEPROM.readFloat(108);
-  acc_time_m20p = EEPROM.readFloat(112);
-  acc_dist_25 = EEPROM.readFloat(116);
-  acc_dist_10 = EEPROM.readFloat(120);
-  acc_dist_0 = EEPROM.readFloat(124);
-  acc_dist_m10 = EEPROM.readFloat(128);
-  acc_dist_m20 = EEPROM.readFloat(132);
-  acc_dist_m20p = EEPROM.readFloat(136);
-  acc_regen = EEPROM.readFloat(140);
-
-  //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
 
    /*//////////////Initialise Task on core0 to send data on Google Sheet ////////////////*/
 
@@ -787,7 +790,7 @@ void read_data() {
           SOH = convertToInt(results.frames[4], 2, 2) * 0.1;
           MaxDetNb = convertToInt(results.frames[4], 4, 1);
           MinDetNb = convertToInt(results.frames[4], 7, 1);
-          Deter_Min = convertToInt(results.frames[4], 5, 2) * 0.1;
+          PID_kWhLeft = convertToInt(results.frames[4], 5, 2) * 0.002;
           int HeaterRaw = convertToInt(results.frames[3], 7, 1);
           if (HeaterRaw > 127) {  //conversition for negative value[
             Heater = -1 * (256 - HeaterRaw);
@@ -951,15 +954,15 @@ void read_data() {
   
             if ((used_kWh >= 4) && (SpdSelect == 'D')) {  // Wait till 4 kWh has been used to start calculating ratio to have a better accuracy
               degrad_ratio = Net_kWh / used_kWh;
-              //degrad_ratio = ((Net_kWh / used_kWh)) * 0.25 + (degrad_ratio * 0.75);              
-              if ((degrad_ratio > 1.1) || (degrad_ratio < 0.95)) {  // if a bad value[ got saved previously, initialize ratio to 1
+                            
+              if ((degrad_ratio > 1.1) || (degrad_ratio < 0.9)) {  // if a bad value[ got saved previously, initialize ratio to 1
                 degrad_ratio = 1;
               }             
               old_lost = degrad_ratio;
             } 
             else {
               degrad_ratio = old_lost;              
-              if ((degrad_ratio > 1.1) || (degrad_ratio < 0.95)) {  // if a bad value[ got saved previously, initialize ratio to 1
+              if ((degrad_ratio > 1.1) || (degrad_ratio < 0.9)) {  // if a bad value[ got saved previously, initialize ratio to 1
                 degrad_ratio = 1;
               }              
             }
@@ -1140,7 +1143,7 @@ void Integrat_speed() {
   speed_interval = (millis() - init_speed_timer) / 1000;
   init_speed_timer = millis();
   int_speed = Speed * speed_interval / 3600;
-  distance += (int_speed * 1.022);  // need to apply a 1.022 to get correct distance
+  distance += (int_speed * 1);  // need to apply a 1.013 to get correct distance
 }
 
 //--------------------------------------------------------------------------------------------
@@ -1175,24 +1178,30 @@ void RangeCalc() {
     PIDkWh_100 = CurrNet_kWh * 100 / Trip_dist;
   }  
   else {
-    kWh_100km = old_PIDkWh_100km;
+    kWh_100km = old_PIDkWh_100km;    
     PIDkWh_100 = old_PIDkWh_100km;
   }
+  if (kWh_100km < 5 || kWh_100km > 999 || PIDkWh_100 < 5 || PIDkWh_100 > 999){
+    kWh_100km = 18;    
+    PIDkWh_100 = 18;
+  }
 
-  if (TripOdo >= (N_km + 1)) {  // wait 11km before calculating consommation for last 10km
+  if (Trip_dist >= (N_km + 1)) {  // wait 11km before calculating consommation for last 10km
     span_kWh_100km = span_energy * 100 / N_km;
-  } else {
+  } 
+  else {
     span_kWh_100km = kWh_100km;
   }
 
   if (kWh_100km > 1) {
-    Est_range = (left_kWh / kWh_100km) * 100;
-    Est_range2 = (left_kWh / span_kWh_100km) * 100;
-    Est_range3 = (left_kWh / PIDkWh_100) * 100;
+    Est_range = (PID_kWhLeft / kWh_100km) * 100;
+    Est_range2 = (PID_kWhLeft / span_kWh_100km) * 100;
+    Est_range3 = (PID_kWhLeft / PIDkWh_100) * 100;
     if (Est_range3 < 0){
       Est_range3 = 999;
     }
-  } else {
+  } 
+  else {
     Est_range = 999;
     Est_range2 = 999;
     Est_range3 = 999;
@@ -1261,10 +1270,9 @@ double Interpolate(double xvalue[], double yvalue[], int numvalue, double pointX
 
 float calc_kwh(float min_SoC, float max_SoC) {
   
-  float fullBattCapacity = 77.4;
+  float fullBattCapacity = 74.3;
   float SoC100 = 100;
-  double b = 0.74;
-  //double b = 0.5733;
+  double b = 0.653;  
   double a = (fullBattCapacity - (b * SoC100)) / pow(SoC100,2);  
   
   float max_kwh = a * pow(max_SoC,2) + b * max_SoC;
@@ -1438,12 +1446,12 @@ void sendGoogleSheet(void * pvParameters){
         valueRange.set("values/[49]/[0]", acc_regen);
         valueRange.set("values/[50]/[0]", MaxDetNb);
         valueRange.set("values/[51]/[0]", MinDetNb);
-        valueRange.set("values/[52]/[0]", Deter_Min);        
+        valueRange.set("values/[52]/[0]", PID_kWhLeft);        
         valueRange.set("values/[53]/[0]", TripOdo);
         valueRange.set("values/[54]/[0]", full_kWh);
         valueRange.set("values/[55]/[0]", start_kWh);               
         valueRange.set("values/[56]/[0]", InitSoC);
-        valueRange.set("values/[57]/[0]", mem_SoC);
+        valueRange.set("values/[57]/[0]", nbr_saved);
       }                                   
             
       // Append values to the spreadsheet
@@ -1566,7 +1574,7 @@ void ResetCurrTrip() {  // when the car is turned On, current trip value are res
     last_energy = acc_energy;    
        
     degrad_ratio = old_lost;
-    if ((degrad_ratio > 1.1) || (degrad_ratio < 0.95)) {  // if a bad values got saved previously, initial ratio to 1
+    if ((degrad_ratio > 1.1) || (degrad_ratio < 0.9)) {  // if a bad values got saved previously, initial ratio to 1
       degrad_ratio = 1;
     }
     used_kWh = calc_kwh(SoC, InitSoC) + kWh_corr;    
@@ -1598,9 +1606,10 @@ void save_lost(char selector) {
   if (selector == 'D' && !DriveOn) {
     DriveOn = true;
   }
-  if ((selector == 'P' || selector == 'N') && DriveOn && SoC > 0) {  // when the selector is set to Park or Neutral, some value are saved to be used the next time the car is started
+  if ((selector == 'P' || selector == 'N') && (DriveOn) && SoC > 0) {  // when the selector is set to Park or Neutral, some value are saved to be used the next time the car is started
     DriveOn = false;
-
+    
+    nbr_saved += 1;
     EEPROM.writeFloat(0, prev_energy);
     EEPROM.writeFloat(16, previous_kWh);    
     EEPROM.writeFloat(32, degrad_ratio);
@@ -1611,7 +1620,7 @@ void save_lost(char selector) {
     EEPROM.writeFloat(48, kWh_corr);    //save cummulative kWh correction (between 2 SoC values) to Flash memory
     EEPROM.writeFloat(52, acc_energy);
     EEPROM.writeFloat(56, SoC);
-    
+    EEPROM.writeFloat(60, nbr_saved);
     EEPROM.writeFloat(64, acc_Ah);
     //EEPROM.writeFloat(68, acc_kWh_25);
     //EEPROM.writeFloat(72, acc_kWh_10);
@@ -1728,7 +1737,7 @@ void button(){
     //Button 1 test
     if ((x >= btnAon.xStart && x <= btnAon.xStart + btnAon.xWidth) && (y >= btnAon.yStart && y <= btnAon.yStart + btnAon.yHeight)) {      
       TouchTime = (millis() - initTouchTime) / 1000;      
-      if (TouchTime >= 3 & !TouchLatch){
+      if (TouchTime >= 2 & !TouchLatch){
         Serial.println("Button1 Long Press");
         TouchLatch = true;
         if (send_enabled){
@@ -1757,16 +1766,16 @@ void button(){
     //Button 2 test
     if ((x >= btnBon.xStart && x <= btnBon.xStart + btnBon.xWidth) && (y >= btnBon.yStart && y <= btnBon.yStart + btnBon.yHeight)) {      
       TouchTime = (millis() - initTouchTime) / 1000;
-      if (TouchTime >= 3 & !TouchLatch){
+      if (TouchTime >= 2 & !TouchLatch){
         TouchLatch = true;        
         Serial.println("Button2 Long Press");
         if (Wifi_select == 0){
           //ledcWrite(pwmLedChannelTFT, 80);
-          Wifi_select == 1;
+          Wifi_select = 1;
         }
         else{
           //ledcWrite(pwmLedChannelTFT, 120);
-          Wifi_select == 0;
+          Wifi_select = 0;
         }
         
         Serial.println("DONE");        
@@ -1790,7 +1799,7 @@ void button(){
     //Button 3 test
     if ((x >= btnCon.xStart && x <= btnCon.xStart + btnCon.xWidth) && (y >= btnCon.yStart && y <= btnCon.yStart + btnCon.yHeight)) {      
       TouchTime = (millis() - initTouchTime) / 1000;
-      if (TouchTime >= 3 & !TouchLatch){
+      if (TouchTime >= 2 & !TouchLatch){
         TouchLatch = true;        
         Serial.println("Button3 Long Press");
         ledcWrite(pwmLedChannelTFT, 0);
@@ -1864,7 +1873,20 @@ void button(){
       TouchTime = (millis() - initTouchTime) / 1000;
       if (!TouchLatch && TouchTime >= 2) {            
         Serial.println("Screen Touched");
-        TouchLatch = true;        
+        TouchLatch = true;
+        DriveOn = true;        
+        save_lost('P');
+        ESP.restart();              
+      }      
+    }
+
+    //Button 8 test
+    if (x >= 0 && x <= 320 && y >= 0 && y <= 60 && screenNbr == 1) {
+      TouchTime = (millis() - initTouchTime) / 1000;
+      if (!TouchLatch && TouchTime >= 2) {            
+        Serial.println("Screen Touched");
+        TouchLatch = true;
+        DriveOn = true;       
         save_lost('P');                
       }      
     }
@@ -2034,7 +2056,7 @@ void page1() {
   strcpy(titre[1],"PID Cons");
   strcpy(titre[2],"PWR Int Cons");
   strcpy(titre[3],"Cons. 10Km");
-  strcpy(titre[4],"left_kWh");
+  strcpy(titre[4],"PID_kWhLeft");
   strcpy(titre[5],"TripOdo");  
   strcpy(titre[6],"Est. range");
   strcpy(titre[7],"Est. range");  
@@ -2044,7 +2066,7 @@ void page1() {
   value_float[1] = PIDkWh_100;
   value_float[2] = kWh_100km;
   value_float[3] = span_kWh_100km;
-  value_float[4] = left_kWh;  
+  value_float[4] = PID_kWhLeft;  
   value_float[5] = TripOdo;
   value_float[6] = Est_range3;
   value_float[7] = Est_range;
@@ -2153,7 +2175,7 @@ void page3() {
 /*///////////////// Display Page 4 //////////////////////*/
 void page4() {
 
-  strcpy(titre[0], "COOLtemp");
+  strcpy(titre[0], "Wifi_select");
   strcpy(titre[1], "MINcellv");
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "Max_Reg");
@@ -2163,7 +2185,7 @@ void page4() {
   strcpy(titre[7], "Cell nbr");
   strcpy(titre[8], "OUT temp");
   strcpy(titre[9], "IN temp");
-  value_float[0] = COOLtemp;
+  value_float[0] = Wifi_select;
   value_float[1] = MINcellv;
   value_float[2] = MAXcellv;
   value_float[3] = Max_Reg;
