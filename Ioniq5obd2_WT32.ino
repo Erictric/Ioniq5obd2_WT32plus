@@ -146,7 +146,7 @@ float COOLtemp;
 float OUTDOORtemp;
 float INDOORtemp;
 char SpdSelect;
-char* SpdSelected = "X";
+unsigned long SpdSelectTimer = 0;
 float Odometer;
 float Speed;
 float Motor1rpm;
@@ -178,12 +178,12 @@ float CurrInitCEC = 0;
 float CurrInitCED = 0;
 float CurrTripOdo;
 float CurrNet_kWh;
-float CurrTripDisc;
-float CurrTripReg;
+float CurrInitRemain;
 float CurrInitAccEnergy;
 float CurrAccEnergy;
 float Prev_kWh = 0;
 float Net_kWh = 0;
+float Net_kWh2 = 0;
 float UsedSoC = 0;
 float Net_Ah = 0;
 float DischAh = 0;
@@ -208,7 +208,7 @@ float integrateP_timer = 0.0;
 float integrateI_timer = 0.0;
 float start_kWh;
 float acc_energy = 0.0;
-float prev_energy = 0.0;
+float InitRemain_kWh = 0.0;
 float delta_energy = 0.0;
 float previous_kWh = 0.0;
 float delta_kWh = 0.0;
@@ -238,6 +238,9 @@ float kWh_corr;
 float left_kWh;
 float used_kWh;
 float degrad_ratio;
+float degrad_ratio_update = 1;
+float degrad_ratio_change = 0;
+bool Init_degrad = true;
 float old_PIDkWh_100km = 14;
 float old_lost = 1;
 //float Estleft_kWh;
@@ -515,7 +518,7 @@ void setup() {
   
   /*////// Get the stored value from last re-initialisation /////*/
 
-  prev_energy = EEPROM.readFloat(0);
+  InitRemain_kWh = EEPROM.readFloat(0);
   InitCED = EEPROM.readFloat(4);
   InitCEC = EEPROM.readFloat(8);
   InitSoC = EEPROM.readFloat(12);
@@ -753,10 +756,10 @@ void read_data() {
   if (BATTc < 0) {
     Charging = true;
   }
-  if (Motor1rpm > 0 || Motor2rpm > 0) {
+  if (Speed > 0) {
     SpdSelect = 'D';    
   }
-  else{
+  else {   
     SpdSelect = 'P';    
   }
   UpdateNetEnergy();  
@@ -899,9 +902,9 @@ void read_data() {
           reset_trip();        
           kWh_corr = 0;
           PrevSoC = SoC;
-          Prev_kWh = Net_kWh;
+          Prev_kWh = Net_kWh2;
           used_kWh = calc_kwh(SoC, InitSoC);          
-          left_kWh = calc_kwh(0, SoC);          
+          left_kWh = calc_kwh(0, SoC) * degrad_ratio;          
           InitRst = false;
         }
         else {  // kWh calculation when the Initial reset is not active
@@ -917,9 +920,9 @@ void read_data() {
               reset_trip();           
               kWh_corr = 0;
               used_kWh = calc_kwh(SoC, InitSoC);              
-              left_kWh = calc_kwh(0, SoC);              
+              left_kWh = calc_kwh(0, SoC) * degrad_ratio;              
               PrevSoC = SoC;
-              Prev_kWh = Net_kWh;
+              Prev_kWh = Net_kWh2;
               kWh_update = true;
               SoC_decreased = true;
             } 
@@ -931,57 +934,53 @@ void read_data() {
           else if (((PrevSoC > SoC) && ((PrevSoC - SoC) < 1)) || ((PrevSoC < SoC) && (Charging))) {  // Normal kWh calculation when SoC decreases and exception if a 0 gitch in SoC data
             kWh_corr = 0;
             used_kWh = calc_kwh(SoC, InitSoC);            
-            left_kWh = calc_kwh(0, SoC);            
+            left_kWh = calc_kwh(0, SoC) * degrad_ratio;            
             SoC_decreased = true;            
             PrevSoC = SoC;
-            delta_kWh = Net_kWh - previous_kWh;
-            previous_kWh = Net_kWh;
-            Prev_kWh = Net_kWh;
+            Prev_kWh = Net_kWh2;
             kWh_update = true;            
-            Integrat_power();
-            delta_energy = acc_energy - prev_energy;
-            prev_energy = acc_energy;            
+            Integrat_power();                       
   
-            if ((used_kWh >= 4) && (SpdSelect == 'D')) {  // Wait till 4 kWh has been used to start calculating ratio to have a better accuracy
-              degrad_ratio = Net_kWh / used_kWh;
+            if ((used_kWh >= 3) && (SpdSelect == 'D')) {  // Wait till 4 kWh has been used to start calculating ratio to have a better accuracy              
+              degrad_ratio = Net_kWh2 / used_kWh;                          
                             
-              if ((degrad_ratio > 1.05) || (degrad_ratio < 0.95)) {  // if a bad value[ got saved previously, initialize ratio to 1
+              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.92)) {  // if a bad value[ got saved previously, initialize ratio to 1
                 degrad_ratio = 1;
               }             
               old_lost = degrad_ratio;
             } 
             else {
               degrad_ratio = old_lost;              
-              if ((degrad_ratio > 1.05) || (degrad_ratio < 0.95)) {  // if a bad value[ got saved previously, initialize ratio to 1
+              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.92)) {  // if a bad value[ got saved previously, initialize ratio to 1
                 degrad_ratio = 1;
               }              
             }
-            start_kWh = calc_kwh(InitSoC, 100);            
+            start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;            
             
-            full_kWh = Net_kWh + (start_kWh + left_kWh);
-            //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;            
+            full_kWh = Net_kWh2 + (start_kWh + left_kWh);
+            //full_kWh = Net_kWh2 + (start_kWh + left_kWh) * degrad_ratio;            
           }
         }
   
       } 
-      else if ((Prev_kWh < Net_kWh) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh increases, a 0.1 kWh is added to the kWh calculation to interpolate until next SoC change.
-        kWh_corr += 0.1;
+      else if ((Prev_kWh < Net_kWh2) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh increases, a 0.1 kWh is added to the kWh calculation to interpolate until next SoC change.
+        kWh_corr += (Net_kWh2 - Prev_kWh);
         used_kWh = calc_kwh(PrevSoC, InitSoC) + kWh_corr;        
-        left_kWh = calc_kwh(0, PrevSoC) - kWh_corr;        
-        Prev_kWh = Net_kWh;
+        left_kWh = (calc_kwh(0, PrevSoC) * degrad_ratio) - kWh_corr;        
+        Prev_kWh = Net_kWh2;
         corr_update = true;
       } 
-      else if ((Prev_kWh > Net_kWh) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh decreases, a 0.1 kWh is substracted to the kWh calculation to interpolate until next SoC change.
-        kWh_corr -= 0.1;
+      else if ((Prev_kWh > Net_kWh2) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh decreases, a 0.1 kWh is substracted to the kWh calculation to interpolate until next SoC change.
+        kWh_corr -= (Prev_kWh - Net_kWh2);
         used_kWh = calc_kwh(PrevSoC, InitSoC) + kWh_corr;        
-        left_kWh = calc_kwh(0, PrevSoC) - kWh_corr;        
-        Prev_kWh = Net_kWh;
+        left_kWh = (calc_kwh(0, PrevSoC) * degrad_ratio) - kWh_corr;        
+        Prev_kWh = Net_kWh2;
         corr_update = true;
       }
   
       if (sendIntervalOn) {  // add condition so "kWh_corr" is not triggered before a cycle after a "kWh_update" when wifi is not connected
         if (kWh_update) {
-          Prev_kWh = Net_kWh;
+          Prev_kWh = Net_kWh2;
           kWh_update = false;  // reset kWh_update so correction logic starts again
         }
         if (corr_update) {
@@ -1066,14 +1065,15 @@ void UpdateNetEnergy() {
   Regen = CEC - InitCEC;
   Net_kWh = Discharg - Regen;
 
+  Net_kWh2 = InitRemain_kWh - PID_kWhLeft;
+
   DischAh = CDC - InitCDC;
   RegenAh = CCC - InitCCC;
   Net_Ah = DischAh - RegenAh;
 
   CurrAccEnergy = acc_energy - CurrInitAccEnergy;
-  CurrTripDisc = CED - CurrInitCED;
-  CurrTripReg = CEC - CurrInitCEC;
-  CurrNet_kWh = CurrTripDisc - CurrTripReg;
+    
+  CurrNet_kWh = CurrInitRemain - PID_kWhLeft;
 }
 
 //--------------------------------------------------------------------------------------------
@@ -1258,7 +1258,7 @@ double Interpolate(double xvalue[], double yvalue[], int numvalue, double pointX
   t = t * t * (3 - 2 * t);
   return yvalue[i] * (1 - t) + yvalue[i + 1] * t;
 }
-
+/*
 float calc_kwh(float min_SoC, float max_SoC) {
   
   float fullBattCapacity = 77.4 * 0.97 * degrad_ratio;
@@ -1272,7 +1272,23 @@ float calc_kwh(float min_SoC, float max_SoC) {
     
   return_kwh = max_kwh - min_kwh;
   return return_kwh;
+}*/
+
+float calc_kwh(float min_SoC, float max_SoC) {
+  
+  float fullBattCapacity = 77.4 * 0.97;
+  float SoC100 = 100;
+  double b = 0.66;
+  double a = (fullBattCapacity - (b * SoC100)) / pow(SoC100,2);  
+  
+  float max_kwh = a * pow(max_SoC,2) + b * max_SoC;
+  float min_kwh = a * pow(min_SoC,2) + b * min_SoC;
+  float return_kwh;
+    
+  return_kwh = max_kwh - min_kwh;
+  return return_kwh;
 }
+
 
 void tokenStatusCallback(TokenInfo info){
     if (info.status == token_status_error){
@@ -1410,7 +1426,7 @@ void sendGoogleSheet(void * pvParameters){
         valueRange.set("values/[31]/[0]", PIDkWh_100);
         valueRange.set("values/[32]/[0]", kWh_100km);
         valueRange.set("values/[33]/[0]", degrad_ratio);
-        valueRange.set("values/[34]/[0]", Motor2rpm);
+        valueRange.set("values/[34]/[0]", Speed);
         valueRange.set("values/[35]/[0]", span_kWh_100km);
         valueRange.set("values/[36]/[0]", Wifi_select);        
         valueRange.set("values/[37]/[0]", TireFL_P);
@@ -1434,6 +1450,8 @@ void sendGoogleSheet(void * pvParameters){
         valueRange.set("values/[55]/[0]", start_kWh);               
         valueRange.set("values/[56]/[0]", InitSoC);
         valueRange.set("values/[57]/[0]", nbr_saved);
+        valueRange.set("values/[58]/[0]", Net_kWh2);
+               
       }                                   
             
       // Append values to the spreadsheet
@@ -1462,7 +1480,7 @@ void sendGoogleSheet(void * pvParameters){
       Serial.println(ESP.getFreeHeap());
             
       if(kWh_update){ //add condition so "kWh_corr" is not trigger before a cycle after a "kWh_update"
-        Prev_kWh = Net_kWh;        
+        Prev_kWh = Net_kWh2;        
         kWh_update = false;  // reset kWh_update after it has been recorded and so the correction logic start again       
       }            
       if(corr_update){  
@@ -1491,7 +1509,7 @@ void reset_trip() {  //Overall trip reset. Automatic if the car has been recharg
   InitCCC = CCC;
   Net_kWh = 0;
   acc_energy = 0;
-  prev_energy = 0;
+  InitRemain_kWh = PID_kWhLeft;
   previous_kWh = 0;
   acc_Ah = 0;
   UsedSoC = 0;
@@ -1507,8 +1525,7 @@ void reset_trip() {  //Overall trip reset. Automatic if the car has been recharg
   CurrInitCED = CED;
   CurrInitCEC = CEC;
   CurrInitOdo = Odometer;
-  CurrTripReg = 0;
-  CurrTripDisc = 0;
+  CurrInitRemain = PID_kWhLeft;
   CurrTimeInit = OPtimemins;
   integrateP_timer = millis();
   integrateI_timer = millis();
@@ -1516,12 +1533,12 @@ void reset_trip() {  //Overall trip reset. Automatic if the car has been recharg
   CurrInitAccEnergy = 0;
     
   last_energy = acc_energy;
-  start_kWh = calc_kwh(InitSoC, 100);
-  left_kWh = calc_kwh(0, SoC);
-  full_kWh = Net_kWh + (start_kWh + left_kWh);
-  //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;  
+  start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;
+  left_kWh = calc_kwh(0, SoC) * degrad_ratio;
+  full_kWh = Net_kWh2 + (start_kWh + left_kWh);
+  //full_kWh = Net_kWh2 + (start_kWh + left_kWh) * degrad_ratio;  
   EEPROM.writeFloat(52, acc_energy);
-  EEPROM.writeFloat(0, prev_energy);  
+  EEPROM.writeFloat(0, InitRemain_kWh);  
   EEPROM.writeFloat(4, InitCED);   //save initial CED to Flash memory
   EEPROM.writeFloat(8, InitCEC);   //save initial CEC to Flash memory
   EEPROM.writeFloat(12, InitSoC);  //save initial SoC to Flash memory
@@ -1549,21 +1566,20 @@ void ResetCurrTrip() {  // when the car is turned On, current trip value are res
     CurrInitCEC = CEC;
     CurrInitOdo = Odometer;
     //CurrInitSoC = SoC;
-    CurrTripReg = 0;
-    CurrTripDisc = 0;
+    CurrInitRemain = PID_kWhLeft;
     CurrTimeInit = OPtimemins;
     Serial.println("Trip Reset");
-    Prev_kWh = Net_kWh;
+    Prev_kWh = Net_kWh2;
     last_energy = acc_energy;    
        
     degrad_ratio = old_lost;
-    if ((degrad_ratio > 1.05) || (degrad_ratio < 0.95)) {  // if a bad values got saved previously, initial ratio to 1
+    if ((degrad_ratio > 1.07) || (degrad_ratio < 0.92)) {  // if a bad values got saved previously, initial ratio to 1
       degrad_ratio = 1;
     }
     used_kWh = calc_kwh(SoC, InitSoC) + kWh_corr;    
-    left_kWh = calc_kwh(0, SoC) - kWh_corr;    
-    start_kWh = calc_kwh(InitSoC, 100);
-    full_kWh = Net_kWh + (start_kWh + left_kWh);
+    left_kWh = (calc_kwh(0, SoC) * degrad_ratio) - kWh_corr;    
+    start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;
+    full_kWh = Net_kWh2 + (start_kWh + left_kWh);
     //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;    
     PrevSoC = SoC;
     PrevBmsSoC = BmsSoC;
@@ -1589,12 +1605,13 @@ void initial_eeprom() {
 void save_lost(char selector) {
   if (selector == 'D' && !DriveOn) {
     DriveOn = true;
+    SpdSelectTimer = millis();
   }
-  if ((selector == 'P' || selector == 'N') && (DriveOn) && SoC > 0) {  // when the selector is set to Park or Neutral, some value are saved to be used the next time the car is started
+  if ((selector == 'P' || selector == 'N') && (DriveOn) && SoC > 0 && ((millis() - SpdSelectTimer) > 90000)) {  // when the selector is set to Park or Neutral, some value are saved to be used the next time the car is started
     DriveOn = false;
-    
+        
     nbr_saved += 1;
-    EEPROM.writeFloat(0, prev_energy);
+    //EEPROM.writeFloat(0, InitRemain_kWh);
     EEPROM.writeFloat(16, previous_kWh);    
     EEPROM.writeFloat(32, degrad_ratio);
     Serial.println("new_lost saved to EEPROM");
@@ -1632,7 +1649,7 @@ void save_lost(char selector) {
 void stop_esp() {
   ESP_on = false;
   if (DriveOn && (mem_SoC > 0)) {
-    EEPROM.writeFloat(0, prev_energy);
+    //EEPROM.writeFloat(0, InitRemain_kWh);
     EEPROM.writeFloat(16, previous_kWh);
     EEPROM.writeFloat(32, degrad_ratio);
     Serial.println("new_lost saved to EEPROM");
@@ -2129,7 +2146,7 @@ void page3() {
   strcpy(titre[9], "Chauf. Batt.");  
   value_float[0] = Power;
   value_float[1] = BattMinT;
-  value_float[2] = Net_kWh;
+  value_float[2] = Net_kWh2;
   value_float[3] = used_kWh;
   value_float[4] = SoC;
   value_float[5] = Max_Pwr;
