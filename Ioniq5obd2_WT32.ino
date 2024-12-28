@@ -902,7 +902,7 @@ void read_data() {
           reset_trip();        
           kWh_corr = 0;
           PrevSoC = SoC;
-          Prev_kWh = Net_kWh2;
+          Prev_kWh = Net_kWh;
           used_kWh = calc_kwh(SoC, InitSoC);          
           left_kWh = calc_kwh(0, SoC) * degrad_ratio;          
           InitRst = false;
@@ -922,7 +922,7 @@ void read_data() {
               used_kWh = calc_kwh(SoC, InitSoC);              
               left_kWh = calc_kwh(0, SoC) * degrad_ratio;              
               PrevSoC = SoC;
-              Prev_kWh = Net_kWh2;
+              Prev_kWh = Net_kWh;
               kWh_update = true;
               SoC_decreased = true;
             } 
@@ -937,50 +937,50 @@ void read_data() {
             left_kWh = calc_kwh(0, SoC) * degrad_ratio;            
             SoC_decreased = true;            
             PrevSoC = SoC;
-            Prev_kWh = Net_kWh2;
+            Prev_kWh = Net_kWh;
             kWh_update = true;            
             Integrat_power();                       
   
             if ((used_kWh >= 3) && (SpdSelect == 'D')) {  // Wait till 4 kWh has been used to start calculating ratio to have a better accuracy              
-              degrad_ratio = Net_kWh2 / used_kWh;                          
+              degrad_ratio = Net_kWh / used_kWh;                          
                             
-              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.92)) {  // if a bad value[ got saved previously, initialize ratio to 1
+              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.9)) {  // if a bad value[ got saved previously, initialize ratio to 1
                 degrad_ratio = 1;
               }             
               old_lost = degrad_ratio;
             } 
             else {
               degrad_ratio = old_lost;              
-              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.92)) {  // if a bad value[ got saved previously, initialize ratio to 1
+              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.9)) {  // if a bad value[ got saved previously, initialize ratio to 1
                 degrad_ratio = 1;
               }              
             }
             start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;            
             
-            full_kWh = Net_kWh2 + (start_kWh + left_kWh);
-            //full_kWh = Net_kWh2 + (start_kWh + left_kWh) * degrad_ratio;            
+            full_kWh = Net_kWh + (start_kWh + left_kWh);
+            //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;            
           }
         }
   
       } 
-      else if ((Prev_kWh < Net_kWh2) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh increases, a 0.1 kWh is added to the kWh calculation to interpolate until next SoC change.
-        kWh_corr += (Net_kWh2 - Prev_kWh);
+      else if ((Prev_kWh < Net_kWh) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh increases, a 0.1 kWh is added to the kWh calculation to interpolate until next SoC change.
+        kWh_corr += (Net_kWh - Prev_kWh);
         used_kWh = calc_kwh(PrevSoC, InitSoC) + kWh_corr;        
         left_kWh = (calc_kwh(0, PrevSoC) * degrad_ratio) - kWh_corr;        
-        Prev_kWh = Net_kWh2;
+        Prev_kWh = Net_kWh;
         corr_update = true;
       } 
-      else if ((Prev_kWh > Net_kWh2) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh decreases, a 0.1 kWh is substracted to the kWh calculation to interpolate until next SoC change.
-        kWh_corr -= (Prev_kWh - Net_kWh2);
+      else if ((Prev_kWh > Net_kWh) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh decreases, a 0.1 kWh is substracted to the kWh calculation to interpolate until next SoC change.
+        kWh_corr -= (Prev_kWh - Net_kWh);
         used_kWh = calc_kwh(PrevSoC, InitSoC) + kWh_corr;        
         left_kWh = (calc_kwh(0, PrevSoC) * degrad_ratio) - kWh_corr;        
-        Prev_kWh = Net_kWh2;
+        Prev_kWh = Net_kWh;
         corr_update = true;
       }
   
       if (sendIntervalOn) {  // add condition so "kWh_corr" is not triggered before a cycle after a "kWh_update" when wifi is not connected
         if (kWh_update) {
-          Prev_kWh = Net_kWh2;
+          Prev_kWh = Net_kWh;
           kWh_update = false;  // reset kWh_update so correction logic starts again
         }
         if (corr_update) {
@@ -1394,63 +1394,61 @@ void sendGoogleSheet(void * pvParameters){
         valueRange.add("majorDimension","COLUMNS");
         valueRange.set("values/[0]/[0]", EventTime);
         valueRange.set("values/[1]/[0]", SoC);
-        valueRange.set("values/[2]/[0]", Power);
-        valueRange.set("values/[3]/[0]", BattMinT);
-        valueRange.set("values/[4]/[0]", BattMaxT);
-        valueRange.set("values/[5]/[0]", Heater);
-        valueRange.set("values/[6]/[0]", Net_Ah);
-        valueRange.set("values/[7]/[0]", Net_kWh);        
-        valueRange.set("values/[8]/[0]", Max_Pwr);
-        valueRange.set("values/[9]/[0]", Max_Reg);
-        valueRange.set("values/[10]/[0]", BmsSoC);
-        valueRange.set("values/[11]/[0]", MAXcellv);
-        valueRange.set("values/[12]/[0]", MINcellv);
-        valueRange.set("values/[13]/[0]", MAXcellvNb);
-        valueRange.set("values/[14]/[0]", MINcellvNb);
-        valueRange.set("values/[15]/[0]", BATTv);
-        valueRange.set("values/[16]/[0]", BATTc);        
-        valueRange.set("values/[17]/[0]", Odometer);
-        valueRange.set("values/[18]/[0]", CEC);
-        valueRange.set("values/[19]/[0]", CED);
-        valueRange.set("values/[20]/[0]", CDC);
-        valueRange.set("values/[21]/[0]", CCC);
-        valueRange.set("values/[22]/[0]", SOH);        
-        valueRange.set("values/[23]/[0]", OPtimemins);
-        valueRange.set("values/[24]/[0]", OUTDOORtemp);
-        valueRange.set("values/[25]/[0]", INDOORtemp);        
-        valueRange.set("values/[26]/[0]", LastSoC);
-        valueRange.set("values/[27]/[0]", used_kWh);
-        valueRange.set("values/[28]/[0]", left_kWh);
-        valueRange.set("values/[29]/[0]", TripOPtime);
-        valueRange.set("values/[30]/[0]", CurrOPtime);
-        valueRange.set("values/[31]/[0]", PIDkWh_100);
-        valueRange.set("values/[32]/[0]", kWh_100km);
-        valueRange.set("values/[33]/[0]", degrad_ratio);
-        valueRange.set("values/[34]/[0]", Speed);
-        valueRange.set("values/[35]/[0]", span_kWh_100km);
-        valueRange.set("values/[36]/[0]", Wifi_select);        
-        valueRange.set("values/[37]/[0]", TireFL_P);
-        valueRange.set("values/[38]/[0]", TireFR_P);
-        valueRange.set("values/[39]/[0]", TireRL_P);
-        valueRange.set("values/[40]/[0]", TireRR_P);
-        valueRange.set("values/[41]/[0]", TireFL_T);
-        valueRange.set("values/[42]/[0]", TireFR_T);
-        valueRange.set("values/[43]/[0]", TireRL_T);
-        valueRange.set("values/[44]/[0]", TireRR_T);
-        valueRange.set("values/[45]/[0]", acc_energy);
-        valueRange.set("values/[46]/[0]", Trip_dist);
-        valueRange.set("values/[47]/[0]", distance);        
-        valueRange.set("values/[48]/[0]", acc_Ah);        
-        valueRange.set("values/[49]/[0]", acc_regen);
-        valueRange.set("values/[50]/[0]", MaxDetNb);
-        valueRange.set("values/[51]/[0]", MinDetNb);
-        valueRange.set("values/[52]/[0]", PID_kWhLeft);        
-        valueRange.set("values/[53]/[0]", TripOdo);
-        valueRange.set("values/[54]/[0]", full_kWh);
-        valueRange.set("values/[55]/[0]", start_kWh);               
-        valueRange.set("values/[56]/[0]", InitSoC);
-        valueRange.set("values/[57]/[0]", nbr_saved);
-        valueRange.set("values/[58]/[0]", Net_kWh2);
+        valueRange.set("values/[2]/[0]", BmsSoC);
+        valueRange.set("values/[3]/[0]", Power);
+        valueRange.set("values/[4]/[0]", TripOdo);
+        valueRange.set("values/[5]/[0]", BattMinT);
+        valueRange.set("values/[6]/[0]", BattMaxT);
+        valueRange.set("values/[7]/[0]", Heater);
+        valueRange.set("values/[8]/[0]", OUTDOORtemp);
+        valueRange.set("values/[9]/[0]", INDOORtemp);        
+        valueRange.set("values/[10]/[0]", Net_kWh);
+        valueRange.set("values/[11]/[0]", Net_kWh2);
+        valueRange.set("values/[12]/[0]", acc_energy);
+        valueRange.set("values/[13]/[0]", Net_Ah);
+        valueRange.set("values/[14]/[0]", acc_Ah);
+        valueRange.set("values/[15]/[0]", EstFull_Ah); 
+        valueRange.set("values/[16]/[0]", Max_Pwr);
+        valueRange.set("values/[17]/[0]", Max_Reg);        
+        valueRange.set("values/[18]/[0]", MAXcellv);
+        valueRange.set("values/[19]/[0]", MINcellv);
+        valueRange.set("values/[20]/[0]", MAXcellvNb);
+        valueRange.set("values/[21]/[0]", MINcellvNb);
+        valueRange.set("values/[22]/[0]", BATTv);
+        valueRange.set("values/[23]/[0]", BATTc);
+        valueRange.set("values/[24]/[0]", AuxBattV);
+        valueRange.set("values/[25]/[0]", CEC);
+        valueRange.set("values/[26]/[0]", CED);
+        valueRange.set("values/[27]/[0]", CDC);
+        valueRange.set("values/[28]/[0]", CCC);
+        valueRange.set("values/[29]/[0]", SOH);
+        valueRange.set("values/[30]/[0]", used_kWh);
+        valueRange.set("values/[31]/[0]", left_kWh);        
+        valueRange.set("values/[32]/[0]", full_kWh);
+        valueRange.set("values/[33]/[0]", start_kWh);
+        valueRange.set("values/[34]/[0]", PID_kWhLeft);        
+        valueRange.set("values/[35]/[0]", degrad_ratio);               
+        valueRange.set("values/[36]/[0]", InitSoC);
+        valueRange.set("values/[37]/[0]", LastSoC);
+        valueRange.set("values/[38]/[0]", PIDkWh_100);
+        valueRange.set("values/[39]/[0]", kWh_100km);
+        valueRange.set("values/[40]/[0]", span_kWh_100km);
+        valueRange.set("values/[41]/[0]", Trip_dist);
+        valueRange.set("values/[42]/[0]", distance);
+        valueRange.set("values/[43]/[0]", Speed);
+        valueRange.set("values/[44]/[0]", Odometer);
+        valueRange.set("values/[45]/[0]", OPtimemins);
+        valueRange.set("values/[46]/[0]", TripOPtime);
+        valueRange.set("values/[47]/[0]", CurrOPtime);
+        valueRange.set("values/[48]/[0]", TireFL_P);
+        valueRange.set("values/[49]/[0]", TireFR_P);
+        valueRange.set("values/[50]/[0]", TireRL_P);
+        valueRange.set("values/[51]/[0]", TireRR_P);
+        valueRange.set("values/[52]/[0]", TireFL_T);
+        valueRange.set("values/[53]/[0]", TireFR_T);
+        valueRange.set("values/[54]/[0]", TireRL_T);
+        valueRange.set("values/[55]/[0]", TireRR_T);
+        valueRange.set("values/[56]/[0]", nbr_saved);        
                
       }                                   
             
@@ -1480,7 +1478,7 @@ void sendGoogleSheet(void * pvParameters){
       Serial.println(ESP.getFreeHeap());
             
       if(kWh_update){ //add condition so "kWh_corr" is not trigger before a cycle after a "kWh_update"
-        Prev_kWh = Net_kWh2;        
+        Prev_kWh = Net_kWh;        
         kWh_update = false;  // reset kWh_update after it has been recorded and so the correction logic start again       
       }            
       if(corr_update){  
@@ -1535,8 +1533,8 @@ void reset_trip() {  //Overall trip reset. Automatic if the car has been recharg
   last_energy = acc_energy;
   start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;
   left_kWh = calc_kwh(0, SoC) * degrad_ratio;
-  full_kWh = Net_kWh2 + (start_kWh + left_kWh);
-  //full_kWh = Net_kWh2 + (start_kWh + left_kWh) * degrad_ratio;  
+  full_kWh = Net_kWh + (start_kWh + left_kWh);
+  //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;  
   EEPROM.writeFloat(52, acc_energy);
   EEPROM.writeFloat(0, InitRemain_kWh);  
   EEPROM.writeFloat(4, InitCED);   //save initial CED to Flash memory
@@ -1569,17 +1567,17 @@ void ResetCurrTrip() {  // when the car is turned On, current trip value are res
     CurrInitRemain = PID_kWhLeft;
     CurrTimeInit = OPtimemins;
     Serial.println("Trip Reset");
-    Prev_kWh = Net_kWh2;
+    Prev_kWh = Net_kWh;
     last_energy = acc_energy;    
        
     degrad_ratio = old_lost;
-    if ((degrad_ratio > 1.07) || (degrad_ratio < 0.92)) {  // if a bad values got saved previously, initial ratio to 1
+    if ((degrad_ratio > 1.07) || (degrad_ratio < 0.9)) {  // if a bad values got saved previously, initial ratio to 1
       degrad_ratio = 1;
     }
-    used_kWh = calc_kwh(SoC, InitSoC) + kWh_corr;    
-    left_kWh = (calc_kwh(0, SoC) * degrad_ratio) - kWh_corr;    
+    used_kWh = calc_kwh(SoC, InitSoC);    
+    left_kWh = (calc_kwh(0, SoC) * degrad_ratio);    
     start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;
-    full_kWh = Net_kWh2 + (start_kWh + left_kWh);
+    full_kWh = Net_kWh + (start_kWh + left_kWh);
     //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;    
     PrevSoC = SoC;
     PrevBmsSoC = BmsSoC;
@@ -2097,7 +2095,7 @@ void page2() {
   strcpy(titre[1], "Full Ah");
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "SOH");
-  strcpy(titre[4], "left_kWh");
+  strcpy(titre[4], "AuxBattV");
   strcpy(titre[5], "BmsSoC");
   strcpy(titre[6], "BATTv");
   strcpy(titre[7], "Cell Vdiff");
@@ -2107,7 +2105,7 @@ void page2() {
   value_float[1] = EstFull_Ah;
   value_float[2] = MAXcellv;
   value_float[3] = SOH;
-  value_float[4] = left_kWh;
+  value_float[4] = AuxBattV;
   value_float[5] = BmsSoC;
   value_float[6] = BATTv;
   value_float[7] = CellVdiff;
@@ -2146,7 +2144,7 @@ void page3() {
   strcpy(titre[9], "Chauf. Batt.");  
   value_float[0] = Power;
   value_float[1] = BattMinT;
-  value_float[2] = Net_kWh2;
+  value_float[2] = Net_kWh;
   value_float[3] = used_kWh;
   value_float[4] = SoC;
   value_float[5] = Max_Pwr;
