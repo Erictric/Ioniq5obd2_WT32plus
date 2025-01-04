@@ -1276,9 +1276,11 @@ float calc_kwh(float min_SoC, float max_SoC) {
 
 float calc_kwh(float min_SoC, float max_SoC) {
   
-  float fullBattCapacity = 77.4 * 0.97;
+  float fullBattCapacity = 77.4;
+  //float fullBattCapacity = 77.4 * 0,97 * 0.975;
   float SoC100 = 100;
-  double b = 0.66;
+  double b = 0.70177;
+  //double b = 0.6637;
   double a = (fullBattCapacity - (b * SoC100)) / pow(SoC100,2);  
   
   float max_kwh = a * pow(max_SoC,2) + b * max_SoC;
