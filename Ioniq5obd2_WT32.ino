@@ -10,6 +10,9 @@
   ELMduino.h needs to be modified as follow: bool begin(Stream& stream, char protocol='6', uint16_t payloadLen = 240);
   For TFT_eSPI library, comment: //#include <User_Setup.h> and add: #include <User_Setups/WT32-SC01-User_Setup.h>
   in User_Setup_Select.h file. WT32-SC01-User_Setup.h needs to be downloaded for github and saved in the User_Setups folder.
+
+  Library folder:
+  c:\Users\emond\OneDrive\Documents\Arduino\libraries\
 */
 #include "Arduino.h"
 #include "SafeString.h"
@@ -23,9 +26,9 @@
 #include <Adafruit_FT6206.h>
 #include <ESP_Google_Sheet_Client.h>
 #include <TimeLib.h>
-#include "ELMduino.h"
+#include <ELMduino.h>
 
-#define FIREBASE_USE_PSRAM
+//#define FIREBASE_USE_PSRAM
 
 #define DEBUG_PORT Serial
 
@@ -74,7 +77,7 @@ void tokenStatusCallback(TokenInfo info);
 TFT_eSPI tft = TFT_eSPI();  // display class instanciation
 Adafruit_FT6206 ts = Adafruit_FT6206(); // touch screen class instanciation
 
-#define Threshold 40 /* threshold for touch wakeup - Greater the value[, more the sensitivity */
+#define Threshold 40 /* threshold for touch wakeup - Greater the value more the sensitivity */
 #define ST7789_DISPOFF    0x28
 #define ST7789_DISPON   0x29
 #define ST7789_SLPIN    0x10
@@ -289,6 +292,19 @@ bool Charge_page = false;
 bool Power_page = false;
 unsigned long read_timer;
 unsigned long read_data_interval = 2000;
+
+float pwr_interval;
+float int_pwr;
+float curr_interval;
+float int_curr;
+
+float fullBattCapacity = 73.25;  // capacity of displayed SoC, extra 4.5% (3kWh) is available below 0% display SoC
+float SoC100 = 100;
+double b = 0.671;
+double a;
+float max_kwh;
+float min_kwh;
+float return_kwh;
 
 // Variables for touch x,y
 static int32_t x, y;
@@ -942,22 +958,28 @@ void read_data() {
             Integrat_power();                       
   
             if ((used_kWh >= 3) && (SpdSelect == 'D')) {  // Wait till 4 kWh has been used to start calculating ratio to have a better accuracy              
-              degrad_ratio = Net_kWh / used_kWh;                          
+              degrad_ratio = Net_kWh2 / used_kWh;                          
                             
-              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.9)) {  // if a bad value[ got saved previously, initialize ratio to 1
-                degrad_ratio = 1;
-              }             
+              if (degrad_ratio > 1.01) { 
+                degrad_ratio = 1.01;
+              }
+              else if (degrad_ratio < 0.9){
+                degrad_ratio = 0.9;
+              }           
               old_lost = degrad_ratio;
             } 
             else {
               degrad_ratio = old_lost;              
-              if ((degrad_ratio > 1.07) || (degrad_ratio < 0.9)) {  // if a bad value[ got saved previously, initialize ratio to 1
-                degrad_ratio = 1;
+              if (degrad_ratio > 1.01) {  
+                degrad_ratio = 1.01;
+              }
+              else if (degrad_ratio < 0.9){
+                degrad_ratio = 0.9;
               }              
             }
             start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;            
             
-            full_kWh = Net_kWh + (start_kWh + left_kWh);
+            full_kWh = Net_kWh2 + (start_kWh + left_kWh);
             //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;            
           }
         }
@@ -969,14 +991,14 @@ void read_data() {
         left_kWh = (calc_kwh(0, PrevSoC) * degrad_ratio) - kWh_corr;        
         Prev_kWh = Net_kWh;
         corr_update = true;
-      } 
+      } /*
       else if ((Prev_kWh > Net_kWh) && !kWh_update) {  // since the SoC has only 0.5 kWh resolution, when the Net_kWh decreases, a 0.1 kWh is substracted to the kWh calculation to interpolate until next SoC change.
         kWh_corr -= (Prev_kWh - Net_kWh);
         used_kWh = calc_kwh(PrevSoC, InitSoC) + kWh_corr;        
         left_kWh = (calc_kwh(0, PrevSoC) * degrad_ratio) - kWh_corr;        
         Prev_kWh = Net_kWh;
         corr_update = true;
-      }
+      }*/
   
       if (sendIntervalOn) {  // add condition so "kWh_corr" is not triggered before a cycle after a "kWh_update" when wifi is not connected
         if (kWh_update) {
@@ -1005,9 +1027,9 @@ void read_data() {
         RangeCalcTimer = millis();
       }
       
-      if (BMS_ign) {
-        EnergyTOC();
-      }
+      //if (BMS_ign) {
+      //  EnergyTOC();
+      //}
   
       if (Max_Pwr < 100 && (Max_Pwr < (Power + 20)) && !Power_page) {  //select the Max Power page if Power+20kW exceed Max_Pwr when Max_Pwr is lower then 100kW.
         DrawBackground = true;
@@ -1083,8 +1105,7 @@ void UpdateNetEnergy() {
 /*//////Function to calculate Energy by power integration since last reset //////////*/
 
 void Integrat_power() {
-  float pwr_interval;
-  float int_pwr;
+  
   pwr_interval = (millis() - integrateP_timer) / 1000;
   integrateP_timer = millis();
   int_pwr = Power * pwr_interval / 3600;
@@ -1101,8 +1122,7 @@ void Integrat_power() {
 /*//////Function to calculate Energy Charge by current integration since last reset //////////*/
 
 void Integrat_current() {
-  float curr_interval;
-  float int_curr;
+  
   curr_interval = (millis() - integrateI_timer) / 1000;
   integrateI_timer = millis();
   int_curr = BATTc * curr_interval / 3600;
@@ -1205,7 +1225,7 @@ void RangeCalc() {
 //--------------------------------------------------------------------------------------------
 
 /*//////Function to record time on condition  //////////*/
-
+/*
 void EnergyTOC() {
   if (OUTDOORtemp >= 25) {
     acc_kWh_25 = acc_kWh_25 + (acc_energy - last_energy);
@@ -1235,12 +1255,12 @@ void EnergyTOC() {
   last_energy = acc_energy;
   last_time = CurrOPtime;
   last_odo = distance;
-}
+}*/
 
 //--------------------------------------------------------------------------------------------
 //                   Function to calculate energy between two SoC value
 //--------------------------------------------------------------------------------------------
-
+/*
 double Interpolate(double xvalue[], double yvalue[], int numvalue, double pointX, bool trim = true) {
   if (trim) {
     if (pointX <= xvalue[0]) return yvalue[0];
@@ -1258,6 +1278,7 @@ double Interpolate(double xvalue[], double yvalue[], int numvalue, double pointX
   t = t * t * (3 - 2 * t);
   return yvalue[i] * (1 - t) + yvalue[i + 1] * t;
 }
+*/
 /*
 float calc_kwh(float min_SoC, float max_SoC) {
   
@@ -1276,17 +1297,11 @@ float calc_kwh(float min_SoC, float max_SoC) {
 
 float calc_kwh(float min_SoC, float max_SoC) {
   
-  float fullBattCapacity = 77.4;
-  //float fullBattCapacity = 77.4 * 0,97 * 0.975;
-  float SoC100 = 100;
-  double b = 0.70177;
-  //double b = 0.6637;
-  double a = (fullBattCapacity - (b * SoC100)) / pow(SoC100,2);  
+  a = (fullBattCapacity - (b * SoC100)) / pow(SoC100,2);  
   
-  float max_kwh = a * pow(max_SoC,2) + b * max_SoC;
-  float min_kwh = a * pow(min_SoC,2) + b * min_SoC;
-  float return_kwh;
-    
+  max_kwh = a * pow(max_SoC,2) + b * max_SoC;
+  min_kwh = a * pow(min_SoC,2) + b * min_SoC;
+      
   return_kwh = max_kwh - min_kwh;
   return return_kwh;
 }
@@ -1535,7 +1550,7 @@ void reset_trip() {  //Overall trip reset. Automatic if the car has been recharg
   last_energy = acc_energy;
   start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;
   left_kWh = calc_kwh(0, SoC) * degrad_ratio;
-  full_kWh = Net_kWh + (start_kWh + left_kWh);
+  full_kWh = Net_kWh2 + (start_kWh + left_kWh);
   //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;  
   EEPROM.writeFloat(52, acc_energy);
   EEPROM.writeFloat(0, InitRemain_kWh);  
@@ -1573,13 +1588,16 @@ void ResetCurrTrip() {  // when the car is turned On, current trip value are res
     last_energy = acc_energy;    
        
     degrad_ratio = old_lost;
-    if ((degrad_ratio > 1.07) || (degrad_ratio < 0.9)) {  // if a bad values got saved previously, initial ratio to 1
-      degrad_ratio = 1;
+    if (degrad_ratio > 1.01) { 
+      degrad_ratio = 1.01;
+    }
+    else if (degrad_ratio < 0.9){
+      degrad_ratio = 0.9;
     }
     used_kWh = calc_kwh(SoC, InitSoC);    
     left_kWh = (calc_kwh(0, SoC) * degrad_ratio);    
     start_kWh = calc_kwh(InitSoC, 100) * degrad_ratio;
-    full_kWh = Net_kWh + (start_kWh + left_kWh);
+    full_kWh = Net_kWh2 + (start_kWh + left_kWh);
     //full_kWh = Net_kWh + (start_kWh + left_kWh) * degrad_ratio;    
     PrevSoC = SoC;
     PrevBmsSoC = BmsSoC;
@@ -2146,7 +2164,7 @@ void page3() {
   strcpy(titre[9], "Chauf. Batt.");  
   value_float[0] = Power;
   value_float[1] = BattMinT;
-  value_float[2] = Net_kWh;
+  value_float[2] = Net_kWh2;
   value_float[3] = used_kWh;
   value_float[4] = SoC;
   value_float[5] = Max_Pwr;

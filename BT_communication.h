@@ -2,10 +2,13 @@
 #define BT_COMMUNICATION
 
 #include "BluetoothSerial.h"
-#include "ELMduino.h"
+//#include "BLEClientSerial.h"
+#include <ELMduino.h>
 #include "TFT_eSPI.h"
 
 BluetoothSerial SerialBT; //Object for Bluetooth
+//BLEClientSerial BLESerial;
+//#define ELM_PORT   BLESerial
 
 ELM327 myELM327;    //Object for OBD2 device
 
