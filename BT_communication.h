@@ -1,25 +1,25 @@
 #ifndef BT_COMMUNICATION
 #define BT_COMMUNICATION
 
-#include "BluetoothSerial.h"
-//#include "BLEClientSerial.h"
+//#include "BluetoothSerial.h"
+#include "BLEClientSerial.h"
 #include <ELMduino.h>
 #include "TFT_eSPI.h"
 
-BluetoothSerial SerialBT; //Object for Bluetooth
-//BLEClientSerial BLESerial;
-//#define ELM_PORT   BLESerial
+//BluetoothSerial SerialBT; //Object for Bluetooth
+BLEClientSerial BLESerial;
+#define ELM_PORT   BLESerial
 
 ELM327 myELM327;    //Object for OBD2 device
 
-#define ELM_PORT SerialBT
+//#define ELM_PORT SerialBT
 
 bool OBD2connected = false;
 
 void ConnectToOBD2(TFT_eSPI& tft){
   char strRetries[2];  
-  ELM_PORT.setPin("1234");
-  ELM_PORT.begin("ESP32", true);
+  //ELM_PORT.setPin("1234");
+  ELM_PORT.begin("IOS-Vlink");
   
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_GREEN);
@@ -30,7 +30,7 @@ void ConnectToOBD2(TFT_eSPI& tft){
   Serial.println("...Connection to OBDII...");
   
   int retries = 0;
-  while (!ELM_PORT.connect("Android-Vlink") && (retries++ < 4)) // Device name of iCar Vgate pro BT4.0 OBD adapter
+  while (!ELM_PORT.connect() && (retries++ < 4)) // Device name of iCar Vgate pro BT4.0 OBD adapter
   {
     dtostrf(retries,1,0,strRetries);
     Serial.println("Couldn't connect to OBD scanner - Phase 1");
