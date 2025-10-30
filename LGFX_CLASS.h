@@ -3,7 +3,7 @@
 
 #define LGFX_USE_V1         // set to use new version of library
 #include <LovyanGFX.hpp>    // main library
-#include "esp32-hal-psram.h"
+//#include "esp32-hal-psram.h"
 
 // Portrait
 #define TFT_WIDTH   320

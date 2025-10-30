@@ -1,34 +1,27 @@
-/*  Ionic5Obd for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
-    Version: v1.00
 
-    SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
-    Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
-    Data looging to Google Sheet: https://randomnerdtutorials.com/esp32-datalogging-google-sheets/
-
-  notes:
-  ELMduino library used is version 2.41, problem not resolved with newer version
-  ELMduino.h needs to be modified as follow: bool begin(Stream& stream, char protocol='6', uint16_t payloadLen = 240);
-  For TFT_eSPI library, comment: //#include <User_Setup.h> and add: #include <User_Setups/WT32-SC01-User_Setup.h>
-  in User_Setup_Select.h file. WT32-SC01-User_Setup.h needs to be downloaded for github and saved in the User_Setups folder.
-
-  Library folder:
-  c:\Users\emond\OneDrive\Documents\Arduino\libraries\
+/*
+    Simple Touch Drawing sample for WT32-SC01-Plus_ESP32-S3
+    Requirements:
+    - Development board : WT32-SC01-Plus_ESP32-S3
+    - Arduino Library - Display/Touch : LovyanGFX
+    - Board selected in Arduino : ESP32S3 Dev Module
 */
+
 #include "Arduino.h"
+#include "LGFX_CLASS.h"
+#include "BT_communication.h"
+#include "Wifi_connection.h"
 #include "SafeString.h"
 #include "EEPROM.h"
 #include <SPI.h>
-#include "TFT_eSPI.h"
-#include "BT_communication.h"
-#include "Wifi_connection.h"
 #include "FreeRTOSConfig.h"
-#include "Free_Fonts.h"
+#include <Adafruit_GFX.h>
 #include <Adafruit_FT6206.h>
 #include <ESP_Google_Sheet_Client.h>
 #include <TimeLib.h>
-#include <ELMduino.h>
+//#include <ELMduino.h>
 
-//#define FIREBASE_USE_PSRAM
+static LGFX lcd;            // declare display variable
 
 #define DEBUG_PORT Serial
 
@@ -74,25 +67,9 @@ const char spreadsheetId[] = "1Ho5H6qfHyVTo3fvcvrGUEGIylHTAWWfTAO8dBwZUqnI";
 // Token Callback function
 void tokenStatusCallback(TokenInfo info);
 
-TFT_eSPI tft = TFT_eSPI();  // display class instanciation
-Adafruit_FT6206 ts = Adafruit_FT6206(); // touch screen class instanciation
-
-#define Threshold 40 /* threshold for touch wakeup - Greater the value more the sensitivity */
-#define ST7789_DISPOFF    0x28
-#define ST7789_DISPON   0x29
-#define ST7789_SLPIN    0x10
-#define ST7789_SLPOUT   0x11
-
-int ledBacklight = 150; // Initial TFT backlight intensity on a scale of 0 to 255. Initial value is 120.
-bool low_backlight = false;
 bool display_off = true;
 
-/*////// Setting PWM properties, do not change this! /////////*/
-const int pwmFreq = 5000;
-const int pwmResolution = 8;
-const int pwmLedChannelTFT = 0;
-
-//TFT y positions for texts and numbers
+//LCD y positions for texts and numbers
 uint16_t textLvl[10] = {65, 135, 205, 275, 345, 65, 135, 205, 275, 345};  // y coordinates for text
 uint16_t drawLvl[10] = {100, 170, 240, 310, 380, 100, 170, 240, 310, 380}; // and numbers
 
@@ -100,6 +77,9 @@ uint16_t drawLvl[10] = {100, 170, 240, 310, 380, 100, 170, 240, 310, 380}; // an
 
 boolean ResetOn = true;
 int screenNbr = 0;
+
+//bool send_enabled = false;
+//bool initscan = false;
 
 uint8_t record_code = 0;
 float mem_energy = 0;
@@ -274,7 +254,7 @@ float acc_dist_m10;
 float acc_dist_m20;
 float acc_dist_m20p;
 bool DriveOn = false;
-bool StartWifi = true;
+bool StartWifi = false;
 bool InitRst = false;
 bool TrigRst = false;
 bool kWh_update = false;
@@ -307,7 +287,7 @@ float min_kwh;
 float return_kwh;
 
 // Variables for touch x,y
-static int32_t x, y;
+//static int32_t x, y;
 TS_Point p;
 static int xMargin = 20, yMargin = 420, margin = 20, btnWidth = 80, btnHeigth = 55;
 char* BtnAtext = "CONS";
@@ -447,6 +427,7 @@ void callback(){  //required function for touch wake
 }
 
 // Function that gets current epoch time
+
 unsigned long getTime() {
   time_t now;
   struct tm timeinfo;
@@ -478,55 +459,29 @@ void IRAM_ATTR Timer0_ISR()
   }         
 }
 
+// Variables for touch x,y
+static int32_t x,y;
 
-/*////////////////////////////////////////////////////////////////////////*/
-/*                         START OF SETUP                                 */
-/*////////////////////////////////////////////////////////////////////////*/
-
-void setup() {
-
-  /*////////////////////////////////////////////////////////////////*/
-  /*              Open serial monitor communications                */
-  /*////////////////////////////////////////////////////////////////*/
-
+void setup(void)
+{
   DEBUG_PORT.begin(9600);
-  DEBUG_PORT.setDebugOutput(false);
+  //DEBUG_PORT.setDebugOutput(false);
 
-  while (!Serial) {
-    ;  // wait for serial port to connect. Needed for native USB port only
-  }
+  //while (!Serial) {
+  //  ;  // wait for serial port to connect. Needed for native USB port only
+  //}
 
-  Serial.println("Serial Monitor - STARTED");
-  
-  /*//////////////Initialise Touch screen ////////////////*/
-  // Pins 18/19 are SDA/SCL for touch sensor on this device
-  // 40 is a touch threshold
-  if (!ts.begin(18, 19, 40)) {
-    Serial.println("Couldn't start touchscreen controller");
-    while (true);
-  }
-  
-  /*//////////////Initialise OLED display ////////////////*/
-  tft.init();
-  tft.setRotation(0);  // 0 & 2 Portrait. 1 & 3 landscape
-  tft.fillScreen(TFT_BLACK);
-  tft.setTextColor(TFT_GREEN);
-  tft.setCursor(0, 0);
-  tft.setTextDatum(MC_DATUM);
-  tft.setTextSize(1);
-  tft.setFreeFont(&FreeSans18pt7b);
+  DEBUG_PORT.println("Serial Monitor - STARTED");
+  delay(1000);
 
-  //pinMode(TFT_BL, OUTPUT);
-  //digitalWrite(TFT_BL, 128);
-
-  Serial.print("Configuring PWM for TFT backlight... ");
-  ledcSetup(pwmLedChannelTFT, pwmFreq, pwmResolution);
-  ledcAttachPin(TFT_BL, pwmLedChannelTFT);
-  Serial.println("DONE");
-
-  Serial.print("Setting PWM for TFT backlight to default intensity... ");
-  ledcWrite(pwmLedChannelTFT, ledBacklight);
-  Serial.println("DONE");
+  lcd.init();
+  lcd.setRotation(2);  // 0 & 2 Portrait. 1 & 3 landscape
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setTextColor(TFT_GREEN);
+  lcd.setCursor(0, 0);
+  lcd.setTextDatum(MC_DATUM);
+  lcd.setTextSize(1);
+  lcd.setFreeFont(&FreeSans12pt7b);  
 
   /*////// initialize EEPROM with predefined size ////////*/
   EEPROM.begin(148);
@@ -552,25 +507,25 @@ void setup() {
   LastSoC = EEPROM.readFloat(56);
   nbr_saved = EEPROM.readFloat(60);
   acc_Ah = EEPROM.readFloat(64);
-  acc_kWh_25 = EEPROM.readFloat(68);
-  acc_kWh_10 = EEPROM.readFloat(72);
-  acc_kWh_0 = EEPROM.readFloat(76);
-  acc_kWh_m10 = EEPROM.readFloat(80);
-  acc_kWh_m20 = EEPROM.readFloat(84);
-  acc_kWh_m20p = EEPROM.readFloat(88);
-  acc_time_25 = EEPROM.readFloat(92);
-  acc_time_10 = EEPROM.readFloat(96);
-  acc_time_0 = EEPROM.readFloat(100);
-  acc_time_m10 = EEPROM.readFloat(104);
-  acc_time_m20 = EEPROM.readFloat(108);
-  acc_time_m20p = EEPROM.readFloat(112);
-  acc_dist_25 = EEPROM.readFloat(116);
-  acc_dist_10 = EEPROM.readFloat(120);
-  acc_dist_0 = EEPROM.readFloat(124);
-  acc_dist_m10 = EEPROM.readFloat(128);
-  acc_dist_m20 = EEPROM.readFloat(132);
-  acc_dist_m20p = EEPROM.readFloat(136);
-  acc_regen = EEPROM.readFloat(140);
+  //acc_kWh_25 = EEPROM.readFloat(68);
+  //acc_kWh_10 = EEPROM.readFloat(72);
+  //acc_kWh_0 = EEPROM.readFloat(76);
+  //acc_kWh_m10 = EEPROM.readFloat(80);
+  //acc_kWh_m20 = EEPROM.readFloat(84);
+  //acc_kWh_m20p = EEPROM.readFloat(88);
+  //acc_time_25 = EEPROM.readFloat(92);
+  //acc_time_10 = EEPROM.readFloat(96);
+  //acc_time_0 = EEPROM.readFloat(100);
+  //acc_time_m10 = EEPROM.readFloat(104);
+  //acc_time_m20 = EEPROM.readFloat(108);
+  //acc_time_m20p = EEPROM.readFloat(112);
+  //acc_dist_25 = EEPROM.readFloat(116);
+  //acc_dist_10 = EEPROM.readFloat(120);
+  //acc_dist_0 = EEPROM.readFloat(124);
+  //acc_dist_m10 = EEPROM.readFloat(128);
+  //acc_dist_m20 = EEPROM.readFloat(132);
+  //acc_dist_m20p = EEPROM.readFloat(136);
+  //acc_regen = EEPROM.readFloat(140);
 
   //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
 
@@ -580,15 +535,14 @@ void setup() {
   /*/////////////////////////////////////////////////////////////////*/
   /*                    CONNECTION TO OBDII                          */
   /*/////////////////////////////////////////////////////////////////*/
-
-  ConnectToOBD2(tft);
+  ConnectToOBD2(lcd);
   
-   /*/////////////////////////////////////////////////////////////////*/
+  /*/////////////////////////////////////////////////////////////////*/
   /*                     CONNECTION TO WIFI                         */
   /*/////////////////////////////////////////////////////////////////*/
 
   if (StartWifi && OBD2connected) {
-    ConnectWifi(tft, Wifi_select);
+    ConnectWifi(lcd, Wifi_select);
 
     //Configure time
     configTime(0, 0, ntpServer);
@@ -626,7 +580,7 @@ void setup() {
     0);                 /* Core where the task should run */
   delay(500);   
 
-  tft.fillScreen(TFT_BLACK);  
+  lcd.fillScreen(TFT_BLACK);  
 
   // Configure Timer0 Interrupt  
   Timer0_Cfg = timerBegin(0, 80, true);
@@ -1702,30 +1656,30 @@ void stop_esp() {
   }
   
   if (sd_condition2){
-    tft.setTextSize(1);
-    tft.setFreeFont(&FreeSans18pt7b);
-    tft.fillScreen(TFT_BLACK);
-    tft.setTextColor(TFT_GREEN);
-    tft.drawString("ESP", tft.width() / 2, tft.height() / 2 - 50);
-    tft.drawString("Stopped", tft.width() / 2, tft.height() / 2);    
+    lcd.setTextSize(1);
+    lcd.setFreeFont(&FreeSans12pt7b);
+    lcd.fillScreen(TFT_BLACK);
+    lcd.setTextColor(TFT_GREEN);
+    lcd.drawString("ESP", lcd.width() / 2, lcd.height() / 2 - 50);
+    lcd.drawString("Stopped", lcd.width() / 2, lcd.height() / 2);    
     delay(1000);
     esp_deep_sleep_start();
   }
   else{
-    tft.setTextSize(1);
-    tft.setFreeFont(&FreeSans18pt7b);
-    tft.fillScreen(TFT_BLACK);
-    tft.setTextColor(TFT_GREEN);
+    lcd.setTextSize(1);
+    lcd.setFreeFont(&FreeSans12pt7b);
+    lcd.fillScreen(TFT_BLACK);
+    lcd.setTextColor(TFT_GREEN);
     if (WiFi.status() == WL_CONNECTED){
-      tft.drawString("Wifi", tft.width() / 2, tft.height() / 2 - 50);
-      tft.drawString("Stopped", tft.width() / 2, tft.height() / 2);
+      lcd.drawString("Wifi", lcd.width() / 2, lcd.height() / 2 - 50);
+      lcd.drawString("Stopped", lcd.width() / 2, lcd.height() / 2);
       WiFi.disconnect();
       Serial.println("Wifi Stopped");
     }
     else{
-      tft.drawString("Going", tft.width() / 2, tft.height() / 2 - 50);
-      tft.drawString("Stand", tft.width() / 2, tft.height() / 2);
-      tft.drawString("By", tft.width() / 2, tft.height() / 2 + 50);
+      lcd.drawString("Going", lcd.width() / 2, lcd.height() / 2 - 50);
+      lcd.drawString("Stand", lcd.width() / 2, lcd.height() / 2);
+      lcd.drawString("By", lcd.width() / 2, lcd.height() / 2 + 50);
     }
     
     delay(1000);
@@ -1742,16 +1696,11 @@ void stop_esp() {
 //--------------------------------------------------------------------------------------------
 
 void button(){
-  if (ts.touched() && !OBD2connected) {
-    ledcWrite(pwmLedChannelTFT, 128);
-    tft.writecommand(ST7789_SLPOUT);// Wakes up the display driver
-    tft.writecommand(ST7789_DISPON); // Switch on the display
-    ConnectToOBD2(tft);
+  if (lcd.getTouch(&x, &y) && !OBD2connected) {    
+    lcd.setBrightness(128); // Switch on the display
+    //ConnectToOBD2(lcd);
   }
-  else if (ts.touched()) {
-    p = ts.getPoint();
-    x = p.x;
-    y = p.y;
+  else if (lcd.getTouch(&x, &y)) {    
           
     //Button 1 test
     if ((x >= btnAon.xStart && x <= btnAon.xStart + btnAon.xWidth) && (y >= btnAon.yStart && y <= btnAon.yStart + btnAon.yHeight)) {      
@@ -1821,9 +1770,7 @@ void button(){
       if (TouchTime >= 2 & !TouchLatch){
         TouchLatch = true;        
         Serial.println("Button3 Long Press");
-        ledcWrite(pwmLedChannelTFT, 0);
-        tft.writecommand(ST7789_DISPOFF); // Switch off the display
-        tft.writecommand(ST7789_SLPIN); // Sleep the display driver
+        //lcd.setBrightness(0); // Switch off the display
         display_off = true;
       }
       if (!Btn3SetON) {            
@@ -1922,7 +1869,7 @@ void button(){
 //--------------------------------------------------------------------------------------------
 
 void drawRoundedRect(RoundedRect toDraw){
-  tft.fillRoundRect(
+  lcd.fillRoundRect(
     toDraw.xStart,
     toDraw.yStart,
     toDraw.xWidth, 
@@ -1933,13 +1880,13 @@ void drawRoundedRect(RoundedRect toDraw){
   
   int box1TextX = toDraw.xStart + (toDraw.xWidth / 2);
   int box1TextY = toDraw.yStart + (toDraw.yHeight / 2);
-  tft.setCursor(box1TextX, box1TextY);
-  tft.setTextDatum(MC_DATUM);
-  tft.setTextPadding(toDraw.xWidth);
-  tft.setFreeFont(&FreeSans9pt7b);
-  tft.setTextSize(1);
-  tft.setTextColor(TFT_BLACK,toDraw.color);  
-  tft.drawString(toDraw.BtnText, box1TextX, box1TextY);    
+  lcd.setCursor(box1TextX, box1TextY);
+  lcd.setTextDatum(MC_DATUM);
+  lcd.setTextPadding(toDraw.xWidth);
+  lcd.setTextSize(1);
+  lcd.setFreeFont(&FreeSans9pt7b);  
+  lcd.setTextColor(TFT_BLACK,toDraw.color);  
+  lcd.drawString(toDraw.BtnText, box1TextX, box1TextY);    
 }
 
 //--------------------------------------------------------------------------------------------
@@ -1948,26 +1895,26 @@ void drawRoundedRect(RoundedRect toDraw){
 
 void DisplayPage() {
   if (DrawBackground) {
-    tft.fillScreen(TFT_BLACK);
-    tft.setTextSize(1);
-    tft.setFreeFont(&FreeSans12pt7b);
-    tft.setTextColor(TFT_WHITE, TFT_BLUE);
-    tft.setTextPadding(160);
+    lcd.fillScreen(TFT_BLACK);
+    lcd.setTextPadding(160);
+    lcd.setTextSize(1);
+    lcd.setFreeFont(&FreeSans12pt7b);        
+    lcd.setTextColor(TFT_WHITE, TFT_BLUE);    
     
     // Draw parameter names
     for (int i = 0; i < 10; i++) {  
       if (i < 5) { // update left colunm
-        tft.drawString(titre[i], tft.width() / 4, textLvl[i], 1);
+        lcd.drawString(titre[i], lcd.width() / 4, textLvl[i]);
       }
       else { // update right colunm
-        tft.drawString(titre[i], 3 * (tft.width() / 4), textLvl[i], 1);
+        lcd.drawString(titre[i], 3 * (lcd.width() / 4), textLvl[i]);
       }
     }
 
     // Draw frame lines
-    tft.drawLine(1,textLvl[0] - 10,319,textLvl[0] - 10,TFT_DARKGREY);
-    tft.drawLine(tft.width() / 2,textLvl[0] - 10,tft.width() / 2,drawLvl[4] + 24,TFT_DARKGREY);
-    tft.drawLine(1,drawLvl[4] + 24,319,drawLvl[4] + 24,TFT_DARKGREY);
+    lcd.drawLine(1,textLvl[0] - 13,319,textLvl[0] - 13,TFT_DARKGREY);
+    lcd.drawLine(lcd.width() / 2,textLvl[0] - 13,lcd.width() / 2,drawLvl[4] + 24,TFT_DARKGREY);
+    lcd.drawLine(1,drawLvl[4] + 24,319,drawLvl[4] + 24,TFT_DARKGREY);
 
     // Initialize previous values to empty value so value will be updated when background is redrawn
     for (int i = 0; i < 10; i++) {
@@ -1978,49 +1925,53 @@ void DisplayPage() {
     switch (screenNbr) {  
       
       case 0: 
-        tft.setFreeFont(&FreeSans9pt7b);        
+        //lcd.setFreeFont(&FreeSans9pt7b);        
         drawRoundedRect(btnAon);      
         drawRoundedRect(btnBoff);
         drawRoundedRect(btnCoff);
-        tft.setFreeFont(&FreeSans18pt7b);
-        tft.setTextColor(MainTitleColor, TFT_BLACK);                
-        tft.drawString(Maintitre[screenNbr], tft.width() / 2, 22, 1); 
+        lcd.setTextSize(1);
+        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setTextColor(MainTitleColor, TFT_BLACK);                
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22); 
         break; 
          
       case 1: 
-        tft.setFreeFont(&FreeSans9pt7b);        
+        //lcd.setFreeFont(&FreeSans9pt7b);        
         drawRoundedRect(btnAoff);      
         drawRoundedRect(btnBon);
         drawRoundedRect(btnCoff);
-        tft.setFreeFont(&FreeSans18pt7b);
-        tft.setTextColor(MainTitleColor, TFT_BLACK);                
-        tft.drawString(Maintitre[screenNbr], tft.width() / 2, 22, 1); 
+        lcd.setTextSize(1);
+        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setTextColor(MainTitleColor, TFT_BLACK);                
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22); 
         break;
         
       case 2: 
-        tft.setFreeFont(&FreeSans9pt7b);        
+        //lcd.setFreeFont(&FreeSans9pt7b);        
         drawRoundedRect(btnAoff);      
         drawRoundedRect(btnBoff);
         drawRoundedRect(btnCon);
-        tft.setFreeFont(&FreeSans18pt7b);
-        tft.setTextColor(MainTitleColor, TFT_BLACK);                
-        tft.drawString(Maintitre[screenNbr], tft.width() / 2, 22, 1); 
+        lcd.setTextSize(1);
+        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setTextColor(MainTitleColor, TFT_BLACK);                
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22); 
         break;
 
       case 3: 
-        tft.setFreeFont(&FreeSans9pt7b);        
+        //lcd.setFreeFont(&FreeSans9pt7b);        
         drawRoundedRect(btnAoff);      
         drawRoundedRect(btnBoff);
         drawRoundedRect(btnCoff);
-        tft.setFreeFont(&FreeSans18pt7b);
-        tft.setTextColor(MainTitleColor, TFT_BLACK);                
-        tft.drawString(Maintitre[screenNbr], tft.width() / 2, 22, 1); 
+        lcd.setTextSize(1);
+        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setTextColor(MainTitleColor, TFT_BLACK);                
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22); 
         break;
     }
     DrawBackground = false;    
-  }
-  tft.setTextSize(1);
-  tft.setFreeFont(&FreeSans18pt7b);
+  }  
+  lcd.setTextSize(1);
+  lcd.setFreeFont(&FreeSans18pt7b);  
 
   // test for negative values and set negative flag
   for (int i = 0; i < 10; i++) {  
@@ -2035,28 +1986,28 @@ void DisplayPage() {
     
     //if value changes update values    
     if ((value[i] != prev_value[i]) && (i < 5)) { // update left colunm
-      tft.setTextColor(TFT_BLACK, TFT_BLACK);
-      tft.drawString(prev_value[i], tft.width() / 4, drawLvl[i], 1);
+      lcd.setTextColor(TFT_BLACK, TFT_BLACK);
+      lcd.drawString(prev_value[i], lcd.width() / 4, drawLvl[i]);
       if (negative_flag[i]) {
-        tft.setTextColor(TFT_ORANGE, TFT_BLACK);
-        tft.drawString(value[i], tft.width() / 4, drawLvl[i], 1);
+        lcd.setTextColor(TFT_ORANGE, TFT_BLACK);
+        lcd.drawString(value[i], lcd.width() / 4, drawLvl[i]);
       } 
       else {
-        tft.setTextColor(TFT_GREEN, TFT_BLACK);
-        tft.drawString(value[i], tft.width() / 4, drawLvl[i], 1);
+        lcd.setTextColor(TFT_GREEN, TFT_BLACK);
+        lcd.drawString(value[i], lcd.width() / 4, drawLvl[i]);
       }
       strcpy(prev_value[i], value[i]);
     }
     else if (value[i] != prev_value[i]) { // update right colunm
-      tft.setTextColor(TFT_BLACK, TFT_BLACK);
-      tft.drawString(prev_value[i], 3 * (tft.width() / 4), drawLvl[i], 1);
+      lcd.setTextColor(TFT_BLACK, TFT_BLACK);
+      lcd.drawString(prev_value[i], 3 * (lcd.width() / 4), drawLvl[i]);
       if (negative_flag[i]) {
-        tft.setTextColor(TFT_ORANGE, TFT_BLACK);
-        tft.drawString(value[i], 3 * (tft.width() / 4), drawLvl[i], 1);
+        lcd.setTextColor(TFT_ORANGE, TFT_BLACK);
+        lcd.drawString(value[i], 3 * (lcd.width() / 4), drawLvl[i]);
       } 
       else {
-        tft.setTextColor(TFT_GREEN, TFT_BLACK);
-        tft.drawString(value[i], 3 * (tft.width() / 4), drawLvl[i], 1);
+        lcd.setTextColor(TFT_GREEN, TFT_BLACK);
+        lcd.drawString(value[i], 3 * (lcd.width() / 4), drawLvl[i]);
       }
       strcpy(prev_value[i], value[i]);
     }  
@@ -2235,9 +2186,9 @@ void page4() {
 /*                     START OF LOOP                                     */
 /*///////////////////////////////////////////////////////////////////////*/
 
-void loop() { 
-
-   /*/////// Read each OBDII PIDs /////////////////*/     
+void loop()
+{
+  /*/////// Read each OBDII PIDs /////////////////*/     
   if ((BMS_ign || Charging || ResetOn) && OBD2connected){
     pid_counter++;
     read_data();    
@@ -2271,7 +2222,6 @@ void loop() {
       save_lost('P');
       init_distsave = Trip_dist;      
     }
-
     if (sending_data){     /*/////// This will trigger logic to send data to Google sheet /////////////////*/
       // Get timestamp
       t = getTime();
@@ -2286,22 +2236,22 @@ void loop() {
 
       //  To display a led status when values are sent to Google Sheet
     if (datasent){
-      tft.fillCircle(20, 20, 6,TFT_GREEN);
+      lcd.fillCircle(20, 20, 6,TFT_GREEN);
       if (millis() - GSheetTimer >= 500){  // turn led off 500mS after it was turned On
         datasent = false;
       }
     }
     else if (failsent){
-      tft.fillCircle(20, 20, 6,TFT_RED);
+      lcd.fillCircle(20, 20, 6,TFT_RED);
       if (millis() - GSheetTimer >= 500){  // turn led off 500mS after it was turned On
         failsent = false;
       }
     }
     else if (!ready){
-      tft.fillCircle(20, 20, 6,TFT_WHITE);
+      lcd.fillCircle(20, 20, 6,TFT_WHITE);
     }
     else{
-      tft.fillCircle(20, 20, 6,TFT_BLACK);
+      lcd.fillCircle(20, 20, 6,TFT_BLACK);
     }  
   }  
   
@@ -2311,9 +2261,7 @@ void loop() {
     Serial.println(" ESP is ON");
     if (display_off){
       Serial.println("Turning Display ON");
-      ledcWrite(pwmLedChannelTFT, 128);
-      tft.writecommand(ST7789_SLPOUT);// Wakes up the display driver
-      tft.writecommand(ST7789_DISPON); // Switch on the display      
+      lcd.setBrightness(128); // Switch on the display      
       display_off = false;
       SoC_saved = false;
       
@@ -2323,13 +2271,13 @@ void loop() {
 
     if (StartWifi) {  // If wifi is configured then display wifi status led      
       if (!send_enabled){
-        tft.fillCircle(300, 20, 6,TFT_WHITE);
+        lcd.fillCircle(300, 20, 6,TFT_WHITE);
       }
       else if (WiFi.status() == WL_CONNECTED){
-        tft.fillCircle(300, 20, 6,TFT_GREEN);
+        lcd.fillCircle(300, 20, 6,TFT_GREEN);
       }
       else{
-        tft.fillCircle(300, 20, 6,TFT_RED);
+        lcd.fillCircle(300, 20, 6,TFT_RED);
       }
     }
         
@@ -2343,11 +2291,9 @@ void loop() {
 
   /*/////// Turn off display when BMS is off /////////////////*/
   else {    
-    ledcWrite(pwmLedChannelTFT, 0);
-    tft.writecommand(ST7789_DISPOFF); // Switch off the display
-    tft.writecommand(ST7789_SLPIN); // Sleep the display driver
+    //lcd.setBrightness(0); // Switch off the display    
     display_off = true;    
   }
   
-  ResetCurrTrip();  // Check if condition are met to reset current trip
+  ResetCurrTrip();  // Check if condition are met
 }
