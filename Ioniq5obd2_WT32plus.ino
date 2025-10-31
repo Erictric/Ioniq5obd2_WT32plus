@@ -1,10 +1,19 @@
+/*  Ionic5obd2 for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
+    Version: v1.00
 
-/*
-    Simple Touch Drawing sample for WT32-SC01-Plus_ESP32-S3
-    Requirements:
-    - Development board : WT32-SC01-Plus_ESP32-S3
-    - Arduino Library - Display/Touch : LovyanGFX
-    - Board selected in Arduino : ESP32S3 Dev Module
+    SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
+    Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
+    Data looging to Google Sheet: https://randomnerdtutorials.com/esp32-datalogging-google-sheets/
+
+  Requirements:
+  - Development board : WT32-SC01-Plus_ESP32-S3
+  - Arduino Library - Display/Touch : LovyanGFX
+  - Board selected in Arduino : ESP32S3 Dev Module
+    ELMduino library used is version 2.41, problem not resolved with newer version
+    ELMduino.h needs to be modified as follow: bool begin(Stream& stream, char protocol='6', uint16_t payloadLen = 240);
+  
+  Library folder:
+  c:\Users\emond\OneDrive\Documents\Arduino\libraries\
 */
 
 #include "Arduino.h"
@@ -19,50 +28,49 @@
 #include <Adafruit_FT6206.h>
 #include <ESP_Google_Sheet_Client.h>
 #include <TimeLib.h>
-//#include <ELMduino.h>
 
 static LGFX lcd;            // declare display variable
 
 #define DEBUG_PORT Serial
 
 // Google Project ID
-#define PROJECT_ID "konaev-datalogging"
+#define PROJECT_ID "ioniq5ev-datalogging"
 
 // Service Account's client email
-#define CLIENT_EMAIL "konaev-datalogging@konaev-datalogging.iam.gserviceaccount.com"
+#define CLIENT_EMAIL "ioniq5ev-datalogging@ioniq5ev-datalogging.iam.gserviceaccount.com"
 
 // Service Account's private key
 const char PRIVATE_KEY[] PROGMEM = "-----BEGIN PRIVATE KEY-----\n"
-                                   "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCnnCHE5paKUCH3\n"
-                                   "Mvz65J3qNo+e6jsdwciuVyGU8nUps2bZ/upY0mSqHRmqrGiHA76npNWidjcEOWJ1\n"
-                                   "0rsE75siuUdS6v0eUAnK0a4o4SsXrqUqXNK9qYxGhc/QBV2kfCDkahRGBKr3JleH\n"
-                                   "MSTMb0kR3I7JS9TfgXQ7QfmJ1eh3iW+y3citMTNLjqGZFkeFxNt9xFgH8LFDHuUi\n"
-                                   "UAzgmwI65qI0KkKFw7kyv2sd8WwltD3hkS+k/JBBxQTv96APmPZOXMF0f+WmvdJy\n"
-                                   "zpMVKXG0BQBvAF73mvzUpfszuHwj1+zwqMw4GRD2ScNlBRpWgBIcj53Fj35COs7e\n"
-                                   "z8V+V1XHAgMBAAECggEAUXMSh/REMJeLQezhuexx/tifx2ps6uN6KZqG47JFFEwt\n"
-                                   "jX8Ok7Y+G9rDV8irjPzZX+8+r9HBn4hhW/9ZSadEXMXrrpQqB9p+P7TQbOYrAjmo\n"
-                                   "4qKz+F3VoImzOJP68w0tEMKp8nKfQDY+L6DGkJ/9wrPLIW/71Nc8S/WeFYjBDKEQ\n"
-                                   "JDYwnW1ZRCqMIjMUxhn1q8n0EyB/Sf9vURchY3iPBdXVC8v4NdjZ1PxL42u9OzFc\n"
-                                   "svnIce6xCfB6hdR+hp06OylUC683Xln61tjZRXTp4QlJ5sq/LyUn0W5htQh/fcuf\n"
-                                   "dUkqyGK4wffpTsUIp4PksDBE0HNQofNgtZ4U4rx+1QKBgQDU3MMqEZPhaG68FnQY\n"
-                                   "/b64eY4Dzfk0WE0PSRJuxJXiw87yVPB2kkEsSU/qSN70Di262ABHTo66tVv9hNVn\n"
-                                   "mYsxZuNZ86YvKrPVW8+RfjNej6LXomm+ffZtHAWMzDtAx7xY+lHMOW3by46iAg5S\n"
-                                   "W0YwheDjH1u8GAIMitU/sXEa7QKBgQDJk69PPqXUtN6hj3wsPzsv+vFr9XnMMfLo\n"
-                                   "DBA1mkQdewhPiCWLSuPQAUGMnFc8UMkbKN0D0Jkg9G0DI77NzdJwjRQ3Z/AH4Di+\n"
-                                   "9Yj/tt0hE7HOtIZG8gOEqvbHFFwAVg7X3+huuNkW1TS/bzAAoowPKDhv9aPEgH8t\n"
-                                   "ahbzOjJ5AwKBgBH4lW2O0Fpec8LjbmfRvHFcqdW+ZQS7U74voCPD6xebCnTBIRAR\n"
-                                   "pvjzM5EHF/Oo4sl8hQGAK2Kt/xc3SMEXYH4KPrWQcX5X75jayHpzGikonUnxR1Yy\n"
-                                   "0kRB8mIBuBrvAgLNF2zTiGffFqqs28KuPA3Kr8LdGeSWbk3axsg61d69AoGAbhjm\n"
-                                   "0J6EDqh3TMDE7pnepvcl83RRAPFrHciw9cX7XCq9wEq5TtopkYuOFNGzZ/Mr1FS+\n"
-                                   "Wn4NlQ1LmUJlzZyUSvsTRqvTU0npVIthN2HWZ2GNZTv+dzNqLoT+Yn/BPEHEu63F\n"
-                                   "EuyNTcZHmCOPkVk2rHSoVqZQu1v/mntua4ym0qcCgYASTSMXNL2uOXff1fiSQBP/\n"
-                                   "gzO2p+guUWcfR5Q/pQrqGSxQzhi3ebntVnVv93jXCOq0REn0gehzgAK+M/0I9SpQ\n"
-                                   "jYeVZCLLFgG+yJaIfnXt7+GUHrzRM2otR/jSqwiRiZzhjwQnG+xdrf3ViiKIRw05\n"
-                                   "YiVzz6jcIbYZ6k58c8NiWw==\n"
+                                   "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1n1jxN7fUFbUV\n"
+                                   "Zc3rn+ZgZ4oWv4v30HgTLgOIZr9DOvtDk/xkKK9UPlKgHX6s+KulIOu9cqlEDNz8\n"
+                                   "Bh5Dsx9I9K7h6ax+BC6NUPkj5nU4pzl36lP9Mxot01Cck5GmP/7nGZwh05eGy+qf\n"
+                                   "ZDvqGNJ2D1GzI84uznCYFT1b0zliINrWls8ylOTjrr/ECoq6a5htC2TD/2EWW7Oy\n"
+                                   "xavn4bmkp7B05HtLz9kAXOfa8TX9WfzwAj8FUZiEvZWr87ei4Olj5T3rAaslCAVU\n"
+                                   "Ftnu+11sxnRS6AOjwLhOrz63ubaT2ZKSPr8DEzt3nljmpp68aUJOYFX9Lmpa1YbT\n"
+                                   "Rt3InN2xAgMBAAECggEAAeTyIcpY7vI1Nw54H4MsFs9sDVdjaTFVGBTrB9CgiCqh\n"
+                                   "kixSBD5rY7rM4R6MCQq37/5s29QKFJ7Fhq7Op01pn/jTXFTAwV8ffpOJYbJtGkS3\n"
+                                   "1y3lwRArIshSzZGsqEbMsxIQj5OPWUifsn7/MMggMjrv+UKzZOGvPKekdSR55pgL\n"
+                                   "u7XzbPGEyTCT75BsWF+8RfBhSTbpNT0XYCzcSxMfOnDbjidtCEc7yjY4qIZm+Bih\n"
+                                   "44b+j6v+w91f4IdgW/OQMY1GCKV5e7ApeqlR9o1MQVtKMzac20LtmAhKnXU39zgv\n"
+                                   "cV/CNzGT+rCFESy9Fpdv4nm6QlQpagk0AFWV3pVNAQKBgQDcS+OhnXhK8XNBB9Qs\n"
+                                   "OMbLkN9mtNY40l4Q81cewhTCd/xgr0oLUgXxeNocnpdO/mgV/GFp3egh7LU/AcSE\n"
+                                   "ueE+Xd3Y7IjzrV6TG4M73bRkxUbfYnCIXq5cMqv0GGZvOg1KgbNwXVMO+eW/ddf3\n"
+                                   "OoKPN9pj18RHURYeDqHJv+qQQQKBgQDTDt9R4AkiYQcScnK8z3mtBF/3Pr58pODP\n"
+                                   "uIvBspzbn8NWlW3M32q260JGrWnXFF3coVDqU6PMhdD4MSiOQ0RpiKwTBhvJ0F4f\n"
+                                   "6ZdycmdYb1dzMb1u/tGCrjqqH8C0CiNe1Obq5PikYrgI/fqK66xvEj/JQ/LRo1R4\n"
+                                   "nWaNLsbxcQKBgQCnW4/nK7ZDWQLyGHx7y/ZamAjgAens6QRFZFh/KXqT8ots+D4M\n"
+                                   "M5gIRoOM0n6oqGVyrnVi9A5yF13qK/Gb04rm0nDDZ47zcHY00+XzCQ8Or0CUXDiZ\n"
+                                   "oTRdHrG7kv3e6f9G5xnm9z8uVXLQ7TnQvEaLfycOStD2TQe8dek7V+1fAQKBgDjc\n"
+                                   "MN3l9ZAFg9o8axzi6GzsWM5LYRZDdS2BEmXEsO2aRQ32g/ZF2oIdL2XLIlCHdCIU\n"
+                                   "c7AtiFt5UasL01lAVhX4dCNL6gCc2j7Ot7Zli+IPXQfzxo04qUkDl1pt44Sdlpnd\n"
+                                   "0bhGp5Xh4qLJic4TYAksaXLXk3tW/VLhVNeEWqSBAoGADiHsTVFds00r41q75c1D\n"
+                                   "EADUnkE3dPr31wRz9GPl7D0cTuf9NMB+I30CMKWI3wCMlKM5UmcS8/yYEt0N1B19\n"
+                                   "LALKwZ4iEouf9KDIojOKyNv9e+cP4AHIKP+FOp8X5KyOgkHKNCfP86JykrQ8nL2L\n"
+                                   "QlVT3ReZg1Cgf/Omx4GAtIs=\n"
                                    "-----END PRIVATE KEY-----\n";
 
 // The ID of the spreadsheet where the data is published
-const char spreadsheetId[] = "1Ho5H6qfHyVTo3fvcvrGUEGIylHTAWWfTAO8dBwZUqnI";
+const char spreadsheetId[] = "1DDPOXX3uooCHbO_UzsCNnbQAA7hsjsSV75VzBJDNk3o";
 
 // Token Callback function
 void tokenStatusCallback(TokenInfo info);
@@ -254,7 +262,7 @@ float acc_dist_m10;
 float acc_dist_m20;
 float acc_dist_m20p;
 bool DriveOn = false;
-bool StartWifi = false;
+bool StartWifi = true;
 bool InitRst = false;
 bool TrigRst = false;
 bool kWh_update = false;
@@ -2296,4 +2304,4 @@ void loop()
   }
   
   ResetCurrTrip();  // Check if condition are met
-}
+}}

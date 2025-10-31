@@ -38,9 +38,7 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
   }
     
   lcd.fillScreen(TFT_BLACK);
-  lcd.setTextColor(TFT_GREEN);
-  //lcd.setTextSize(1);
-  //lcd.setFreeFont(&FreeSans12pt7b);
+  lcd.setTextColor(TFT_GREEN);  
   lcd.drawString("Connecting", lcd.width() / 2, lcd.height() / 2 - 50);
   lcd.drawString("To", lcd.width() / 2, lcd.height() / 2);
   lcd.drawString("Wifi", lcd.width() / 2, lcd.height() / 2 + 50);

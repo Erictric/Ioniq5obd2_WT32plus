@@ -14,7 +14,6 @@ bool OBD2connected = false;
 
 void ConnectToOBD2(LGFX& lcd){
   char strRetries[2];  
-  //ELM_PORT.setPin("1234");
   ELM_PORT.begin("IOS-Vlink");
   
   lcd.fillScreen(TFT_BLACK);
@@ -31,7 +30,6 @@ void ConnectToOBD2(LGFX& lcd){
     dtostrf(retries,1,0,strRetries);
     //Serial.println("Couldn't connect to OBD scanner - Phase 1");
     lcd.fillScreen(TFT_BLACK);
-    //lcd.setTextSize(1);
     lcd.drawString("Couldn't", lcd.width() / 2, lcd.height() / 2 - 100);
     lcd.drawString("connect to", lcd.width() / 2, lcd.height() / 2 - 50);
     lcd.drawString("OBDII", lcd.width() / 2, lcd.height() / 2);
@@ -63,7 +61,6 @@ void ConnectToOBD2(LGFX& lcd){
   //Serial.println("Connected to OBDII");
       
   lcd.fillScreen(TFT_BLACK);
-  //lcd.setTextSize(1);
   lcd.drawString("Connected",  lcd.width() / 2, lcd.height() / 2 - 50);
   lcd.drawString("to OBDII", lcd.width() / 2, lcd.height() / 2);
 
