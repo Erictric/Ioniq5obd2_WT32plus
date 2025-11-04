@@ -262,7 +262,7 @@ float acc_dist_m10;
 float acc_dist_m20;
 float acc_dist_m20p;
 bool DriveOn = false;
-bool StartWifi = true;
+float StartWifi = 0;
 bool InitRst = false;
 bool TrigRst = false;
 bool kWh_update = false;
@@ -515,7 +515,7 @@ void setup(void)
   LastSoC = EEPROM.readFloat(56);
   nbr_saved = EEPROM.readFloat(60);
   acc_Ah = EEPROM.readFloat(64);
-  //acc_kWh_25 = EEPROM.readFloat(68);
+  StartWifi = EEPROM.readFloat(68);
   //acc_kWh_10 = EEPROM.readFloat(72);
   //acc_kWh_0 = EEPROM.readFloat(76);
   //acc_kWh_m10 = EEPROM.readFloat(80);
@@ -549,7 +549,7 @@ void setup(void)
   /*                     CONNECTION TO WIFI                         */
   /*/////////////////////////////////////////////////////////////////*/
 
-  if (StartWifi && OBD2connected) {
+  if ((StartWifi == 1) && OBD2connected) {
     ConnectWifi(lcd, Wifi_select);
 
     //Configure time
@@ -1706,7 +1706,7 @@ void stop_esp() {
 void button(){
   if (lcd.getTouch(&x, &y) && !OBD2connected) {    
     lcd.setBrightness(128); // Switch on the display
-    //ConnectToOBD2(lcd);
+    ConnectToOBD2(lcd);
   }
   else if (lcd.getTouch(&x, &y)) {    
           
@@ -1716,11 +1716,19 @@ void button(){
       if (TouchTime >= 2 & !TouchLatch){
         Serial.println("Button1 Long Press");
         TouchLatch = true;
-        if (send_enabled){
-          send_enabled = false;
+        if (StartWifi == 1){
+          StartWifi = 0;
+          EEPROM.writeFloat(68, StartWifi);
+          EEPROM.commit();
+          save_lost('P');
+          ESP.restart();
         }
         else{
-          send_enabled = true;
+          StartWifi = 1;
+          EEPROM.writeFloat(68, StartWifi);
+          EEPROM.commit();
+          save_lost('P');
+          ESP.restart();
         }        
       }            
       if (!Btn1SetON)
@@ -2157,7 +2165,7 @@ void page4() {
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "Max_Reg");
   strcpy(titre[4], "distance");
-  strcpy(titre[5], "Speed");
+  strcpy(titre[5], "StartWifi");
   strcpy(titre[6], "Cell nbr");
   strcpy(titre[7], "Cell nbr");
   strcpy(titre[8], "OUT temp");
@@ -2167,7 +2175,7 @@ void page4() {
   value_float[2] = MAXcellv;
   value_float[3] = Max_Reg;
   value_float[4] = distance;
-  value_float[5] = Speed;
+  value_float[5] = StartWifi;
   value_float[6] = MINcellvNb;
   value_float[7] = MAXcellvNb;
   value_float[8] = OUTDOORtemp;
@@ -2277,7 +2285,7 @@ void loop()
       DrawBackground = true;
     }
 
-    if (StartWifi) {  // If wifi is configured then display wifi status led      
+    if (StartWifi == 1) {  // If wifi is configured then display wifi status led      
       if (!send_enabled){
         lcd.fillCircle(300, 20, 6,TFT_WHITE);
       }
