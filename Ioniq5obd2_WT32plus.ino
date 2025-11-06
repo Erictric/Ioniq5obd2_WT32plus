@@ -1720,8 +1720,7 @@ void button(){
           StartWifi = 0;
           EEPROM.writeFloat(68, StartWifi);
           EEPROM.commit();
-          save_lost('P');
-          ESP.restart();
+          send_enabled = false;
         }
         else{
           StartWifi = 1;
@@ -2165,7 +2164,7 @@ void page4() {
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "Max_Reg");
   strcpy(titre[4], "distance");
-  strcpy(titre[5], "StartWifi");
+  strcpy(titre[5], "dist_save");
   strcpy(titre[6], "Cell nbr");
   strcpy(titre[7], "Cell nbr");
   strcpy(titre[8], "OUT temp");
@@ -2175,7 +2174,7 @@ void page4() {
   value_float[2] = MAXcellv;
   value_float[3] = Max_Reg;
   value_float[4] = distance;
-  value_float[5] = StartWifi;
+  value_float[5] = dist_save;
   value_float[6] = MINcellvNb;
   value_float[7] = MAXcellvNb;
   value_float[8] = OUTDOORtemp;
@@ -2296,6 +2295,10 @@ void loop()
         lcd.fillCircle(300, 20, 6,TFT_RED);
       }
     }
+     else{
+      tft.fillCircle(300, 20, 6,TFT_BLACK);
+    }
+	
         
     switch (screenNbr) {  // select page to display
       case 0: page1(); break;
