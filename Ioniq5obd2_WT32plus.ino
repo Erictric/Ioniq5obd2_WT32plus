@@ -19,15 +19,15 @@
 #include "Arduino.h"
 #include "LGFX_CLASS.h"
 #include "BT_communication.h"
+#include <WiFi.h>
 #include "Wifi_connection.h"
 #include "SafeString.h"
 #include "EEPROM.h"
-#include <SPI.h>
-#include "FreeRTOSConfig.h"
+//#include <SPI.h>
+//#include <Arduino_FreeRTOS.h>
 #include <Adafruit_GFX.h>
-#include <Adafruit_FT6206.h>
 #include <ESP_Google_Sheet_Client.h>
-#include <TimeLib.h>
+#include <Time.h>
 
 static LGFX lcd;            // declare display variable
 
