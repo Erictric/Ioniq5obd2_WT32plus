@@ -19,17 +19,19 @@
 #include "Arduino.h"
 #include "LGFX_CLASS.h"
 #include "BT_communication.h"
-#include <WiFi.h>
+#include "WiFi.h"
 #include "Wifi_connection.h"
 #include "SafeString.h"
 #include "EEPROM.h"
-//#include <SPI.h>
-//#include <Arduino_FreeRTOS.h>
 #include <Adafruit_GFX.h>
 #include <ESP_Google_Sheet_Client.h>
-#include <Time.h>
+#include <time.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+#include "ELMduino.h"
 
 static LGFX lcd;            // declare display variable
+extern ELM327 myELM327;     // declare ELM327 object
 
 #define DEBUG_PORT Serial
 
@@ -85,9 +87,6 @@ uint16_t drawLvl[10] = {100, 170, 240, 310, 380, 100, 170, 240, 310, 380}; // an
 
 boolean ResetOn = true;
 int screenNbr = 0;
-
-//bool send_enabled = false;
-//bool initscan = false;
 
 uint8_t record_code = 0;
 float mem_energy = 0;
@@ -234,7 +233,6 @@ float degrad_ratio_change = 0;
 bool Init_degrad = true;
 float old_PIDkWh_100km = 14;
 float old_lost = 1;
-//float Estleft_kWh;
 float kWh_100km;
 float span_kWh_100km;
 float PIDkWh_100;
@@ -296,11 +294,11 @@ float return_kwh;
 
 // Variables for touch x,y
 //static int32_t x, y;
-TS_Point p;
+//TS_Point p;
 static int xMargin = 20, yMargin = 420, margin = 20, btnWidth = 80, btnHeigth = 55;
-char* BtnAtext = "CONS";
-char* BtnBtext = "BATT";
-char* BtnCtext = "POWER";
+const char* BtnAtext = "CONS";
+const char* BtnBtext = "BATT";
+const char* BtnCtext = "POWER";
 char Maintitre[][13] = {"Consommation", "Batt. Info", "Energie", "Batt. Info 2"};
 uint16_t MainTitleColor = TFT_WHITE;
 uint16_t BtnOnColor = TFT_GREEN;
@@ -320,7 +318,7 @@ struct RoundedRect {
   int yHeight;
   byte cornerRadius;
   uint16_t color;
-  char* BtnText;
+  const char* BtnText;
 };
 
 RoundedRect btnAon = {
@@ -399,7 +397,7 @@ bool success = false;
 unsigned long sendInterval = 10000;  // in millisec
 unsigned long GSheetTimer = 0;
 bool sendIntervalOn = false;
-time_t t = 0;   // Variable to save current epoch time
+tm timeinfo;   // Variable to save current epoch time
 uint16_t nbrDays[13] = {0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366};  // Array for summer time logics
 char EventTime[18];   // Array to send formatted time
 const char* EventCode0 = "New Trip";
@@ -436,22 +434,27 @@ void callback(){  //required function for touch wake
 
 // Function that gets current epoch time
 
-unsigned long getTime() {
+tm getTime() {
   time_t now;
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
     Serial.println("Failed to obtain time");
-    return(0);
+    return timeinfo;
   }
   time(&now);
 
-  if (((nbrDays[month(now) - 1] + day(now)) >= 70) && ((nbrDays[month(now) - 1] + day(now)) <= 308)) {  //  summer time logic
-        now = now - 14400;
-      }      
-      else{
-        now = now - 18000;
-      }
-  return now;
+  // Use struct tm fields instead of TimeLib helpers (tm_mon is 0-11, tm_mday is 1-31)
+  //int monthIndex = timeinfo.tm_mon; // 0..11
+  //int dayOfMonth = timeinfo.tm_mday;
+  //int dayOfYear = nbrDays[monthIndex] + dayOfMonth;
+
+  // summer time logic
+  //if ((dayOfYear >= 70) && (dayOfYear <= 308)) {
+  //  now = now - 14400;
+  //} else {
+  //  now = now - 18000;
+  //}
+  return timeinfo;
 }
 
 hw_timer_t *Timer0_Cfg = NULL;
@@ -538,7 +541,7 @@ void setup(void)
   //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
 
   /* uncomment if you need to display Safestring results on Serial Monitor */
-  //SafeString::setOutput(Serial);
+  SafeString::setOutput(Serial);
 
   /*/////////////////////////////////////////////////////////////////*/
   /*                    CONNECTION TO OBDII                          */
@@ -679,8 +682,9 @@ void read_data() {
   //  Read PID 220101 each iteration to get faster battery power update
   myELM327.sendCommand("AT SH 7E4");  // Set Header for BMS
 
+  
   if (myELM327.queryPID("220101")) {  // Service and Message PID = hex 22 0101 => dec 34, 257
-   
+  //if (myELM327.nb_rx_state ==  ELM_SUCCESS) { 
     char* payload = myELM327.payload;
     size_t payloadLen = myELM327.recBytes;
     Serial.print("payloadLen: ");
@@ -752,8 +756,9 @@ void read_data() {
   
         button();
         myELM327.sendCommand("AT SH 7E4");  // Set Header for BMS
-          
+        //myELM327.queryPID((char*)"220105");  
         if (myELM327.queryPID("220105")) {  // Service and Message PID = hex 22 0105 => dec 34, 261
+        //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
   
@@ -778,8 +783,9 @@ void read_data() {
   
         button();
         myELM327.sendCommand("AT SH 7E4");  // Set Header for BMS
-  
+        //myELM327.queryPID((char*)"220106");               
         if (myELM327.queryPID("220106")) {  // Service and Message PID = hex 22 0106 => dec 34, 262
+        //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
   
@@ -797,7 +803,9 @@ void read_data() {
         
         button();
         myELM327.sendCommand("AT SH 7C6");  // Set Header for CLU Cluster Module
-        if (myELM327.queryPID("22B002")) {  // Service and Message PID
+        //myELM327.queryPID((char*)"22B002");
+        if (myELM327.queryPID("22B002")) {
+        //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
   
@@ -809,8 +817,10 @@ void read_data() {
       case 4:
   
         button();
-        myELM327.sendCommand("AT SH 7B3");  //Set Header Aircon
+        myELM327.sendCommand("AT SH 7B3");  //Set Header Aircon   
+        //myELM327.queryPID((char*)"220100");  
         if (myELM327.queryPID("220100")) {  // Service and Message PID
+        //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
   
@@ -825,8 +835,10 @@ void read_data() {
       case 5:
   
         button();
-        myELM327.sendCommand("AT SH 7A0");  //Set BCM Header
+        myELM327.sendCommand("AT SH 7A0");  //Set BCM Header   
+        //myELM327.queryPID((char*)"22C00B");     
         if (myELM327.queryPID("22C00B")) {  // Service and Message PID
+        //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
   
@@ -2239,11 +2251,11 @@ void loop()
     }
     if (sending_data){     /*/////// This will trigger logic to send data to Google sheet /////////////////*/
       // Get timestamp
-      t = getTime();
+      timeinfo = getTime();
       Serial.print("Time updated: ");
-      Serial.println(t);
+      //Serial.println(t);
       
-      sprintf(EventTime, "%02d-%02d-%02d %02d:%02d:%02d", day(t), month(t), year(t), hour(t), minute(t), second(t));                         
+      sprintf(EventTime, "%02d-%02d-%04d %02d:%02d:%02d", t.tm_mday, t.tm_mon + 1, t.tm_year + 1900, t.tm_hour, t.tm_min, t.tm_sec);                         
       
       send_data = true;  // This will trigger logic to send data to Google sheet
       sending_data = false;       
@@ -2296,7 +2308,7 @@ void loop()
       }
     }
      else{
-      tft.fillCircle(300, 20, 6,TFT_BLACK);
+      lcd.fillCircle(300, 20, 6,TFT_BLACK);
     }
 	
         
@@ -2315,4 +2327,4 @@ void loop()
   }
   
   ResetCurrTrip();  // Check if condition are met
-}}
+}
