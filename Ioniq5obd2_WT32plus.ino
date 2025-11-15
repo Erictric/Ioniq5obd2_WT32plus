@@ -2255,7 +2255,7 @@ void loop()
       Serial.print("Time updated: ");
       //Serial.println(t);
       
-      sprintf(EventTime, "%02d-%02d-%04d %02d:%02d:%02d", t.tm_mday, t.tm_mon + 1, t.tm_year + 1900, t.tm_hour, t.tm_min, t.tm_sec);                         
+      sprintf(EventTime, "%02d-%02d-%04d %02d:%02d:%02d", timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900, timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);                         
       
       send_data = true;  // This will trigger logic to send data to Google sheet
       sending_data = false;       
