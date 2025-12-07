@@ -11,52 +11,63 @@ BLEClientSerial BLESerial;
 ELM327 myELM327;    //Object for OBD2 device
 
 bool OBD2connected = false;
-extern bool showBLESelection;
-extern bool bleScreenDrawn;
-extern int bleScreenPage;
-extern String storedBLEDevice;
 
 void ConnectToOBD2(LGFX& lcd){
-  char strRetries[2];   
+  char strRetries[2];  
+  ELM_PORT.begin("IOS-Vlink");
   
-  // Try to initialize BLE - if it fails, handle gracefully
-  if (!ELM_PORT.begin(storedBLEDevice.c_str())) {
-    Serial.println("BLE initialization failed");
-    OBD2connected = false;
-    return;
-  }
-  else {
-    Serial.println("BLE initialized successfully");
-    Serial.println("...Connection to OBDII...");
-  }
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setTextColor(TFT_GREEN);
+  lcd.drawString("Connecting", lcd.width() / 2, lcd.height() / 2 - 50);
+  lcd.drawString("To", lcd.width() / 2, lcd.height() / 2);
+  lcd.drawString("OBDII", lcd.width() / 2, lcd.height() / 2 + 50);
+  lcd.drawString("Device", lcd.width() / 2, lcd.height() / 2 + 100);
+  Serial.println("...Connection to OBDII...");
   
   int retries = 0;
   while (!ELM_PORT.connect() && (retries < 4)) // Device name of iCar Vgate pro BT4.0 OBD adapter
   {
-    Serial.printf("Couldn't connect to OBD scanner - Phase 1 (retry %d)\n", retries);
+    dtostrf(retries,1,0,strRetries);
+    //Serial.println("Couldn't connect to OBD scanner - Phase 1");
+    lcd.fillScreen(TFT_BLACK);
+    lcd.drawString("Couldn't", lcd.width() / 2, lcd.height() / 2 - 100);
+    lcd.drawString("connect to", lcd.width() / 2, lcd.height() / 2 - 50);
+    lcd.drawString("OBDII", lcd.width() / 2, lcd.height() / 2);
+    lcd.drawString("scanner", lcd.width() / 2, lcd.height() / 2 + 50);
+    lcd.drawString(" Phase 1", lcd.width() / 2, lcd.height() / 2 + 100); 
     delay(500);
-    retries++;
-  }
-  
-  // If all connection attempts failed, show selection screen
-  if (retries >= 4) {
-    Serial.println("Failed to find OBD device after retries");
-    showBLESelection = true;
-    bleScreenDrawn = false;  // Force initial draw
-    bleScreenPage = 0;  // Start with connection failed message
-    OBD2connected = false;
-    return;
+    retries++;   
+    lcd.fillScreen(TFT_BLACK);
+    lcd.drawString("Connection", lcd.width() / 2, lcd.height() / 2 - 50);
+    lcd.drawString("Retry", lcd.width() / 2, lcd.height() / 2);
+    lcd.drawString(strRetries, lcd.width() / 2, lcd.height() / 2 + 50);        
   }
 
   if (!myELM327.begin(ELM_PORT)) // select protocol '6'
   {
-    Serial.println("Couldn't connect to OBD scanner - Phase 2");
+    //Serial.println("Couldn't connect to OBD scanner - Phase 2");    
+    lcd.fillScreen(TFT_BLACK);    
+    lcd.drawString("Couldn't", lcd.width() / 2, lcd.height() / 2 - 50);
+    lcd.drawString("connect to", lcd.width() / 2, lcd.height() / 2);
+    lcd.drawString("OBDII", lcd.width() / 2, lcd.height() / 2 + 50);
+    lcd.drawString("scanner", lcd.width() / 2, lcd.height() / 2 + 100);
+    lcd.drawString(" Phase 2", lcd.width() / 2, lcd.height() / 2 + 150);
+    delay(500);       
+    
+    //esp_deep_sleep_start();
   }
+
   else{
-    Serial.println("Connected to OBDII");
-    OBD2connected = true;
-    extern bool DrawBackground;  // Forward declaration
-    DrawBackground = true;  // Ensure display is drawn after connection
+  //Serial.println("Connected to OBDII");
+      
+  lcd.fillScreen(TFT_BLACK);
+  lcd.drawString("Connected",  lcd.width() / 2, lcd.height() / 2 - 50);
+  lcd.drawString("to OBDII", lcd.width() / 2, lcd.height() / 2);
+
+  OBD2connected = true;
+
+  delay(500);
+  lcd.fillScreen(TFT_BLACK);
   }
 }
 #endif

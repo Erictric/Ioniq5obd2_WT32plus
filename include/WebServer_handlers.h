@@ -75,40 +75,6 @@ void handleRoot() {
   }
   server.sendContent("</div>");
   
-  // List archived files
-  server.sendContent("<div class='card'><h2>Archived Log Files</h2>");
-  if (sdCardAvailable) {
-    File root = SD.open("/");
-    if (root) {
-      bool foundArchive = false;
-      File file = root.openNextFile();
-      while (file) {
-        String filename = String(file.name());
-        // Look for archived files: ioniq5_log_YYYYMMDD.csv
-        if (filename.startsWith("ioniq5_log_") && filename.endsWith(".csv") && filename != "ioniq5_log.csv") {
-          foundArchive = true;
-          char buffer[256];
-          int fileSize = file.size() / 1024;  // Size in KB
-          snprintf(buffer, sizeof(buffer), 
-                   "<p>%s (%d KB) <a href='/download_archive?file=%s'>Download</a> "
-                   "<a href='/delete_archive?file=%s' onclick='return confirm(\"Delete %s?\")'>Delete</a></p>",
-                   filename.c_str(), fileSize, filename.c_str(), filename.c_str(), filename.c_str());
-          server.sendContent(buffer);
-        }
-        file.close();
-        file = root.openNextFile();
-      }
-      root.close();
-      
-      if (!foundArchive) {
-        server.sendContent("<p>No archived files</p>");
-      }
-    }
-  } else {
-    server.sendContent("<p>SD card not available</p>");
-  }
-  server.sendContent("</div>");
-  
   server.sendContent("<div class='card'><h2>System Info</h2>");
   char buffer[128];
   snprintf(buffer, sizeof(buffer), "<p>IP Address: %s</p>", WiFi.localIP().toString().c_str());
@@ -284,75 +250,6 @@ void handleDeleteSoC() {
     server.send(200, "text/html", "<html><body><h2>SoC decrease log file deleted</h2><a href='/'>Back</a></body></html>");
   } else {
     server.send(500, "text/plain", "Failed to delete file");
-  }
-}
-
-// Download archived file
-void handleDownloadArchive() {
-  if (!sdCardAvailable) {
-    server.send(404, "text/plain", "SD card not available");
-    return;
-  }
-  
-  if (!server.hasArg("file")) {
-    server.send(400, "text/plain", "Missing file parameter");
-    return;
-  }
-  
-  String filename = server.arg("file");
-  
-  // Security check: ensure filename starts with ioniq5_log_ and ends with .csv
-  if (!filename.startsWith("ioniq5_log_") || !filename.endsWith(".csv")) {
-    server.send(403, "text/plain", "Invalid filename");
-    return;
-  }
-  
-  String fullPath = "/" + filename;
-  
-  if (!SD.exists(fullPath.c_str())) {
-    server.send(404, "text/plain", "Archived file not found");
-    return;
-  }
-  
-  File file = SD.open(fullPath.c_str(), FILE_READ);
-  if (!file) {
-    server.send(500, "text/plain", "Failed to open archived file");
-    return;
-  }
-  
-  String disposition = "attachment; filename=" + filename;
-  server.sendHeader("Content-Disposition", disposition.c_str());
-  server.streamFile(file, "text/csv");
-  file.close();
-}
-
-// Delete archived file
-void handleDeleteArchive() {
-  if (!sdCardAvailable) {
-    server.send(404, "text/plain", "SD card not available");
-    return;
-  }
-  
-  if (!server.hasArg("file")) {
-    server.send(400, "text/plain", "Missing file parameter");
-    return;
-  }
-  
-  String filename = server.arg("file");
-  
-  // Security check: ensure filename starts with ioniq5_log_ and ends with .csv
-  if (!filename.startsWith("ioniq5_log_") || !filename.endsWith(".csv")) {
-    server.send(403, "text/plain", "Invalid filename");
-    return;
-  }
-  
-  String fullPath = "/" + filename;
-  
-  if (SD.remove(fullPath.c_str())) {
-    String html = "<html><body><h2>Archived file deleted: " + filename + "</h2><a href='/'>Back</a></body></html>";
-    server.send(200, "text/html", html.c_str());
-  } else {
-    server.send(500, "text/plain", "Failed to delete archived file");
   }
 }
 
