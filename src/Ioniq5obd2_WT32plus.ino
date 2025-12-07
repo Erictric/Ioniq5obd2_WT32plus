@@ -103,9 +103,6 @@ boolean ResetOn = true;
 int screenNbr = 0;
 bool showSaveConfirmation = false;  // Flag to show save confirmation dialog
 bool showWiFiInfo = false;  // Flag to show WiFi information screen
-bool showBLESelection = false;  // Flag to show BLE device selection screen
-bool bleScreenDrawn = false;  // Flag to track if BLE screen has been drawn
-int bleScreenPage = 0;  // 0=connection failed message, 1=device scan list
 int wifiScreenPage = 0;  // 0=scan list, 1=keyboard for SSID, 2=keyboard for password
 String wifiSSIDList[20];  // Store up to 20 WiFi networks
 int wifiRSSI[20];         // Store signal strength
@@ -113,12 +110,6 @@ int wifiCount = 0;        // Number of networks found
 int selectedWiFi = -1;    // Selected network index
 String enteredSSID = "";  // Manual SSID entry
 String enteredPassword = "";  // Password entry
-String bleDeviceList[20];  // Store up to 20 BLE devices
-int bleRSSI[20];           // Store signal strength
-int bleCount = 0;          // Number of BLE devices found
-int selectedBLE = -1;      // Selected BLE device index
-String storedBLEDevice = "IOS-Vlink";  // Default BLE device name (last successfully connected)
-String attemptedBLEDevice = "";  // Device currently being attempted for connection
 // Different character sets for keyboard
 char keyboardLower[] = "abcdefghijklmnopqrstuvwxyz";
 char keyboardUpper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -571,25 +562,9 @@ void setup(void)
   lcd.setTextDatum(MC_DATUM);
   lcd.setTextSize(1);
   lcd.setFreeFont(&FreeSans12pt7b);
-  
-  // Display welcome screen
-  lcd.fillScreen(TFT_BLACK);
-  lcd.setFont(&FreeSans18pt7b);
-  lcd.setTextColor(TFT_CYAN);
-  lcd.drawString("Ioniq 5", 160, 80);
-  lcd.drawString("OBD2 Data Reader", 160, 120);
-  
-  lcd.setFont(&FreeSans12pt7b);
-  lcd.setTextColor(TFT_YELLOW);
-  lcd.drawString("Initializing...", 160, 200);
-  
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_WHITE);
-  lcd.drawString("WiFi: Connecting...", 160, 280);
-  lcd.drawString("OBD2: Waiting...", 160, 310);
 
   /*////// initialize EEPROM with predefined size ////////*/
-  EEPROM.begin(242);  // Increased to accommodate WiFi credentials and BLE device name (72-103: SSID, 104-167: Password, 168: hasCustomWiFi, 210-241: BLE device name)
+  EEPROM.begin(242);  // Increased to accommodate WiFi credentials (72-103: SSID, 104-167: Password, 168: hasCustomWiFi)
 
   
   /*////// Get the stored value from last re-initialisation /////*/
@@ -614,20 +589,6 @@ void setup(void)
   acc_Ah = EEPROM.readFloat(64);
   send_enabled_float = EEPROM.readFloat(68);
   send_enabled = (send_enabled_float >= 0.5);  // Restore send_enabled from EEPROM (1.0 = enabled, 0.0 = disabled)
-  
-  // Load BLE device name from EEPROM (address 210-241, 32 chars max)
-  char bleDeviceChars[32];
-  for (int i = 0; i < 32; i++) {
-    bleDeviceChars[i] = EEPROM.read(210 + i);
-  }
-  bleDeviceChars[31] = '\0';  // Ensure null termination
-  if (bleDeviceChars[0] != 0 && bleDeviceChars[0] != 255) {  // Valid stored name
-    storedBLEDevice = String(bleDeviceChars);
-    Serial.print("Loaded BLE device from EEPROM: ");
-    Serial.println(storedBLEDevice);
-  } else {
-    Serial.println("Using default BLE device: IOS-Vlink");
-  }
   
   //acc_kWh_10 = EEPROM.readFloat(72);
   //acc_kWh_0 = EEPROM.readFloat(76);
@@ -728,18 +689,6 @@ void setup(void)
   if (StartWifi) {
     DEBUG_PORT.println("Attempting WiFi connection...");
     ConnectWifi(lcd, Wifi_select);
-    
-    // Update WiFi status on welcome screen
-    lcd.setFont(&FreeSans9pt7b);
-    if (WiFi.status() == WL_CONNECTED) {
-      lcd.setTextColor(TFT_GREEN);
-      lcd.fillRect(0, 270, 320, 20, TFT_BLACK);  // Clear previous message
-      lcd.drawString("WiFi: Connected", 160, 280);
-    } else {
-      lcd.setTextColor(TFT_RED);
-      lcd.fillRect(0, 270, 320, 20, TFT_BLACK);  // Clear previous message
-      lcd.drawString("WiFi: Failed", 160, 280);
-    }
   
     GSheet.printf("ESP Google Sheet Client v%s\n\n", ESP_GOOGLE_SHEET_CLIENT_VERSION);
   
@@ -766,8 +715,6 @@ void setup(void)
       server.on("/download_soc", handleDownloadSoC);
       server.on("/view_soc", handleViewSoC);
       server.on("/delete_soc", handleDeleteSoC);
-      server.on("/download_archive", handleDownloadArchive);
-      server.on("/delete_archive", handleDeleteArchive);
       server.onNotFound(handleNotFound);
       server.begin();
       DEBUG_PORT.print("Web server started at http://");
@@ -778,51 +725,7 @@ void setup(void)
   /*/////////////////////////////////////////////////////////////////*/
   /*                    CONNECTION TO OBDII                          */
   /*/////////////////////////////////////////////////////////////////*/
-  // Update OBD2 status to "Connecting..."
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_YELLOW);
-  lcd.fillRect(0, 300, 320, 20, TFT_BLACK);  // Clear previous message
-  lcd.drawString("OBD2: Connecting...", 160, 310);
-  
-  attemptedBLEDevice = storedBLEDevice;  // Set the device being attempted for startup connection
   ConnectToOBD2(lcd);
-  
-  // After OBD2 connection attempt, show final status on welcome screen
-  lcd.fillScreen(TFT_BLACK);
-  lcd.setFont(&FreeSans18pt7b);
-  lcd.setTextColor(TFT_CYAN);
-  lcd.drawString("Ioniq 5", 160, 80);
-  lcd.drawString("OBD2 Data Reader", 160, 120);
-  
-  lcd.setFont(&FreeSans12pt7b);
-  lcd.setTextColor(TFT_GREEN);
-  lcd.drawString("Ready!", 160, 200);
-  
-  lcd.setFont(&FreeSans9pt7b);
-  // WiFi status
-  if (WiFi.status() == WL_CONNECTED) {
-    lcd.setTextColor(TFT_GREEN);
-    lcd.drawString("WiFi: Connected", 160, 280);
-    lcd.setTextColor(TFT_CYAN);
-    lcd.drawString(WiFi.localIP().toString(), 160, 310);
-  } else {
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("WiFi: Not Connected", 160, 280);
-  }
-  
-  // OBD2 status
-  if (OBD2connected) {
-    lcd.setTextColor(TFT_GREEN);
-    lcd.drawString("OBD2: Connected", 160, 350);
-  } else {
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("OBD2: Not Connected", 160, 350);
-  }
-  
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_LIGHTGREY);
-  lcd.drawString("Starting in 3 seconds...", 160, 420);
-  delay(3000);  // Show status for 3 seconds
 
   //Setup interrupt on Touch Pad 2 (GPIO2)
   //touchAttachInterrupt(T2, callback, Threshold);
@@ -1321,8 +1224,6 @@ void read_data() {
         mem_SoC = SoC;
         initscan = true;
         record_code = 1;
-        // Check if file needs archiving (>5000 lines)
-        checkAndArchiveIfNeeded(csvFilename);
         reset_trip();      
       }  
       
@@ -1613,73 +1514,6 @@ float calc_kwh(float min_SoC, float max_SoC) {
 }
 
 //----------------------------------------------------------------------------------------
-//        Count lines in a file
-//----------------------------------------------------------------------------------------
-int countFileLines(const char* filename) {
-  File file = SD.open(filename, FILE_READ);
-  if (!file) {
-    return 0;
-  }
-  
-  int lineCount = 0;
-  while (file.available()) {
-    if (file.read() == '\n') {
-      lineCount++;
-    }
-  }
-  file.close();
-  return lineCount;
-}
-
-//----------------------------------------------------------------------------------------
-//        Archive file with current date
-//----------------------------------------------------------------------------------------
-bool archiveFile(const char* filename) {
-  // Get current time
-  if (!getLocalTime(&timeinfo)) {
-    Serial.println("Failed to obtain time for archiving");
-    return false;
-  }
-  
-  // Create new filename with date: /ioniq5_log_YYYYMMDD.csv
-  char newFilename[50];
-  snprintf(newFilename, sizeof(newFilename), "/ioniq5_log_%04d%02d%02d.csv",
-           timeinfo.tm_year + 1900, timeinfo.tm_mon + 1, timeinfo.tm_mday);
-  
-  // Rename the file
-  if (SD.rename(filename, newFilename)) {
-    Serial.print("File archived as: ");
-    Serial.println(newFilename);
-    return true;
-  } else {
-    Serial.println("Failed to archive file");
-    return false;
-  }
-}
-
-//----------------------------------------------------------------------------------------
-//        Check and archive file if needed (called on EventCode1)
-//----------------------------------------------------------------------------------------
-void checkAndArchiveIfNeeded(const char* filename) {
-  int lineCount = countFileLines(filename);
-  Serial.print("File line count: ");
-  Serial.println(lineCount);
-  
-  if (lineCount > 5000) {
-    Serial.println("File exceeds 5000 lines, archiving...");
-    if (archiveFile(filename)) {
-      // Create new file with header
-      File file = SD.open(filename, FILE_WRITE);
-      if (file) {
-        file.println("timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved");
-        file.close();
-        Serial.println("New file created with header");
-      }
-    }
-  }
-}
-
-//----------------------------------------------------------------------------------------
 //        Save data to SD card in CSV format
 //----------------------------------------------------------------------------------------
 bool saveToSD(const char* timestamp) {
@@ -1707,63 +1541,63 @@ bool saveToSD(const char* timestamp) {
   
   Serial.println("File opened, writing data...");
   
-  // Write tab-separated row (same order as Google Sheets)
-  file.print(timestamp); file.print("\t");
-  file.print(SoC); file.print("\t");
-  file.print(BmsSoC); file.print("\t");
-  file.print(Power); file.print("\t");
-  file.print(TripOdo); file.print("\t");
-  file.print(BattMinT); file.print("\t");
-  file.print(BattMaxT); file.print("\t");
-  file.print(Heater); file.print("\t");
-  file.print(OUTDOORtemp); file.print("\t");
-  file.print(INDOORtemp); file.print("\t");
-  file.print(Net_kWh); file.print("\t");
-  file.print(Net_kWh2); file.print("\t");
-  file.print(acc_energy); file.print("\t");
-  file.print(Net_Ah); file.print("\t");
-  file.print(acc_Ah); file.print("\t");
-  file.print(EstFull_Ah); file.print("\t");
-  file.print(Max_Pwr); file.print("\t");
-  file.print(Max_Reg); file.print("\t");
-  file.print(MAXcellv); file.print("\t");
-  file.print(MINcellv); file.print("\t");
-  file.print(MAXcellvNb); file.print("\t");
-  file.print(MINcellvNb); file.print("\t");
-  file.print(BATTv); file.print("\t");
-  file.print(BATTc); file.print("\t");
-  file.print(AuxBattV); file.print("\t");
-  file.print(CEC); file.print("\t");
-  file.print(CED); file.print("\t");
-  file.print(CDC); file.print("\t");
-  file.print(CCC); file.print("\t");
-  file.print(SOH); file.print("\t");
-  file.print(used_kWh); file.print("\t");
-  file.print(left_kWh); file.print("\t");
-  file.print(full_kWh); file.print("\t");
-  file.print(start_kWh); file.print("\t");
-  file.print(PID_kWhLeft); file.print("\t");
-  file.print(degrad_ratio); file.print("\t");
-  file.print(InitSoC); file.print("\t");
-  file.print(LastSoC); file.print("\t");
-  file.print(PIDkWh_100); file.print("\t");
-  file.print(kWh_100km); file.print("\t");
-  file.print(span_kWh_100km); file.print("\t");
-  file.print(Trip_dist); file.print("\t");
-  file.print(distance); file.print("\t");
-  file.print(Speed); file.print("\t");
-  file.print(Odometer); file.print("\t");
-  file.print(OPtimemins); file.print("\t");
-  file.print(TripOPtime); file.print("\t");
-  file.print(CurrOPtime); file.print("\t");
-  file.print(TireFL_P); file.print("\t");
-  file.print(TireFR_P); file.print("\t");
-  file.print(TireRL_P); file.print("\t");
-  file.print(TireRR_P); file.print("\t");
-  file.print(TireFL_T); file.print("\t");
-  file.print(TireFR_T); file.print("\t");
-  file.print(TireRL_T); file.print("\t");
-  file.print(TireRR_T); file.print("\t");
+  // Write comma-separated row (same order as Google Sheets)
+  file.print(timestamp); file.print(",");
+  file.print(SoC); file.print(",");
+  file.print(BmsSoC); file.print(",");
+  file.print(Power); file.print(",");
+  file.print(TripOdo); file.print(",");
+  file.print(BattMinT); file.print(",");
+  file.print(BattMaxT); file.print(",");
+  file.print(Heater); file.print(",");
+  file.print(OUTDOORtemp); file.print(",");
+  file.print(INDOORtemp); file.print(",");
+  file.print(Net_kWh); file.print(",");
+  file.print(Net_kWh2); file.print(",");
+  file.print(acc_energy); file.print(",");
+  file.print(Net_Ah); file.print(",");
+  file.print(acc_Ah); file.print(",");
+  file.print(EstFull_Ah); file.print(",");
+  file.print(Max_Pwr); file.print(",");
+  file.print(Max_Reg); file.print(",");
+  file.print(MAXcellv); file.print(",");
+  file.print(MINcellv); file.print(",");
+  file.print(MAXcellvNb); file.print(",");
+  file.print(MINcellvNb); file.print(",");
+  file.print(BATTv); file.print(",");
+  file.print(BATTc); file.print(",");
+  file.print(AuxBattV); file.print(",");
+  file.print(CEC); file.print(",");
+  file.print(CED); file.print(",");
+  file.print(CDC); file.print(",");
+  file.print(CCC); file.print(",");
+  file.print(SOH); file.print(",");
+  file.print(used_kWh); file.print(",");
+  file.print(left_kWh); file.print(",");
+  file.print(full_kWh); file.print(",");
+  file.print(start_kWh); file.print(",");
+  file.print(PID_kWhLeft); file.print(",");
+  file.print(degrad_ratio); file.print(",");
+  file.print(InitSoC); file.print(",");
+  file.print(LastSoC); file.print(",");
+  file.print(PIDkWh_100); file.print(",");
+  file.print(kWh_100km); file.print(",");
+  file.print(span_kWh_100km); file.print(",");
+  file.print(Trip_dist); file.print(",");
+  file.print(distance); file.print(",");
+  file.print(Speed); file.print(",");
+  file.print(Odometer); file.print(",");
+  file.print(OPtimemins); file.print(",");
+  file.print(TripOPtime); file.print(",");
+  file.print(CurrOPtime); file.print(",");
+  file.print(TireFL_P); file.print(",");
+  file.print(TireFR_P); file.print(",");
+  file.print(TireRL_P); file.print(",");
+  file.print(TireRR_P); file.print(",");
+  file.print(TireFL_T); file.print(",");
+  file.print(TireFR_T); file.print(",");
+  file.print(TireRL_T); file.print(",");
+  file.print(TireRR_T); file.print(",");
   file.print(nbr_saved);
   
   file.println();  // End the CSV line  file.close();
@@ -1795,7 +1629,7 @@ bool saveEventCodeToSD(const char* timestamp) {
   }
   
   // Write event code row with timestamp
-  file.print(timestamp); file.print("\t");
+  file.print(timestamp); file.print(",");
   
   if (record_code == 0) {
     // No reset, only header required (ESP32 power reboot)
@@ -1804,33 +1638,33 @@ bool saveEventCodeToSD(const char* timestamp) {
   } else {
     switch (record_code) {
     case 1:
-      file.print(EventCode1); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_LastSoC); file.print("\t"); file.print(mem_LastSoC);
+      file.print(EventCode1); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_LastSoC); file.print(","); file.print(mem_LastSoC);
       break;
     case 2:
       file.print(EventCode2);
       break;
     case 3:
-      file.print(EventCode3); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_PrevSoC); file.print("\t"); file.print(mem_PrevSoC); file.print("\t");
-      file.print(Mess_Energy); file.print("\t"); file.print(mem_energy);
+      file.print(EventCode3); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_PrevSoC); file.print(","); file.print(mem_PrevSoC); file.print(",");
+      file.print(Mess_Energy); file.print(","); file.print(mem_energy);
       break;
     case 4:
-      file.print(EventCode4); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_PrevSoC); file.print("\t"); file.print(mem_PrevSoC);
+      file.print(EventCode4); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_PrevSoC); file.print(","); file.print(mem_PrevSoC);
       break;
     case 5:
-      file.print(EventCode5); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_Power); file.print("\t"); file.print(Power);
+      file.print(EventCode5); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_Power); file.print(","); file.print(Power);
       break;
     case 6:
-      file.print(EventCode6); file.print("\t");
-      file.print(Mess_Power); file.print("\t"); file.print(Power); file.print("\t");
-      file.print(Mess_SD); file.print("\t"); file.print(shutdown_timer);
+      file.print(EventCode6); file.print(",");
+      file.print(Mess_Power); file.print(","); file.print(Power); file.print(",");
+      file.print(Mess_SD); file.print(","); file.print(shutdown_timer);
       break;
     default:
       file.print(EventCode0);
@@ -1868,7 +1702,7 @@ bool saveEventCodeToSD_SoC(const char* timestamp) {
   }
   
   // Write event code row with timestamp
-  file.print(timestamp); file.print("\t");
+  file.print(timestamp); file.print(",");
   
   if (record_code == 0) {
     // No reset, only header required (ESP32 power reboot)
@@ -1877,33 +1711,33 @@ bool saveEventCodeToSD_SoC(const char* timestamp) {
   } else {
     switch (record_code) {
     case 1:
-      file.print(EventCode1); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_LastSoC); file.print("\t"); file.print(mem_LastSoC);
+      file.print(EventCode1); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_LastSoC); file.print(","); file.print(mem_LastSoC);
       break;
     case 2:
       file.print(EventCode2);
       break;
     case 3:
-      file.print(EventCode3); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_PrevSoC); file.print("\t"); file.print(mem_PrevSoC); file.print("\t");
-      file.print(Mess_Energy); file.print("\t"); file.print(mem_energy);
+      file.print(EventCode3); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_PrevSoC); file.print(","); file.print(mem_PrevSoC); file.print(",");
+      file.print(Mess_Energy); file.print(","); file.print(mem_energy);
       break;
     case 4:
-      file.print(EventCode4); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_PrevSoC); file.print("\t"); file.print(mem_PrevSoC);
+      file.print(EventCode4); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_PrevSoC); file.print(","); file.print(mem_PrevSoC);
       break;
     case 5:
-      file.print(EventCode5); file.print("\t");
-      file.print(Mess_SoC); file.print("\t"); file.print(mem_SoC); file.print("\t");
-      file.print(Mess_Power); file.print("\t"); file.print(Power);
+      file.print(EventCode5); file.print(",");
+      file.print(Mess_SoC); file.print(","); file.print(mem_SoC); file.print(",");
+      file.print(Mess_Power); file.print(","); file.print(Power);
       break;
     case 6:
-      file.print(EventCode6); file.print("\t");
-      file.print(Mess_Power); file.print("\t"); file.print(Power); file.print("\t");
-      file.print(Mess_SD); file.print("\t"); file.print(shutdown_timer);
+      file.print(EventCode6); file.print(",");
+      file.print(Mess_Power); file.print(","); file.print(Power); file.print(",");
+      file.print(Mess_SD); file.print(","); file.print(shutdown_timer);
       break;
     default:
       file.print(EventCode0);
@@ -2168,63 +2002,63 @@ bool saveToSD_SoCDecrease(const char* timestamp) {
   
   Serial.println("File opened, writing SoC decrease data...");
   
-  // Write tab-separated row (same data as main log)
-  file.print(timestamp); file.print("\t");
-  file.print(SoC); file.print("\t");
-  file.print(BmsSoC); file.print("\t");
-  file.print(Power); file.print("\t");
-  file.print(TripOdo); file.print("\t");
-  file.print(BattMinT); file.print("\t");
-  file.print(BattMaxT); file.print("\t");
-  file.print(Heater); file.print("\t");
-  file.print(OUTDOORtemp); file.print("\t");
-  file.print(INDOORtemp); file.print("\t");
-  file.print(Net_kWh); file.print("\t");
-  file.print(Net_kWh2); file.print("\t");
-  file.print(acc_energy); file.print("\t");
-  file.print(Net_Ah); file.print("\t");
-  file.print(acc_Ah); file.print("\t");
-  file.print(EstFull_Ah); file.print("\t");
-  file.print(Max_Pwr); file.print("\t");
-  file.print(Max_Reg); file.print("\t");
-  file.print(MAXcellv); file.print("\t");
-  file.print(MINcellv); file.print("\t");
-  file.print(MAXcellvNb); file.print("\t");
-  file.print(MINcellvNb); file.print("\t");
-  file.print(BATTv); file.print("\t");
-  file.print(BATTc); file.print("\t");
-  file.print(AuxBattV); file.print("\t");
-  file.print(CEC); file.print("\t");
-  file.print(CED); file.print("\t");
-  file.print(CDC); file.print("\t");
-  file.print(CCC); file.print("\t");
-  file.print(SOH); file.print("\t");
-  file.print(used_kWh); file.print("\t");
-  file.print(left_kWh); file.print("\t");
-  file.print(full_kWh); file.print("\t");
-  file.print(start_kWh); file.print("\t");
-  file.print(PID_kWhLeft); file.print("\t");
-  file.print(degrad_ratio); file.print("\t");
-  file.print(InitSoC); file.print("\t");
-  file.print(LastSoC); file.print("\t");
-  file.print(PIDkWh_100); file.print("\t");
-  file.print(kWh_100km); file.print("\t");
-  file.print(span_kWh_100km); file.print("\t");
-  file.print(Trip_dist); file.print("\t");
-  file.print(distance); file.print("\t");
-  file.print(Speed); file.print("\t");
-  file.print(Odometer); file.print("\t");
-  file.print(OPtimemins); file.print("\t");
-  file.print(TripOPtime); file.print("\t");
-  file.print(CurrOPtime); file.print("\t");
-  file.print(TireFL_P); file.print("\t");
-  file.print(TireFR_P); file.print("\t");
-  file.print(TireRL_P); file.print("\t");
-  file.print(TireRR_P); file.print("\t");
-  file.print(TireFL_T); file.print("\t");
-  file.print(TireFR_T); file.print("\t");
-  file.print(TireRL_T); file.print("\t");
-  file.print(TireRR_T); file.print("\t");
+  // Write comma-separated row (same data as main log)
+  file.print(timestamp); file.print(",");
+  file.print(SoC); file.print(",");
+  file.print(BmsSoC); file.print(",");
+  file.print(Power); file.print(",");
+  file.print(TripOdo); file.print(",");
+  file.print(BattMinT); file.print(",");
+  file.print(BattMaxT); file.print(",");
+  file.print(Heater); file.print(",");
+  file.print(OUTDOORtemp); file.print(",");
+  file.print(INDOORtemp); file.print(",");
+  file.print(Net_kWh); file.print(",");
+  file.print(Net_kWh2); file.print(",");
+  file.print(acc_energy); file.print(",");
+  file.print(Net_Ah); file.print(",");
+  file.print(acc_Ah); file.print(",");
+  file.print(EstFull_Ah); file.print(",");
+  file.print(Max_Pwr); file.print(",");
+  file.print(Max_Reg); file.print(",");
+  file.print(MAXcellv); file.print(",");
+  file.print(MINcellv); file.print(",");
+  file.print(MAXcellvNb); file.print(",");
+  file.print(MINcellvNb); file.print(",");
+  file.print(BATTv); file.print(",");
+  file.print(BATTc); file.print(",");
+  file.print(AuxBattV); file.print(",");
+  file.print(CEC); file.print(",");
+  file.print(CED); file.print(",");
+  file.print(CDC); file.print(",");
+  file.print(CCC); file.print(",");
+  file.print(SOH); file.print(",");
+  file.print(used_kWh); file.print(",");
+  file.print(left_kWh); file.print(",");
+  file.print(full_kWh); file.print(",");
+  file.print(start_kWh); file.print(",");
+  file.print(PID_kWhLeft); file.print(",");
+  file.print(degrad_ratio); file.print(",");
+  file.print(InitSoC); file.print(",");
+  file.print(LastSoC); file.print(",");
+  file.print(PIDkWh_100); file.print(",");
+  file.print(kWh_100km); file.print(",");
+  file.print(span_kWh_100km); file.print(",");
+  file.print(Trip_dist); file.print(",");
+  file.print(distance); file.print(",");
+  file.print(Speed); file.print(",");
+  file.print(Odometer); file.print(",");
+  file.print(OPtimemins); file.print(",");
+  file.print(TripOPtime); file.print(",");
+  file.print(CurrOPtime); file.print(",");
+  file.print(TireFL_P); file.print(",");
+  file.print(TireFR_P); file.print(",");
+  file.print(TireRL_P); file.print(",");
+  file.print(TireRR_P); file.print(",");
+  file.print(TireFL_T); file.print(",");
+  file.print(TireFR_T); file.print(",");
+  file.print(TireRL_T); file.print(",");
+  file.print(TireRR_T); file.print(",");
   file.print(nbr_saved);
   
   file.println();  // End the line
@@ -2233,101 +2067,6 @@ bool saveToSD_SoCDecrease(const char* timestamp) {
   Serial.println("SoC decrease data saved to SD card");
   
   return true;
-}
-
-//----------------------------------------------------------------------------------------
-//        BLE Device Selection Screen
-//----------------------------------------------------------------------------------------
-void drawBLEScreen() {
-  lcd.fillScreen(TFT_BLACK);
-  lcd.setFont(&FreeSans18pt7b);
-  lcd.setTextColor(TFT_WHITE);
-  
-  if (bleScreenPage == 0) {
-    // Connection failed message page
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("OBD2 Connection", 160, 60);
-    lcd.drawString("Failed!", 160, 100);
-    
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.setTextColor(TFT_YELLOW);
-    // Show the device that was attempted (if set), otherwise show stored device
-    String deviceToShow = (attemptedBLEDevice.length() > 0) ? attemptedBLEDevice : storedBLEDevice;
-    lcd.drawString("Device: " + deviceToShow, 160, 160);
-    
-    lcd.setFont(&FreeSans9pt7b);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Please check:", 160, 220);
-    lcd.drawString("1. OBD2 device is powered ON", 160, 250);
-    lcd.drawString("2. Device is within range", 160, 280);
-    lcd.drawString("3. Device is not paired elsewhere", 160, 310);
-    
-    // Buttons - three buttons layout
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.fillRoundRect(10, 350, 90, 50, 10, TFT_GREEN);
-    lcd.fillRoundRect(115, 350, 90, 50, 10, TFT_BLUE);
-    lcd.fillRoundRect(10, 415, 300, 50, 10, TFT_ORANGE);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Retry", 55, 375);
-    lcd.drawString("Select", 160, 365);
-    lcd.drawString("Device", 160, 388);
-    lcd.drawString("Continue Without OBD2", 160, 440);
-  }
-  else if (bleScreenPage == 1) {
-    // Device list page
-    lcd.drawString("Available Devices", 160, 30);
-    lcd.setFont(&FreeSans9pt7b);
-    lcd.setTextColor(TFT_CYAN);
-    
-    if (bleCount == 0) {
-      lcd.drawString("Scanning for BLE devices...", 160, 200);
-    } else {
-      // Set left-aligned text for device names
-      lcd.setTextDatum(TL_DATUM);
-      for (int i = 0; i < bleCount && i < 10; i++) {
-        int yPos = 80 + (i * 30);
-        lcd.setTextColor(TFT_CYAN);
-        lcd.drawString(bleDeviceList[i].c_str(), 10, yPos);
-        lcd.setTextColor(TFT_LIGHTGREY);
-        char rssiStr[16];
-        sprintf(rssiStr, "%d", bleRSSI[i]);
-        lcd.drawString(rssiStr, 270, yPos);
-      }
-      // Restore centered text alignment
-      lcd.setTextDatum(MC_DATUM);
-    }
-    
-    // Buttons
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.fillRoundRect(10, 420, 140, 50, 10, TFT_GREEN);
-    lcd.fillRoundRect(170, 420, 140, 50, 10, TFT_RED);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Scan", 80, 445);
-    lcd.drawString("Cancel", 240, 445);
-  }
-  else if (bleScreenPage == 2) {
-    // Device confirmation page
-    lcd.setTextColor(TFT_CYAN);
-    lcd.drawString("Confirm Device", 160, 60);
-    lcd.drawString("Selection", 160, 100);
-    
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Selected Device:", 160, 160);
-    
-    lcd.setTextColor(TFT_GREEN);
-    lcd.drawString(storedBLEDevice.c_str(), 160, 200);
-    
-    lcd.setTextColor(TFT_LIGHTGREY);
-    lcd.drawString("Connect to this device?", 160, 260);
-    
-    // Buttons
-    lcd.fillRoundRect(10, 350, 140, 50, 10, TFT_GREEN);
-    lcd.fillRoundRect(170, 350, 140, 50, 10, TFT_RED);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Confirm", 80, 375);
-    lcd.drawString("Cancel", 240, 375);
-  }
 }
 
 void tokenStatusCallback(TokenInfo info){

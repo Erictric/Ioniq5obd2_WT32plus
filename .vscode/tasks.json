@@ -1,0 +1,86 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "PlatformIO: Upload (OTA)",
+            "command": "C:\\.platformio\\penv\\Scripts\\platformio.exe",
+            "args": [
+                "run",
+                "--target",
+                "upload",
+                "--environment",
+                "esp32-s3-devkitm-1"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "PlatformIO: Upload (Serial COM5)",
+            "command": "C:\\.platformio\\penv\\Scripts\\platformio.exe",
+            "args": [
+                "run",
+                "--target",
+                "upload",
+                "--environment",
+                "esp32-s3-devkitm-1",
+                "--upload-port",
+                "COM5"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "PlatformIO: Build",
+            "command": "C:\\.platformio\\penv\\Scripts\\platformio.exe",
+            "args": [
+                "run",
+                "--environment",
+                "esp32-s3-devkitm-1"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        }
+    ]
+}
