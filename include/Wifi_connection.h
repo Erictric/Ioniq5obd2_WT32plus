@@ -58,8 +58,10 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
       WiFi.begin(ssid2, password2);
     }
   }
+  
+  lcd.setTextColor(TFT_GREEN);  
+  lcd.drawString("Connecting To Wifi", lcd.width() / 2, 200);
     
-  // WiFi connection without updating display (welcome screen handles display)
   while (WiFi.status() != WL_CONNECTED  && (connect_time < 15)) { // 2 attempts
     if(firstTry){
       connect_time = (millis() - init_time) / 1000;
@@ -78,14 +80,33 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
     Serial.println(" secs");
     Serial.print("IP address: "); 
     Serial.println(WiFi.localIP());
+  
+    // Clear "Connecting To Wifi" message
+    lcd.setTextColor(TFT_BLACK);
+    lcd.drawString("Connecting To Wifi", lcd.width() / 2, 200);
     
+    // Show WiFi connected status
+    lcd.setTextColor(TFT_GREEN);
+    lcd.drawString("Wifi Connected", lcd.width() / 2, 200);
+    lcd.setTextColor(TFT_WHITE);
+    lcd.drawString(WiFi.localIP().toString(), lcd.width() / 2, 230);
     firstTry = false;
     send_enabled = true;
     initscan = true;  // To write header name on Google Sheet on power up 
+    delay(500);
   }
   else
   {
     Serial.println("Failed to connect to WiFi");
+    
+    // Clear "Connecting To Wifi" message
+    lcd.setTextColor(TFT_BLACK);
+    lcd.drawString("Connecting To Wifi", lcd.width() / 2, 200);
+    
+    // Show WiFi failed status
+    lcd.setTextColor(TFT_RED);
+    lcd.drawString("Wifi Failed", lcd.width() / 2, 200);
+    delay(2000);
   }
 }
 #endif

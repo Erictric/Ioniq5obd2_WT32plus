@@ -103,6 +103,7 @@ boolean ResetOn = true;
 int screenNbr = 0;
 bool showSaveConfirmation = false;  // Flag to show save confirmation dialog
 bool showWiFiInfo = false;  // Flag to show WiFi information screen
+bool showOBD2FailScreen = false;  // Flag to show OBD2 connection failure screen
 int wifiScreenPage = 0;  // 0=scan list, 1=keyboard for SSID, 2=keyboard for password
 String wifiSSIDList[20];  // Store up to 20 WiFi networks
 int wifiRSSI[20];         // Store signal strength
@@ -680,6 +681,17 @@ void setup(void)
   Serial.println("Timezone configured for EST/EDT");
   
   /*/////////////////////////////////////////////////////////////////*/
+  /*                    WELCOME SCREEN TITLE                         */
+  /*/////////////////////////////////////////////////////////////////*/
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_CYAN);
+  lcd.drawString("Ioniq 5", 160, 50);
+  lcd.drawString("OBD2", 160, 90);
+  lcd.drawString("Data Reader", 160, 130);
+  lcd.setFont(&FreeSans12pt7b);
+  
+  /*/////////////////////////////////////////////////////////////////*/
   /*                     CONNECTION TO WIFI                         */
   /*/////////////////////////////////////////////////////////////////*/
 
@@ -689,7 +701,21 @@ void setup(void)
   if (StartWifi) {
     DEBUG_PORT.println("Attempting WiFi connection...");
     ConnectWifi(lcd, Wifi_select);
+  }   
+
+  /*/////////////////////////////////////////////////////////////////*/
+  /*                    CONNECTION TO OBDII                          */
+  /*/////////////////////////////////////////////////////////////////*/
+  // Draw connecting message immediately so it appears right after WiFi on screen
+  lcd.setTextColor(TFT_GREEN);
+  lcd.drawString("Connecting To OBDII", lcd.width() / 2, 280);
+  Serial.println("...Connection to OBDII...");
   
+  ConnectToOBD2(lcd);
+
+  // Setup Web Server after connections (Google Sheets disabled)
+  if (StartWifi && WiFi.status() == WL_CONNECTED) {
+    /* Google Sheets disabled - not currently used
     GSheet.printf("ESP Google Sheet Client v%s\n\n", ESP_GOOGLE_SHEET_CLIENT_VERSION);
   
     // Set the callback for Google API access token generation status (for debug only)
@@ -700,59 +726,26 @@ void setup(void)
   
     // Begin the access token generation for Google API authentication
     GSheet.begin(CLIENT_EMAIL, PROJECT_ID, PRIVATE_KEY);
+    */
+    
+    // Re-configure timezone after WiFi connects to ensure NTP uses local time
+    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    DEBUG_PORT.println("Timezone re-configured after WiFi connection");
+    delay(200);  // Brief delay for NTP sync
     
     // Initialize web server for SD card access
-    if (WiFi.status() == WL_CONNECTED) {
-      // Re-configure timezone after WiFi connects to ensure NTP uses local time
-      configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-      DEBUG_PORT.println("Timezone re-configured after WiFi connection");
-      delay(200);  // Brief delay for NTP sync
-      
-      server.on("/", handleRoot);
-      server.on("/download", handleDownload);
-      server.on("/view", handleView);
-      server.on("/delete", handleDelete);
-      server.on("/download_soc", handleDownloadSoC);
-      server.on("/view_soc", handleViewSoC);
-      server.on("/delete_soc", handleDeleteSoC);
-      server.onNotFound(handleNotFound);
-      server.begin();
-      DEBUG_PORT.print("Web server started at http://");
-      DEBUG_PORT.println(WiFi.localIP());
-    }
-  }   
-
-  /*/////////////////////////////////////////////////////////////////*/
-  /*                    WELCOME SCREEN                               */
-  /*/////////////////////////////////////////////////////////////////*/
-  lcd.fillScreen(TFT_BLACK);
-  lcd.setFont(&FreeSans18pt7b);
-  lcd.setTextColor(TFT_CYAN);
-  lcd.drawString("Welcome", 160, 100);
-  
-  lcd.setFont(&FreeSans12pt7b);
-  
-  // Show WiFi status
-  if (WiFi.status() == WL_CONNECTED) {
-    lcd.setTextColor(TFT_GREEN);
-    lcd.drawString("WiFi: Connected", 160, 180);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString(WiFi.localIP().toString(), 160, 210);
-  } else {
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("WiFi: Not Connected", 160, 180);
+    server.on("/", handleRoot);
+    server.on("/download", handleDownload);
+    server.on("/view", handleView);
+    server.on("/delete", handleDelete);
+    server.on("/download_soc", handleDownloadSoC);
+    server.on("/view_soc", handleViewSoC);
+    server.on("/delete_soc", handleDeleteSoC);
+    server.onNotFound(handleNotFound);
+    server.begin();
+    DEBUG_PORT.print("Web server started at http://");
+    DEBUG_PORT.println(WiFi.localIP());
   }
-  
-  // Show placeholder for OBD2 (will update after connection attempt)
-  lcd.setTextColor(TFT_YELLOW);
-  lcd.drawString("OBD2: Connecting...", 160, 260);
-  
-  delay(3000);  // Show welcome screen for 3 seconds
-
-  /*/////////////////////////////////////////////////////////////////*/
-  /*                    CONNECTION TO OBDII                          */
-  /*/////////////////////////////////////////////////////////////////*/
-  ConnectToOBD2(lcd);
 
   //Setup interrupt on Touch Pad 2 (GPIO2)
   //touchAttachInterrupt(T2, callback, Threshold);
@@ -776,7 +769,10 @@ void setup(void)
   delay(500);
 #endif   
 
-  lcd.fillScreen(TFT_BLACK);  
+  // Only clear screen if OBD2 connected or no fail screen showing
+  if (!showOBD2FailScreen) {
+    lcd.fillScreen(TFT_BLACK);
+  }
 
   // Configure Timer0 Interrupt  
   Timer0_Cfg = timerBegin(0, 80, true);
@@ -2538,6 +2534,81 @@ void stop_esp() {
 void button(){
   if (lcd.getTouch(&x, &y)) {
     
+    // OBD2 failure screen takes priority
+    if (showOBD2FailScreen && !TouchLatch) {
+      TouchLatch = true;
+      
+      // Retry button (20-150, 280-340)
+      if (x >= 20 && x <= 150 && y >= 280 && y <= 340) {
+        Serial.println("Retry OBD2 connection");
+        showOBD2FailScreen = false;
+        
+        // Redraw welcome screen
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_CYAN);
+        lcd.drawString("Ioniq 5", 160, 50);
+        lcd.drawString("OBD2", 160, 90);
+        lcd.drawString("Data Reader", 160, 130);
+        lcd.setFont(&FreeSans12pt7b);
+        
+        // Show WiFi status
+        if (WiFi.status() == WL_CONNECTED) {
+          lcd.setTextColor(TFT_GREEN);
+          lcd.drawString("Wifi Connected", 160, 200);
+          lcd.setTextColor(TFT_WHITE);
+          lcd.drawString(WiFi.localIP().toString(), 160, 230);
+        } else {
+          lcd.setTextColor(TFT_RED);
+          lcd.drawString("Wifi Failed", 160, 200);
+        }
+        
+        // Show connecting message
+        lcd.setTextColor(TFT_GREEN);
+        lcd.drawString("Connecting To OBDII", lcd.width() / 2, 280);
+        Serial.println("...Connection to OBDII...");
+        
+        ConnectToOBD2(lcd);
+        if (OBD2connected) {
+          DrawBackground = true;
+        }
+        return;
+      }
+      
+      // Continue button (170-300, 280-340)
+      if (x >= 170 && x <= 300 && y >= 280 && y <= 340) {
+        Serial.println("Continue without OBD2");
+        showOBD2FailScreen = false;
+        showWiFiInfo = true;
+        
+        // Display WiFi info screen
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.drawString("WiFi Information", 160, 100);
+        
+        lcd.setFont(&FreeSans12pt7b);
+        if (WiFi.status() == WL_CONNECTED) {
+          lcd.setTextColor(TFT_GREEN);
+          lcd.drawString("Status: Connected", 160, 160);
+          lcd.setTextColor(TFT_CYAN);
+          lcd.drawString("SSID: " + WiFi.SSID(), 160, 200);
+          lcd.drawString("IP: " + WiFi.localIP().toString(), 160, 240);
+          char rssiStr[32];
+          sprintf(rssiStr, "Signal: %d dBm", WiFi.RSSI());
+          lcd.drawString(rssiStr, 160, 280);
+        } else {
+          lcd.setTextColor(TFT_RED);
+          lcd.drawString("Status: Disconnected", 160, 200);
+        }
+        
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.setTextColor(TFT_LIGHTGREY);
+        lcd.drawString("Touch screen to continue", 160, 400);
+        return;
+      }
+    }
+    
     // Normal button handling    
           
     //Button 1 test
@@ -2855,7 +2926,37 @@ void button(){
       TouchLatch = true;
       Serial.println("Dismissing WiFi info screen");
       showWiFiInfo = false;
-      DrawBackground = true;
+      
+      // If OBD2 is not connected, show the OBD2 fail screen again
+      if (!OBD2connected) {
+        showOBD2FailScreen = true;
+        
+        // Redraw OBD2 fail screen
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_RED);
+        lcd.drawString("OBD2 Connection", 160, 80);
+        lcd.drawString("Failed", 160, 120);
+        
+        lcd.setFont(&FreeSans12pt7b);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.drawString("Device not found", 160, 180);
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.setTextColor(TFT_LIGHTGREY);
+        lcd.drawString("Check if device is powered", 160, 210);
+        
+        // Retry button (left)
+        lcd.setFont(&FreeSans12pt7b);
+        lcd.fillRoundRect(20, 280, 130, 60, 10, TFT_GREEN);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.drawString("RETRY", 85, 310);
+        
+        // Continue button (right)
+        lcd.fillRoundRect(170, 280, 130, 60, 10, TFT_BLUE);
+        lcd.drawString("CONTINUE", 235, 310);
+      } else {
+        DrawBackground = true;
+      }
       return;
     }
     
@@ -3498,6 +3599,11 @@ void loop()
   }  
   
   /*/////// Display Page Number /////////////////*/
+
+  // OBD2 fail screen takes highest priority
+  if (showOBD2FailScreen) {
+    return;
+  }
 
   // WiFi info screen takes priority - don't update display while showing
   if (showWiFiInfo) {
