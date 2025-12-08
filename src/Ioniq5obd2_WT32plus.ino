@@ -723,6 +723,33 @@ void setup(void)
   }   
 
   /*/////////////////////////////////////////////////////////////////*/
+  /*                    WELCOME SCREEN                               */
+  /*/////////////////////////////////////////////////////////////////*/
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_CYAN);
+  lcd.drawString("Welcome", 160, 100);
+  
+  lcd.setFont(&FreeSans12pt7b);
+  
+  // Show WiFi status
+  if (WiFi.status() == WL_CONNECTED) {
+    lcd.setTextColor(TFT_GREEN);
+    lcd.drawString("WiFi: Connected", 160, 180);
+    lcd.setTextColor(TFT_WHITE);
+    lcd.drawString(WiFi.localIP().toString(), 160, 210);
+  } else {
+    lcd.setTextColor(TFT_RED);
+    lcd.drawString("WiFi: Not Connected", 160, 180);
+  }
+  
+  // Show placeholder for OBD2 (will update after connection attempt)
+  lcd.setTextColor(TFT_YELLOW);
+  lcd.drawString("OBD2: Connecting...", 160, 260);
+  
+  delay(3000);  // Show welcome screen for 3 seconds
+
+  /*/////////////////////////////////////////////////////////////////*/
   /*                    CONNECTION TO OBDII                          */
   /*/////////////////////////////////////////////////////////////////*/
   ConnectToOBD2(lcd);
