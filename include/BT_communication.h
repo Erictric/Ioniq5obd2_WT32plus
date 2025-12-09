@@ -12,14 +12,73 @@ ELM327 myELM327;    //Object for OBD2 device
 
 bool OBD2connected = false;
 
+// Function to draw BLE connection error screen
+void drawBLEConnectionError(LGFX& lcd) {
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_RED);
+  lcd.drawString("CONNECTION", 160, 80);
+  lcd.drawString("ERROR", 160, 120);
+  
+  lcd.setFont(&FreeSans12pt7b);
+  lcd.setTextColor(TFT_ORANGE);
+  lcd.drawString("BLE: Device Not Found", 160, 180);
+  
+  lcd.setTextColor(TFT_LIGHTGREY);
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.drawString("Check if device is powered", 160, 240);
+  
+  // Retry button (left)
+  lcd.fillRoundRect(20, 380, 130, 60, 10, TFT_GREEN);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.setFont(&FreeSans12pt7b);
+  lcd.drawString("RETRY", 85, 410);
+  
+  // Continue button (right)
+  lcd.fillRoundRect(170, 380, 130, 60, 10, TFT_BLUE);
+  lcd.drawString("CONTINUE", 235, 410);
+}
+
+// Function to draw protocol error screen
+void drawProtocolError(LGFX& lcd) {
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_RED);
+  lcd.drawString("PROTOCOL", 160, 80);
+  lcd.drawString("ERROR", 160, 120);
+  
+  lcd.setFont(&FreeSans12pt7b);
+  lcd.setTextColor(TFT_ORANGE);
+  lcd.drawString("OBD2: Initialization Failed", 160, 180);
+  
+  lcd.setTextColor(TFT_LIGHTGREY);
+  lcd.drawString("Cannot initialize ELM327", 160, 240);
+  
+  // Retry button (left)
+  lcd.fillRoundRect(20, 380, 130, 60, 10, TFT_GREEN);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.setFont(&FreeSans12pt7b);
+  lcd.drawString("RETRY", 85, 410);
+  
+  // Continue button (right)
+  lcd.fillRoundRect(170, 380, 130, 60, 10, TFT_BLUE);
+  lcd.drawString("CONTINUE", 235, 410);
+}
+
 void ConnectToOBD2(LGFX& lcd){
   char strRetries[2];  
   
   if (!ELM_PORT.begin("IOS-Vlink")) {
     Serial.println("BLE initialization failed");
+    lcd.fillScreen(TFT_BLACK);
+    lcd.setFont(&FreeSans18pt7b);
     lcd.setTextColor(TFT_RED);
-    lcd.drawString("OBDII BLE", lcd.width() / 2, 310);
-    lcd.drawString("Init Failed", lcd.width() / 2, 340);
+    lcd.drawString("SYSTEM", lcd.width() / 2, 250);
+    lcd.drawString("ERROR", lcd.width() / 2, 290);
+    
+    lcd.setFont(&FreeSans12pt7b);
+    lcd.setTextColor(TFT_ORANGE);
+    lcd.drawString("BLE: Init Failed", lcd.width() / 2, 330);
     OBD2connected = false;
     delay(2000);
     lcd.fillScreen(TFT_BLACK);
@@ -42,27 +101,7 @@ void ConnectToOBD2(LGFX& lcd){
     showOBD2FailScreen = true;
     
     // Show OBD2 connection failure screen with buttons
-    lcd.fillScreen(TFT_BLACK);
-    lcd.setFont(&FreeSans18pt7b);
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("OBD2 Connection", 160, 80);
-    lcd.drawString("Failed", 160, 120);
-    
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Device not found", 160, 180);
-    lcd.setFont(&FreeSans9pt7b);
-    lcd.setTextColor(TFT_LIGHTGREY);
-    lcd.drawString("Check if device is powered", 160, 210);
-    
-    // Retry button (left)
-    lcd.fillRoundRect(20, 280, 130, 60, 10, TFT_GREEN);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("RETRY", 85, 310);
-    
-    // Continue button (right)
-    lcd.fillRoundRect(170, 280, 130, 60, 10, TFT_BLUE);
-    lcd.drawString("CONTINUE", 235, 310);
+    drawBLEConnectionError(lcd);
     
     return;
   }
@@ -75,24 +114,7 @@ void ConnectToOBD2(LGFX& lcd){
     showOBD2FailScreen = true;
     
     // Show OBD2 protocol failure screen with buttons
-    lcd.fillScreen(TFT_BLACK);
-    lcd.setFont(&FreeSans18pt7b);
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("OBD2 Protocol", 160, 80);
-    lcd.drawString("Failed", 160, 120);
-    
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("Cannot initialize ELM327", 160, 180);
-    
-    // Retry button (left)
-    lcd.fillRoundRect(20, 280, 130, 60, 10, TFT_GREEN);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString("RETRY", 85, 310);
-    
-    // Continue button (right)
-    lcd.fillRoundRect(170, 280, 130, 60, 10, TFT_BLUE);
-    lcd.drawString("CONTINUE", 235, 310);
+    drawProtocolError(lcd);
     
     return;
   }
@@ -100,13 +122,21 @@ void ConnectToOBD2(LGFX& lcd){
   else{
   //Serial.println("Connected to OBDII");
   
-  // Clear "Connecting To OBDII" message
+  // Clear "Connecting" message
   lcd.setTextColor(TFT_BLACK);
-  lcd.drawString("Connecting To OBDII", lcd.width() / 2, 280);
+  lcd.drawString("OBD2: Connecting...", lcd.width() / 2, 410);
   
   // Show connected message
   lcd.setTextColor(TFT_GREEN);
-  lcd.drawString("OBDII Connected", lcd.width() / 2, 280);
+  lcd.drawString("OBD2: Connected", lcd.width() / 2, 410);
+  
+  // Show device name
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_DARKGREY);
+  char deviceDisplay[64];
+  snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s", ELM_PORT.getDeviceName().c_str());
+  lcd.drawString(deviceDisplay, lcd.width() / 2, 435);
+  lcd.setFont(&FreeSans12pt7b);
 
   OBD2connected = true;
 

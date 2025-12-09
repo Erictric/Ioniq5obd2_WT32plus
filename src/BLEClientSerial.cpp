@@ -158,6 +158,12 @@ bool BLEClientSerial::begin(const char* localName)
     return begin(const_cast<char*>(localName));
 }
 
+// Get the target device name
+String BLEClientSerial::getDeviceName(void)
+{
+    return String(targetDeviceName.c_str());
+}
+
 int BLEClientSerial::available(void)
 {
     // reply with data available

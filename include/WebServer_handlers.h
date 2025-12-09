@@ -11,6 +11,7 @@ extern WebServer server;
 extern bool sdCardAvailable;
 extern const char* csvFilename;
 extern const char* socDecreaseFilename;
+extern const char* archiveDir;
 
 //----------------------------------------------------------------------------------------
 //        Web server handlers for SD card data logging
@@ -18,6 +19,8 @@ extern const char* socDecreaseFilename;
 
 // Root page - show links and SD card info
 void handleRoot() {
+  char buffer[128];  // Declare buffer at the beginning for use throughout function
+  
   // Send HTML in chunks to avoid String concatenation and heap fragmentation
   server.setContentLength(CONTENT_LENGTH_UNKNOWN);
   server.send(200, "text/html", "");
@@ -32,7 +35,6 @@ void handleRoot() {
   
   server.sendContent("<div class='card'><h2>SD Card Status</h2>");
   if (sdCardAvailable) {
-    char buffer[128];
     uint64_t cardSize = SD.cardSize() / (1024 * 1024);
     uint64_t usedSize = SD.usedBytes() / (1024 * 1024);
     
@@ -75,8 +77,35 @@ void handleRoot() {
   }
   server.sendContent("</div>");
   
+  server.sendContent("<div class='card'><h2>Archived Files</h2>");
+  if (sdCardAvailable && SD.exists(archiveDir)) {
+    File archiveRoot = SD.open(archiveDir);
+    if (archiveRoot && archiveRoot.isDirectory()) {
+      int archiveCount = 0;
+      File entry = archiveRoot.openNextFile();
+      while (entry) {
+        if (!entry.isDirectory()) {
+          archiveCount++;
+        }
+        entry.close();
+        entry = archiveRoot.openNextFile();
+      }
+      archiveRoot.close();
+      
+      if (archiveCount > 0) {
+        snprintf(buffer, sizeof(buffer), "<p>%d archived file(s) found</p>", archiveCount);
+        server.sendContent(buffer);
+        server.sendContent("<a href='/archives'>View Archives</a>");
+      } else {
+        server.sendContent("<p>No archived files</p>");
+      }
+    }
+  } else {
+    server.sendContent("<p>No archive directory</p>");
+  }
+  server.sendContent("</div>");
+  
   server.sendContent("<div class='card'><h2>System Info</h2>");
-  char buffer[128];
   snprintf(buffer, sizeof(buffer), "<p>IP Address: %s</p>", WiFi.localIP().toString().c_str());
   server.sendContent(buffer);
   snprintf(buffer, sizeof(buffer), "<p>Free Heap: %u bytes</p>", ESP.getFreeHeap());
@@ -248,6 +277,137 @@ void handleDeleteSoC() {
   
   if (SD.remove(socDecreaseFilename)) {
     server.send(200, "text/html", "<html><body><h2>SoC decrease log file deleted</h2><a href='/'>Back</a></body></html>");
+  } else {
+    server.send(500, "text/plain", "Failed to delete file");
+  }
+}
+
+// List archived files
+void handleArchives() {
+  if (!sdCardAvailable || !SD.exists(archiveDir)) {
+    server.send(404, "text/plain", "No archive directory found");
+    return;
+  }
+  
+  File archiveRoot = SD.open(archiveDir);
+  if (!archiveRoot || !archiveRoot.isDirectory()) {
+    server.send(500, "text/plain", "Failed to open archive directory");
+    return;
+  }
+  
+  server.setContentLength(CONTENT_LENGTH_UNKNOWN);
+  server.send(200, "text/html", "");
+  
+  server.sendContent("<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width, initial-scale=1'>");
+  server.sendContent("<title>Archived Files</title>");
+  server.sendContent("<style>body{font-family:Arial;margin:20px;background:#f0f0f0;}");
+  server.sendContent("h1{color:#333;}.card{background:white;padding:20px;margin:10px 0;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);}");
+  server.sendContent("table{width:100%;border-collapse:collapse;background:white;}");
+  server.sendContent("th,td{padding:10px;text-align:left;border-bottom:1px solid #ddd;}");
+  server.sendContent("th{background:#007bff;color:white;}");
+  server.sendContent("a{color:#007bff;text-decoration:none;}a:hover{text-decoration:underline;}");
+  server.sendContent(".btn{display:inline-block;padding:5px 10px;margin:2px;background:#28a745;color:white;border-radius:3px;font-size:12px;}");
+  server.sendContent(".btn-del{background:#dc3545;}</style></head><body>");
+  server.sendContent("<h1>Archived Files</h1>");
+  server.sendContent("<a href='/'>Back to Home</a>");
+  
+  server.sendContent("<div class='card'><table><tr><th>Filename</th><th>Size</th><th>Actions</th></tr>");
+  
+  char buffer[256];
+  File entry = archiveRoot.openNextFile();
+  while (entry) {
+    if (!entry.isDirectory()) {
+      const char* filename = entry.name();
+      size_t filesize = entry.size();
+      
+      server.sendContent("<tr><td>");
+      // Extract just the filename without path
+      const char* baseName = strrchr(filename, '/');
+      if (baseName) {
+        baseName++;
+      } else {
+        baseName = filename;
+      }
+      server.sendContent(baseName);
+      server.sendContent("</td><td>");
+      
+      if (filesize > 1024 * 1024) {
+        snprintf(buffer, sizeof(buffer), "%.2f MB", filesize / (1024.0 * 1024.0));
+      } else if (filesize > 1024) {
+        snprintf(buffer, sizeof(buffer), "%.2f KB", filesize / 1024.0);
+      } else {
+        snprintf(buffer, sizeof(buffer), "%d bytes", filesize);
+      }
+      server.sendContent(buffer);
+      
+      server.sendContent("</td><td>");
+      snprintf(buffer, sizeof(buffer), "<a class='btn' href='/archive_download?file=%s'>Download</a>", baseName);
+      server.sendContent(buffer);
+      snprintf(buffer, sizeof(buffer), "<a class='btn btn-del' href='/archive_delete?file=%s' onclick='return confirm(\"Delete %s?\")'>Delete</a>", baseName, baseName);
+      server.sendContent(buffer);
+      server.sendContent("</td></tr>");
+    }
+    entry.close();
+    entry = archiveRoot.openNextFile();
+  }
+  
+  server.sendContent("</table></div></body></html>");
+  server.sendContent("");
+  archiveRoot.close();
+}
+
+// Download an archived file
+void handleArchiveDownload() {
+  if (!sdCardAvailable) {
+    server.send(404, "text/plain", "SD card not available");
+    return;
+  }
+  
+  String filename = server.arg("file");
+  if (filename.length() == 0) {
+    server.send(400, "text/plain", "No filename specified");
+    return;
+  }
+  
+  char fullPath[128];
+  snprintf(fullPath, sizeof(fullPath), "%s/%s", archiveDir, filename.c_str());
+  
+  if (!SD.exists(fullPath)) {
+    server.send(404, "text/plain", "File not found");
+    return;
+  }
+  
+  File file = SD.open(fullPath, FILE_READ);
+  if (!file) {
+    server.send(500, "text/plain", "Failed to open file");
+    return;
+  }
+  
+  char disposition[150];
+  snprintf(disposition, sizeof(disposition), "attachment; filename=%s", filename.c_str());
+  server.sendHeader("Content-Disposition", disposition);
+  server.streamFile(file, "text/csv");
+  file.close();
+}
+
+// Delete an archived file
+void handleArchiveDelete() {
+  if (!sdCardAvailable) {
+    server.send(404, "text/plain", "SD card not available");
+    return;
+  }
+  
+  String filename = server.arg("file");
+  if (filename.length() == 0) {
+    server.send(400, "text/plain", "No filename specified");
+    return;
+  }
+  
+  char fullPath[128];
+  snprintf(fullPath, sizeof(fullPath), "%s/%s", archiveDir, filename.c_str());
+  
+  if (SD.remove(fullPath)) {
+    server.send(200, "text/html", "<html><body><h2>Archive file deleted</h2><a href='/archives'>Back to Archives</a></body></html>");
   } else {
     server.send(500, "text/plain", "Failed to delete file");
   }

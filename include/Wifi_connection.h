@@ -59,10 +59,8 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
     }
   }
   
-  lcd.setTextColor(TFT_GREEN);  
-  lcd.drawString("Connecting To Wifi", lcd.width() / 2, 200);
-    
-  while (WiFi.status() != WL_CONNECTED  && (connect_time < 15)) { // 2 attempts
+    lcd.setTextColor(TFT_YELLOW);
+    lcd.drawString("WiFi: Connecting...", lcd.width() / 2, 310);  while (WiFi.status() != WL_CONNECTED  && (connect_time < 15)) { // 2 attempts
     if(firstTry){
       connect_time = (millis() - init_time) / 1000;
     }    
@@ -81,15 +79,23 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
     Serial.print("IP address: "); 
     Serial.println(WiFi.localIP());
   
-    // Clear "Connecting To Wifi" message
+    // Clear "Connecting" message
     lcd.setTextColor(TFT_BLACK);
-    lcd.drawString("Connecting To Wifi", lcd.width() / 2, 200);
+    lcd.drawString("WiFi: Connecting...", lcd.width() / 2, 310);
     
     // Show WiFi connected status
     lcd.setTextColor(TFT_GREEN);
-    lcd.drawString("Wifi Connected", lcd.width() / 2, 200);
-    lcd.setTextColor(TFT_WHITE);
-    lcd.drawString(WiFi.localIP().toString(), lcd.width() / 2, 230);
+    lcd.drawString("WiFi: Connected", lcd.width() / 2, 310);
+    
+    // Show SSID and IP address
+    lcd.setFont(&FreeSans9pt7b);
+    lcd.setTextColor(TFT_DARKGREY);
+    String ssidDisplay = "SSID: " + WiFi.SSID();
+    lcd.drawString(ssidDisplay, lcd.width() / 2, 335);
+    String ipDisplay = "IP: " + WiFi.localIP().toString();
+    lcd.drawString(ipDisplay, lcd.width() / 2, 360);
+    lcd.setFont(&FreeSans12pt7b);
+    
     firstTry = false;
     send_enabled = true;
     initscan = true;  // To write header name on Google Sheet on power up 
