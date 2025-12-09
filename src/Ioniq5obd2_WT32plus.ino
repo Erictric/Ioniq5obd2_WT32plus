@@ -25,7 +25,6 @@
 #include "SafeString.h"
 #include "EEPROM.h"
 #include <Adafruit_GFX.h>
-#include <ESP_Google_Sheet_Client.h>
 #include <time.h>
 #include <freertos/FreeRTOS.h>
 #include <BLEDevice.h>
@@ -42,48 +41,6 @@ static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
 
 #define DEBUG_PORT Serial
-
-// Google Project ID
-#define PROJECT_ID "ioniq5ev-datalogging"
-
-// Service Account's client email
-#define CLIENT_EMAIL "ioniq5ev-datalogging@ioniq5ev-datalogging.iam.gserviceaccount.com"
-
-// Service Account's private key
-const char PRIVATE_KEY[] PROGMEM = "-----BEGIN PRIVATE KEY-----\n"
-                                   "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1n1jxN7fUFbUV\n"
-                                   "Zc3rn+ZgZ4oWv4v30HgTLgOIZr9DOvtDk/xkKK9UPlKgHX6s+KulIOu9cqlEDNz8\n"
-                                   "Bh5Dsx9I9K7h6ax+BC6NUPkj5nU4pzl36lP9Mxot01Cck5GmP/7nGZwh05eGy+qf\n"
-                                   "ZDvqGNJ2D1GzI84uznCYFT1b0zliINrWls8ylOTjrr/ECoq6a5htC2TD/2EWW7Oy\n"
-                                   "xavn4bmkp7B05HtLz9kAXOfa8TX9WfzwAj8FUZiEvZWr87ei4Olj5T3rAaslCAVU\n"
-                                   "Ftnu+11sxnRS6AOjwLhOrz63ubaT2ZKSPr8DEzt3nljmpp68aUJOYFX9Lmpa1YbT\n"
-                                   "Rt3InN2xAgMBAAECggEAAeTyIcpY7vI1Nw54H4MsFs9sDVdjaTFVGBTrB9CgiCqh\n"
-                                   "kixSBD5rY7rM4R6MCQq37/5s29QKFJ7Fhq7Op01pn/jTXFTAwV8ffpOJYbJtGkS3\n"
-                                   "1y3lwRArIshSzZGsqEbMsxIQj5OPWUifsn7/MMggMjrv+UKzZOGvPKekdSR55pgL\n"
-                                   "u7XzbPGEyTCT75BsWF+8RfBhSTbpNT0XYCzcSxMfOnDbjidtCEc7yjY4qIZm+Bih\n"
-                                   "44b+j6v+w91f4IdgW/OQMY1GCKV5e7ApeqlR9o1MQVtKMzac20LtmAhKnXU39zgv\n"
-                                   "cV/CNzGT+rCFESy9Fpdv4nm6QlQpagk0AFWV3pVNAQKBgQDcS+OhnXhK8XNBB9Qs\n"
-                                   "OMbLkN9mtNY40l4Q81cewhTCd/xgr0oLUgXxeNocnpdO/mgV/GFp3egh7LU/AcSE\n"
-                                   "ueE+Xd3Y7IjzrV6TG4M73bRkxUbfYnCIXq5cMqv0GGZvOg1KgbNwXVMO+eW/ddf3\n"
-                                   "OoKPN9pj18RHURYeDqHJv+qQQQKBgQDTDt9R4AkiYQcScnK8z3mtBF/3Pr58pODP\n"
-                                   "uIvBspzbn8NWlW3M32q260JGrWnXFF3coVDqU6PMhdD4MSiOQ0RpiKwTBhvJ0F4f\n"
-                                   "6ZdycmdYb1dzMb1u/tGCrjqqH8C0CiNe1Obq5PikYrgI/fqK66xvEj/JQ/LRo1R4\n"
-                                   "nWaNLsbxcQKBgQCnW4/nK7ZDWQLyGHx7y/ZamAjgAens6QRFZFh/KXqT8ots+D4M\n"
-                                   "M5gIRoOM0n6oqGVyrnVi9A5yF13qK/Gb04rm0nDDZ47zcHY00+XzCQ8Or0CUXDiZ\n"
-                                   "oTRdHrG7kv3e6f9G5xnm9z8uVXLQ7TnQvEaLfycOStD2TQe8dek7V+1fAQKBgDjc\n"
-                                   "MN3l9ZAFg9o8axzi6GzsWM5LYRZDdS2BEmXEsO2aRQ32g/ZF2oIdL2XLIlCHdCIU\n"
-                                   "c7AtiFt5UasL01lAVhX4dCNL6gCc2j7Ot7Zli+IPXQfzxo04qUkDl1pt44Sdlpnd\n"
-                                   "0bhGp5Xh4qLJic4TYAksaXLXk3tW/VLhVNeEWqSBAoGADiHsTVFds00r41q75c1D\n"
-                                   "EADUnkE3dPr31wRz9GPl7D0cTuf9NMB+I30CMKWI3wCMlKM5UmcS8/yYEt0N1B19\n"
-                                   "LALKwZ4iEouf9KDIojOKyNv9e+cP4AHIKP+FOp8X5KyOgkHKNCfP86JykrQ8nL2L\n"
-                                   "QlVT3ReZg1Cgf/Omx4GAtIs=\n"
-                                   "-----END PRIVATE KEY-----\n";
-
-// The ID of the spreadsheet where the data is published
-const char spreadsheetId[] = "1DDPOXX3uooCHbO_UzsCNnbQAA7hsjsSV75VzBJDNk3o";
-
-// Token Callback function
-void tokenStatusCallback(TokenInfo info);
 
 bool display_off = true;
 bool sdCardAvailable = false;
@@ -135,17 +92,11 @@ float mem_Power = 0;
 float mem_LastSoC = 0;
 float Wifi_select = 1;
 bool data_ready = false;
-bool code_sent = false;
 bool sd_condition1 = false;
 bool sd_condition2 = false;
 bool SoC_saved = false;
-bool code_received = false;
 bool shutdown_esp = false;
 bool wifiReconn = false;
-bool datasent = false;
-bool failsent = false;
-uint16_t nbr_fails = 0;
-uint16_t nbr_notReady = 0;
 uint16_t nbr_saved = 0;
 
 float BattMinT;
@@ -178,19 +129,16 @@ char SpdSelect;
 unsigned long SpdSelectTimer = 0;
 float Odometer;
 float Speed;
-float Motor1rpm;
-float Motor2rpm;
+float FrontMotor;
+float RearMotor;
 byte TransSelByte;
 byte Park;
 byte Reverse;
 byte Neutral;
 byte Drive;
 char selector[1];
-byte StatusWord;
-byte BMS_ign;
-byte StatusWord2;
-byte BMS_relay;
-byte Charging;
+bool OBDscanning = false;
+bool Charging = false;
 float OPtimemins;
 float OPtimehours;
 float TireFL_P;
@@ -307,7 +255,6 @@ bool TrigRst = false;
 bool kWh_update = false;
 bool SoC_decreased = false;
 bool corr_update = false;
-bool ESP_on = false;
 bool DrawBackground = true;
 char titre[10][13];
 char value[10][7];
@@ -427,18 +374,12 @@ unsigned long ESPTimerInterval = 1200;  // time in seconds to turn off ESP when 
 unsigned long shutdown_timer = 0;
 unsigned long stopESP_timer = 0;
 
-/*////// Variables for Google Sheet data transfer ////////////*/
+/*////// Variables for SD card data logging ////////////*/
 
-TaskHandle_t googleSheetTaskHandle = NULL;  // Task handle for Google Sheet task
-bool sending_data = false;
-bool send_data = false;
-bool data_sent = false;
-bool ready = false;   // Google Sheet ready flag
-bool success = false;
-unsigned long sendInterval = 10000;  // in millisec
-unsigned long GSheetTimer = 0;
-bool sendIntervalOn = false;
-int googleSheetCounter = 0;  // Counter to send to Google Sheets every 60s (6 x 10s intervals)
+bool sending_data = false;  // Flag to trigger SD card save every 10 seconds
+unsigned long sendInterval = 10000;  // SD card save interval in millisec
+unsigned long GSheetTimer = 0;  // Timer for SD card save LED flash
+bool sendIntervalOn = false;  // Flag for kWh_corr timing logic
 bool sdCardSaved = false;  // Flag to indicate SD card save for LED flash
 tm timeinfo;   // Variable to save current epoch time
 uint16_t nbrDays[13] = {0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366};  // Array for summer time logics
@@ -491,11 +432,7 @@ void IRAM_ATTR Timer0_ISR()
 {
   if (OBD2connected) {
     sending_data = true;  // Trigger SD card save every 10 seconds
-    googleSheetCounter++;  // Increment counter for Google Sheets timing
   }
-  else if (OBD2connected) {
-    sendIntervalOn = true;
-  }         
 }
 
 // Function that gets current epoch time
@@ -709,18 +646,32 @@ void archiveAndRecreateFiles(bool forceArchive = false) {
 void drawWelcomeScreen() {
   lcd.fillScreen(TFT_BLACK);
   
-  // Title Section
-  lcd.setFont(&FreeSans24pt7b);
+  // Title Section - centered between top (0) and separator line (230)
+  // Main title with shadow effect and larger font
+  lcd.setFont(&FreeSansBold24pt7b);
+  // Shadow
+  lcd.setTextColor(TFT_DARKGREY);
+  lcd.drawString("IONIQ 5", 162, 62);
+  // Main text with gradient effect using multiple colors
   lcd.setTextColor(TFT_WHITE);
-  lcd.drawString("IONIQ 5", 160, 50);
+  lcd.drawString("IONIQ 5", 160, 60);
   
-  lcd.setFont(&FreeSans18pt7b);
+  // Subtitle with bold font and electric blue accent
+  lcd.setFont(&FreeSansBold18pt7b);
+  // Draw "OBD2" with electric blue glow effect
+  lcd.setTextColor(0x047F); // Dark blue shadow
+  lcd.drawString("OBD2", 162, 127);
   lcd.setTextColor(TFT_CYAN);
-  lcd.drawString("OBD2", 160, 115);
-  lcd.drawString("Data Logger", 160, 155);
+  lcd.drawString("OBD2", 160, 125);
   
-  // Separator line
-  lcd.drawLine(40, 230, 280, 230, TFT_DARKGREY);
+  // "Data Logger" subtitle
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_LIGHTGREY);
+  lcd.drawString("Data Logger", 160, 165);
+  
+  // Separator line with gradient effect
+  lcd.drawLine(40, 230, 280, 230, TFT_CYAN);
+  lcd.drawLine(40, 231, 280, 231, TFT_DARKGREY);
   
   // System Status Section
   lcd.setFont(&FreeSans12pt7b);
@@ -1045,17 +996,10 @@ int convertToInt(char* dataFrame, size_t startByte, size_t numberBytes) {
 
 void read_data() {
 
-  // Check for touch input only every 5th cycle to improve performance
-  // button() is also called at end of loop(), so touch is still very responsive
-  if (pid_counter % 5 == 0) {
-    button();
-  }
+  Serial.print("pid_counter: ");
+  Serial.println(pid_counter);
 
-  // Reduce serial debug output frequency - only print every 10 iterations
-  if (pid_counter % 10 == 0) {
-    //Serial.print("pid_counter: ");
-    //Serial.println(pid_counter);
-  }
+  button();
 
   // read in rawData via ODBII
   
@@ -1099,38 +1043,25 @@ void read_data() {
     CCC = ((convertToInt(results.frames[4], 7, 1) << 24) + convertToInt(results.frames[5], 1, 3)) * 0.1;
     CDC = convertToInt(results.frames[5], 4, 4) * 0.1;
     BmsSoC = convertToInt(results.frames[1], 2, 1) * 0.5;
-    StatusWord = convertToInt(results.frames[7], 6, 1);  // Extract byte that contain BMS status bits
-    BMS_ign = bitRead(StatusWord, 2);
-    StatusWord2 = convertToInt(results.frames[1], 7, 1);  // Extract byte that contain BMS status bits
-    BMS_relay = bitRead(StatusWord2, 0);
     MAXcellv = convertToInt(results.frames[3], 7, 1) * 0.02;
     MAXcellvNb = convertToInt(results.frames[4], 1, 1);
     MINcellv = convertToInt(results.frames[4], 2, 1) * 0.02;
     MINcellvNb = convertToInt(results.frames[4], 3, 1);
     OPtimemins = convertToInt(results.frames[7], 2, 4) * 0.01666666667;
     OPtimehours = OPtimemins * 0.01666666667;
-    Motor1rpm = convertToInt(results.frames[8], 2, 2);
-    Motor2rpm = convertToInt(results.frames[8], 4, 2);
+    FrontMotor = convertToInt(results.frames[8], 2, 2);
+    RearMotor = convertToInt(results.frames[8], 4, 2);
   }
-  if (BATTc > 0) {
-    ESP_on = true;
-    BMS_ign = true;
-  }
-  if (BATTc < 0) {
-    Charging = true;
-  }
-  if (Speed > 0) {
-    SpdSelect = 'D';    
-  }
-  else {   
-    SpdSelect = 'P';    
-  }
+  if (BmsSoC > 0) {
+    OBDscanning = true;
+  }  
+  
   UpdateNetEnergy();  
   
-  if (pid_counter > 6){
+  if (pid_counter > 5){
     pid_counter = 0;
   }
-  else if (BMS_ign || Charging){
+  else if (OBDscanning){
   // Read remaining PIDs only if BMS relay is ON
     switch (pid_counter) {
       case 1:
@@ -1210,6 +1141,15 @@ void read_data() {
           OUTDOORtemp = (((convertToInt(results.frames[1], 4, 1)) * 0.5) - 40);
           Speed = (convertToInt(results.frames[4], 6, 1));
           Integrat_speed();
+          if (BATTc < 0 && Speed == 0) {
+            Charging = true;
+          }
+          if (Speed > 0) {
+            SpdSelect = 'D';    
+          }
+          else {   
+            SpdSelect = 'P';    
+          }
         }
         break;
   
@@ -1233,6 +1173,8 @@ void read_data() {
           TireRR_P = convertToInt(results.frames[3], 3, 1) * 0.2;
           TireRR_T = convertToInt(results.frames[3], 4, 1) - 50;
         }
+        pid_counter = 0;
+        data_ready = true;  // after all PIDs have been read, turn on flag for valid value from OBD2
         break;
 
 
@@ -1393,7 +1335,7 @@ void read_data() {
         RangeCalcTimer = millis();
       }
       
-      //if (BMS_ign) {
+      //if (OBDscanning) {
       //  EnergyTOC();
       //}
   
@@ -2228,214 +2170,10 @@ bool saveToSD_SoCDecrease(const char* timestamp) {
   return true;
 }
 
-void tokenStatusCallback(TokenInfo info){
-    if (info.status == token_status_error){
-        GSheet.printf("Token info: type = %s, status = %s\n", GSheet.getTokenType(info).c_str(), GSheet.getTokenStatus(info).c_str());
-        GSheet.printf("Token error: %s\n", GSheet.getTokenError(info).c_str());
-    }
-    else{
-        GSheet.printf("Token info: type = %s, status = %s\n", GSheet.getTokenType(info).c_str(), GSheet.getTokenStatus(info).c_str());
-    }
-}
-
 //----------------------------------------------------------------------------------------
-//        Task on core 0 to Send data to Google Sheet via IFTTT web service Function
+//        Google Sheets functionality has been removed
+//        SD card logging remains active
 //----------------------------------------------------------------------------------------
-
-void sendGoogleSheet(void * pvParameters){
-  for(;;){        
-    if (ready && (send_data || record_code != 0) && OBD2connected) {
-            
-      code_sent = false;
-      
-      FirebaseJson response;
-
-      Serial.println("\nAppend spreadsheet values...");
-      Serial.println("----------------------------");
-
-      FirebaseJson valueRange;      
-          
-      if(initscan || record_code != 0 || shutdown_esp){
-
-        switch (record_code)
-        {
-        case 0:   // No reset only header required, ESP32 power reboot
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode0);          
-          initscan = false;
-          shutdown_esp = false;
-          break;
-
-        case 1:   // Write status for Reset after a battery was recharged
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode1);
-          valueRange.set("values/[1]/[0]", Mess_SoC);
-          valueRange.set("values/[2]/[0]", mem_SoC);
-          valueRange.set("values/[3]/[0]", Mess_LastSoC); 
-          valueRange.set("values/[4]/[0]", mem_LastSoC);
-          initscan = true;
-          break;
-
-        case 2:   // Write status for Reset performed with reset button (right button)
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode2);
-          initscan = true;
-          break;
-          
-        case 3:   // Write status for Reset when Acc_energy is less then 0.3kWh when SoC changes
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode3);
-          valueRange.set("values/[1]/[0]", Mess_SoC);          
-          valueRange.set("values/[2]/[0]", mem_SoC);
-          valueRange.set("values/[3]/[0]", Mess_PrevSoC);          
-          valueRange.set("values/[4]/[0]", mem_PrevSoC);
-          valueRange.set("values/[5]/[0]", Mess_Energy);
-          valueRange.set("values/[6]/[0]", mem_energy);
-          initscan = true;
-          break;
-              
-        case 4:   // Write status for Reset if SoC changes from 100 to 99% not going through 99.5%
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode4);
-          valueRange.set("values/[1]/[0]", Mess_SoC);
-          valueRange.set("values/[2]/[0]", mem_SoC);
-          valueRange.set("values/[3]/[0]", Mess_PrevSoC); 
-          valueRange.set("values/[4]/[0]", mem_PrevSoC);           
-          initscan = true;
-          break;
-
-        case 5:   // Write that esp is going normal shutdown
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode5);
-          valueRange.set("values/[1]/[0]", Mess_SoC);
-          valueRange.set("values/[2]/[0]", mem_SoC);
-          valueRange.set("values/[3]/[0]", Mess_Power);
-          valueRange.set("values/[4]/[0]", Power);
-                              
-          code_received = true;                      
-          Serial.println("Code Received");
-          break;
-
-        case 6:   // Write that esp is going timed shutdown
-          valueRange.add("majorDimension","COLUMNS");
-          valueRange.set("values/[0]/[0]", EventCode6);
-          valueRange.set("values/[1]/[0]", Mess_Power);          
-          valueRange.set("values/[2]/[0]", Power);
-          valueRange.set("values/[3]/[0]", Mess_SD);          
-          valueRange.set("values/[4]/[0]", shutdown_timer);                          
-          code_received = true;                      
-          break;
-
-        }
-      }  
-      else{
-        valueRange.add("majorDimension","COLUMNS");
-        valueRange.set("values/[0]/[0]", EventTime);
-        valueRange.set("values/[1]/[0]", SoC);
-        valueRange.set("values/[2]/[0]", BmsSoC);
-        valueRange.set("values/[3]/[0]", Power);
-        valueRange.set("values/[4]/[0]", TripOdo);
-        valueRange.set("values/[5]/[0]", BattMinT);
-        valueRange.set("values/[6]/[0]", BattMaxT);
-        valueRange.set("values/[7]/[0]", Heater);
-        valueRange.set("values/[8]/[0]", OUTDOORtemp);
-        valueRange.set("values/[9]/[0]", INDOORtemp);        
-        valueRange.set("values/[10]/[0]", Net_kWh);
-        valueRange.set("values/[11]/[0]", Net_kWh2);
-        valueRange.set("values/[12]/[0]", acc_energy);
-        valueRange.set("values/[13]/[0]", Net_Ah);
-        valueRange.set("values/[14]/[0]", acc_Ah);
-        valueRange.set("values/[15]/[0]", EstFull_Ah); 
-        valueRange.set("values/[16]/[0]", Max_Pwr);
-        valueRange.set("values/[17]/[0]", Max_Reg);        
-        valueRange.set("values/[18]/[0]", MAXcellv);
-        valueRange.set("values/[19]/[0]", MINcellv);
-        valueRange.set("values/[20]/[0]", MAXcellvNb);
-        valueRange.set("values/[21]/[0]", MINcellvNb);
-        valueRange.set("values/[22]/[0]", BATTv);
-        valueRange.set("values/[23]/[0]", BATTc);
-        valueRange.set("values/[24]/[0]", AuxBattV);
-        valueRange.set("values/[25]/[0]", CEC);
-        valueRange.set("values/[26]/[0]", CED);
-        valueRange.set("values/[27]/[0]", CDC);
-        valueRange.set("values/[28]/[0]", CCC);
-        valueRange.set("values/[29]/[0]", SOH);
-        valueRange.set("values/[30]/[0]", used_kWh);
-        valueRange.set("values/[31]/[0]", left_kWh);        
-        valueRange.set("values/[32]/[0]", full_kWh);
-        valueRange.set("values/[33]/[0]", start_kWh);
-        valueRange.set("values/[34]/[0]", PID_kWhLeft);        
-        valueRange.set("values/[35]/[0]", degrad_ratio);               
-        valueRange.set("values/[36]/[0]", InitSoC);
-        valueRange.set("values/[37]/[0]", LastSoC);
-        valueRange.set("values/[38]/[0]", PIDkWh_100);
-        valueRange.set("values/[39]/[0]", kWh_100km);
-        valueRange.set("values/[40]/[0]", span_kWh_100km);
-        valueRange.set("values/[41]/[0]", Trip_dist);
-        valueRange.set("values/[42]/[0]", distance);
-        valueRange.set("values/[43]/[0]", Speed);
-        valueRange.set("values/[44]/[0]", Odometer);
-        valueRange.set("values/[45]/[0]", OPtimemins);
-        valueRange.set("values/[46]/[0]", TripOPtime);
-        valueRange.set("values/[47]/[0]", CurrOPtime);
-        valueRange.set("values/[48]/[0]", TireFL_P);
-        valueRange.set("values/[49]/[0]", TireFR_P);
-        valueRange.set("values/[50]/[0]", TireRL_P);
-        valueRange.set("values/[51]/[0]", TireRR_P);
-        valueRange.set("values/[52]/[0]", TireFL_T);
-        valueRange.set("values/[53]/[0]", TireFR_T);
-        valueRange.set("values/[54]/[0]", TireRL_T);
-        valueRange.set("values/[55]/[0]", TireRR_T);
-        valueRange.set("values/[56]/[0]", nbr_saved);        
-               
-      }                                   
-            
-      // Append values to the spreadsheet
-      if (send_data || record_code != 0){
-        success = GSheet.values.append(&response /* returned response */, spreadsheetId /* spreadsheet Id to append */, "Sheet1!A1" /* range to append */, &valueRange /* data range to append */);
-        send_data = false;
-        
-        // Also save to SD card (only for normal data, not event codes)
-        if (record_code == 0) {
-          saveToSD(EventTime);
-        }
-      }
-                 
-      record_code = 0;
-      vTaskDelay(10);
-      if (success){
-        response.toString(Serial, true);
-        valueRange.clear();
-        datasent = true;
-      }
-      else{        
-        Serial.print("GSheet sent error: ");
-        Serial.println(GSheet.errorReason());
-        valueRange.clear();
-        failsent = true;
-        nbr_fails += 1;
-      }
-      GSheetTimer = millis();
-      Serial.println();
-      Serial.print("FreeHeap: ");
-      Serial.println(ESP.getFreeHeap());
-            
-      if(kWh_update){ //add condition so "kWh_corr" is not trigger before a cycle after a "kWh_update"
-        Prev_kWh = Net_kWh;        
-        kWh_update = false;  // reset kWh_update after it has been recorded and so the correction logic start again       
-      }            
-      if(corr_update){  
-        corr_update = false;  // reset corr_update after it has been recorded
-      }
-      if (code_received){
-        Serial.println("Eventcode Sent");
-        code_sent = true;
-      }     
-      
-    }    
-    vTaskDelay(10); // some delay is required to reset watchdog timer
-  }
-}
 
 /*////////////// Full Trip Reset ///////////////// */
 
@@ -2590,8 +2328,7 @@ void save_lost(char selector) {
   }
 }
 
-void stop_esp() {
-  ESP_on = false;
+void stop_esp() { 
   if (DriveOn && (mem_SoC > 0)) {
     //EEPROM.writeFloat(0, InitRemain_kWh);
     EEPROM.writeFloat(16, previous_kWh);
@@ -2690,9 +2427,11 @@ void button(){
           // Show SSID and IP address
           lcd.setFont(&FreeSans9pt7b);
           lcd.setTextColor(TFT_DARKGREY);
-          String ssidDisplay = "SSID: " + WiFi.SSID();
+          char ssidDisplay[64];
+          snprintf(ssidDisplay, sizeof(ssidDisplay), "SSID: %s", WiFi.SSID().c_str());
           lcd.drawString(ssidDisplay, 160, 335);
-          String ipDisplay = "IP: " + WiFi.localIP().toString();
+          char ipDisplay[32];
+          snprintf(ipDisplay, sizeof(ipDisplay), "IP: %s", WiFi.localIP().toString().c_str());
           lcd.drawString(ipDisplay, 160, 360);
           lcd.setFont(&FreeSans12pt7b);
         } else {
@@ -3611,7 +3350,7 @@ void loop()
   }
   
   /*/////// Read each OBDII PIDs /////////////////*/     
-  if ((BMS_ign || Charging || ResetOn) && OBD2connected){
+  if ((OBDscanning || ResetOn) && OBD2connected){
     pid_counter++;
     read_data();    
   }
@@ -3623,67 +3362,19 @@ void loop()
   /*/////// Check if touch buttons are pressed /////////////////*/
   button();
     
-  /*/////// If Wifi is connected, this will trigger logic to send data to Google sheet /////////////////*/
-  if (send_enabled){
-    ready = GSheet.ready();
-    if (!ready){
-      nbr_notReady += 1;
-      Serial.print("GSheet not ready");
-      GSheet.begin(CLIENT_EMAIL, PROJECT_ID, PRIVATE_KEY);
-      ready = GSheet.ready();
-    }
-    if(nbr_fails > 10 || nbr_notReady > 10){
-      save_lost('P');   // save data by sending a simulated Park condition
-      send_enabled = false;
-      nbr_fails = 0;
-      nbr_notReady = 0;
-      //ESP.restart();
-    }
-    if(dist_save >= 25 && !save_sent){
-      save_sent = true;   // to save only one time since dist_save is only updated at some time interval
-      save_lost('P');
-      init_distsave = Trip_dist;      
-    }
-    if (sending_data){     /*/////// Save to SD card every 10s, send to Google Sheets every 60s /////////////////*/
-      // Get timestamp
-      timeinfo = getTime();
-      Serial.print("Local time: ");
-      Serial.printf("%02d-%02d-%04d %02d:%02d:%02d\n", timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900, timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
-      
-      sprintf(EventTime, "%02d-%02d-%04d %02d:%02d:%02d", timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900, timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);                         
-      
-      // Save event code first (if any) before regular data
-      saveEventCodeToSD(EventTime);
-      
-      // Always save to SD card every 10 seconds
-      saveToSD(EventTime);
-      
-      // Save to second file when SoC decreases
-      if (SoC_decreased) {
-        saveEventCodeToSD_SoC(EventTime);  // Save event code to SoC file first
-        saveToSD_SoCDecrease(EventTime);   // Then save regular data
-        SoC_decreased = false;  // Reset flag after saving
-      }
-      
-      // Send to Google Sheets every 60 seconds (6 x 10s intervals)
-      if (googleSheetCounter >= 6 && ready) {
-        send_data = true;  // Trigger Google Sheets send
-        googleSheetCounter = 0;  // Reset counter
-      }
-      
-      sending_data = false;       
-    }
-  }
-  // Save to SD card even if send_enabled is false (offline logging)
-  else if (!send_enabled && sending_data) {
+  /*/////// SD card logging every 10 seconds /////////////////*/
+  if (sending_data) {
     // Get timestamp for SD card logging
     timeinfo = getTime();
+    Serial.print("Local time: ");
+    Serial.printf("%02d-%02d-%04d %02d:%02d:%02d\n", timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900, timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
+    
     sprintf(EventTime, "%02d-%02d-%04d %02d:%02d:%02d", timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900, timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
     
     // Save event code first (if any) before regular data
     saveEventCodeToSD(EventTime);
     
-    // Save to SD card only (no Google Sheets)
+    // Save to SD card
     saveToSD(EventTime);
     
     // Save to second file when SoC decreases
@@ -3693,36 +3384,31 @@ void loop()
       SoC_decreased = false;  // Reset flag after saving
     }
     
+    // Auto-save every 25km
+    if(dist_save >= 25 && !save_sent){
+      save_sent = true;
+      save_lost('P');
+      init_distsave = Trip_dist;      
+    }
+    
     sending_data = false;
+    
+    // Set flag for LED indicator
+    sdCardSaved = true;
+    GSheetTimer = millis();
   }
   
-  // LED indicator for data saves
-  if (sdCardSaved){
-    lcd.fillCircle(20, 20, 6, TFT_GREEN);  // Green flash when SD card save
-    if (millis() - GSheetTimer >= 500){  // turn led off 500mS after it was turned On
+  /*/////// Display SD card save indicator /////////////////*/
+  // Show brief green flash when data is saved to SD card
+  if (sdCardSaved) {
+    lcd.fillCircle(20, 20, 6, TFT_GREEN);
+    if (millis() - GSheetTimer >= 500) {
       sdCardSaved = false;
     }
   }
-  else if (send_enabled && datasent){
-    lcd.fillCircle(20, 20, 6, TFT_GREEN);  // Green flash when Google Sheets send
-    if (millis() - GSheetTimer >= 500){
-      datasent = false;
-    }
-  }
-  else if (failsent){
-    lcd.fillCircle(20, 20, 6, TFT_RED);
-    if (millis() - GSheetTimer >= 500){
-      failsent = false;
-    }
-  }
-  else if (send_enabled && !ready){
-    lcd.fillCircle(20, 20, 6, TFT_WHITE);
-  }
-  else{
+  else {
     lcd.fillCircle(20, 20, 6, TFT_BLACK);
-  }  
-  
-  /*/////// Display Page Number /////////////////*/
+  }  /*/////// Display Page Number /////////////////*/
 
   // OBD2 fail screen takes highest priority
   if (showOBD2FailScreen) {
@@ -3741,6 +3427,7 @@ void loop()
     // Nothing to do here as drawWiFiScreen() is called from button handler
   }
   else if (OBD2connected && SoC != 0) {    
+    Serial.println(" OBD2 connected - displaying data");
     if (display_off){
       Serial.println("Turning Display ON");
       lcd.setBrightness(128); // Switch on the display      
@@ -3751,11 +3438,8 @@ void loop()
       DrawBackground = true;
     }
 
-    if (StartWifi) {  // If wifi is configured then display wifi status led      
-      if (!send_enabled){
-        lcd.fillCircle(300, 20, 6,TFT_WHITE);
-      }
-      else if (WiFi.status() == WL_CONNECTED){
+    if (StartWifi) {  // If wifi is configured then display wifi status led
+      if (WiFi.status() == WL_CONNECTED){
         lcd.fillCircle(300, 20, 6,TFT_GREEN);
       }
       else{
