@@ -3146,7 +3146,11 @@ void DisplayPage() {
     
     //if value changes update values (use strcmp for proper string comparison)
     if ((strcmp(value[i], prev_value[i]) != 0) && (i < 5)) { // update left column
-      // Draw directly with background color to avoid flashing - no need to erase first
+      // Erase old value by drawing over it with black text
+      lcd.setTextColor(TFT_BLACK, TFT_BLACK);
+      lcd.drawString(prev_value[i], lcd.width() / 4, drawLvl[i]);
+      
+      // Draw new value with proper color
       if (negative_flag[i]) {
         lcd.setTextColor(TFT_ORANGE, TFT_BLACK);
       } 
@@ -3157,7 +3161,11 @@ void DisplayPage() {
       strcpy(prev_value[i], value[i]);
     }
     else if (strcmp(value[i], prev_value[i]) != 0) { // update right column
-      // Draw directly with background color to avoid flashing - no need to erase first
+      // Erase old value by drawing over it with black text
+      lcd.setTextColor(TFT_BLACK, TFT_BLACK);
+      lcd.drawString(prev_value[i], 3 * (lcd.width() / 4), drawLvl[i]);
+      
+      // Draw new value with proper color
       if (negative_flag[i]) {
         lcd.setTextColor(TFT_ORANGE, TFT_BLACK);
       } 
@@ -3412,6 +3420,11 @@ void loop()
 
   // OBD2 fail screen takes highest priority
   if (showOBD2FailScreen) {
+    return;
+  }
+
+  // Save confirmation dialog takes priority - don't update display while showing
+  if (showSaveConfirmation) {
     return;
   }
 
