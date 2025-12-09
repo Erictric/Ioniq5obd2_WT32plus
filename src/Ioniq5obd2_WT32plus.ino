@@ -42,7 +42,7 @@
 // MAJOR: Breaking changes or major new features
 // MINOR: New features, improvements, non-breaking changes
 // PATCH: Bug fixes and minor tweaks
-const char* APP_VERSION = "v2.1.0";
+const char* APP_VERSION = "v2.2.0";
 
 static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
@@ -74,6 +74,11 @@ int screenNbr = 0;
 bool showSaveConfirmation = false;  // Flag to show save confirmation dialog
 bool showWiFiInfo = false;  // Flag to show WiFi information screen
 bool showOBD2FailScreen = false;  // Flag to show OBD2 connection failure screen
+bool showDeviceSelection = false;  // Flag to show BLE device selection screen
+String selectedBLEDevice = "";  // Selected OBD2 device name (empty until loaded from EEPROM)
+String bleDeviceList[10];  // Store up to 10 BLE devices found
+int bleDeviceCount = 0;  // Number of BLE devices found
+bool bleScanning = false;  // Flag to indicate BLE scan in progress
 int wifiScreenPage = 0;  // 0=scan list, 1=keyboard for SSID, 2=keyboard for password
 String wifiSSIDList[20];  // Store up to 20 WiFi networks
 int wifiRSSI[20];         // Store signal strength
@@ -719,7 +724,7 @@ void setup(void)
   lcd.setFreeFont(&FreeSans12pt7b);
 
   /*////// initialize EEPROM with predefined size ////////*/
-  EEPROM.begin(242);  // Increased to accommodate WiFi credentials (72-103: SSID, 104-167: Password, 168: hasCustomWiFi)
+  EEPROM.begin(256);  // Increased to accommodate WiFi credentials and BLE device name (72-103: SSID, 104-167: Password, 168: hasCustomWiFi, 169-200: BLE Device)
 
   
   /*////// Get the stored value from last re-initialisation /////*/
@@ -744,6 +749,22 @@ void setup(void)
   acc_Ah = EEPROM.readFloat(64);
   send_enabled_float = EEPROM.readFloat(68);
   send_enabled = (send_enabled_float >= 0.5);  // Restore send_enabled from EEPROM (1.0 = enabled, 0.0 = disabled)
+  
+  // Load saved BLE device name from EEPROM (address 169-200, 32 bytes)
+  char savedBLEDevice[32];
+  for (int i = 0; i < 32; i++) {
+    savedBLEDevice[i] = EEPROM.read(169 + i);
+  }
+  savedBLEDevice[31] = '\0';  // Ensure null termination
+  
+  // If a valid device name is saved, use it; otherwise default to "IOS-Vlink"
+  if (savedBLEDevice[0] != 0 && savedBLEDevice[0] != 255) {
+    selectedBLEDevice = String(savedBLEDevice);
+    Serial.printf("Loaded BLE device from EEPROM: %s\n", selectedBLEDevice.c_str());
+  } else {
+    selectedBLEDevice = "IOS-Vlink";  // Default device
+    Serial.println("No saved BLE device, using default: IOS-Vlink");
+  }
   
   //acc_kWh_10 = EEPROM.readFloat(72);
   //acc_kWh_0 = EEPROM.readFloat(76);
@@ -2294,6 +2315,78 @@ void initial_eeprom() {
   EEPROM.commit();
 }
 
+/*//////Function to save selected BLE device to EEPROM //////////*/
+
+void saveBLEDevice(String deviceName) {
+  char deviceBuffer[32];
+  memset(deviceBuffer, 0, 32);
+  deviceName.toCharArray(deviceBuffer, 32);
+  
+  for (int i = 0; i < 32; i++) {
+    EEPROM.write(169 + i, deviceBuffer[i]);
+  }
+  EEPROM.commit();
+  Serial.printf("BLE device saved to EEPROM: %s\n", deviceName.c_str());
+}
+
+/*//////Function to scan for available BLE devices //////////*/
+
+void scanBLEDevices() {
+  bleScanning = true;
+  bleDeviceCount = 0;
+  
+  Serial.println("Scanning for BLE devices...");
+  
+  // Deinitialize BLE if already initialized to avoid conflicts
+  BLEDevice::deinit(false);
+  delay(100);
+  
+  BLEDevice::init("");
+  BLEScan* pBLEScan = BLEDevice::getScan();
+  pBLEScan->setAdvertisedDeviceCallbacks(nullptr);
+  pBLEScan->setActiveScan(true);
+  pBLEScan->setInterval(100);
+  pBLEScan->setWindow(99);
+  
+  Serial.println("Starting BLE scan for 8 seconds...");
+  BLEScanResults foundDevices = pBLEScan->start(8, false);
+  
+  Serial.printf("Scan complete. Found %d devices total\n", foundDevices.getCount());
+  
+  // Process all found devices
+  for (int i = 0; i < foundDevices.getCount() && bleDeviceCount < 10; i++) {
+    BLEAdvertisedDevice device = foundDevices.getDevice(i);
+    String deviceName = String(device.getName().c_str());
+    String deviceAddr = String(device.getAddress().toString().c_str());
+    
+    Serial.printf("Device %d: Name='%s' Address=%s RSSI=%d\n", 
+                  i, deviceName.c_str(), deviceAddr.c_str(), device.getRSSI());
+    
+    // Add devices with non-empty names
+    if (deviceName.length() > 0) {
+      bleDeviceList[bleDeviceCount] = deviceName;
+      Serial.printf("  -> Added to list as #%d\n", bleDeviceCount);
+      bleDeviceCount++;
+    } else {
+      Serial.printf("  -> Skipped (no name)\n");
+    }
+  }
+  
+  pBLEScan->clearResults();
+  
+  // Deinitialize after scan to avoid conflicts with connection
+  BLEDevice::deinit(false);
+  delay(100);
+  
+  bleScanning = false;
+  Serial.printf("Scan complete. Found %d named devices.\n", bleDeviceCount);
+  
+  if (bleDeviceCount == 0) {
+    Serial.println("WARNING: No named BLE devices found!");
+    Serial.println("Make sure your OBD2 device is powered on and in range.");
+  }
+}
+
 /*//////Function to save some variable before turn off the car //////////*/
 
 void save_lost(char selector) {
@@ -2423,6 +2516,74 @@ void button(){
     if (showOBD2FailScreen && !TouchLatch) {
       TouchLatch = true;
       
+      // Select Device button (60-260, 300-350)
+      if (x >= 60 && x <= 260 && y >= 300 && y <= 350) {
+        Serial.println("Select Device pressed");
+        showOBD2FailScreen = false;
+        showDeviceSelection = true;
+        
+        // Scan for BLE devices
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_CYAN);
+        lcd.drawString("Scanning...", 160, 200);
+        lcd.setFont(&FreeSans12pt7b);
+        lcd.setTextColor(TFT_LIGHTGREY);
+        lcd.drawString("Looking for BLE devices", 160, 250);
+        
+        scanBLEDevices();
+        
+        // Draw device selection screen
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.drawString("Select OBD2 Device", 160, 40);
+        
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.setTextColor(TFT_LIGHTGREY);
+        
+        if (bleDeviceCount == 0) {
+          lcd.drawString("No devices found", 160, 90);
+        } else {
+          lcd.drawString("Tap device to select:", 160, 90);
+        }
+        
+        // Display found devices (up to 5 visible to leave room for "Use Default")
+        lcd.setFont(&FreeSans12pt7b);
+        for (int i = 0; i < bleDeviceCount && i < 5; i++) {
+          int yPos = 120 + (i * 45);
+          bool isSelected = (bleDeviceList[i] == selectedBLEDevice);
+          lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
+          lcd.setTextColor(TFT_WHITE);
+          lcd.drawString(bleDeviceList[i], 160, yPos + 20);
+        }
+        
+        // Add "Use Default (IOS-Vlink)" option at the bottom
+        int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
+        bool defaultSelected = (selectedBLEDevice == "IOS-Vlink");
+        lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
+        lcd.setFont(&FreeSans12pt7b);
+        
+        // Scan Again button
+        lcd.fillRoundRect(20, 390, 90, 50, 10, TFT_ORANGE);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.drawString("SCAN", 65, 415);
+        
+        // Back button
+        lcd.fillRoundRect(120, 390, 90, 50, 10, TFT_RED);
+        lcd.drawString("BACK", 165, 415);
+        
+        // Connect button
+        lcd.fillRoundRect(220, 390, 80, 50, 10, TFT_GREEN);
+        lcd.drawString("OK", 260, 415);
+        
+        return;
+      }
+      
       // Retry button (20-150, 380-440)
       if (x >= 20 && x <= 150 && y >= 380 && y <= 440) {
         Serial.println("Retry OBD2 connection");
@@ -2497,6 +2658,184 @@ void button(){
         lcd.setFont(&FreeSans9pt7b);
         lcd.setTextColor(TFT_LIGHTGREY);
         lcd.drawString("Touch screen to continue", 160, 400);
+        return;
+      }
+    }
+    
+    // Device selection screen handling
+    if (showDeviceSelection && !TouchLatch) {
+      TouchLatch = true;
+      
+      // Check if any device button was touched (up to 5 devices visible)
+      for (int i = 0; i < bleDeviceCount && i < 5; i++) {
+        int yPos = 120 + (i * 45);
+        if (x >= 20 && x <= 300 && y >= yPos && y <= yPos + 40) {
+          selectedBLEDevice = bleDeviceList[i];
+          Serial.printf("Selected device: %s\n", selectedBLEDevice.c_str());
+          
+          // Redraw all device buttons with updated selection
+          lcd.setFont(&FreeSans12pt7b);
+          for (int j = 0; j < bleDeviceCount && j < 5; j++) {
+            int btnY = 120 + (j * 45);
+            bool isSelected = (j == i);
+            lcd.fillRoundRect(20, btnY, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
+            lcd.setTextColor(TFT_WHITE);
+            lcd.drawString(bleDeviceList[j], 160, btnY + 20);
+          }
+          
+          // Redraw "Use Default" button as unselected
+          int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
+          lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, TFT_BLUE);
+          lcd.setTextColor(TFT_WHITE);
+          lcd.setFont(&FreeSans9pt7b);
+          lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
+          
+          return;
+        }
+      }
+      
+      // Check "Use Default" button
+      int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
+      if (x >= 20 && x <= 300 && y >= defaultYPos && y <= defaultYPos + 40) {
+        selectedBLEDevice = "IOS-Vlink";
+        Serial.println("Selected default device: IOS-Vlink");
+        
+        // Redraw all scanned devices as unselected
+        lcd.setFont(&FreeSans12pt7b);
+        for (int j = 0; j < bleDeviceCount && j < 5; j++) {
+          int btnY = 120 + (j * 45);
+          lcd.fillRoundRect(20, btnY, 280, 40, 8, TFT_DARKGREY);
+          lcd.setTextColor(TFT_WHITE);
+          lcd.drawString(bleDeviceList[j], 160, btnY + 20);
+        }
+        
+        // Redraw "Use Default" button as selected
+        lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, TFT_GREEN);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
+        
+        return;
+      }
+      
+      // Scan Again button (20-110, 390-440)
+      if (x >= 20 && x <= 110 && y >= 390 && y <= 440) {
+        Serial.println("Scanning for BLE devices...");
+        
+        // Show scanning message
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_CYAN);
+        lcd.drawString("Scanning...", 160, 200);
+        lcd.setFont(&FreeSans12pt7b);
+        lcd.setTextColor(TFT_LIGHTGREY);
+        lcd.drawString("Looking for BLE devices", 160, 250);
+        
+        scanBLEDevices();
+        
+        // Redraw device selection screen with new results
+        lcd.fillScreen(TFT_BLACK);
+        lcd.setFont(&FreeSans18pt7b);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.drawString("Select OBD2 Device", 160, 40);
+        
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.setTextColor(TFT_LIGHTGREY);
+        
+        if (bleDeviceCount == 0) {
+          lcd.drawString("No devices found", 160, 90);
+        } else {
+          lcd.drawString("Tap device to select:", 160, 90);
+        }
+        
+        // Display found devices (up to 5)
+        lcd.setFont(&FreeSans12pt7b);
+        for (int i = 0; i < bleDeviceCount && i < 5; i++) {
+          int yPos = 120 + (i * 45);
+          bool isSelected = (bleDeviceList[i] == selectedBLEDevice);
+          lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
+          lcd.setTextColor(TFT_WHITE);
+          lcd.drawString(bleDeviceList[i], 160, yPos + 20);
+        }
+        
+        // Display "Use Default" button
+        int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
+        bool defaultSelected = (selectedBLEDevice == "IOS-Vlink");
+        lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
+        
+        // Redraw buttons
+        lcd.fillRoundRect(20, 390, 90, 50, 10, TFT_ORANGE);
+        lcd.setTextColor(TFT_WHITE);
+        lcd.setFont(&FreeSans9pt7b);
+        lcd.drawString("SCAN", 65, 415);
+        
+        lcd.fillRoundRect(120, 390, 90, 50, 10, TFT_RED);
+        lcd.drawString("BACK", 165, 415);
+        
+        lcd.fillRoundRect(220, 390, 80, 50, 10, TFT_GREEN);
+        lcd.drawString("OK", 260, 415);
+        
+        return;
+      }
+      
+      // Back button (120-210, 390-440)
+      if (x >= 120 && x <= 210 && y >= 390 && y <= 440) {
+        Serial.println("Back from device selection");
+        showDeviceSelection = false;
+        showOBD2FailScreen = true;
+        
+        // Redraw error screen
+        drawBLEConnectionError(lcd);
+        return;
+      }
+      
+      // Connect/OK button (220-300, 390-440)
+      if (x >= 220 && x <= 300 && y >= 390 && y <= 440) {
+        if (selectedBLEDevice.length() == 0) {
+          Serial.println("No device selected!");
+          return;
+        }
+        
+        Serial.printf("Attempting connection to selected device: %s\n", selectedBLEDevice.c_str());
+        Serial.println("Device will be saved to EEPROM only after successful connection");
+        
+        showDeviceSelection = false;
+        
+        // Redraw welcome screen
+        drawWelcomeScreen();
+        
+        // Show WiFi status
+        if (WiFi.status() == WL_CONNECTED) {
+          lcd.setTextColor(TFT_GREEN);
+          lcd.drawString("WiFi: Connected", 160, 310);
+          
+          // Show SSID and IP address
+          lcd.setFont(&FreeSans9pt7b);
+          lcd.setTextColor(TFT_DARKGREY);
+          char ssidDisplay[64];
+          snprintf(ssidDisplay, sizeof(ssidDisplay), "SSID: %s", WiFi.SSID().c_str());
+          lcd.drawString(ssidDisplay, 160, 335);
+          char ipDisplay[32];
+          snprintf(ipDisplay, sizeof(ipDisplay), "IP: %s", WiFi.localIP().toString().c_str());
+          lcd.drawString(ipDisplay, 160, 360);
+          lcd.setFont(&FreeSans12pt7b);
+        } else {
+          lcd.setTextColor(TFT_RED);
+          lcd.drawString("WiFi: Failed", 160, 310);
+        }
+        
+        // Show connecting message
+        lcd.setTextColor(TFT_YELLOW);
+        lcd.drawString("OBD2: Connecting...", lcd.width() / 2, 410);
+        Serial.println("...Connection to OBDII...");
+        
+        ConnectToOBD2(lcd);
+        if (OBD2connected) {
+          DrawBackground = true;
+        }
         return;
       }
     }
@@ -3432,6 +3771,11 @@ void loop()
 
   // OBD2 fail screen takes highest priority
   if (showOBD2FailScreen) {
+    return;
+  }
+
+  // Device selection screen takes priority
+  if (showDeviceSelection) {
     return;
   }
 

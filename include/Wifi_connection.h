@@ -105,13 +105,13 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
   {
     Serial.println("Failed to connect to WiFi");
     
-    // Clear "Connecting To Wifi" message
+    // Clear "Connecting..." message
     lcd.setTextColor(TFT_BLACK);
-    lcd.drawString("Connecting To Wifi", lcd.width() / 2, 200);
+    lcd.drawString("WiFi: Connecting...", lcd.width() / 2, 310);
     
     // Show WiFi failed status
     lcd.setTextColor(TFT_RED);
-    lcd.drawString("Wifi Failed", lcd.width() / 2, 200);
+    lcd.drawString("WiFi: Failed", lcd.width() / 2, 310);
     delay(2000);
   }
 }

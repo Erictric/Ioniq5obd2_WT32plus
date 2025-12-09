@@ -28,13 +28,17 @@ void drawBLEConnectionError(LGFX& lcd) {
   lcd.setFont(&FreeSans9pt7b);
   lcd.drawString("Check if device is powered", 160, 240);
   
-  // Retry button (left)
-  lcd.fillRoundRect(20, 380, 130, 60, 10, TFT_GREEN);
+  // Select Device button (top)
+  lcd.fillRoundRect(60, 300, 200, 50, 10, TFT_ORANGE);
   lcd.setTextColor(TFT_WHITE);
   lcd.setFont(&FreeSans12pt7b);
+  lcd.drawString("SELECT DEVICE", 160, 325);
+  
+  // Retry button (bottom left)
+  lcd.fillRoundRect(20, 380, 130, 60, 10, TFT_GREEN);
   lcd.drawString("RETRY", 85, 410);
   
-  // Continue button (right)
+  // Continue button (bottom right)
   lcd.fillRoundRect(170, 380, 130, 60, 10, TFT_BLUE);
   lcd.drawString("CONTINUE", 235, 410);
 }
@@ -54,21 +58,26 @@ void drawProtocolError(LGFX& lcd) {
   lcd.setTextColor(TFT_LIGHTGREY);
   lcd.drawString("Cannot initialize ELM327", 160, 240);
   
-  // Retry button (left)
-  lcd.fillRoundRect(20, 380, 130, 60, 10, TFT_GREEN);
+  // Select Device button (top)
+  lcd.fillRoundRect(60, 300, 200, 50, 10, TFT_ORANGE);
   lcd.setTextColor(TFT_WHITE);
   lcd.setFont(&FreeSans12pt7b);
+  lcd.drawString("SELECT DEVICE", 160, 325);
+  
+  // Retry button (bottom left)
+  lcd.fillRoundRect(20, 380, 130, 60, 10, TFT_GREEN);
   lcd.drawString("RETRY", 85, 410);
   
-  // Continue button (right)
+  // Continue button (bottom right)
   lcd.fillRoundRect(170, 380, 130, 60, 10, TFT_BLUE);
   lcd.drawString("CONTINUE", 235, 410);
 }
 
 void ConnectToOBD2(LGFX& lcd){
-  char strRetries[2];  
+  char strRetries[2];
+  extern String selectedBLEDevice;
   
-  if (!ELM_PORT.begin("IOS-Vlink")) {
+  if (!ELM_PORT.begin(selectedBLEDevice.c_str())) {
     Serial.println("BLE initialization failed");
     lcd.fillScreen(TFT_BLACK);
     lcd.setFont(&FreeSans18pt7b);
@@ -139,6 +148,13 @@ void ConnectToOBD2(LGFX& lcd){
   lcd.setFont(&FreeSans12pt7b);
 
   OBD2connected = true;
+  
+  // Update selectedBLEDevice to match the actual connected device and save to EEPROM
+  extern String selectedBLEDevice;
+  extern void saveBLEDevice(String deviceName);
+  selectedBLEDevice = ELM_PORT.getDeviceName();
+  saveBLEDevice(selectedBLEDevice);
+  Serial.printf("Successfully connected to: %s (saved to EEPROM)\n", selectedBLEDevice.c_str());
 
   delay(1500);
   }
