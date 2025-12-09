@@ -1,5 +1,5 @@
 /*  Ionic5obd2 for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
-    Version: v1.00
+    Version: v2.1.0
 
     SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
     Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
@@ -36,6 +36,13 @@
 #include <SD.h>
 #include <SPI.h>
 #include "WebServer_handlers.h"
+
+// Application Version - Update with code changes
+// Format: MAJOR.MINOR.PATCH
+// MAJOR: Breaking changes or major new features
+// MINOR: New features, improvements, non-breaking changes
+// PATCH: Bug fixes and minor tweaks
+const char* APP_VERSION = "v2.1.0";
 
 static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
@@ -668,6 +675,11 @@ void drawWelcomeScreen() {
   lcd.setFont(&FreeSans18pt7b);
   lcd.setTextColor(TFT_LIGHTGREY);
   lcd.drawString("Data Logger", 160, 165);
+  
+  // Version display
+  lcd.setFont(&FreeSans12pt7b);
+  lcd.setTextColor(TFT_DARKGREY);
+  lcd.drawString(APP_VERSION, 160, 200);
   
   // Separator line with gradient effect
   lcd.drawLine(40, 230, 280, 230, TFT_CYAN);
