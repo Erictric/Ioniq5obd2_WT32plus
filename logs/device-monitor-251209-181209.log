@@ -1,0 +1,20 @@
+WiFi connected in: 5.00 secs
+IP address: 10.87.1.107
+...Connection to OBDII...
+IOS-Vlink found.
+Forming a connection to 
+dd:0d:30:48:0a:53
+[DEBUG] Service FFF0 found.
+[  9311][E][BLERemoteCharacteristic.cpp:289] retrieveDescriptors(): esp_ble_gattc_get_all_descr: Unknown
+[DEBUG] CHAR rxUUID found.
+[DEBUG] canNotify 1
+[DEBUG] CHAR txUUID found.
+[DEBUG] canWrite 1
+[DEBUG] RX subscribed
+BLE device saved to EEPROM: IOS-Vlink
+Successfully connected to: IOS-Vlink (saved to EEPROM)
+Waiting 10 seconds for diagnostic button...
+Button1 Long Press - Showing IP Address
+Dismissing WiFi info screen
+Screen Touched
+Screen Touched

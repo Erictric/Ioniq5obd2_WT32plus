@@ -1,0 +1,44 @@
+Touch detected at: x=49, y=440
+DIAG button pressed!
+
+========================================
+DIAGNOSTIC SCAN: Searching for 12V Battery SoC
+Looking for responses > 20 bytes
+Logging to SD card: /diagnostic_scan.txt
+========================================
+
+
+========== SCAN: Header 7E5 ==========
+Testing service 21, PIDs 2100-21FF...
+This will test 256 queries
+Sending 10 03 (Extended Diagnostic Session)...
+Extended session response: 5003003201F4
+Extended diagnostic session activated successfully!
+
+--- Testing Service 21 (Read Data By Identifier) ---
+Progress: PID 2100 (0/256 PIDs tested, 1 responses)
+Progress: PID 2110 (16/256 PIDs tested, 17 responses)
+Progress: PID 2120 (32/256 PIDs tested, 33 responses)
+Progress: PID 2130 (48/256 PIDs tested, 49 responses)
+Progress: PID 2140 (64/256 PIDs tested, 65 responses)
+Progress: PID 2150 (80/256 PIDs tested, 81 responses)
+Progress: PID 2160 (96/256 PIDs tested, 97 responses)
+Progress: PID 2170 (112/256 PIDs tested, 113 responses)
+Progress: PID 2180 (128/256 PIDs tested, 129 responses)
+Progress: PID 2190 (144/256 PIDs tested, 145 responses)
+Progress: PID 21A0 (160/256 PIDs tested, 161 responses)
+Progress: PID 21B0 (176/256 PIDs tested, 177 responses)
+Progress: PID 21C0 (192/256 PIDs tested, 193 responses)
+pair status = fail Progress: PID 21D0 (208/256 PIDs tested, 209 responses)
+Progress: PID 21E0 (224/256 PIDs tested, 225 responses)
+Progress: PID 21F0 (240/256 PIDs tested, 241 responses)
+
+7E5 Scan complete: 256 total responses, 0 significant (>10 bytes)
+
+========================================
+DIAGNOSTIC SCAN COMPLETE
+Total responses: 256
+Significant responses (>20 bytes): 0
+========================================
+
+Results saved to SD card: /diagnostic_scan.txt

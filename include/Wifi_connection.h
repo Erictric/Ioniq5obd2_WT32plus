@@ -33,17 +33,17 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
   //WiFi.disconnect();
 
   // Try to load custom WiFi credentials from EEPROM first
-  String savedSSID = "";
-  String savedPassword = "";
-  extern bool loadWiFiCredentials(String &ssid, String &password);  // Forward declaration
+  char savedSSID[17] = "";
+  char savedPassword[17] = "";
+  extern bool loadWiFiCredentials(char* ssid, char* password);  // Forward declaration
   
   bool hasCustomWiFi = false;
   
   // Try to load custom credentials
-  if (loadWiFiCredentials(savedSSID, savedPassword) && savedSSID.length() > 0) {
+  if (loadWiFiCredentials(savedSSID, savedPassword) && savedSSID[0] != '\0') {
     // Use saved credentials
-    Serial.printf("Using saved WiFi credentials: %s\n", savedSSID.c_str());
-    WiFi.begin(savedSSID.c_str(), savedPassword.c_str());
+    Serial.printf("Using saved WiFi credentials: %s\n", savedSSID);
+    WiFi.begin(savedSSID, savedPassword);
     hasCustomWiFi = true;
   }
   else {
@@ -90,9 +90,11 @@ void ConnectWifi(LGFX& lcd, uint16_t Wifi_select){
     // Show SSID and IP address
     lcd.setFont(&FreeSans9pt7b);
     lcd.setTextColor(TFT_DARKGREY);
-    String ssidDisplay = "SSID: " + WiFi.SSID();
+    char ssidDisplay[40];
+    snprintf(ssidDisplay, sizeof(ssidDisplay), "SSID: %s", WiFi.SSID().c_str());
     lcd.drawString(ssidDisplay, lcd.width() / 2, 335);
-    String ipDisplay = "IP: " + WiFi.localIP().toString();
+    char ipDisplay[40];
+    snprintf(ipDisplay, sizeof(ipDisplay), "IP: %s", WiFi.localIP().toString().c_str());
     lcd.drawString(ipDisplay, lcd.width() / 2, 360);
     lcd.setFont(&FreeSans12pt7b);
     

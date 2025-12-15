@@ -1,0 +1,3428 @@
+Retry OBD2 connection
+...Connection to OBDII...
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Retry OBD2 connection
+...Connection to OBDII...
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Retry OBD2 connection
+...Connection to OBDII...
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Retry OBD2 connection
+...Connection to OBDII...
+IOS-Vlink found.
+Forming a connection to 
+dd:0d:30:48:0a:53
+[DEBUG] Service FFF0 found.
+[157352][E][BLERemoteCharacteristic.cpp:289] retrieveDescriptors(): esp_ble_gattc_get_all_descr: Unknown
+[DEBUG] CHAR rxUUID found.
+[DEBUG] canNotify 1
+[DEBUG] CHAR txUUID found.
+[DEBUG] canWrite 1
+[DEBUG] RX subscribed
+[DEBUG] ELM RESPONSE > A
+[DEBUG] ELM RESPONSE >[DEBUG] ELM RESPONSE > _
+Z
+[DEBUG] ELM RESPONSE > \r
+\rELM327_v2.1\r\r>
+[DEBUG] ELM RESPONSE > AT
+[DEBUG] ELM RESPONSE > _
+[DE0
+[DEBUG] ELM RESPONSE >>
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSEOK\r\r>
+BLE device saved to EEPROM: IOS-Vlink
+Successfully connected to: IOS-Vlink (saved to EEPROM)
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:6
+[DEBUG] ELEFA40000000000\r
+[DEBUG] ELM RESPONSE > 2:00001DF2F52F5\r
+[DEBUG] ELM RESPONSE > 7\r
+[DEBUG] ELM RESPONSE > F00\r
+[DEBUG] ELM RESPONSE > 515DF100015511\r
+[DEBUG] ELM RESPONSE > 6:000103450000F5\r
+[DEBUG] ELM RES7:C700F1200003\r
+[DEBUG] ELM RESPONSE > 8:000000000006BD\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA400000000002:00001DF2F5F2F53:F5F4F3F4001EC74:01C74D00008F005:015DF1000155116:000103450000F57:C700F1208300038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA400000000002:00001DF2F5F2F53:F5F4F3F4001EC74:01C74D00008F005:015DF1000155116:000103450000F57:C700F1208300038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F2'
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DF2'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A4'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F12083'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+[DEBUG] ELM RESPONSE > 1:0F012C01012CF3\r
+[D0\r
+[DEBUG] ELM RESPONSE > 3:746162000050F4\r
+[DEBUG] ELM RESPONSE > 4:0003E8B56F7600\r
+[DEBUG] ELM RESPONSE > 5:A7000000000000\r
+[DEBUG] ELM RESPONSE > 6:00F4F3F5AAAA\r
+[DEBUG] ELM RES\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF32:F4F3F4F3F4F3103:746162000050F44:0003E8B56F76005:A70000000000006:00F4F3F5F5AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF32:F4F3F4F3F4F3103:746162000050F44:0003E8B56F76005:A70000000000006:00F4F3F5F5AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '10'
+ hex number  hexSubString cap:14 len:2 '74'
+ hex number  hexSubString cap:14 len:2 'A7'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '6F76'
+ hex number  hexSubString cap:14 len:2 'F4'
+
+*** DIAGNOSTIC SCAN TRIGGERED ***
+
+========================================
+DIAGNOSTIC SCAN: Searching for 12V Battery SoC
+Looking for responses > 20 bytes
+========================================
+
+
+--- Testing Header: 7E2 ---
+[DEBUG] ELM RESPONSEOK\r\r>
+
+Service 21 with header 7E2:
+[F2111\r
+[DEBUG] ELM RESPONSE > \r>
+.[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPON\r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONS7F2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RES\r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DE>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+.[DEBUG] ELM RESPONSE > 
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DE>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBF2111\r
+[DEBUG] ELM RESPON>
+[DEBUG] ELM RESPONSE > >
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE>
+[DEBUG] ELM RESPONSE > 7F2111\r
+>
+ ELM RESPONSE > 7F2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEB>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DE
+.[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+F2111\r
+[DEBUG] ELM RESP\r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RES>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONS> \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RES>
+[DEBUG] ELM RESPONS7F2111\r
+[DEBUG] ELM RESPONSE>
+.[DEF2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPO7F2111\r
+[DEB
+[DEBUG] EONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+>
+[DEBF2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] EL
+[DEBF2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPON\r>
+[DEBUG] ELM RES7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RES7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+.[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEB
+pair status = fail E (193000) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (193045) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (193360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (193390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (193720) BT_BTM: BTM_GetSecurityFlags false
+
+E (193721) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+E (194035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (194080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (194380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (194425) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (194725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (194770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (195100) BT_BTM: BTM_GetSecurityFlags false
+
+ ELM RESPONSE > 7F2111\r
+E (195145) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (195445) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (195490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (195790) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (195820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (196120) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (196180) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (196495) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (196570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (196870) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (196915) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (197230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (197305) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (197635) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (197695) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (197995) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (198040) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (198340) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (198385) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (198670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (198730) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (199030) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (199075) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (199390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (199435) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (199735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (199780) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (200080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (200125) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (200425) BT_BTM: BTM_GetSecurityFlags false
+
+F2111
+E (200470) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (200770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (200815) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (201100) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (201145) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+.E (201430) BT_BTM: BTM_GetSecurityFlags false
+
+2111\r
+E (201475) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (201760) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSEF2111\r
+E (201805) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (202120) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (202150) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (202450) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (202480) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (202780) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (202825) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (203125) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (203170) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (203470) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (203545) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (203860) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (203890) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB>
+E (204190) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE7F2111\r
+E (204250) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (204550) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1\r
+E (204595) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (204895) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (204940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (205240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (205285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (205585) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (205630) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (205930) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (205960) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (206260) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 11
+E (206290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (206620) BT_BTM: BTM_GetSecurityFlags false
+
+E (206621) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+[DEBUG] ELM RESPONSE > \r>
+.E (206935) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (206965) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (207265) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO7F\r
+E (207310) BT_BTM: BTM_GetSecurityFlags false
+
+[D>
+E (207625) BT_BTM: BTM_GetSecurityFlags false
+
+[DEF2111\r
+E (207655) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (207955) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (208000) BT_BTM: BTM_GetSecurityFlags false
+
+SE > \r>
+E (208300) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (208360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (208675) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (208690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (209020) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (209065) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (209380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (209410) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (209710) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (209755) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (210055) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (210100) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (210415) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO1\r
+E (210460) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (210775) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (210790) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (211105) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ESPONSE > 7F2111\r
+E (211135) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (211435) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (211480) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (211780) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (211825) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (212155) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (212170) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (212470) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 2111\r
+E (212515) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (212815) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (212860) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (213160) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (213205) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE>
+E (213490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (213535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (213835) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (213880) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (214180) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (214225) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (214525) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (214570) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (214870) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (214915) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (215215) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (215260) BT_BTM: BTM_GetSecurityFlags false
+
+ONSE > \r>
+E (215560) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111
+E (215605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (215920) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (215950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO>
+E (216250) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F211
+E (216295) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (216595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (216640) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (216940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (216985) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (217300) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\E (217345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (217660) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (217690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (218005) BT_BTM: BTM_GetSecurityFlags false
+
+.[DEBUG] ELM RESPONSE > 7F2111\r
+E (218035) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (218335) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (218380) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (218680) BT_BTM: BTM_GetSecurityFlags false
+
+F2111\r
+E (218725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (219040) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (219085) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (219400) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (219430) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (219730) BT_BTM: BTM_GetSecurityFlags false
+
+7F2111\r
+E (219775) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (220060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONF2111\r
+E (220120) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES>
+E (220450) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (220465) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (220780) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (220810) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (221110) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F\r
+E (221140) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (221440) BT_BTM: BTM_GetSecurityFlags false
+
+[2111\r
+E (221485) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (221800) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2111\r
+E (221830) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (222130) BT_BTM: BTM_GetSecurityFlags false
+
+11\r
+E (222175) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (222475) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (222520) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (222820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB\r
+E (222880) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (223180) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (223225) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (223540) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (223570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (223870) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (223915) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (224230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS21E (224260) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (224560) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (224605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (224905) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (224950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (225250) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (225295) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (225595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (225640) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (225955) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (225985) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (226315) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (226360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (226675) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (226690) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (226990) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (227035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (227320) BT_BTM: BTM_GetSecurityFlags false
+
+[DE\r
+E (227365) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (227665) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (227710) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (228010) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (228055) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (228340) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (228385) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (228670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (228745) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+.E (229060) BT_BTM: BTM_GetSecurityFlags false
+
+[D
+E (229105) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (229405) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (229450) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (229750) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (229795) BT_BTM: BTM_GetSecurityFlags false
+
+ RESPONSE > \r>
+E (230110) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE7F2111\r
+E (230155) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (230455) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (230500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (230800) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (230845) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (231145) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (231190) BT_BTM: BTM_GetSecurityFlags false
+
+\r>
+E (231490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (231535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (231820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (231865) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (232165) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (232210) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (232510) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (232555) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (232855) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM \r
+E (232915) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (233215) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (233260) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (233560) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (233605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE>
+E (233905) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (233950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (234250) BT_BTM: BTM_GetSecurityFlags false
+
+E > 7F2111\r
+E (234295) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (234595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (234640) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (234940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (234985) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (235285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1\r
+E (235330) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (235630) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (235705) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (236035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (236095) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (236395) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (236440) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (236740) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (236785) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (237085) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2111\r
+E (237130) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (237445) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (237475) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (237760) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (237805) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (238105) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON7F2111\r
+E (238150) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (238450) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (238495) BT_BTM: BTM_GetSecurityFlags false
+
+> \r>
+E (238795) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (238870) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (239170) BT_BTM: BTM_GetSecurityFlags false
+
+[DE
+E (239200) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (239500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (239545) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (239845) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (239890) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (240190) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F11\r
+E (240235) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (240535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (240595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (240895) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (240940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (241240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (241285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (241600) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES
+E (241645) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (241960) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (242005) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (242305) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (242350) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (242650) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (242695) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (242995) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2111\r
+E (243070) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (243385) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (243415) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (243730) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (243775) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (244075) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (244120) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (244420) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (244465) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (244765) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (244810) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (245110) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (245155) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (245470) BT_BTM: BTM_GetSecurityFlags false
+
+F2111\r
+E (245515) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+.E (245815) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (245860) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (246160) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (246205) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (246505) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS7F2111\r
+E (246550) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (246865) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (246895) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (247180) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (247225) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (247510) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (247555) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (247870) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (247900) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (248230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (248290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (248590) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (248635) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (248920) BT_BTM: BTM_GetSecurityFlags false
+
+SPONSE > 7F2111\r
+E (248965) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (249265) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (249310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (249625) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F
+E (249655) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE \r>
+E (249955) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (250000) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (250300) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (250345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBE (250645) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (250675) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (250975) BT_BTM: BTM_GetSecurityFlags false
+
+F2111\r
+E (251005) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (251305) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (251350) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (251680) BT_BTM: BTM_GetSecurityFlags false
+
+[DEF2111\r
+E (251695) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (252010) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (252040) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (252340) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (252385) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (252685) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (252715) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (253030) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (253060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (253360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (253390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (253705) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (253735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (254035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (254065) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (254380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F211\r
+E (254440) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (254740) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (254785) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (255070) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS7F2111\r
+E (255115) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (255445) BT_BTM: BTM_GetSecurityFlags false
+
+[D
+E (255460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (255760) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (255805) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (256090) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (256135) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+
+Service 22 with header 7E2:
+E (256450) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (256480) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (256780) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (256825) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (257140) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (257185) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (257500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB
+E (257530) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (257830) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (257875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (258190) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (258235) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (258550) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (258595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (258925) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (258940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (259240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE7F2213\r
+E (259285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (259570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (259615) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (259930) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (259960) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (260260) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] EONSE > 7F2213\r
+E (260305) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES>
+E (260620) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB3\r
+E (260650) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (260950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (260995) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (261310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (261355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (261670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (261700) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (262000) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (262045) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (262360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES2213\r
+E (262390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (262690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (262735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (263035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB\r
+E (263080) BT_BTM: BTM_GetSecurityFlags false
+
+] ELM RESPONSE > \r>
+E (263380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB3\r
+E (263425) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (263740) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (263770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (264100) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (264145) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (264460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (264490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (264790) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (264835) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (265135) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (265180) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (265480) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (265525) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (265840) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (265885) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (266200) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM \r
+E (266230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (266530) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB13\r
+E (266575) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (266875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (266920) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (267220) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (267265) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (267565) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (267610) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (267910) BT_BTM: BTM_GetSecurityFlags false
+
+[DE
+E (267955) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (268270) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON213\r
+E (268285) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (268600) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (268645) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (268960) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (268990) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (269290) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (269335) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (269635) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (269680) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (269980) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F221E (270025) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (270325) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (270370) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (270670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (270715) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (271030) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (271060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (271345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (271390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (271690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2
+E (271720) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (272005) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (272050) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (272395) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (272425) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (272725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (272770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (273070) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (273115) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+.E (273430) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (273460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (273775) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS13\r
+E (273805) BT_BTM: BTM_GetSecurityFlags false
+
+[>
+E (274105) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (274150) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (274450) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB2213\r
+E (274495) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (274795) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] E RESPONSE > 7F2213\r
+E (274840) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (275140) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (275185) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (275470) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (275515) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (275830) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (275860) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (276175) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (276235) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (276535) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (276580) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (276880) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (276925) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (277225) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (277270) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (277570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (277615) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (277900) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (277945) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (278245) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213
+E (278290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (278605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (278635) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (278935) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB13\r
+E (278995) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (279295) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (279355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (279640) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (279685) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (279970) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (280015) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (280330) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (280360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (280690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (280735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (281035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB213\r
+E (281080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (281380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB2213\r
+E (281425) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (281725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (281770) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (282070) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (282115) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (282430) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (282460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (282760) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (282805) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (283090) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (283135) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (283435) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (283480) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (283780) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2E (283825) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (284125) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (284170) BT_BTM: BTM_GetSecurityFlags false
+
+>
+.E (284470) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (284530) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (284830) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON\r
+E (284875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (285175) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (285220) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO
+E (285520) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (285565) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (285880) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (285910) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (286195) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (286240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (286540) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (286585) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES>
+E (286885) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (286930) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (287230) BT_BTM: BTM_GetSecurityFlags false
+
+[F2213\r
+E (287290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP
+E (287590) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (287635) BT_BTM: BTM_GetSecurityFlags false
+
+\r>
+E (287950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (288010) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (288310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (288355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (288670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (288700) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (288985) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES13\r
+E (289030) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (289330) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (289375) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (289690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (289750) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (290050) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (290095) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (290395) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (290440) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (290740) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (290785) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (291100) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (291130) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE>
+E (291430) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (291490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (291820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (291835) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (292150) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (292210) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (292510) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (292555) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (292855) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (292900) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (293200) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (293245) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (293545) BT_BTM: BTM_GetSecurityFlags false
+
+213\r
+E (293590) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (293875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (293920) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (294235) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (294280) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (294595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (294640) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (294940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2E (294985) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (295285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (295330) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (295630) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (295660) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (295960) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (296020) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (296335) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (296380) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (296665) BT_BTM: BTM_GetSecurityFlags false
+
+UG] ELM RESPONSE > 7F2213\r
+E (296725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (297025) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (297070) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (297355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON7F2213\r
+E (297400) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (297700) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (297745) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (298045) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (298090) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (298390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (298435) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (298735) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (298780) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (299080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB2213\r
+E (299125) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (299425) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (299500) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (299830) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (299860) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (300160) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (300205) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (300505) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (300550) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (300850) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP7F2213\r
+E (300910) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (301210) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (301255) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (301555) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (301600) BT_BTM: BTM_GetSecurityFlags false
+
+E (301900) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES2213\r
+E (301945) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (302260) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (302290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (302590) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (302650) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (302935) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (302980) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (303310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (303385) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (303685) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (303730) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (304030) BT_BTM: BTM_GetSecurityFlags false
+
+EBUG] ELM RESPONSE > 7F2213\r
+E (304060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (304345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (304390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (304690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (304735) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (305035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (305080) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (305380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ESPONSE > 7F2213\r
+E (305425) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (305725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON7F2213\r
+E (305770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (306085) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2213\r
+E (306130) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (306460) BT_BTM: BTM_GetSecurityFlags false
+
+E (306461) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB\r
+[DEBUG] ELM RESPONSE > \r>
+.E (306775) BT_BTM: BTM_GetSecurityFlags false
+
+2213\r
+E (306820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (307120) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (307165) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (307465) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2213\r
+E (307510) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (307810) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (307855) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (308155) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (308200) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (308500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (308545) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (308845) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (308890) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (309205) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (309235) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB
+E (309535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (309580) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (309865) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (309940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (310240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (310285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (310570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (310615) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (310945) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES213\r
+E (310960) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (311260) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (311305) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (311605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (311665) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (311950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (311995) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (312310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (312355) BT_BTM: BTM_GetSecurityFlags false
+
+[
+E (312655) BT_BTM: BTM_GetSecurityFlags false
+
+ RESPONSE > 7F2213\r
+E (312700) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (313000) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (313045) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (313345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (313420) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (313720) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (313765) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (314050) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (314095) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (314395) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (314440) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (314725) BT_BTM: BTM_GetSecurityFlags false
+
+F2213\r
+E (314770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (315070) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (315115) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (315430) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (315460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (315775) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB\r
+E (315805) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (316120) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (316165) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (316495) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (316510) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (316810) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (316855) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (317140) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2213\r
+E (317185) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (317500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (317530) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+.E (317830) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (317875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE \r>
+E (318175) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F22E (318220) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (318520) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (318565) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (318865) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (318910) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (319195) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (319240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (319570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (319585) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (319885) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (319930) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE>
+E (320230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (320275) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (320575) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (320620) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (320920) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (320980) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (321280) BT_BTM: BTM_GetSecurityFlags false
+
+> 7F2213\r
+E (321325) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (321625) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES3\r
+E (321670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (321955) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (322030) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (322345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (322390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE>
+E (322690) BT_BTM: BTM_GetSecurityFlags false
+
+13\r
+E (322735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (323035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (323080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (323380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (323455) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (323755) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2213\r
+E (323800) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (324085) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (324130) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (324430) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (324475) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (324790) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (324820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (325105) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (325150) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (325450) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (325495) BT_BTM: BTM_GetSecurityFlags false
+
+\r>
+E (325795) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (325840) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (326140) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (326185) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (326485) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE2213\r
+E (326530) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (326830) BT_BTM: BTM_GetSecurityFlags false
+
+[F2213\r
+E (326875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (327175) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (327220) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (327535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (327565) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (327865) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (327910) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (328210) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (328255) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (328555) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (328600) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (328900) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (328945) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (329230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (329275) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (329605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (329620) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE \r>
+E (329935) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP7F2213\r
+E (330010) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (330325) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (330355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (330655) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (330700) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (331015) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB
+E (331045) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (331345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (331390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (331690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB\r
+E (331735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (332035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (332080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (332380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (332425) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (332725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (332770) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (333085) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (333115) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (333415) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (333490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (333790) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (333835) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (334135) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP7F2213\r
+E (334195) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE
+.E (334495) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (334540) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (334840) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (334885) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (335185) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (335230) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (335530) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (335575) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (335875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] EONSE > 7F2213\r
+E (335905) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (336205) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (336250) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (336550) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF213\r
+E (336595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (336895) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (336970) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBE (337270) BT_BTM: BTM_GetSecurityFlags false
+
+3\r
+E (337315) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (337630) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (337675) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (338005) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS7F2213\r
+E (338020) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (338320) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (338365) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (338665) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (338710) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (339025) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB\r
+E (339070) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (339370) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (339415) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (339730) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (339760) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (340060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (340105) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (340405) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (340450) BT_BTM: BTM_GetSecurityFlags false
+
+[D>
+E (340750) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES213\r
+E (340795) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (341095) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (341155) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (341455) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (341500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES>
+E (341800) BT_BTM: BTM_GetSecurityFlags false
+
+[D
+E (341845) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (342145) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (342190) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (342490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (342535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (342835) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (342865) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (343165) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (343210) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE
+E (343525) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (343570) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (343885) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (343930) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (344230) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (344290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (344590) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2213\r
+E (344635) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (344935) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2213\r
+E (344980) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+
+--- Testing Header: 7E3 ---
+E (345310) BT_BTM: BTM_GetSecurityFlags false
+
+K\r\r>
+
+Service 21 with header 7E3:
+E (345460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F\r
+E (345505) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP
+.E (345790) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (345835) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (346135) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (346180) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (346480) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (346525) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (346825) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO2111\r
+E (346870) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (347170) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (347215) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (347515) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (347560) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (347860) BT_BTM: BTM_GetSecurityFlags false
+
+E (347905) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (348220) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (348250) BT_BTM: BTM_GetSecurityFlags false
+
+[D>
+E (348550) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (348595) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (348895) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (348940) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (349240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (349285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (349585) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (349630) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (349930) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (349975) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (350275) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (350320) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (350620) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE11\r
+E (350695) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (350995) BT_BTM: BTM_GetSecurityFlags false
+
+2111\r
+E (351040) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE \r>
+E (351325) BT_BTM: BTM_GetSecurityFlags false
+
+.[DEBUG] ELM RESPONSE > 7F2111\r
+E (351370) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (351670) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE7F2111\r
+E (351715) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (352015) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (352060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (352345) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (352390) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (352690) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (352735) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (353035) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (353080) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (353380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESE (353455) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (353755) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (353800) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (354085) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (354130) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (354430) BT_BTM: BTM_GetSecurityFlags false
+
+ONSE > 7F2111\r
+E (354490) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (354820) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (354865) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (355195) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (355225) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (355540) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\
+E (355585) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (355915) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB1\r
+E (355945) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (356245) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (356290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (356590) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (356635) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (356935) BT_BTM: BTM_GetSecurityFlags false
+
+.[DEBUG] ELM RESPONSE > 7F2111\r
+E (356980) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (357265) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES7F2111\r
+E (357310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (357610) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (357655) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (357955) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (358000) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (358285) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (358330) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (358630) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (358675) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (358975) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (359020) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (359320) BT_BTM: BTM_GetSecurityFlags false
+
+F2111\r
+E (359380) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (359680) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (359725) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (360040) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (360100) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (360400) BT_BTM: BTM_GetSecurityFlags false
+
+[DE (360445) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (360745) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F21E (360790) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (361090) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON111\r
+E (361135) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (361435) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (361480) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (361765) BT_BTM: BTM_GetSecurityFlags false
+
+SPONSE > 7F2111\r
+E (361810) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (362110) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB2111\r
+E (362155) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (362455) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (362500) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (362800) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (362860) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO>
+E (363190) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (363205) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (363520) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (363580) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (363880) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (363925) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (364240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (364300) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RES\r>
+E (364600) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (364645) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (364945) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (364990) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (365290) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (365335) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (365635) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (365680) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (365965) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (366010) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESONSE > \r>
+E (366310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (366355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (366655) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (366700) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (367000) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2\r
+E (367060) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (367360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (367405) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (367705) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (367750) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (368050) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (368095) BT_BTM: BTM_GetSecurityFlags false
+
+E (368395) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON\r
+E (368440) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (368755) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (368815) BT_BTM: BTM_GetSecurityFlags false
+
+>
+E (369115) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (369160) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (369460) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (369535) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (369835) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (369880) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (370165) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (370210) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (370510) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (370555) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (370900) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (370945) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>
+E (371275) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (371305) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE \r>
+E (371605) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (371650) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (371950) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (371995) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (372310) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (372355) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (372655) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (372700) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (373000) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESF2111\r
+E (373045) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (373360) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\
+E (373435) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+.E (373765) BT_BTM: BTM_GetSecurityFlags false
+
+11\r
+E (373810) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE
+E (374125) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (374155) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (374485) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBF2111\r
+E (374560) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (374875) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (374920) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+E (375220) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2111\r
+E (375265) BT_BTM: BTM_GetSecurityFlags false
+
+[DE>

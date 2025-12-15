@@ -75,17 +75,17 @@ bool showSaveConfirmation = false;  // Flag to show save confirmation dialog
 bool showWiFiInfo = false;  // Flag to show WiFi information screen
 bool showOBD2FailScreen = false;  // Flag to show OBD2 connection failure screen
 bool showDeviceSelection = false;  // Flag to show BLE device selection screen
-String selectedBLEDevice = "";  // Selected OBD2 device name (empty until loaded from EEPROM)
-String bleDeviceList[10];  // Store up to 10 BLE devices found
+char selectedBLEDevice[21] = "";  // Selected OBD2 device name (max 20 chars + null)
+char bleDeviceList[10][21] = { "" };  // Store up to 10 BLE devices found (max 20 chars + null)
 int bleDeviceCount = 0;  // Number of BLE devices found
 bool bleScanning = false;  // Flag to indicate BLE scan in progress
 int wifiScreenPage = 0;  // 0=scan list, 1=keyboard for SSID, 2=keyboard for password
-String wifiSSIDList[20];  // Store up to 20 WiFi networks
+char wifiSSIDList[20][17] = { "" };  // Store up to 20 WiFi networks (max 16 chars + null)
 int wifiRSSI[20];         // Store signal strength
 int wifiCount = 0;        // Number of networks found
 int selectedWiFi = -1;    // Selected network index
-String enteredSSID = "";  // Manual SSID entry
-String enteredPassword = "";  // Password entry
+char enteredSSID[17] = "";  // Manual SSID entry (max 16 chars + null)
+char enteredPassword[17] = "";  // Password entry (max 16 chars + null)
 // Different character sets for keyboard
 char keyboardLower[] = "abcdefghijklmnopqrstuvwxyz";
 char keyboardUpper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -390,7 +390,7 @@ unsigned long stopESP_timer = 0;
 
 bool sending_data = false;  // Flag to trigger SD card save every 10 seconds
 unsigned long sendInterval = 10000;  // SD card save interval in millisec
-unsigned long GSheetTimer = 0;  // Timer for SD card save LED flash
+unsigned long SDsaveTimer = 0;  // Timer for SD card save LED flash
 bool sendIntervalOn = false;  // Flag for kWh_corr timing logic
 bool sdCardSaved = false;  // Flag to indicate SD card save for LED flash
 tm timeinfo;   // Variable to save current epoch time
@@ -541,27 +541,32 @@ bool archiveFile(const char* filename) {
   }
   
   // Create archived filename
-  String originalName = String(filename);
-  originalName.replace("/", "");  // Remove leading slash
-  String archivedName = archiveDir;
-  archivedName += "/";
-  archivedName += originalName;
-  
+  char originalName[64];
+  strncpy(originalName, filename, sizeof(originalName) - 1);
+  originalName[sizeof(originalName) - 1] = '\0';
+  // Remove leading slash if present
+  if (originalName[0] == '/') {
+    memmove(originalName, originalName + 1, strlen(originalName));
+  }
+  char archivedName[128];
+  snprintf(archivedName, sizeof(archivedName), "%s/%s", archiveDir, originalName);
+
   // Add timestamp before extension
-  int dotIndex = archivedName.lastIndexOf('.');
-  if (dotIndex > 0) {
-    String base = archivedName.substring(0, dotIndex);
-    String ext = archivedName.substring(dotIndex);
-    archivedName = base;
-    archivedName += "_";
-    archivedName += timestamp;
-    archivedName += ext;
+  char* dot = strrchr(archivedName, '.');
+  if (dot) {
+    char base[128], ext[16];
+    size_t baseLen = dot - archivedName;
+    strncpy(base, archivedName, baseLen);
+    base[baseLen] = '\0';
+    strncpy(ext, dot, sizeof(ext) - 1);
+    ext[sizeof(ext) - 1] = '\0';
+    snprintf(archivedName, sizeof(archivedName), "%s_%s%s", base, timestamp, ext);
   } else {
-    archivedName += "_";
-    archivedName += timestamp;
+    strncat(archivedName, "_", sizeof(archivedName) - strlen(archivedName) - 1);
+    strncat(archivedName, timestamp, sizeof(archivedName) - strlen(archivedName) - 1);
   }
   
-  Serial.printf("Archiving %s to %s\n", filename, archivedName.c_str());
+  Serial.printf("Archiving %s to %s\n", filename, archivedName);
   
   // Read source file
   File sourceFile = SD.open(filename, FILE_READ);
@@ -571,7 +576,7 @@ bool archiveFile(const char* filename) {
   }
   
   // Create destination file
-  File destFile = SD.open(archivedName.c_str(), FILE_WRITE);
+  File destFile = SD.open(archivedName, FILE_WRITE);
   if (!destFile) {
     Serial.println("Failed to create archive file");
     sourceFile.close();
@@ -590,7 +595,7 @@ bool archiveFile(const char* filename) {
   
   // Delete original file
   if (SD.remove(filename)) {
-    Serial.printf("File archived successfully: %s\n", archivedName.c_str());
+    Serial.printf("File archived successfully: %s\n", archivedName);
     return true;
   } else {
     Serial.println("Failed to delete original file after archiving");
@@ -759,10 +764,12 @@ void setup(void)
   
   // If a valid device name is saved, use it; otherwise default to "IOS-Vlink"
   if (savedBLEDevice[0] != 0 && savedBLEDevice[0] != 255) {
-    selectedBLEDevice = String(savedBLEDevice);
-    Serial.printf("Loaded BLE device from EEPROM: %s\n", selectedBLEDevice.c_str());
+    strncpy(selectedBLEDevice, savedBLEDevice, 20);
+    selectedBLEDevice[20] = '\0';
+    Serial.printf("Loaded BLE device from EEPROM: %s\n", selectedBLEDevice);
   } else {
-    selectedBLEDevice = "IOS-Vlink";  // Default device
+    strncpy(selectedBLEDevice, "IOS-Vlink", 20);
+    selectedBLEDevice[20] = '\0';
     Serial.println("No saved BLE device, using default: IOS-Vlink");
   }
   
@@ -788,7 +795,7 @@ void setup(void)
   //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
 
   /* uncomment if you need to display Safestring results on Serial Monitor */
-  SafeString::setOutput(Serial);
+  //SafeString::setOutput(Serial);
 
   /*/////////////////////////////////////////////////////////////////*/
   /*                    INITIALIZE SD CARD (SPI MODE)                */
@@ -888,19 +895,7 @@ void setup(void)
 
   // Setup Web Server after connections (Google Sheets disabled)
   if (StartWifi && WiFi.status() == WL_CONNECTED) {
-    /* Google Sheets disabled - not currently used
-    GSheet.printf("ESP Google Sheet Client v%s\n\n", ESP_GOOGLE_SHEET_CLIENT_VERSION);
-  
-    // Set the callback for Google API access token generation status (for debug only)
-    GSheet.setTokenCallback(tokenStatusCallback);
-  
-    // Set the seconds to refresh the auth token before expire (60 to 3540, default is 300 seconds)
-    GSheet.setPrerefreshSeconds(10 * 60);
-  
-    // Begin the access token generation for Google API authentication
-    GSheet.begin(CLIENT_EMAIL, PROJECT_ID, PRIVATE_KEY);
-    */
-    
+        
     // Re-configure timezone after WiFi connects to ensure NTP uses local time
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
     DEBUG_PORT.println("Timezone re-configured after WiFi connection");
@@ -923,28 +918,7 @@ void setup(void)
     DEBUG_PORT.println(WiFi.localIP());
   }
 
-  //Setup interrupt on Touch Pad 2 (GPIO2)
-  //touchAttachInterrupt(T2, callback, Threshold);
-
-  //Configure Touchpad as wakeup source
-  //esp_sleep_enable_touchpad_wakeup(); // initialize ESP wakeup on Touch activation  
-
-
-   /*//////////////Initialise Task on core0 to send data on Google Sheet ////////////////*/
-
-  // Google Sheets task disabled to save memory - SD card logging still active
-#if 0
-  xTaskCreatePinnedToCore(
-    sendGoogleSheet,   /* Function to implement the task */
-    "sendGoogleSheet", /* Name of the task */
-    4096,              /* Stack size in words (16KB - reduced from 40KB) */
-    NULL,               /* Task input parameter */
-    0,                  /* Priority of the task */
-    &googleSheetTaskHandle,  /* Task handle. */
-    0);                 /* Core where the task should run */
-  delay(500);
-#endif   
-
+     
   // Only clear screen if OBD2 connected or no fail screen showing
   if (!showOBD2FailScreen) {
     lcd.fillScreen(TFT_BLACK);
@@ -1042,6 +1016,7 @@ void read_data() {
   
   if (myELM327.queryPID("220101")) {  // Service and Message PID = hex 22 0101 => dec 34, 257
   //if (myELM327.nb_rx_state ==  ELM_SUCCESS) { 
+    delayMicroseconds(10); // 10 uSec delay between PID queries
     char* payload = myELM327.payload;
     size_t payloadLen = myELM327.recBytes;
     // Reduce debug output - only print occasionally
@@ -1082,8 +1057,9 @@ void read_data() {
     MINcellvNb = convertToInt(results.frames[4], 3, 1);
     OPtimemins = convertToInt(results.frames[7], 2, 4) * 0.01666666667;
     OPtimehours = OPtimemins * 0.01666666667;
-    FrontMotor = convertToInt(results.frames[8], 2, 2);
-    RearMotor = convertToInt(results.frames[8], 4, 2);
+    //FrontMotor = convertToInt(results.frames[8], 2, 2);
+    //RearMotor = convertToInt(results.frames[8], 4, 2);   
+    
   }
   if (BmsSoC > 0) {
     OBDscanning = true;
@@ -1103,6 +1079,7 @@ void read_data() {
         myELM327.sendCommand("AT SH 7E4");  // Set Header for BMS
         //myELM327.queryPID((char*)"220105");  
         if (myELM327.queryPID("220105")) {  // Service and Message PID = hex 22 0105 => dec 34, 261
+          delayMicroseconds(10); // 10 uSec delay between PID queries
         //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
@@ -1130,6 +1107,7 @@ void read_data() {
         myELM327.sendCommand("AT SH 7E4");  // Set Header for BMS
         //myELM327.queryPID((char*)"220106");               
         if (myELM327.queryPID("220106")) {  // Service and Message PID = hex 22 0106 => dec 34, 262
+          delayMicroseconds(10); // 10 uSec delay between PID queries
         //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
@@ -1150,6 +1128,7 @@ void read_data() {
         myELM327.sendCommand("AT SH 7C6");  // Set Header for CLU Cluster Module
         //myELM327.queryPID((char*)"22B002");
         if (myELM327.queryPID("22B002")) {
+          delayMicroseconds(10); // 10 uSec delay between PID queries
         //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
@@ -1165,6 +1144,7 @@ void read_data() {
         myELM327.sendCommand("AT SH 7B3");  //Set Header Aircon   
         //myELM327.queryPID((char*)"220100");  
         if (myELM327.queryPID("220100")) {  // Service and Message PID
+          delayMicroseconds(10); // 10 uSec delay between PID queries
         //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
@@ -1192,6 +1172,7 @@ void read_data() {
         myELM327.sendCommand("AT SH 7A0");  //Set BCM Header   
         //myELM327.queryPID((char*)"22C00B");     
         if (myELM327.queryPID("22C00B")) {  // Service and Message PID
+          delayMicroseconds(10); // 10 uSec delay between PID queries
         //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
           char* payload = myELM327.payload;
           size_t payloadLen = myELM327.recBytes;
@@ -1739,7 +1720,7 @@ bool saveToSD(const char* timestamp) {
   
   // Trigger LED flash for SD card save
   sdCardSaved = true;
-  GSheetTimer = millis();
+  SDsaveTimer = millis();
   
   return true;
 }
@@ -1923,21 +1904,21 @@ void saveWiFiCredentials(String ssid, String password) {
   Serial.println("WiFi credentials saved");
 }
 
-bool loadWiFiCredentials(String &ssid, String &password) {
+bool loadWiFiCredentials(char* ssid, char* password) {
   // Load WiFi credentials from EEPROM
   // Returns true if custom credentials exist and are valid, false otherwise
-  
+
   // Check if custom WiFi flag is set
   if (EEPROM.read(168) != 0xFF) {
     Serial.println("No custom WiFi credentials found in EEPROM (flag not set)");
     return false;
   }
-  
+
   Serial.println("Loading WiFi credentials from EEPROM");
-  
-  // Read SSID
-  ssid = "";
-  for (int i = 0; i < 32; i++) {
+
+  // Read SSID (max 16 chars)
+  int ssidLen = 0;
+  for (int i = 0; i < 16; i++) {
     char c = EEPROM.read(72 + i);
     if (c == 0) break;  // Null terminator
     // Check for invalid characters (non-printable or garbage)
@@ -1945,29 +1926,30 @@ bool loadWiFiCredentials(String &ssid, String &password) {
       Serial.println("Invalid SSID data detected");
       return false;
     }
-    ssid += c;
+    ssid[ssidLen++] = c;
   }
-  
+  ssid[ssidLen] = '\0';
+
   // Validate SSID is not empty and reasonable length
-  if (ssid.length() == 0 || ssid.length() > 32) {
+  if (ssidLen == 0 || ssidLen > 16) {
     Serial.println("Invalid SSID length");
     return false;
   }
-  
-  // Read Password
-  password = "";
-  for (int i = 0; i < 64; i++) {
+
+  // Read Password (max 16 chars)
+  int passLen = 0;
+  for (int i = 0; i < 16; i++) {
     char c = EEPROM.read(104 + i);
     if (c == 0) break;  // Null terminator
-    // Check for invalid characters (non-printable or garbage)
     if (c < 32 || c > 126) {
       Serial.println("Invalid password data detected");
       return false;
     }
-    password += c;
+    password[passLen++] = c;
   }
-  
-  Serial.printf("Loaded valid SSID: %s (length: %d)\n", ssid.c_str(), ssid.length());
+  password[passLen] = '\0';
+
+  Serial.printf("Loaded valid SSID: %s (length: %d)\n", ssid, ssidLen);
   return true;
 }
 
@@ -1987,7 +1969,7 @@ void drawWiFiScreen() {
     for (int i = 0; i < wifiCount && i < 8; i++) {
       int yPos = 100 + (i * 35);
       lcd.setTextColor(TFT_CYAN);
-      lcd.drawString(wifiSSIDList[i].c_str(), 10, yPos - 8);
+      lcd.drawString(wifiSSIDList[i], 10, yPos - 8);
       lcd.setTextColor(TFT_LIGHTGREY);
       char rssiStr[16];
       sprintf(rssiStr, "%d dBm", wifiRSSI[i]);
@@ -2018,7 +2000,7 @@ void drawWiFiScreen() {
     lcd.setFont(&FreeSans9pt7b);
     lcd.setTextColor(TFT_LIGHTGREY);
     char lenStr[20];
-    sprintf(lenStr, "Length: %d", enteredSSID.length());
+    sprintf(lenStr, "Length: %d", (int)strlen(enteredSSID));
     lcd.drawString(lenStr, 160, 95);
     
     // Current character selection - larger display
@@ -2068,7 +2050,7 @@ void drawWiFiScreen() {
     lcd.setFont(&FreeSans9pt7b);
     lcd.setTextColor(TFT_LIGHTGREY);
     char lenStr[20];
-    sprintf(lenStr, "Length: %d", enteredPassword.length());
+    sprintf(lenStr, "Length: %d", (int)strlen(enteredPassword));
     lcd.drawString(lenStr, 160, 95);
     
     // Current character selection - larger display
@@ -2272,7 +2254,7 @@ void ResetCurrTrip() {  // when the car is turned On, current trip value are res
     integrateI_timer = millis();
     RangeCalcTimer = millis();
     read_timer = millis();
-    GSheetTimer = millis();    
+    SDsaveTimer = millis();    
     CurrInitAccEnergy = acc_energy;
     CurrInitCED = CED;
     CurrInitCEC = CEC;
@@ -2317,16 +2299,17 @@ void initial_eeprom() {
 
 /*//////Function to save selected BLE device to EEPROM //////////*/
 
-void saveBLEDevice(String deviceName) {
+
+void saveBLEDevice(const char* deviceName) {
   char deviceBuffer[32];
   memset(deviceBuffer, 0, 32);
-  deviceName.toCharArray(deviceBuffer, 32);
-  
+  strncpy(deviceBuffer, deviceName, 31);
+  deviceBuffer[31] = '\0';
   for (int i = 0; i < 32; i++) {
     EEPROM.write(169 + i, deviceBuffer[i]);
   }
   EEPROM.commit();
-  Serial.printf("BLE device saved to EEPROM: %s\n", deviceName.c_str());
+  Serial.printf("BLE device saved to EEPROM: %s\n", deviceBuffer);
 }
 
 /*//////Function to scan for available BLE devices //////////*/
@@ -2364,7 +2347,8 @@ void scanBLEDevices() {
     
     // Add devices with non-empty names
     if (deviceName.length() > 0) {
-      bleDeviceList[bleDeviceCount] = deviceName;
+      strncpy(bleDeviceList[bleDeviceCount], deviceName.c_str(), 20);
+      bleDeviceList[bleDeviceCount][20] = '\0';
       Serial.printf("  -> Added to list as #%d\n", bleDeviceCount);
       bleDeviceCount++;
     } else {
@@ -2552,7 +2536,7 @@ void button(){
         lcd.setFont(&FreeSans12pt7b);
         for (int i = 0; i < bleDeviceCount && i < 5; i++) {
           int yPos = 120 + (i * 45);
-          bool isSelected = (bleDeviceList[i] == selectedBLEDevice);
+          bool isSelected = (strncmp(bleDeviceList[i], selectedBLEDevice, 20) == 0);
           lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
           lcd.setTextColor(TFT_WHITE);
           lcd.drawString(bleDeviceList[i], 160, yPos + 20);
@@ -2560,7 +2544,7 @@ void button(){
         
         // Add "Use Default (IOS-Vlink)" option at the bottom
         int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
-        bool defaultSelected = (selectedBLEDevice == "IOS-Vlink");
+        bool defaultSelected = (strncmp(selectedBLEDevice, "IOS-Vlink", 20) == 0);
         lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
         lcd.setTextColor(TFT_WHITE);
         lcd.setFont(&FreeSans9pt7b);
@@ -2670,8 +2654,9 @@ void button(){
       for (int i = 0; i < bleDeviceCount && i < 5; i++) {
         int yPos = 120 + (i * 45);
         if (x >= 20 && x <= 300 && y >= yPos && y <= yPos + 40) {
-          selectedBLEDevice = bleDeviceList[i];
-          Serial.printf("Selected device: %s\n", selectedBLEDevice.c_str());
+          strncpy(selectedBLEDevice, bleDeviceList[i], 20);
+          selectedBLEDevice[20] = '\0';
+          Serial.printf("Selected device: %s\n", selectedBLEDevice);
           
           // Redraw all device buttons with updated selection
           lcd.setFont(&FreeSans12pt7b);
@@ -2697,7 +2682,8 @@ void button(){
       // Check "Use Default" button
       int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
       if (x >= 20 && x <= 300 && y >= defaultYPos && y <= defaultYPos + 40) {
-        selectedBLEDevice = "IOS-Vlink";
+        strncpy(selectedBLEDevice, "IOS-Vlink", 20);
+        selectedBLEDevice[20] = '\0';
         Serial.println("Selected default device: IOS-Vlink");
         
         // Redraw all scanned devices as unselected
@@ -2794,12 +2780,11 @@ void button(){
       
       // Connect/OK button (220-300, 390-440)
       if (x >= 220 && x <= 300 && y >= 390 && y <= 440) {
-        if (selectedBLEDevice.length() == 0) {
+        if (selectedBLEDevice[0] == '\0') {
           Serial.println("No device selected!");
           return;
         }
-        
-        Serial.printf("Attempting connection to selected device: %s\n", selectedBLEDevice.c_str());
+        Serial.printf("Attempting connection to selected device: %s\n", selectedBLEDevice);
         Serial.println("Device will be saved to EEPROM only after successful connection");
         
         showDeviceSelection = false;
@@ -2908,7 +2893,8 @@ void button(){
         wifiCount = WiFi.scanNetworks();
         Serial.printf("Found %d networks\n", wifiCount);
         for (int i = 0; i < wifiCount && i < 20; i++) {
-          wifiSSIDList[i] = WiFi.SSID(i);
+          strncpy(wifiSSIDList[i], WiFi.SSID(i).c_str(), 16);
+          wifiSSIDList[i][16] = '\0';
           wifiRSSI[i] = WiFi.RSSI(i);
         }
         Serial.println("WiFi scan complete");
@@ -2991,10 +2977,11 @@ void button(){
           int yPos = 100 + (i * 35);
           if (y >= yPos - 15 && y <= yPos + 15) {
             selectedWiFi = i;
-            enteredSSID = wifiSSIDList[i];
+            strncpy(enteredSSID, wifiSSIDList[i], 16);
+            enteredSSID[16] = '\0';
             wifiScreenPage = 2;  // Go to password entry
             drawWiFiScreen();
-            Serial.printf("Selected WiFi: %s\n", wifiSSIDList[i].c_str());
+            Serial.printf("Selected WiFi: %s\n", wifiSSIDList[i]);
             return;
           }
         }
@@ -3002,7 +2989,7 @@ void button(){
         // Manual button
         if (x >= 10 && x <= 150 && y >= 420 && y <= 470) {
           wifiScreenPage = 1;  // Go to manual SSID entry
-          enteredSSID = "";
+            strcpy(enteredSSID, "");
           drawWiFiScreen();
           return;
         }
@@ -3049,24 +3036,29 @@ void button(){
         // SSID keyboard handling - buttons at y=220 and y=290
         if (x >= 10 && x <= 150 && y >= 220 && y <= 270) {
           // Add character (cycles through current keyboard)
-          if (enteredSSID.length() < 32) {
-            enteredSSID += currentKeyboard[keyboardIndex % currentKeyboardSize];
+          if (strlen(enteredSSID) < 16) {
+            size_t len = strlen(enteredSSID);
+            if (len < 16) {
+              enteredSSID[len] = currentKeyboard[keyboardIndex % currentKeyboardSize];
+              enteredSSID[len + 1] = '\0';
+            }
             keyboardIndex++;
             drawWiFiScreen();
           }
         }
         else if (x >= 170 && x <= 310 && y >= 220 && y <= 270) {
           // Delete character
-          if (enteredSSID.length() > 0) {
-            enteredSSID.remove(enteredSSID.length() - 1);
+          if (strlen(enteredSSID) > 0) {
+            size_t len = strlen(enteredSSID);
+            if (len > 0) enteredSSID[len - 1] = '\0';
             drawWiFiScreen();
           }
         }
         else if (x >= 10 && x <= 150 && y >= 290 && y <= 340) {
           // Next to password
-          if (enteredSSID.length() > 0) {
+          if (strlen(enteredSSID) > 0) {
             wifiScreenPage = 2;
-            enteredPassword = "";
+            strcpy(enteredPassword, "");
             keyboardIndex = 0;  // Reset keyboard index
             drawWiFiScreen();
           }
@@ -3112,16 +3104,21 @@ void button(){
         // Password keyboard handling - buttons at y=220, y=290, and y=360
         if (x >= 10 && x <= 150 && y >= 220 && y <= 270) {
           // Add character
-          if (enteredPassword.length() < 64) {
-            enteredPassword += currentKeyboard[keyboardIndex % currentKeyboardSize];
+          if (strlen(enteredPassword) < 16) {
+            size_t len = strlen(enteredPassword);
+            if (len < 16) {
+              enteredPassword[len] = currentKeyboard[keyboardIndex % currentKeyboardSize];
+              enteredPassword[len + 1] = '\0';
+            }
             keyboardIndex++;
             drawWiFiScreen();
           }
         }
         else if (x >= 170 && x <= 310 && y >= 220 && y <= 270) {
           // Delete character
-          if (enteredPassword.length() > 0) {
-            enteredPassword.remove(enteredPassword.length() - 1);
+          if (strlen(enteredPassword) > 0) {
+            size_t len = strlen(enteredPassword);
+            if (len > 0) enteredPassword[len - 1] = '\0';
             drawWiFiScreen();
           }
         }
@@ -3143,13 +3140,13 @@ void button(){
         }
         else if (x >= 10 && x <= 310 && y >= 360 && y <= 410) {
           // Connect
-          Serial.printf("Connecting to WiFi: %s\n", enteredSSID.c_str());
+          Serial.printf("Connecting to WiFi: %s\n", enteredSSID);
           
           // Save credentials to EEPROM for future use
           saveWiFiCredentials(enteredSSID, enteredPassword);
           
           // Connect to the new WiFi
-          WiFi.begin(enteredSSID.c_str(), enteredPassword.c_str());
+          WiFi.begin(enteredSSID, enteredPassword);
           screenNbr = 0;
           DrawBackground = true;
         }
@@ -3439,7 +3436,7 @@ void DisplayPage() {
           lcd.fillRect(10, 90, 300, 40, TFT_DARKGREY);
           lcd.setTextColor(TFT_YELLOW, TFT_DARKGREY);
           String maskedPassword = "";
-          for (unsigned int i = 0; i < enteredPassword.length(); i++) {
+          for (unsigned int i = 0; i < strlen(enteredPassword); i++) {
             maskedPassword += "*";
           }
           lcd.drawString(maskedPassword, 20, 110);
@@ -3754,14 +3751,14 @@ void loop()
     
     // Set flag for LED indicator
     sdCardSaved = true;
-    GSheetTimer = millis();
+    SDsaveTimer = millis();
   }
   
   /*/////// Display SD card save indicator /////////////////*/
   // Show brief green flash when data is saved to SD card
   if (sdCardSaved) {
     lcd.fillCircle(20, 20, 6, TFT_GREEN);
-    if (millis() - GSheetTimer >= 500) {
+    if (millis() - SDsaveTimer >= 500) {
       sdCardSaved = false;
     }
   }

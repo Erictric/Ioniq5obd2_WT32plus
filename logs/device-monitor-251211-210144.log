@@ -1,0 +1,165 @@
+WiFi connected in: 5.00 secs
+IP address: 10.138.216.107
+...Connection to OBDII...
+IOS-Vlink found.
+Forming a connection to 
+dd:0d:30:48:0a:53
+[DEBUG] Service FFF0 found.
+[  9539][E][BLERemoteCharacteristic.cpp:289] retrieveDescriptors(): esp_ble_gattc_get_all_descr: Unknown
+[DEBUG] CHAR rxUUID found.
+[DEBUG] canNotify 1
+[DEBUG] CHAR txUUID found.
+[DEBUG] canWrite 1
+[DEBUG] RX subscribed
+Successfully connected to: IOS-Vlink (already saved)
+OBD2 connected. Waiting 10 seconds for DIAG button press...
+Touch detected at: x=54, y=441
+DIAG button pressed!
+
+========================================
+DIAGNOSTIC SCAN: Searching for 12V Battery SoC
+Looking for responses > 20 bytes
+Logging to SD card: /diagnostic_scan.txt
+========================================
+
+
+========== SCAN: Header 7E2 ==========Sending 10 03 (Extended Diagnostic Session)...
+Warning: Failed to enter extended diagnostic session
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1814E45311:412D4E302D53422:392D56343030A'
+        data cap:48 len:48 '0130:62F1814E45311:412D4E302D53422:392D56343030A'
+PID 22F181 (49 bytes): 0130:62F1814E45311:412D4E302D53422:392D56343030A
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62F1824E454E1:3430393230AAA'
+        data cap:32 len:32 '00B0:62F1824E454E1:3430393230AAA'
+PID 22F182 (33 bytes): 00B0:62F1824E454E1:3430393230AAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1873339371:353131584E4E3'
+        data cap:32 len:32 '00D0:62F1873339371:353131584E4E3'
+PID 22F187 (33 bytes): 00D0:62F1873339371:353131584E4E3
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024071'
+        data cap:13 len:13 '62F18B2024071'
+PID 22F18B (14 bytes): 62F18B2024071
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00E0:62F18CAAAAAA1:AAAA04324190672:42AAAAAAAAAAA'
+        data cap:48 len:48 '00E0:62F18CAAAAAA1:AAAA04324190672:42AAAAAAAAAAA'
+PID 22F18C (49 bytes): 00E0:62F18CAAAAAA1:AAAA04324190672:42AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0140:62F1904B4D381:4B4E44444637522:5533323937313'
+        data cap:48 len:48 '0140:62F1904B4D381:4B4E44444637522:5533323937313'
+PID 22F190 (49 bytes): 0140:62F1904B4D381:4B4E44444637522:5533323937313
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1913339371:353131584E4E3'
+        data cap:32 len:32 '00D0:62F1913339371:353131584E4E3'
+PID 22F191 (33 bytes): 00D0:62F1913339371:353131584E4E3
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1933339371:353131584E4E3'
+        data cap:32 len:32 '00D0:62F1933339371:353131584E4E3'
+PID 22F193 (33 bytes): 00D0:62F1933339371:353131584E4E3
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A04E53423'
+        data cap:13 len:13 '62F1A04E53423'
+PID 22F1A0 (14 bytes): 62F1A04E53423
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15330343'
+        data cap:13 len:13 '62F1A15330343'
+PID 22F1A1 (14 bytes): 62F1A15330343
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1B14E53423'
+        data cap:13 len:13 '62F1B14E53423'
+PID 22F1B1 (14 bytes): 62F1B14E53423
+pair status = fail 
+Header 7E2 scan complete: 256 total responses, 11 significant (>10 bytes)
+
+========== SCAN: Header 7E3 ==========Sending 10 03 (Extended Diagnostic Session)...
+Extended session response: NODATA
+Warning: Unexpected response to extended session request
+
+Header 7E3 scan complete: 256 total responses, 11 significant (>10 bytes)
+
+========== SCAN: Header 7E4 ==========Sending 10 03 (Extended Diagnostic Session)...
+Extended session response: 5003003201F4
+Extended diagnostic session activated successfully!
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03B0:62F1800135361:30434E453345562:2D20424D5320203:202020202056454:522E302E3120205:2020200A0B0C0D6:0E0A0B0C0D0E007:000000353630438:11111111AAAAA'
+        data cap:144 len:144 '03B0:62F1800135361:30434E453345562:2D20424D5320203:202020202056454:522E302E3120205:2020200A0B0C0D6:0E0A0B0C0D0E007:000000353630438:11111111AAAAA'
+PID 22F180 (145 bytes): 03B0:62F1800135361:30434E453345562:2D20424D5320203:202020202056454:522E302E3120205:2020200A0B0C0D6:0E0A0B0C0D0E007:000000353630438:11111111AAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1873337351:4130474933353'
+        data cap:32 len:32 '00D0:62F1873337351:4130474933353'
+PID 22F187 (33 bytes): 00D0:62F1873337351:4130474933353
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024071'
+        data cap:13 len:13 '62F18B2024071'
+PID 22F18B (14 bytes): 62F18B2024071
+Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0150:62F18C4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+        data cap:64 len:64 '0150:62F18C4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+PID 22F18C (65 bytes): 0150:62F18C4253301:31414E453854302:313439000000003:00AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F18E3337351:3031474933353'
+        data cap:32 len:32 '00D0:62F18E3337351:3031474933353'
+PID 22F18E (33 bytes): 00D0:62F18E3337351:3031474933353
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0140:62F1904E45331:45562D20424D532:2020202020202'
+        data cap:48 len:48 '0140:62F1904E45331:45562D20424D532:2020202020202'
+PID 22F190 (49 bytes): 0140:62F1904E45331:45562D20424D532:2020202020202
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1915645521:2E302E312020202:2020AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1915645521:2E302E312020202:2020AAAAAAAAA'
+PID 22F191 (49 bytes): 00F0:62F1915645521:2E302E312020202:2020AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1982020201:2020202020202'
+        data cap:32 len:32 '00D0:62F1982020201:2020202020202'
+PID 22F198 (33 bytes): 00D0:62F1982020201:2020202020202
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1990000000'
+        data cap:13 len:13 '62F1990000000'
+PID 22F199 (14 bytes): 62F1990000000
+Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0150:62F19A4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+        data cap:64 len:64 '0150:62F19A4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+PID 22F19A (65 bytes): 0150:62F19A4253301:31414E453854302:313439000000003:00AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F19B0000000'
+        data cap:13 len:13 '62F19B0000000'
+PID 22F19B (14 bytes): 62F19B0000000
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F19C2020201:2020202020202'
+        data cap:32 len:32 '00D0:62F19C2020201:2020202020202'
+PID 22F19C (33 bytes): 00D0:62F19C2020201:2020202020202
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A03536304'
+        data cap:13 len:13 '62F1A03536304'
+PID 22F1A0 (14 bytes): 62F1A03536304
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15254325'
+        data cap:13 len:13 '62F1A15254325'
+PID 22F1A1 (14 bytes): 62F1A15254325
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1B13536304'
+        data cap:13 len:13 '62F1B13536304'
+PID 22F1B1 (14 bytes): 62F1B13536304
+
+Header 7E4 scan complete: 513 total responses, 26 significant (>10 bytes)
+
+========== SCAN: Header 7E5 ==========Sending 10 03 (Extended Diagnostic Session)...
+Extended session response: NODATA
+Warning: Unexpected response to extended session request
+
+Header 7E5 scan complete: 513 total responses, 26 significant (>10 bytes)
+
+========== SCAN: Header 7E6 ==========Sending 10 03 (Extended Diagnostic Session)...
+Extended session response: NODATA
+Warning: Unexpected response to extended session request
+
+Header 7E6 scan complete: 513 total responses, 26 significant (>10 bytes)
+
+========================================
+DIAGNOSTIC SCAN COMPLETE
+Total responses: 513
+Significant responses (>20 bytes): 26
+========================================
+
+Results saved to SD card: /diagnostic_scan.txt

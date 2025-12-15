@@ -1,0 +1,17 @@
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Timezone re-configured after WiFi connection
+Web server started at http://10.87.1.107

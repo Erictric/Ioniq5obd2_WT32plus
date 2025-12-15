@@ -1,0 +1,59 @@
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Timezone re-configured after WiFi connection
+Web server started at http://10.87.1.107
+Select Device pressed
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 17 devices total
+Device 0: Name='' Address=00:24:00:0f:26:f1 RSSI=-90
+  -> Skipped (no name)
+Device 1: Name='' Address=05:0e:c9:35:42:79 RSSI=-80
+  -> Skipped (no name)
+Device 2: Name='' Address=20:15:de:41:b9:a7 RSSI=-77
+  -> Skipped (no name)
+Device 3: Name='' Address=25:58:41:cf:52:87 RSSI=-51
+  -> Skipped (no name)
+Device 4: Name='' Address=66:9d:64:5d:c9:ad RSSI=-89
+  -> Skipped (no name)
+Device 5: Name='' Address=6e:1f:87:03:6a:61 RSSI=-85
+  -> Skipped (no name)
+Device 6: Name='' Address=6f:94:f3:75:a0:46 RSSI=-81
+  -> Skipped (no name)
+Device 7: Name='' Address=72:54:ad:6a:91:0b RSSI=-87
+  -> Skipped (no name)
+Device 8: Name='WB837690' Address=94:34:69:05:13:7c RSSI=-77
+  -> Added to list as #0
+Device 9: Name='' Address=c4:f7:c1:44:01:9b RSSI=-80
+  -> Skipped (no name)
+Device 10: Name='' Address=c7:20:9c:00:e0:1c RSSI=-90
+  -> Skipped (no name)
+Device 11: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-79
+  -> Added to list as #1
+Device 12: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-76
+  -> Added to list as #2
+Device 13: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-91
+  -> Added to list as #3
+Device 14: Name='T_CL2335BC21304' Address=d8:bc:38:2b:97:56 RSSI=-89
+  -> Added to list as #4
+Device 15: Name='IOS-Vlink' Address=dd:0d:30:48:0a:53 RSSI=-50
+  -> Added to list as #5
+Device 16: Name='' Address=ec:81:93:f2:58:0e RSSI=-87
+  -> Skipped (no name)
+Scan complete. Found 6 named devices.
+Back from device selection
+Continue without OBD2
+Dismissing WiFi info screen

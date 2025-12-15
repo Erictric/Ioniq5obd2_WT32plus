@@ -1,0 +1,152 @@
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Retry OBD2 connection
+...Connection to OBDII...
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Select Device pressed
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 18 devices total
+Device 0: Name='' Address=01:b9:60:12:1b:d9 RSSI=-8
+  -> Skipped (no name)
+Device 1: Name='JBL Charge 4' Address=04:21:44:a3:f7:46 RSSI=-89
+  -> Added to list as #0
+Device 2: Name='Venus_1097BD1A5C9E' Address=10:97:bd:1a:5c:9e RSSI=-90
+  -> Added to list as #1
+Device 3: Name='' Address=20:15:de:41:b9:a7 RSSI=-75
+  -> Skipped (no name)
+Device 4: Name='Sba80e17ee7344734C' Address=28:3c:90:a2:3a:d4 RSSI=-90
+  -> Added to list as #2
+Device 5: Name='' Address=3c:f6:63:45:43:b7 RSSI=-45
+  -> Skipped (no name)
+Device 6: Name='' Address=48:e6:be:f1:b5:22 RSSI=-56
+  -> Skipped (no name)
+Device 7: Name='' Address=54:44:a3:e6:d3:77 RSSI=-94
+  -> Skipped (no name)
+Device 8: Name='' Address=64:4e:d7:82:33:44 RSSI=-87
+  -> Skipped (no name)
+Device 9: Name='WB837690' Address=94:34:69:05:13:7c RSSI=-88
+  -> Added to list as #3
+Device 10: Name='' Address=a8:80:55:c7:ce:2b RSSI=-76
+  -> Skipped (no name)
+Device 11: Name='' Address=c4:f7:c1:44:01:9b RSSI=-60
+  -> Skipped (no name)
+Device 12: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-79
+  -> Added to list as #4
+Device 13: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-82
+  -> Added to list as #5
+Device 14: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-86
+  -> Added to list as #6
+Device 15: Name='Govee_H6099_134A' Address=d2:2d:45:86:13:4a RSSI=-85
+  -> Added to list as #7
+Device 16: Name='' Address=dd:0d:30:48:0a:53 RSSI=-89
+  -> Skipped (no name)
+Device 17: Name='' Address=ec:81:93:f2:58:0e RSSI=-90
+  -> Skipped (no name)
+Scan complete. Found 8 named devices.
+Next page: 1
+Button3 Touched
+Button3 set to ON
+Previous page: 0
+Next page: 1
+Previous page: 0
+Next page: 1
+Previous page: 0
+Next page: 1
+Previous page: 0
+Next page: 1
+Previous page: 0
+Next page: 1
+Scanning for BLE devices...
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 12 devices total
+Device 0: Name='' Address=01:b9:60:12:1b:d9 RSSI=-42
+  -> Skipped (no name)
+Device 1: Name='' Address=20:15:de:41:b9:a7 RSSI=-78
+  -> Skipped (no name)
+Device 2: Name='' Address=3c:f6:63:45:43:b7 RSSI=-61
+  -> Skipped (no name)
+Device 3: Name='' Address=48:e6:be:f1:b5:22 RSSI=-67
+  -> Skipped (no name)
+Device 4: Name='WB837690' Address=94:34:69:05:13:7c RSSI=-93
+  -> Added to list as #0
+Device 5: Name='' Address=a8:80:55:c7:ce:2b RSSI=-83
+  -> Skipped (no name)
+Device 6: Name='' Address=c4:f7:c1:44:01:9b RSSI=-75
+  -> Skipped (no name)
+Device 7: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-82
+  -> Added to list as #1
+Device 8: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-90
+  -> Added to list as #2
+Device 9: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-86
+  -> Added to list as #3
+Device 10: Name='Govee_H6099_134A' Address=d2:2d:45:86:13:4a RSSI=-90
+  -> Added to list as #4
+Device 11: Name='' Address=dd:0d:30:48:0a:53 RSSI=-88
+  -> Skipped (no name)
+Scan complete. Found 5 named devices.
+Scanning for BLE devices...
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 11 devices total
+Device 0: Name='' Address=01:b9:60:12:1b:d9 RSSI=-45
+  -> Skipped (no name)
+Device 1: Name='' Address=20:15:de:41:b9:a7 RSSI=-92
+  -> Skipped (no name)
+Device 2: Name='' Address=3c:f6:63:45:43:b7 RSSI=-61
+  -> Skipped (no name)
+Device 3: Name='' Address=48:e6:be:f1:b5:22 RSSI=-81
+  -> Skipped (no name)
+Device 4: Name='' Address=a8:80:55:c7:ce:2b RSSI=-84
+  -> Skipped (no name)
+Device 5: Name='' Address=c4:f7:c1:44:01:9b RSSI=-81
+  -> Skipped (no name)
+Device 6: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-83
+  -> Added to list as #0
+Device 7: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-91
+  -> Added to list as #1
+Device 8: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-88
+  -> Added to list as #2
+Device 9: Name='Govee_H6099_134A' Address=d2:2d:45:86:13:4a RSSI=-91
+  -> Added to list as #3
+Device 10: Name='' Address=dd:0d:30:48:0a:53 RSSI=-89
+  -> Skipped (no name)
+Scan complete. Found 4 named devices.
+Selected device: ihoment_H5083_B374
+Back from device selection
+Retry OBD2 connection
+...Connection to OBDII...
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries

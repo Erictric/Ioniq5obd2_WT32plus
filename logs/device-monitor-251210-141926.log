@@ -1,0 +1,1241 @@
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 0
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 1
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Timezone re-configured after WiFi connection
+Web server started at http://10.138.216.107
+Select Device pressed
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 24 devices total
+Device 0: Name='Charger_2434C2000658' Address=00:24:00:0f:26:f1 RSSI=-88
+  -> Added to list as #0
+Device 1: Name='' Address=05:3b:dc:85:b9:00 RSSI=-45
+  -> Skipped (no name)
+Device 2: Name='' Address=08:3a:8d:25:63:7a RSSI=-91
+  -> Skipped (no name)
+Device 3: Name='' Address=0e:43:23:c4:87:1e RSSI=-8
+  -> Skipped (no name)
+Device 4: Name='' Address=1d:0b:7d:38:5d:f6 RSSI=-92
+  -> Skipped (no name)
+Device 5: Name='' Address=20:15:de:41:b9:a7 RSSI=-85
+  -> Skipped (no name)
+Device 6: Name='' Address=38:ca:84:1c:75:97 RSSI=-89
+  -> Skipped (no name)
+Device 7: Name='' Address=44:39:15:6a:fc:52 RSSI=-86
+  -> Skipped (no name)
+Device 8: Name='' Address=4f:ba:7d:32:e5:7d RSSI=-80
+  -> Skipped (no name)
+Device 9: Name='' Address=50:98:93:4a:f3:f6 RSSI=-88
+  -> Skipped (no name)
+Device 10: Name='' Address=54:44:a3:e6:d3:77 RSSI=-88
+  -> Skipped (no name)
+Device 11: Name='' Address=72:51:80:08:84:b6 RSSI=-86
+  -> Skipped (no name)
+Device 12: Name='' Address=72:d0:1e:63:98:27 RSSI=-89
+  -> Skipped (no name)
+Device 13: Name='WB837690' Address=94:34:69:05:13:7c RSSI=-77
+  -> Added to list as #1
+Device 14: Name='AL0010A1GN8V03257C' Address=94:e6:86:c7:5c:62 RSSI=-93
+  -> Added to list as #2
+Device 15: Name='' Address=c1:06:fd:9d:5c:cb RSSI=-88
+  -> Skipped (no name)
+Device 16: Name='' Address=c4:f7:c1:44:01:9b RSSI=-80
+  -> Skipped (no name)
+Device 17: Name='' Address=c7:9b:ba:a3:72:9d RSSI=-86
+  -> Skipped (no name)
+Device 18: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-80
+  -> Added to list as #3
+Device 19: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-72
+  -> Added to list as #4
+Device 20: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-90
+  -> Added to list as #5
+Device 21: Name='T_CL2335BC21304' Address=d8:bc:38:2b:97:56 RSSI=-90
+  -> Added to list as #6
+Device 22: Name='IOS-Vlink' Address=dd:0d:30:48:0a:53 RSSI=-43
+  -> Added to list as #7
+Device 23: Name='' Address=ec:81:93:f2:58:0e RSSI=-91
+  -> Skipped (no name)
+Scan complete. Found 8 named devices.
+Next page: 1
+Button3 Touched
+Button3 set to ON
+Selected device: IOS-Vlink
+Attempting connection to selected device: IOS-Vlink
+Device will be saved to EEPROM only after successful connection
+...Connection to OBDII...
+IOS-Vlink found.
+Forming a connection to 
+dd:0d:30:48:0a:53
+[DEBUG] Service FFF0 found.
+[DEBUG] CHAR rxUUID found.
+[DEBUG] canNotify 1
+[DEBUG] CHAR txUUID found.
+[DEBUG] canWrite 1
+[DEBUG] RX subscribed
+BLE device saved to EEPROM: IOS-Vlink
+Successfully connected to: IOS-Vlink (saved to EEPROM)
+pid_counter: 1
+Warning: SafeString( data, ...) passed unterminated buffer of length 17 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE'
+        data cap:16 len:16 '03E0:620101EFFBE'
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+pid_counter: 2
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA1D00038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA1D00038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA1D'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00FA00FA0000002:000000000000003:000000FD00EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00FA00FA0000002:000000000000003:000000FD00EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'FA'
+Screen Touched
+pid_counter: 3
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA1E00038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA1E00038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA1E'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006931'
+pid_counter: 4
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA1E'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF463F4201EF2:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF463F4201EF2:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '46'
+ hex number  hexSubString cap:14 len:2 '3F'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 5
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '27'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '2B'
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+pid_counter: 1
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF92:F9F9F9F9F9F91C3:B86162000050FA4:0003E8B56F7C005:A50000000000006:00F9F9F9F9AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF92:F9F9F9F9F9F91C3:B86162000050FA4:0003E8B56F7C005:A50000000000006:00F9F9F9F9AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '1C'
+ hex number  hexSubString cap:14 len:2 'B8'
+ hex number  hexSubString cap:14 len:2 'A5'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '6F7C'
+ hex number  hexSubString cap:14 len:2 'FA'
+ OBD2 connected - displaying data
+Turning Display ON
+Display going ON
+pid_counter: 2
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'FA'
+ OBD2 connected - displaying data
+pid_counter: 3
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2000038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2000038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA20'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006931'
+ OBD2 connected - displaying data
+Trip Reset
+pid_counter: 4
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2000038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2000038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA20'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF463F4201F02:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF463F4201F02:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '46'
+ hex number  hexSubString cap:14 len:2 '3F'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2000038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2000038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA20'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '27'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B3'
+ hex number  hexSubString cap:14 len:2 '2B'
+ OBD2 connected - displaying data
+pid_counter: 1
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2100038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2100038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA21'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF92:F9F9F9F9F9F91C3:B86162000050FA4:0003E8B56F7C005:A50000000000006:00F9F9F9F9AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF92:F9F9F9F9F9F91C3:B86162000050FA4:0003E8B56F7C005:A50000000000006:00F9F9F9F9AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '1C'
+ hex number  hexSubString cap:14 len:2 'B8'
+ hex number  hexSubString cap:14 len:2 'A5'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '6F7C'
+ hex number  hexSubString cap:14 len:2 'FA'
+ OBD2 connected - displaying data
+pid_counter: 2
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00FA00FA0000002:000000000000003:000000FD00EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00FA00FA0000002:000000000000003:000000FD00EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'FA'
+ OBD2 connected - displaying data
+pid_counter: 3
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2200038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2200038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA22'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006931'
+ OBD2 connected - displaying data
+pid_counter: 4
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF463F4201F02:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF463F4201F02:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '46'
+ hex number  hexSubString cap:14 len:2 '3F'
+ hex number  hexSubString cap:14 len:2 '00'
+Local time: 10-12-2025 14:20:09
+Saving event code to SD card
+Event code saved to SD card
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+ OBD2 connected - displaying data
+pid_counter: 5
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '27'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B3'
+ hex number  hexSubString cap:14 len:2 '2B'
+ OBD2 connected - displaying data
+pid_counter: 1
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF92:F9F9F9F9F9F91C3:B86162000050FA4:0003E8B56F7C005:A50000000000006:00F9F9F9F9AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF92:F9F9F9F9F9F91C3:B86162000050FA4:0003E8B56F7C005:A50000000000006:00F9F9F9F9AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '1C'
+ hex number  hexSubString cap:14 len:2 'B8'
+ hex number  hexSubString cap:14 len:2 'A5'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '6F7C'
+ hex number  hexSubString cap:14 len:2 'FA'
+ OBD2 connected - displaying data
+pid_counter: 2
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F1EA23'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'FA'
+ OBD2 connected - displaying data
+pid_counter: 3
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2400038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2400038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA24'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:14 len:6 '006931'
+ OBD2 connected - displaying data
+pid_counter: 4
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF463F4201EF2:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF463F4201EF2:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '46'
+ hex number  hexSubString cap:14 len:2 '3F'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2500038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2500038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA25'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '27'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B3'
+ hex number  hexSubString cap:14 len:2 '2B'
+ OBD2 connected - displaying data
+pid_counter: 1
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:0DC74D00008F005:015DF1000155116:000103450000F57:C700F1EA2500038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:0DC74D00008F005:015DF1000155116:000103450000F57:C700F1EA2500038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '0D'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F1EA25'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '1C'
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+pid_counter: 2
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2600038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2600038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA26'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Screen Touched
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00FA00FA0000002:000000000000003:000000FD00EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00FA00FA0000002:000000000000003:000000FD00EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'FA'
+pid_counter: 3
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C74D00008F005:015DF1000155116:000103450000F57:C700F1EA2600038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C74D00008F005:015DF1000155116:000103450000F57:C700F1EA2600038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F1EA26'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006931002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006931'
+pid_counter: 4
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A1'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF463F4201F02:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF463F4201F02:8F01F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF4E7C484500FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '46'
+ hex number  hexSubString cap:14 len:2 '3F'
+ hex number  hexSubString cap:14 len:2 '00'
+Screen Touched
+pid_counter: 5
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2700038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA100000000002:00041DE1FAF9FA3:F9F9F9F90022C74:01C77200008F005:015DF1000155116:000103450000F57:C700F1EA2700038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F9'
+ hex number  hexSubString cap:14 len:2 'FA'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE1'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A1'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F1EA27'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'

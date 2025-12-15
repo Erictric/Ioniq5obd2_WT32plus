@@ -1,0 +1,2673 @@
+WiFi connected in: 5.00 secs
+IP address: 10.87.1.107
+...Connection to OBDII...
+IOS-Vlink found.
+Forming a connection to 
+dd:0d:30:48:0a:53
+[DEBUG] Service FFF0 found.
+[  9366][E][BLERemoteCharacteristic.cpp:289] retrieveDescriptors(): esp_ble_gattc_get_all_descr: Unknown
+[DEBUG] CHAR rxUUID found.
+[DEBUG] canNotify 1
+[DEBUG] CHAR txUUID found.
+[DEBUG] canWrite 1
+[DEBUG] RX subscribed
+BLE device saved to EEPROM: IOS-Vlink
+Successfully connected to: IOS-Vlink (saved to EEPROM)
+Waiting 10 seconds for diagnostic button...
+
+*** DIAGNOSTIC SCAN TRIGGERED ***
+
+========================================
+DIAGNOSTIC SCAN: Searching for 12V Battery SoC
+Looking for responses > 20 bytes
+Logging to SD card: /diagnostic_scan.txt
+========================================
+
+Scanning 10 known significant PIDs with subfunctions 01-0F...
+
+--- Testing Header: 7E3, Service: 22, PID: E0 ---
+Testing subfunction 01... Warning: SafeString( data, ...) passed unterminated buffer of length 240 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0CB0:62E001FFFFFF1:FF6009339668382:0000004E05B7393:0000000000001B4:0052FC98FDFDFF5:FDFFFDFFCDAB136:090531059F06BA7:05C2CD090040078:060052FD6AFCC19:CDDF0348FDC1CDA:E1032BF8000000B:00000000000000C:00000000000000D:00000000000000E:000000000000'
+        data cap:239 len:239 '0CB0:62E001FFFFFF1:FF6009339668382:0000004E05B7393:0000000000001B4:0052FC98FDFDFF5:FDFFFDFFCDAB136:090531059F06BA7:05C2CD090040078:060052FD6AFCC19:CDDF0348FDC1CDA:E1032BF8000000B:00000000000000C:00000000000000D:00000000000000E:000000000000'
+Response (240 bytes)
+Raw payload: 0CB0:62E001FFFFFF1:FF6009339668382:0000004E05B7393:0000000000001B4:0052FC98FDFDFF5:FDFFFDFFCDAB136:090531059F06BA7:05C2CD090040078:060052FD6AFCC19:CDDF0348FDC1CDA:E1032BF8000000B:00000000000000C:00000000000000D:00000000000000E:000000000000
+Parsed frames:
+  Frame 0: 62E001FFFFFF
+  Frame 1: FF600933966838
+  Frame 2: 0000004E05B739
+  Frame 3: 0000000000001B
+  Frame 4: 0052FC98FDFDFF
+  Frame 5: FDFFFDFFCDAB13
+  Frame 6: 090531059F06BA
+  Frame 7: 05C2CD09004007
+  Frame 8: 060052FD6AFCC1
+
+Testing subfunction 02... Empty response
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 240 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is 'A:00000000000000B:00000000000000C:00000000000000D:00AAAAAAAAAAAA0CB0:62E0030000001:000000000000002:000000000000003:000000000000004:000000000000005:000000000000006:000000000000007:000000000000008:000000000000009:00000000000000A:000000000000'
+        data cap:239 len:239 'A:00000000000000B:00000000000000C:00000000000000D:00AAAAAAAAAAAA0CB0:62E0030000001:000000000000002:000000000000003:000000000000004:000000000000005:000000000000006:000000000000007:000000000000008:000000000000009:00000000000000A:000000000000'
+Response (240 bytes)
+Raw payload: A:00000000000000B:00000000000000C:00000000000000D:00AAAAAAAAAAAA0CB0:62E0030000001:000000000000002:000000000000003:000000000000004:000000000000005:000000000000006:000000000000007:000000000000008:000000000000009:00000000000000A:000000000000
+Parsed frames:
+  Frame 0: 62E003000000
+  Frame 1: 00000000000000
+  Frame 2: 00000000000000
+  Frame 3: 00000000000000
+  Frame 4: 00000000000000
+  Frame 5: 00000000000000
+  Frame 6: 00000000000000
+  Frame 7: 00000000000000
+  Frame 8: 00000000000000
+
+Testing subfunction 04... Empty response
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 240 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '6:000000000000007:000000000000008:000000000000009:00000000000000A:00000000000000B:00000000000000C:00000000000000D:00AAAAAAAAAAAA0CB0:62E005FFFFFF1:FF0000000000002:000000000000003:000000000000004:000000000000005:0000000F0014006:FBFBFA000100'
+        data cap:239 len:239 '6:000000000000007:000000000000008:000000000000009:00000000000000A:00000000000000B:00000000000000C:00000000000000D:00AAAAAAAAAAAA0CB0:62E005FFFFFF1:FF0000000000002:000000000000003:000000000000004:000000000000005:0000000F0014006:FBFBFA000100'
+Response (240 bytes)
+Raw payload: 6:000000000000007:000000000000008:000000000000009:00000000000000A:00000000000000B:00000000000000C:00000000000000D:00AAAAAAAAAAAA0CB0:62E005FFFFFF1:FF0000000000002:000000000000003:000000000000004:000000000000005:0000000F0014006:FBFBFA000100
+Parsed frames:
+  Frame 0: 62E005FFFFFF
+  Frame 1: FF000000000000
+  Frame 2: 00000000000000
+  Frame 3: 00000000000000
+  Frame 4: 00000000000000
+  Frame 5: 0000000F001400
+  Frame 6: FBFBFA000100
+  Frame 7: 00000000000000
+  Frame 8: 00000000000000
+
+Testing subfunction 06... Empty response
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 32 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is 'F:000000000000000:0000000000000'
+        data cap:31 len:31 'F:000000000000000:0000000000000'
+Response (32 bytes)
+Raw payload: F:000000000000000:0000000000000
+Parsed frames:
+  Frame 0: 0000000000000
+
+Testing subfunction 08... Empty response
+Testing subfunction 09... Empty response
+Testing subfunction 0A... Empty response
+Testing subfunction 0B... Empty response
+Testing subfunction 0C... Empty response
+Testing subfunction 0D... Empty response
+Testing subfunction 0E... Empty response
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 7E3, Service: 22, PID: E4 ---
+Testing subfunction 01... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 04... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0A... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0C... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0D... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 7E4, Service: 22, PID: 01 ---
+Testing subfunction 01... Response (146 bytes)
+Raw payload: 03E0:620101EFFBE71:EFA300000000002:00001DE9F7F5F73:F7F6F6F5001DC74:01C77200008F005:015DF1000155116:000103450000F57:C700F160D70003
+Parsed frames:
+  Frame 0: 620101EFFBE7
+  Frame 1: EFA30000000000
+  Frame 2: 00001DE9F7F5F7
+  Frame 3: F7F6F6F5001DC7
+  Frame 4: 01C77200008F00
+  Frame 5: 015DF100015511
+  Frame 6: 000103450000F5
+  Frame 7: C700F160D70003
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:620102FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C75:C7C7C7C7C7AAA'
+        data cap:96 len:96 '0270:620102FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C75:C7C7C7C7C7AAA'
+Response (97 bytes)
+Raw payload: 0270:620102FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C75:C7C7C7C7C7AAA
+Parsed frames:
+  Frame 0: 620102FFFFFF
+  Frame 1: FFC7C7C7C7C7C7
+  Frame 2: C7C7C7C7C7C7C7
+  Frame 3: C7C7C7C7C7C7C7
+  Frame 4: C7C7C7C7C7C7C7
+  Frame 5: C7C7C7C7C7AAA
+
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:620103FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C75:C7C7C7C7C7AAA'
+        data cap:96 len:96 '0270:620103FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C75:C7C7C7C7C7AAA'
+Response (97 bytes)
+Raw payload: 0270:620103FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C75:C7C7C7C7C7AAA
+Parsed frames:
+  Frame 0: 620103FFFFFF
+  Frame 1: FFC7C7C7C7C7C7
+  Frame 2: C7C7C7C7C7C7C7
+  Frame 3: C7C7C7C7C7C7C7
+  Frame 4: C7C7C7C7C7C7C7
+  Frame 5: C7C7C7C7C7AAA
+
+Testing subfunction 04... Response (98 bytes)
+Raw payload: 0270:620104FFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C7
+Parsed frames:
+  Frame 0: 620104FFFFFF
+  Frame 1: FFC7C7C7C7C7C7
+  Frame 2: C7C7C7C7C7C7C7
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F6153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F6153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA'
+Response (113 bytes)
+Raw payload: 02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F6153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA
+Parsed frames:
+  Frame 0: 620105FFFB74
+  Frame 1: 0F012C01012CF5
+  Frame 2: F5F5F5F5F5F615
+  Frame 3: A46162000050F6
+  Frame 4: 0003E8B56F9900
+  Frame 5: A6000000000000
+  Frame 6: 00F6F6F6F7AAA
+
+Testing subfunction 06... Response (98 bytes)
+Raw payload: 0260:62010617F8111:00F500F60000002:000000000000003:000000FF00EA004:00000000000000
+Parsed frames:
+  Frame 0: 62010617F811
+  Frame 1: 00F500F6000000
+  Frame 2: 00000000000000
+  Frame 3: 000000FF00EA00
+  Frame 4: 00000000000000
+
+Testing subfunction 07... Response (130 bytes)
+Raw payload: 0330:6201070000411:800000000000002:000000000000003:00000000000000
+Parsed frames:
+  Frame 0: 620107000041
+  Frame 1: 80000000000000
+  Frame 2: 00000000000000
+  Frame 3: 00000000000000
+
+Testing subfunction 08... Response (147 bytes)
+Raw payload: 03D0:620108CC00001:400000000000002:000000000000003:00000000000000
+Parsed frames:
+  Frame 0: 620108CC0000
+  Frame 1: 40000000000000
+  Frame 2: 00000000000000
+  Frame 3: 00000000000000
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0A... Response (98 bytes)
+Raw payload: 0270:62010AFFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C7
+Parsed frames:
+  Frame 0: 62010AFFFFFF
+  Frame 1: FFC7C7C7C7C7C7
+  Frame 2: C7C7C7C7C7C7C7
+  Frame 3: C7C7C7C7C7C7C7
+
+Testing subfunction 0B... Response (98 bytes)
+Raw payload: 0270:62010BFFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C7
+Parsed frames:
+  Frame 0: 62010BFFFFFF
+  Frame 1: FFC7C7C7C7C7C7
+  Frame 2: C7C7C7C7C7C7C7
+
+Testing subfunction 0C... Response (98 bytes)
+Raw payload: 0270:62010CFFFFFF1:FFC7C7C7C7C7C72:C7C7C7C7C7C7C73:C7C7C7C7C7C7C74:C7C7C7C7C7C7C7
+Parsed frames:
+  Frame 0: 62010CFFFFFF
+  Frame 1: FFC7C7C7C7C7C7
+  Frame 2: C7C7C7C7C7C7C7
+  Frame 3: C7C7C7C7C7C7C7
+  Frame 4: C7C7C7C7C7C7C7
+
+Testing subfunction 0D... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 7A0, Service: 22, PID: B0 ---
+Testing subfunction 01... Response (82 bytes)
+Raw payload: 01E0:62B00140E8301:000000000000002:00000101000000
+Parsed frames:
+  Frame 0: 62B00140E830
+  Frame 1: 00000000000000
+  Frame 2: 00000101000000
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0090:62B0020000001:000000AAAAAAA'
+        data cap:32 len:32 '0090:62B0020000001:000000AAAAAAA'
+Response (33 bytes)
+Raw payload: 0090:62B0020000001:000000AAAAAAA
+Parsed frames:
+  Frame 0: 62B002000000
+  Frame 1: 000000AAAAAAA
+
+Testing subfunction 03... Response (114 bytes)
+Raw payload: 02A0:62B003A003A41:00BB000B00F9FA2:FAFAFAFA000000
+Parsed frames:
+  Frame 0: 62B003A003A4
+  Frame 1: 00BB000B00F9FA
+  Frame 2: FAFAFAFA000000
+
+Testing subfunction 04... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B0047001411:0C0E008200AAA'
+        data cap:32 len:32 '00B0:62B0047001411:0C0E008200AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B0047001411:0C0E008200AAA
+Parsed frames:
+  Frame 0: 62B004700141
+  Frame 1: 0C0E008200AAA
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B0050000101:0000000800AAA'
+        data cap:32 len:32 '00B0:62B0050000101:0000000800AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B0050000101:0000000800AAA
+Parsed frames:
+  Frame 0: 62B005000010
+  Frame 1: 0000000800AAA
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B0060000001:0000000000AAA'
+        data cap:32 len:32 '00B0:62B0060000001:0000000000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B0060000001:0000000000AAA
+Parsed frames:
+  Frame 0: 62B006000000
+  Frame 1: 0000000000AAA
+
+Testing subfunction 07... Response (34 bytes)
+Raw payload: 00B0:62B007000000
+Parsed frames:
+  Frame 0: 62B007000000
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B0080401081:0000000000AAA'
+        data cap:32 len:32 '00B0:62B0080401081:0000000000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B0080401081:0000000000AAA
+Parsed frames:
+  Frame 0: 62B008040108
+  Frame 1: 0000000000AAA
+
+Testing subfunction 09... Response (34 bytes)
+Raw payload: 00B0:62B009988800
+Parsed frames:
+  Frame 0: 62B009988800
+
+Testing subfunction 0A... Response (34 bytes)
+Raw payload: 00B0:62B00A000000
+Parsed frames:
+  Frame 0: 62B00A000000
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B00B0000001:0000000000AAA'
+        data cap:32 len:32 '00B0:62B00B0000001:0000000000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B00B0000001:0000000000AAA
+Parsed frames:
+  Frame 0: 62B00B000000
+  Frame 1: 0000000000AAA
+
+Testing subfunction 0C... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B00C2000001:0000000000AAA'
+        data cap:32 len:32 '00B0:62B00C2000001:0000000000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B00C2000001:0000000000AAA
+Parsed frames:
+  Frame 0: 62B00C200000
+  Frame 1: 0000000000AAA
+
+Testing subfunction 0D... Response (34 bytes)
+Raw payload: 00B0:62B00D000000
+Parsed frames:
+  Frame 0: 62B00D000000
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62B00E0008201:0800000400AAA'
+        data cap:32 len:32 '00B0:62B00E0008201:0800000400AAA'
+Response (33 bytes)
+Raw payload: 00B0:62B00E0008201:0800000400AAA
+Parsed frames:
+  Frame 0: 62B00E000820
+  Frame 1: 0800000400AAA
+
+Testing subfunction 0F... Response (34 bytes)
+Raw payload: 00B0:62B00F7FFFFC
+Parsed frames:
+  Frame 0: 62B00F7FFFFC
+
+
+--- Testing Header: 7A0, Service: 22, PID: BF ---
+Testing subfunction 01... Response (34 bytes)
+Raw payload: 00C0:62BF01000000
+Parsed frames:
+  Frame 0: 62BF01000000
+
+Testing subfunction 02... Response (240 bytes)
+Raw payload: 0F30:62BF0207C449
+Parsed frames:
+  Frame 0: 62BF0207C449
+
+Testing subfunction 03... Empty response
+Testing subfunction 04... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0A... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0C... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0D... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 7A0, Service: 22, PID: C0 ---
+Testing subfunction 01... Response (83 bytes)
+Raw payload: 01E0:62C001FFFFFE1:00342E024B0007
+Parsed frames:
+  Frame 0: 62C001FFFFFE
+  Frame 1: 00342E024B0007
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0170:62C002FFFF001:008272F6C282722:F1E08272EC89823:72ECAFAAAAAAA'
+        data cap:64 len:64 '0170:62C002FFFF001:008272F6C282722:F1E08272EC89823:72ECAFAAAAAAA'
+Response (65 bytes)
+Raw payload: 0170:62C002FFFF001:008272F6C282722:F1E08272EC89823:72ECAFAAAAAAA
+Parsed frames:
+  Frame 0: 62C002FFFF00
+  Frame 1: 008272F6C28272
+  Frame 2: F1E08272EC8982
+  Frame 3: 72ECAFAAAAAAA
+
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C003FFFFFF1:F01000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C003FFFFFF1:F01000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C003FFFFFF1:F01000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C003FFFFFF
+  Frame 1: F0100000000000
+  Frame 2: 342E02500A08B6
+  Frame 3: B60B0800000000
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 04... Response (82 bytes)
+Raw payload: 0230:62C004FFFFFF
+Parsed frames:
+  Frame 0: 62C004FFFFFF
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C005FFFFFF1:F03000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C005FFFFFF1:F03000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C005FFFFFF1:F03000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C005FFFFFF
+  Frame 1: F0300000000000
+  Frame 2: 342E02500A08B6
+  Frame 3: B60B0800000000
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C006FFFFFF1:F04000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C006FFFFFF1:F04000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C006FFFFFF1:F04000000000002:342E02500A08B63:B60B08000000004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C006FFFFFF
+  Frame 1: F0400000000000
+  Frame 2: 342E02500A08B6
+  Frame 3: B60B0800000000
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C007FFFFFF1:F05000000000002:342E024B0007B63:B60700000001004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C007FFFFFF1:F05000000000002:342E024B0007B63:B60700000001004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C007FFFFFF1:F05000000000002:342E024B0007B63:B60700000001004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C007FFFFFF
+  Frame 1: F0500000000000
+  Frame 2: 342E024B0007B6
+  Frame 3: B6070000000100
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C008FFFFFF1:F06000000000002:342E024B0007AB3:AB0700000001004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C008FFFFFF1:F06000000000002:342E024B0007AB3:AB0700000001004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C008FFFFFF1:F06000000000002:342E024B0007AB3:AB0700000001004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C008FFFFFF
+  Frame 1: F0600000000000
+  Frame 2: 342E024B0007AB
+  Frame 3: AB070000000100
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C009FFFFFF1:F07000000000002:342E024B0007BD3:BD0700000001004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C009FFFFFF1:F07000000000002:342E024B0007BD3:BD0700000001004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C009FFFFFF1:F07000000000002:342E024B0007BD3:BD0700000001004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C009FFFFFF
+  Frame 1: F0700000000000
+  Frame 2: 342E024B0007BD
+  Frame 3: BD070000000100
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 0A... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62C00AFFFFFF1:F08000000000002:342E024B0007B63:BA0700000001004:000002020100015:01AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62C00AFFFFFF1:F08000000000002:342E024B0007B63:BA0700000001004:000002020100015:01AAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:62C00AFFFFFF1:F08000000000002:342E024B0007B63:BA0700000001004:000002020100015:01AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62C00AFFFFFF
+  Frame 1: F0800000000000
+  Frame 2: 342E024B0007B6
+  Frame 3: BA070000000100
+  Frame 4: 00000202010001
+  Frame 5: 01AAAAAAAAAAA
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100004:FF8DB08DB090B45:90B4AAAAAAAAA
+Parsed frames:
+  Frame 0: 62C00BFFFFFF
+  Frame 1: 80B127020000B1
+  Frame 2: 2B010000B52B01
+  Frame 3: 0000B32B010000
+  Frame 4: FF8DB08DB090B4
+  Frame 5: 90B4AAAAAAAAA
+
+Testing subfunction 0C... Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:62C00CFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA'
+        data cap:112 len:112 '02E0:62C00CFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA'
+Response (113 bytes)
+Raw payload: 02E0:62C00CFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA
+Parsed frames:
+  Frame 0: 62C00CFFFFF8
+  Frame 1: 000000000000FF
+  Frame 2: FF000000000000
+  Frame 3: 0000FFFF000000
+  Frame 4: 0000000000FFFF
+  Frame 5: 000000FFFFFFFF
+  Frame 6: FFFFFFFFFFAAA
+
+Testing subfunction 0D... Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:62C00DFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA'
+        data cap:112 len:112 '02E0:62C00DFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA'
+Response (113 bytes)
+Raw payload: 02E0:62C00DFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA
+Parsed frames:
+  Frame 0: 62C00DFFFFF8
+  Frame 1: 000000000000FF
+  Frame 2: FF000000000000
+  Frame 3: 0000FFFF000000
+  Frame 4: 0000000000FFFF
+  Frame 5: 000000FFFFFFFF
+  Frame 6: FFFFFFFFFFAAA
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:62C00EFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA'
+        data cap:112 len:112 '02E0:62C00EFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA'
+Response (113 bytes)
+Raw payload: 02E0:62C00EFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF5:000000FFFFFFFF6:FFFFFFFFFFAAA
+Parsed frames:
+  Frame 0: 62C00EFFFFF8
+  Frame 1: 000000000000FF
+  Frame 2: FF000000000000
+  Frame 3: 0000FFFF000000
+  Frame 4: 0000000000FFFF
+  Frame 5: 000000FFFFFFFF
+  Frame 6: FFFFFFFFFFAAA
+
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:62C00FFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF6:FFFFFFFFFFAAA'
+        data cap:96 len:96 '02E0:62C00FFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF6:FFFFFFFFFFAAA'
+Response (97 bytes)
+Raw payload: 02E0:62C00FFFFFF81:000000000000FF2:FF0000000000003:0000FFFF0000004:0000000000FFFF6:FFFFFFFFFFAAA
+Parsed frames:
+  Frame 0: 62C00FFFFFF8
+  Frame 1: 000000000000FF
+  Frame 2: FF000000000000
+  Frame 3: 0000FFFF000000
+  Frame 4: 0000000000FFFF
+  Frame 6: FFFFFFFFFFAAA
+
+
+--- Testing Header: 7B3, Service: 22, PID: 01 ---
+Testing subfunction 01... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201010CC5801:00FFFFFFFF43422:FFFFACB7FFFFFF3:F0FF8F410000004:000000000000005:0000000000AAA'
+        data cap:96 len:96 '0270:6201010CC5801:00FFFFFFFF43422:FFFFACB7FFFFFF3:F0FF8F410000004:000000000000005:0000000000AAA'
+Response (97 bytes)
+Raw payload: 0270:6201010CC5801:00FFFFFFFF43422:FFFFACB7FFFFFF3:F0FF8F410000004:000000000000005:0000000000AAA
+Parsed frames:
+  Frame 0: 6201010CC580
+  Frame 1: 00FFFFFFFF4342
+  Frame 2: FFFFACB7FFFFFF
+  Frame 3: F0FF8F41000000
+  Frame 4: 00000000000000
+  Frame 5: 0000000000AAA
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:620102BBFC001:003DFF010001FF2:01000600013C053:000000000000004:000000000000005:0000000000AAA'
+        data cap:96 len:96 '0270:620102BBFC001:003DFF010001FF2:01000600013C053:000000000000004:000000000000005:0000000000AAA'
+Response (97 bytes)
+Raw payload: 0270:620102BBFC001:003DFF010001FF2:01000600013C053:000000000000004:000000000000005:0000000000AAA
+Parsed frames:
+  Frame 0: 620102BBFC00
+  Frame 1: 003DFF010001FF
+  Frame 2: 01000600013C05
+  Frame 3: 00000000000000
+  Frame 4: 00000000000000
+  Frame 5: 0000000000AAA
+
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 04... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0A... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0C... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0D... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 7D1, Service: 22, PID: 02 ---
+Testing subfunction 01... Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:620201FFFF001:00C105010402002:060001000400FF3:FF0101A20600004:A2060000FFFFFF5:FFAAAAAAAAAAA'
+        data cap:96 len:96 '0230:620201FFFF001:00C105010402002:060001000400FF3:FF0101A20600004:A2060000FFFFFF5:FFAAAAAAAAAAA'
+Response (97 bytes)
+Raw payload: 0230:620201FFFF001:00C105010402002:060001000400FF3:FF0101A20600004:A2060000FFFFFF5:FFAAAAAAAAAAA
+Parsed frames:
+  Frame 0: 620201FFFF00
+  Frame 1: 00C10501040200
+  Frame 2: 060001000400FF
+  Frame 3: FF0101A2060000
+  Frame 4: A2060000FFFFFF
+  Frame 5: FFAAAAAAAAAAA
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 240 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0710:6202025643551:000069310000FF2:855643550000693:300000000E56434:550000692D00005:FFE656435500006:692C0000FFAC567:43550000692A008:00FFFA564355009:0069280000FF71A:56435500006928B:0000FFE6564355C:000069250000FFD:FA564355000068E:EF0000FFE656'
+        data cap:239 len:239 '0710:6202025643551:000069310000FF2:855643550000693:300000000E56434:550000692D00005:FFE656435500006:692C0000FFAC567:43550000692A008:00FFFA564355009:0069280000FF71A:56435500006928B:0000FFE6564355C:000069250000FFD:FA564355000068E:EF0000FFE656'
+Response (240 bytes)
+Raw payload: 0710:6202025643551:000069310000FF2:855643550000693:300000000E56434:550000692D00005:FFE656435500006:692C0000FFAC567:43550000692A008:00FFFA564355009:0069280000FF71A:56435500006928B:0000FFE6564355C:000069250000FFD:FA564355000068E:EF0000FFE656
+Parsed frames:
+  Frame 0: 620202564355
+  Frame 1: 000069310000FF
+  Frame 2: 85564355000069
+  Frame 3: 300000000E5643
+  Frame 4: 550000692D0000
+  Frame 5: FFE65643550000
+  Frame 6: 692C0000FFAC56
+  Frame 7: 43550000692A00
+  Frame 8: 00FFFA56435500
+
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 04... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0A... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0C... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0D... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 7D1, Service: 22, PID: F1 ---
+Testing subfunction 01... Warning: SafeString( data, ...) passed unterminated buffer of length 81 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0200:62F1014E455F1:204350455F20412:2E3031204130413:304130413131204:4731383000AAA'
+        data cap:80 len:80 '0200:62F1014E455F1:204350455F20412:2E3031204130413:304130413131204:4731383000AAA'
+Response (81 bytes)
+Raw payload: 0200:62F1014E455F1:204350455F20412:2E3031204130413:304130413131204:4731383000AAA
+Parsed frames:
+  Frame 0: 62F1014E455F
+  Frame 1: 204350455F2041
+  Frame 2: 2E303120413041
+  Frame 3: 30413041313120
+  Frame 4: 4731383000AAA
+
+Testing subfunction 02... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 03... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 04... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 05... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 06... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 07... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 08... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 09... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F221'
+        data cap:5 len:5 '7F221'
+Response (6 bytes)
+Raw payload: 7F221
+Parsed frames:
+
+Testing subfunction 0A... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F221'
+        data cap:5 len:5 '7F221'
+Response (6 bytes)
+Raw payload: 7F221
+Parsed frames:
+
+Testing subfunction 0B... Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F221'
+        data cap:5 len:5 '7F221'
+Response (6 bytes)
+Raw payload: 7F221
+Parsed frames:
+
+pair status = fail Testing subfunction 0C... E (40515) BT_BTM: BTM_GetSecurityFlags false
+
+E (40574) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+E (40664) BT_BTM: BTM_GetSecurityFlags false
+
+Testing subfunction 0D... E (40724) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... E (40814) BT_BTM: BTM_GetSecurityFlags false
+
+E (40904) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... E (41009) BT_BTM: BTM_GetSecurityFlags false
+
+E (41069) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+--- Testing Header: 770, Service: 22, PID: BC ---
+E (41159) BT_BTM: BTM_GetSecurityFlags false
+
+Testing subfunction 01... E (41325) BT_BTM: BTM_GetSecurityFlags false
+
+E (41326) BT_BTM: BTM_GetSecurityFlags false
+
+E (41369) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00E0:62BC014200001:000002000000002:02AAAAAAAAAAA'
+        data cap:48 len:48 '00E0:62BC014200001:000002000000002:02AAAAAAAAAAA'
+Response (49 bytes)
+Raw payload: 00E0:62BC014200001:000002000000002:02AAAAAAAAAAA
+Parsed frames:
+  Frame 0: 62BC01420000
+  Frame 1: 00000200000000
+  Frame 2: 02AAAAAAAAAAA
+
+Testing subfunction 02... E (41474) BT_BTM: BTM_GetSecurityFlags false
+
+E (41519) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 03... E (41639) BT_BTM: BTM_GetSecurityFlags false
+
+E (41654) BT_BTM: BTM_GetSecurityFlags false
+
+E (41729) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC03FDEE201:630A660400AAA'
+        data cap:32 len:32 '00B0:62BC03FDEE201:630A660400AAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC03FDEE201:630A660400AAA
+Parsed frames:
+  Frame 0: 62BC03FDEE20
+  Frame 1: 630A660400AAA
+
+Testing subfunction 04... E (41834) BT_BTM: BTM_GetSecurityFlags false
+
+E (41894) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC04303F701:200C000000AAA'
+        data cap:32 len:32 '00B0:62BC04303F701:200C000000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC04303F701:200C000000AAA
+Parsed frames:
+  Frame 0: 62BC04303F70
+  Frame 1: 200C000000AAA
+
+Testing subfunction 05... E (41999) BT_BTM: BTM_GetSecurityFlags false
+
+E (42014) BT_BTM: BTM_GetSecurityFlags false
+
+E (42059) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC050F13201:0000400000AAA'
+        data cap:32 len:32 '00B0:62BC050F13201:0000400000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC050F13201:0000400000AAA
+Parsed frames:
+  Frame 0: 62BC050F1320
+  Frame 1: 0000400000AAA
+
+Testing subfunction 06... E (42164) BT_BTM: BTM_GetSecurityFlags false
+
+E (42179) BT_BTM: BTM_GetSecurityFlags false
+
+E (42224) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC06B400001:6D00000000AAA'
+        data cap:32 len:32 '00B0:62BC06B400001:6D00000000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC06B400001:6D00000000AAA
+Parsed frames:
+  Frame 0: 62BC06B40000
+  Frame 1: 6D00000000AAA
+
+Testing subfunction 07... E (42345) BT_BTM: BTM_GetSecurityFlags false
+
+E (42389) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC073800131:3E00000840AAA'
+        data cap:32 len:32 '00B0:62BC073800131:3E00000840AAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC073800131:3E00000840AAA
+Parsed frames:
+  Frame 0: 62BC07380013
+  Frame 1: 3E00000840AAA
+
+E (42494) BT_BTM: BTM_GetSecurityFlags false
+
+Testing subfunction 08... E (42539) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC080052901:BC0000011CAAA'
+        data cap:32 len:32 '00B0:62BC080052901:BC0000011CAAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC080052901:BC0000011CAAA
+Parsed frames:
+  Frame 0: 62BC08005290
+  Frame 1: BC0000011CAAA
+
+Testing subfunction 09... E (42675) BT_BTM: BTM_GetSecurityFlags false
+
+E (42734) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62BC09301F031:CC00380000AAA'
+        data cap:32 len:32 '00B0:62BC09301F031:CC00380000AAA'
+Response (33 bytes)
+Raw payload: 00B0:62BC09301F031:CC00380000AAA
+Parsed frames:
+  Frame 0: 62BC09301F03
+  Frame 1: CC00380000AAA
+
+Testing subfunction 0A... E (42839) BT_BTM: BTM_GetSecurityFlags false
+
+E (42899) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0B... E (43004) BT_BTM: BTM_GetSecurityFlags false
+
+E (43049) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0C... E (43199) BT_BTM: BTM_GetSecurityFlags false
+
+E (43259) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0D... E (43379) BT_BTM: BTM_GetSecurityFlags false
+
+E (43454) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0E... E (43559) BT_BTM: BTM_GetSecurityFlags false
+
+E (43619) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+Testing subfunction 0F... E (43724) BT_BTM: BTM_GetSecurityFlags false
+
+E (43784) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Response (6 bytes)
+Raw payload: 7F223
+Parsed frames:
+
+
+========================================
+DIAGNOSTIC SCAN COMPLETE
+Total responses: 139
+Significant responses (>20 bytes): 0
+========================================
+
+Results saved to SD card: /diagnostic_scan.txt
+E (43874) BT_BTM: BTM_GetSecurityFlags false
+
+*** DIAGNOSTIC SCAN COMPLETE - Check output above ***
+
+Timezone re-configured after WiFi connection
+Web server started at http://10.87.1.107
+pid_counter: 1
+E (45344) BT_BTM: BTM_GetSecurityFlags false
+
+E (45404) BT_BTM: BTM_GetSecurityFlags false
+
+E (45419) BT_BTM: BTM_GetSecurityFlags false
+
+E (45420) BT_BTM: BTM_GetSecurityFlags false
+
+E (45434) BT_BTM: BTM_GetSecurityFlags false
+
+E (45449) BT_BTM: BTM_GetSecurityFlags false
+
+E (45464) BT_BTM: BTM_GetSecurityFlags false
+
+E (45465) BT_BTM: BTM_GetSecurityFlags false
+
+E (45479) BT_BTM: BTM_GetSecurityFlags false
+
+E (45480) BT_BTM: BTM_GetSecurityFlags false
+
+E (45524) BT_BTM: BTM_GetSecurityFlags false
+
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (45569) BT_BTM: BTM_GetSecurityFlags false
+
+E (45629) BT_BTM: BTM_GetSecurityFlags false
+
+E (45644) BT_BTM: BTM_GetSecurityFlags false
+
+E (45659) BT_BTM: BTM_GetSecurityFlags false
+
+E (45660) BT_BTM: BTM_GetSecurityFlags false
+
+E (45674) BT_BTM: BTM_GetSecurityFlags false
+
+E (45704) BT_BTM: BTM_GetSecurityFlags false
+
+E (45705) BT_BTM: BTM_GetSecurityFlags false
+
+E (45734) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F5153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F5153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '15'
+ hex number  hexSubString cap:14 len:2 'A4'
+ hex number  hexSubString cap:14 len:2 'A6'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '6F99'
+ hex number  hexSubString cap:14 len:2 'F6'
+ OBD2 connected - displaying data
+Turning Display ON
+Display going ON
+pid_counter: 2
+E (45824) BT_BTM: BTM_GetSecurityFlags false
+
+E (45884) BT_BTM: BTM_GetSecurityFlags false
+
+E (45914) BT_BTM: BTM_GetSecurityFlags false
+
+E (45915) BT_BTM: BTM_GetSecurityFlags false
+
+E (45916) BT_BTM: BTM_GetSecurityFlags false
+
+E (45929) BT_BTM: BTM_GetSecurityFlags false
+
+E (45930) BT_BTM: BTM_GetSecurityFlags false
+
+E (45944) BT_BTM: BTM_GetSecurityFlags false
+
+E (45959) BT_BTM: BTM_GetSecurityFlags false
+
+E (45960) BT_BTM: BTM_GetSecurityFlags false
+
+E (46019) BT_BTM: BTM_GetSecurityFlags false
+
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (46064) BT_BTM: BTM_GetSecurityFlags false
+
+E (46139) BT_BTM: BTM_GetSecurityFlags false
+
+E (46154) BT_BTM: BTM_GetSecurityFlags false
+
+E (46155) BT_BTM: BTM_GetSecurityFlags false
+
+E (46169) BT_BTM: BTM_GetSecurityFlags false
+
+E (46184) BT_BTM: BTM_GetSecurityFlags false
+
+E (46185) BT_BTM: BTM_GetSecurityFlags false
+
+E (46244) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00F500F60000002:000000000000003:000000FF00EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00F500F60000002:000000000000003:000000FF00EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'F5'
+ OBD2 connected - displaying data
+pid_counter: 3
+E (46334) BT_BTM: BTM_GetSecurityFlags false
+
+E (46394) BT_BTM: BTM_GetSecurityFlags false
+
+E (46424) BT_BTM: BTM_GetSecurityFlags false
+
+E (46425) BT_BTM: BTM_GetSecurityFlags false
+
+E (46426) BT_BTM: BTM_GetSecurityFlags false
+
+E (46439) BT_BTM: BTM_GetSecurityFlags false
+
+E (46440) BT_BTM: BTM_GetSecurityFlags false
+
+E (46454) BT_BTM: BTM_GetSecurityFlags false
+
+E (46469) BT_BTM: BTM_GetSecurityFlags false
+
+E (46470) BT_BTM: BTM_GetSecurityFlags false
+
+E (46514) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA300000000002:00001DE9F7F5F73:F7F6F6F5001DC74:01C74D00008F005:015DF1000155116:000103450000F57:C700F160F000038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA300000000002:00001DE9F7F5F73:F7F6F6F5001DC74:01C74D00008F005:015DF1000155116:000103450000F57:C700F160F000038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F160F0'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+E (46544) BT_BTM: BTM_GetSecurityFlags false
+
+E (46620) BT_BTM: BTM_GetSecurityFlags false
+
+E (46664) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB8006931002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB8006931002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006931'
+ OBD2 connected - displaying data
+pid_counter: 4
+E (46694) BT_BTM: BTM_GetSecurityFlags false
+
+E (46769) BT_BTM: BTM_GetSecurityFlags false
+
+E (46784) BT_BTM: BTM_GetSecurityFlags false
+
+E (46785) BT_BTM: BTM_GetSecurityFlags false
+
+E (46799) BT_BTM: BTM_GetSecurityFlags false
+
+E (46829) BT_BTM: BTM_GetSecurityFlags false
+
+E (46830) BT_BTM: BTM_GetSecurityFlags false
+
+E (46831) BT_BTM: BTM_GetSecurityFlags false
+
+E (46844) BT_BTM: BTM_GetSecurityFlags false
+
+E (46845) BT_BTM: BTM_GetSecurityFlags false
+
+E (46889) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F160F0'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (46949) BT_BTM: BTM_GetSecurityFlags false
+
+E (47041) BT_BTM: BTM_GetSecurityFlags false
+
+E (47069) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF432C4000EF2:8F00F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF5F7A474200FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF432C4000EF2:8F00F0FFFF0FFF3:B3FFFFFFFFFFFF4:FF5F7A474200FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '43'
+ hex number  hexSubString cap:14 len:2 '2C'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+E (47099) BT_BTM: BTM_GetSecurityFlags false
+
+E (47159) BT_BTM: BTM_GetSecurityFlags false
+
+E (47174) BT_BTM: BTM_GetSecurityFlags false
+
+E (47175) BT_BTM: BTM_GetSecurityFlags false
+
+E (47189) BT_BTM: BTM_GetSecurityFlags false
+
+E (47204) BT_BTM: BTM_GetSecurityFlags false
+
+E (47205) BT_BTM: BTM_GetSecurityFlags false
+
+E (47219) BT_BTM: BTM_GetSecurityFlags false
+
+E (47234) BT_BTM: BTM_GetSecurityFlags false
+
+E (47235) BT_BTM: BTM_GetSecurityFlags false
+
+E (47279) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F160F1'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (47339) BT_BTM: BTM_GetSecurityFlags false
+
+E (47399) BT_BTM: BTM_GetSecurityFlags false
+
+E (47414) BT_BTM: BTM_GetSecurityFlags false
+
+E (47415) BT_BTM: BTM_GetSecurityFlags false
+
+E (47444) BT_BTM: BTM_GetSecurityFlags false
+
+E (47445) BT_BTM: BTM_GetSecurityFlags false
+
+E (47446) BT_BTM: BTM_GetSecurityFlags false
+
+E (47489) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '27'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B3'
+ hex number  hexSubString cap:14 len:2 '2B'
+ OBD2 connected - displaying data
+pid_counter: 6
+E (47519) BT_BTM: BTM_GetSecurityFlags false
+
+E (47579) BT_BTM: BTM_GetSecurityFlags false
+
+E (47594) BT_BTM: BTM_GetSecurityFlags false
+
+E (47609) BT_BTM: BTM_GetSecurityFlags false
+
+E (47610) BT_BTM: BTM_GetSecurityFlags false
+
+E (47624) BT_BTM: BTM_GetSecurityFlags false
+
+E (47639) BT_BTM: BTM_GetSecurityFlags false
+
+E (47640) BT_BTM: BTM_GetSecurityFlags false
+
+E (47654) BT_BTM: BTM_GetSecurityFlags false
+
+E (47669) BT_BTM: BTM_GetSecurityFlags false
+
+E (47699) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (47759) BT_BTM: BTM_GetSecurityFlags false
+
+E (47834) BT_BTM: BTM_GetSecurityFlags false
+
+E (47835) BT_BTM: BTM_GetSecurityFlags false
+
+E (47849) BT_BTM: BTM_GetSecurityFlags false
+
+E (47864) BT_BTM: BTM_GetSecurityFlags false
+
+E (47865) BT_BTM: BTM_GetSecurityFlags false
+
+E (47909) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:12 len:4 'E830'
+ OBD2 connected - displaying data
+pid_counter: 1
+E (47954) BT_BTM: BTM_GetSecurityFlags false
+
+E (48014) BT_BTM: BTM_GetSecurityFlags false
+
+E (48029) BT_BTM: BTM_GetSecurityFlags false
+
+E (48030) BT_BTM: BTM_GetSecurityFlags false
+
+E (48059) BT_BTM: BTM_GetSecurityFlags false
+
+E (48060) BT_BTM: BTM_GetSecurityFlags false
+
+E (48074) BT_BTM: BTM_GetSecurityFlags false
+
+E (48075) BT_BTM: BTM_GetSecurityFlags false
+
+E (48089) BT_BTM: BTM_GetSecurityFlags false
+
+E (48104) BT_BTM: BTM_GetSecurityFlags false
+
+E (48134) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA300000000002:00011DE9F7F5F73:F7F6F6F5001DC74:01C77200008F005:015DF1000155116:000103450000F57:C700F160F200038:000000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA300000000002:00011DE9F7F5F73:F7F6F6F5001DC74:01C77200008F005:015DF1000155116:000103450000F57:C700F160F200038:000000000006B'
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F160F2'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+E (48179) BT_BTM: BTM_GetSecurityFlags false
+
+E (48239) BT_BTM: BTM_GetSecurityFlags false
+
+E (48284) BT_BTM: BTM_GetSecurityFlags false
+
+E (48286) BT_BTM: BTM_GetSecurityFlags false
+
+E (48287) BT_BTM: BTM_GetSecurityFlags false
+
+E (48287) BT_BTM: BTM_GetSecurityFlags false
+
+E (48290) BT_BTM: BTM_GetSecurityFlags false
+
+E (48299) BT_BTM: BTM_GetSecurityFlags false
+
+E (48344) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F5153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CF52:F5F5F5F5F5F5153:A46162000050F64:0003E8B56F99005:A60000000000006:00F6F6F6F7AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '15'
+ hex number  hexSubString cap:14 len:2 'A4'
+ hex number  hexSubString cap:14 len:2 'A6'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '6F99'
+ hex number  hexSubString cap:14 len:2 'F6'
+ OBD2 connected - displaying data
+Trip Reset
+pid_counter: 2
+E (48419) BT_BTM: BTM_GetSecurityFlags false
+
+E (48479) BT_BTM: BTM_GetSecurityFlags false
+
+E (48494) BT_BTM: BTM_GetSecurityFlags false
+
+E (48495) BT_BTM: BTM_GetSecurityFlags false
+
+E (48509) BT_BTM: BTM_GetSecurityFlags false
+
+E (48524) BT_BTM: BTM_GetSecurityFlags false
+
+E (48525) BT_BTM: BTM_GetSecurityFlags false
+
+E (48539) BT_BTM: BTM_GetSecurityFlags false
+
+E (48569) BT_BTM: BTM_GetSecurityFlags false
+
+E (48570) BT_BTM: BTM_GetSecurityFlags false
+
+E (48599) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (48644) BT_BTM: BTM_GetSecurityFlags false
+
+E (48704) BT_BTM: BTM_GetSecurityFlags false
+
+E (48719) BT_BTM: BTM_GetSecurityFlags false
+
+E (48720) BT_BTM: BTM_GetSecurityFlags false
+
+E (48779) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00F500F60000002:0000000000000'
+        data cap:48 len:48 '0260:62010617F8111:00F500F60000002:0000000000000'
+ hex number  hexSubString cap:14 len:2 'F5'
+ OBD2 connected - displaying data
+pid_counter: 3
+E (48824) BT_BTM: BTM_GetSecurityFlags false
+
+E (48974) BT_BTM: BTM_GetSecurityFlags false
+
+E (48989) BT_BTM: BTM_GetSecurityFlags false
+
+E (48990) BT_BTM: BTM_GetSecurityFlags false
+
+E (49004) BT_BTM: BTM_GetSecurityFlags false
+
+E (49019) BT_BTM: BTM_GetSecurityFlags false
+
+E (49034) BT_BTM: BTM_GetSecurityFlags false
+
+E (49035) BT_BTM: BTM_GetSecurityFlags false
+
+E (49049) BT_BTM: BTM_GetSecurityFlags false
+
+E (49064) BT_BTM: BTM_GetSecurityFlags false
+
+E (49065) BT_BTM: BTM_GetSecurityFlags false
+
+E (49079) BT_BTM: BTM_GetSecurityFlags false
+
+E (49094) BT_BTM: BTM_GetSecurityFlags false
+
+E (49229) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:4 '1DE9'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (49259) BT_BTM: BTM_GetSecurityFlags false
+
+E (49336) BT_BTM: BTM_GetSecurityFlags false
+
+E (49484) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFA8006931002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFA8006931002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006931'
+ OBD2 connected - displaying data
+pid_counter: 4
+E (49514) BT_BTM: BTM_GetSecurityFlags false
+
+E (49574) BT_BTM: BTM_GetSecurityFlags false
+
+E (49589) BT_BTM: BTM_GetSecurityFlags false
+
+E (49590) BT_BTM: BTM_GetSecurityFlags false
+
+E (49604) BT_BTM: BTM_GetSecurityFlags false
+
+E (49619) BT_BTM: BTM_GetSecurityFlags false
+
+E (49620) BT_BTM: BTM_GetSecurityFlags false
+
+E (49634) BT_BTM: BTM_GetSecurityFlags false
+
+E (49649) BT_BTM: BTM_GetSecurityFlags false
+
+E (49650) BT_BTM: BTM_GetSecurityFlags false
+
+E (49799) BT_BTM: BTM_GetSecurityFlags false
+
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (49844) BT_BTM: BTM_GetSecurityFlags false
+
+E (50099) BT_BTM: BTM_GetSecurityFlags false
+
+Error: createSafeStringFromCharArrayWithSize( data, ..., 0) was passed zero passed for array size
+        data cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ OBD2 connected - displaying data
+pid_counter: 5
+E (50144) BT_BTM: BTM_GetSecurityFlags false
+
+E (50204) BT_BTM: BTM_GetSecurityFlags false
+
+E (50219) BT_BTM: BTM_GetSecurityFlags false
+
+E (50220) BT_BTM: BTM_GetSecurityFlags false
+
+E (50234) BT_BTM: BTM_GetSecurityFlags false
+
+E (50249) BT_BTM: BTM_GetSecurityFlags false
+
+E (50250) BT_BTM: BTM_GetSecurityFlags false
+
+E (50264) BT_BTM: BTM_GetSecurityFlags false
+
+E (50279) BT_BTM: BTM_GetSecurityFlags false
+
+E (50280) BT_BTM: BTM_GetSecurityFlags false
+
+E (50429) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '86'
+ hex number  hexSubString cap:14 len:4 '1DEA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '25'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (50474) BT_BTM: BTM_GetSecurityFlags false
+
+E (50564) BT_BTM: BTM_GetSecurityFlags false
+
+E (50565) BT_BTM: BTM_GetSecurityFlags false
+
+E (50579) BT_BTM: BTM_GetSecurityFlags false
+
+E (50594) BT_BTM: BTM_GetSecurityFlags false
+
+E (50595) BT_BTM: BTM_GetSecurityFlags false
+
+E (50609) BT_BTM: BTM_GetSecurityFlags false
+
+E (50759) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 81 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100005:90B4AAAAAAAAA'
+        data cap:80 len:80 '0240:62C00BFFFFFF1:80B127020000B12:2B010000B52B013:0000B32B0100005:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '27'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '2B'
+ hex number  hexSubString cap:14 len:2 'B3'
+ hex number  hexSubString cap:14 len:2 '2B'
+ OBD2 connected - displaying data
+pid_counter: 6
+E (50804) BT_BTM: BTM_GetSecurityFlags false
+
+E (50879) BT_BTM: BTM_GetSecurityFlags false
+
+E (50894) BT_BTM: BTM_GetSecurityFlags false
+
+E (50895) BT_BTM: BTM_GetSecurityFlags false
+
+E (50924) BT_BTM: BTM_GetSecurityFlags false
+
+E (50925) BT_BTM: BTM_GetSecurityFlags false
+
+E (50926) BT_BTM: BTM_GetSecurityFlags false
+
+E (50939) BT_BTM: BTM_GetSecurityFlags false
+
+E (50955) BT_BTM: BTM_GetSecurityFlags false
+
+E (50955) BT_BTM: BTM_GetSecurityFlags false
+
+E (51104) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '86'
+ hex number  hexSubString cap:14 len:4 '1DEA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 '00'
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (51149) BT_BTM: BTM_GetSecurityFlags false
+
+E (51224) BT_BTM: BTM_GetSecurityFlags false
+
+E (51225) BT_BTM: BTM_GetSecurityFlags false
+
+E (51239) BT_BTM: BTM_GetSecurityFlags false
+
+E (51254) BT_BTM: BTM_GetSecurityFlags false
+
+E (51255) BT_BTM: BTM_GetSecurityFlags false
+
+E (51404) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 81 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '01E0:62B00140E8301:000000000000002:000001010000003:000001000001004:000000AAAAAAA'
+        data cap:80 len:80 '01E0:62B00140E8301:000000000000002:000001010000003:000001000001004:000000AAAAAAA'
+ hex number  hexSubString cap:12 len:4 'E830'
+ OBD2 connected - displaying data
+pid_counter: 1
+E (51479) BT_BTM: BTM_GetSecurityFlags false
+
+E (51539) BT_BTM: BTM_GetSecurityFlags false
+
+E (51554) BT_BTM: BTM_GetSecurityFlags false
+
+E (51555) BT_BTM: BTM_GetSecurityFlags false
+
+E (51569) BT_BTM: BTM_GetSecurityFlags false
+
+E (51584) BT_BTM: BTM_GetSecurityFlags false
+
+E (51585) BT_BTM: BTM_GetSecurityFlags false
+
+E (51599) BT_BTM: BTM_GetSecurityFlags false
+
+E (51614) BT_BTM: BTM_GetSecurityFlags false
+
+E (51615) BT_BTM: BTM_GetSecurityFlags false
+
+E (51764) BT_BTM: BTM_GetSecurityFlags false
+
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:4 '1DEA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F160F5'
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (51794) BT_BTM: BTM_GetSecurityFlags false
+
+E (51854) BT_BTM: BTM_GetSecurityFlags false
+
+E (51869) BT_BTM: BTM_GetSecurityFlags false
+
+E (51870) BT_BTM: BTM_GetSecurityFlags false
+
+E (51884) BT_BTM: BTM_GetSecurityFlags false
+
+E (51899) BT_BTM: BTM_GetSecurityFlags false
+
+E (51900) BT_BTM: BTM_GetSecurityFlags false
+
+E (51914) BT_BTM: BTM_GetSecurityFlags false
+
+E (52064) BT_BTM: BTM_GetSecurityFlags false
+
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+pid_counter: 2
+E (52109) BT_BTM: BTM_GetSecurityFlags false
+
+E (52184) BT_BTM: BTM_GetSecurityFlags false
+
+E (52199) BT_BTM: BTM_GetSecurityFlags false
+
+E (52200) BT_BTM: BTM_GetSecurityFlags false
+
+E (52214) BT_BTM: BTM_GetSecurityFlags false
+
+E (52229) BT_BTM: BTM_GetSecurityFlags false
+
+E (52230) BT_BTM: BTM_GetSecurityFlags false
+
+E (52259) BT_BTM: BTM_GetSecurityFlags false
+
+E (52260) BT_BTM: BTM_GetSecurityFlags false
+
+E (52261) BT_BTM: BTM_GetSecurityFlags false
+
+E (52409) BT_BTM: BTM_GetSecurityFlags false
+
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 10 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 8 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+ hex number  hexSubString cap:14 len:2 'A3'
+Error: frame.substring() beginIdx 12 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() endIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 4 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 2 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+Error: frame.substring() beginIdx 6 >  frame.length() : 0
+        frame cap:0 len:0 ''
+ hex number  hexSubString cap:0 len:0 ''
+ invalid hex number  hexSubString cap:0 len:0 ''
+E (52454) BT_BTM: BTM_GetSecurityFlags false
+
+E (52514) BT_BTM: BTM_GetSecurityFlags false
+
+E (52529) BT_BTM: BTM_GetSecurityFlags false
+
+E (52530) BT_BTM: BTM_GetSecurityFlags false
+
+E (52544) BT_BTM: BTM_GetSecurityFlags false
+
+E (52559) BT_BTM: BTM_GetSecurityFlags false
+
+E (52560) BT_BTM: BTM_GetSecurityFlags false
+
+E (52709) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00F500F60000002:000000000000003:000000FF00EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00F500F60000002:000000000000003:000000FF00EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'F5'
+pid_counter: 3
+E (52739) BT_BTM: BTM_GetSecurityFlags false
+
+E (52799) BT_BTM: BTM_GetSecurityFlags false
+
+E (52814) BT_BTM: BTM_GetSecurityFlags false
+
+E (52829) BT_BTM: BTM_GetSecurityFlags false
+
+E (52830) BT_BTM: BTM_GetSecurityFlags false
+
+E (52844) BT_BTM: BTM_GetSecurityFlags false
+
+E (52874) BT_BTM: BTM_GetSecurityFlags false
+
+E (52875) BT_BTM: BTM_GetSecurityFlags false
+
+E (52876) BT_BTM: BTM_GetSecurityFlags false
+
+E (52889) BT_BTM: BTM_GetSecurityFlags false
+
+E (53024) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFA300000000002:00001DEAF7F5F73:F7F6F6F5001DC74:01C74D000085005:015DF1000155116:000103450000F57:C700F160F600028:810000000006B'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFA300000000002:00001DEAF7F5F73:F7F6F6F5001DC74:01C74D000085005:015DF1000155116:000103450000F57:C700F160F600028:810000000006B'
+ hex number  hexSubString cap:14 len:2 'F5'
+ hex number  hexSubString cap:14 len:2 'F7'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:4 '1DEA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010345'
+ hex number  hexSubString cap:14 len:6 '0000F5'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '015DF1'
+ hex number  hexSubString cap:14 len:8 '00015511'
+ hex number  hexSubString cap:14 len:2 'A3'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'C7'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F160F6'
+ hex number  hexSubString cap:13 len:4 '0000'
+ hex number  hexSubString cap:13 len:4 '0000'
+E (53054) BT_BTM: BTM_GetSecurityFlags false
+

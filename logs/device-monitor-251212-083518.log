@@ -1,0 +1,379 @@
+Touch detected at: x=57, y=447
+DIAG button pressed!
+
+========================================
+DIAGNOSTIC SCAN: Searching for 12V Battery SoC
+Looking for responses > 20 bytes
+Logging to SD card: /diagnostic_scan.txt
+========================================
+
+
+========== SCAN: Header 7E2 ==========Warning: SafeString( data, ...) passed unterminated buffer of length 209 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0570:62F1004E45311:412D4E302D53422:392D563430304E3:454E34303932304:333937353131585:4E4E31202407116:AAAAAAAAAA04327:419067424B4D388:4B4E44444637529:55333239373136A:33393735313158B:4E4E314E534239C:53303435AAAAA'
+        data cap:208 len:208 '0570:62F1004E45311:412D4E302D53422:392D563430304E3:454E34303932304:333937353131585:4E4E31202407116:AAAAAAAAAA04327:419067424B4D388:4B4E44444637529:55333239373136A:33393735313158B:4E4E314E534239C:53303435AAAAA'
+PID 22F100 (209 bytes): 0570:62F1004E45311:412D4E302D53422:392D563430304E3:454E34303932304:333937353131585:4E4E31202407116:AAAAAAAAAA04327:419067424B4D388:4B4E44444637529:55333239373136A:33393735313158B:4E4E314E534239C:53303435AAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1814E45311:412D4E302D53422:392D56343030A'
+        data cap:48 len:48 '0130:62F1814E45311:412D4E302D53422:392D56343030A'
+PID 22F181 (49 bytes): 0130:62F1814E45311:412D4E302D53422:392D56343030A
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62F1824E454E1:3430393230AAA'
+        data cap:32 len:32 '00B0:62F1824E454E1:3430393230AAA'
+PID 22F182 (33 bytes): 00B0:62F1824E454E1:3430393230AAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1873339371:353131584E4E3'
+        data cap:32 len:32 '00D0:62F1873339371:353131584E4E3'
+PID 22F187 (33 bytes): 00D0:62F1873339371:353131584E4E3
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024071'
+        data cap:13 len:13 '62F18B2024071'
+PID 22F18B (14 bytes): 62F18B2024071
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00E0:62F18CAAAAAA1:AAAA04324190672:42AAAAAAAAAAA'
+        data cap:48 len:48 '00E0:62F18CAAAAAA1:AAAA04324190672:42AAAAAAAAAAA'
+PID 22F18C (49 bytes): 00E0:62F18CAAAAAA1:AAAA04324190672:42AAAAAAAAAAA
+PID 22F190 (50 bytes): 0140:62F1904B4D381:4B4E4444463752
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1913339371:353131584E4E3'
+        data cap:32 len:32 '00D0:62F1913339371:353131584E4E3'
+PID 22F191 (33 bytes): 00D0:62F1913339371:353131584E4E3
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1933339371:353131584E4E3'
+        data cap:32 len:32 '00D0:62F1933339371:353131584E4E3'
+PID 22F193 (33 bytes): 00D0:62F1933339371:353131584E4E3
+pair status = fail Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A04E53423'
+        data cap:13 len:13 '62F1A04E53423'
+PID 22F1A0 (14 bytes): 62F1A04E53423
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15330343'
+        data cap:13 len:13 '62F1A15330343'
+PID 22F1A1 (14 bytes): 62F1A15330343
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1B14E53423'
+        data cap:13 len:13 '62F1B14E53423'
+PID 22F1B1 (14 bytes): 62F1B14E53423
+
+Header 7E2 scan complete: 257 total responses, 12 significant (>10 bytes)
+
+========== SCAN: Header 7E3 ==========Warning: SafeString( data, ...) passed unterminated buffer of length 240 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0620:62F1003336361:30313158414D302:201E060A1440143:ADB040C927BB004:00ABCDFFFFFFFF5:003336363031316:58414D3020454E7:453145323041458:4D53322D3031309:202301094E4544A:4D43553534454EB:45314532304145C:4D53322D303130D:30303030303030E:31AAAAAAAAAA'
+        data cap:239 len:239 '0620:62F1003336361:30313158414D302:201E060A1440143:ADB040C927BB004:00ABCDFFFFFFFF5:003336363031316:58414D3020454E7:453145323041458:4D53322D3031309:202301094E4544A:4D43553534454EB:45314532304145C:4D53322D303130D:30303030303030E:31AAAAAAAAAA'
+PID 22F100 (240 bytes): 0620:62F1003336361:30313158414D302:201E060A1440143:ADB040C927BB004:00ABCDFFFFFFFF5:003336363031316:58414D3020454E7:453145323041458:4D53322D3031309:202301094E4544A:4D43553534454EB:45314532304145C:4D53322D303130D:30303030303030E:31AAAAAAAAAA
+PID 22F150 (50 bytes): 0130:62F1504E4531
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F151454E451:3145323041454D2:53322D303130A'
+        data cap:48 len:48 '0130:62F151454E451:3145323041454D2:53322D303130A'
+PID 22F151 (49 bytes): 0130:62F151454E451:3145323041454D2:53322D303130A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1522023010'
+        data cap:13 len:13 '62F1522023010'
+PID 22F152 (14 bytes): 62F1522023010
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1533336361:30313158414D302:202020202020A'
+        data cap:48 len:48 '0130:62F1533336361:30313158414D302:202020202020A'
+PID 22F153 (49 bytes): 0130:62F1533336361:30313158414D302:202020202020A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1542023010'
+        data cap:13 len:13 '62F1542023010'
+PID 22F154 (14 bytes): 62F1542023010
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1554641431:544F525900000'
+        data cap:32 len:32 '00D0:62F1554641431:544F525900000'
+PID 22F155 (33 bytes): 00D0:62F1554641431:544F525900000
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F156876D962'
+        data cap:13 len:13 '62F156876D962'
+PID 22F156 (14 bytes): 62F156876D962
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F15725E9D6B'
+        data cap:13 len:13 '62F15725E9D6B'
+PID 22F157 (14 bytes): 62F15725E9D6B
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62F1804E45441:4D43553534AAA'
+        data cap:32 len:32 '00B0:62F1804E45441:4D43553534AAA'
+PID 22F180 (33 bytes): 00B0:62F1804E45441:4D43553534AAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00E0:62F1873336361:30313158414D302:20AAAAAAAAAAA'
+        data cap:48 len:48 '00E0:62F1873336361:30313158414D302:20AAAAAAAAAAA'
+PID 22F187 (49 bytes): 00E0:62F1873336361:30313158414D302:20AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1894E45311:4541524D4E42532:315230302020A'
+        data cap:48 len:48 '0130:62F1894E45311:4541524D4E42532:315230302020A'
+PID 22F189 (49 bytes): 0130:62F1894E45311:4541524D4E42532:315230302020A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024071'
+        data cap:13 len:13 '62F18B2024071'
+PID 22F18B (14 bytes): 62F18B2024071
+Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0150:62F18C3234301:373137494E30312:413030303031383:36AAAAAAAAAAA'
+        data cap:64 len:64 '0150:62F18C3234301:373137494E30312:413030303031383:36AAAAAAAAAAA'
+PID 22F18C (65 bytes): 0150:62F18C3234301:373137494E30312:413030303031383:36AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F18D454E451:3145323041454D2:53322D303130A'
+        data cap:48 len:48 '0130:62F18D454E451:3145323041454D2:53322D303130A'
+PID 22F18D (49 bytes): 0130:62F18D454E451:3145323041454D2:53322D303130A
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00E0:62F1913336361:30313158414D302:20AAAAAAAAAAA'
+        data cap:48 len:48 '00E0:62F1913336361:30313158414D302:20AAAAAAAAAAA'
+PID 22F191 (49 bytes): 00E0:62F1913336361:30313158414D302:20AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00E0:62F1933336361:30313158414D302:20AAAAAAAAAAA'
+        data cap:48 len:48 '00E0:62F1933336361:30313158414D302:20AAAAAAAAAAA'
+PID 22F193 (49 bytes): 00E0:62F1933336361:30313158414D302:20AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0080:62F1978295771:6785AAAAAAAAA'
+        data cap:32 len:32 '0080:62F1978295771:6785AAAAAAAAA'
+PID 22F197 (33 bytes): 0080:62F1978295771:6785AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1992023010'
+        data cap:13 len:13 '62F1992023010'
+PID 22F199 (14 bytes): 62F1992023010
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A07275776'
+        data cap:13 len:13 '62F1A07275776'
+PID 22F1A0 (14 bytes): 62F1A07275776
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15254324'
+        data cap:13 len:13 '62F1A15254324'
+PID 22F1A1 (14 bytes): 62F1A15254324
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1B1454E451:3145323041454D2:53322D303130A'
+        data cap:48 len:48 '0130:62F1B1454E451:3145323041454D2:53322D303130A'
+PID 22F1B1 (49 bytes): 0130:62F1B1454E451:3145323041454D2:53322D303130A
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0230:62F1C18C58D21:38A908D2A6A15C2:849859443524A33:3CFAEFF0ACDCDB4:DC53FD33D11F605:D8AAAAAAAAAAA'
+        data cap:96 len:96 '0230:62F1C18C58D21:38A908D2A6A15C2:849859443524A33:3CFAEFF0ACDCDB4:DC53FD33D11F605:D8AAAAAAAAAAA'
+PID 22F1C1 (97 bytes): 0230:62F1C18C58D21:38A908D2A6A15C2:849859443524A33:3CFAEFF0ACDCDB4:DC53FD33D11F605:D8AAAAAAAAAAA
+PID 22F1EF (240 bytes): 0630:62F1EF07E30B1:523130204E45312:2F312F300B52353:31204E45312F314:2F300B523835205:4E45312F312F306:0C52313030204E7:45312F312F300C8:52313535204E459:312F312F300C52
+
+Header 7E3 scan complete: 497 total responses, 36 significant (>10 bytes)
+
+========== SCAN: Header 7E4 ==========Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03B0:62F1800135361:30434E453345562:2D20424D5320203:202020202056454:522E302E3120205:2020200A0B0C0D6:0E0A0B0C0D0E007:000000353630438:11111111AAAAA'
+        data cap:144 len:144 '03B0:62F1800135361:30434E453345562:2D20424D5320203:202020202056454:522E302E3120205:2020200A0B0C0D6:0E0A0B0C0D0E007:000000353630438:11111111AAAAA'
+PID 22F180 (145 bytes): 03B0:62F1800135361:30434E453345562:2D20424D5320203:202020202056454:522E302E3120205:2020200A0B0C0D6:0E0A0B0C0D0E007:000000353630438:11111111AAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1873337351:4130474933353'
+        data cap:32 len:32 '00D0:62F1873337351:4130474933353'
+PID 22F187 (33 bytes): 00D0:62F1873337351:4130474933353
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024071'
+        data cap:13 len:13 '62F18B2024071'
+PID 22F18B (14 bytes): 62F18B2024071
+Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0150:62F18C4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+        data cap:64 len:64 '0150:62F18C4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+PID 22F18C (65 bytes): 0150:62F18C4253301:31414E453854302:313439000000003:00AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F18E3337351:3031474933353'
+        data cap:32 len:32 '00D0:62F18E3337351:3031474933353'
+PID 22F18E (33 bytes): 00D0:62F18E3337351:3031474933353
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0140:62F1904E45331:45562D20424D532:2020202020202'
+        data cap:48 len:48 '0140:62F1904E45331:45562D20424D532:2020202020202'
+PID 22F190 (49 bytes): 0140:62F1904E45331:45562D20424D532:2020202020202
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1915645521:2E302E312020202:2020AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1915645521:2E302E312020202:2020AAAAAAAAA'
+PID 22F191 (49 bytes): 00F0:62F1915645521:2E302E312020202:2020AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1982020201:2020202020202'
+        data cap:32 len:32 '00D0:62F1982020201:2020202020202'
+PID 22F198 (33 bytes): 00D0:62F1982020201:2020202020202
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1990000000'
+        data cap:13 len:13 '62F1990000000'
+PID 22F199 (14 bytes): 62F1990000000
+Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0150:62F19A4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+        data cap:64 len:64 '0150:62F19A4253301:31414E453854302:313439000000003:00AAAAAAAAAAA'
+PID 22F19A (65 bytes): 0150:62F19A4253301:31414E453854302:313439000000003:00AAAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F19B0000000'
+        data cap:13 len:13 '62F19B0000000'
+PID 22F19B (14 bytes): 62F19B0000000
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F19C2020201:2020202020202'
+        data cap:32 len:32 '00D0:62F19C2020201:2020202020202'
+PID 22F19C (33 bytes): 00D0:62F19C2020201:2020202020202
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A03536304'
+        data cap:13 len:13 '62F1A03536304'
+PID 22F1A0 (14 bytes): 62F1A03536304
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15254325'
+        data cap:13 len:13 '62F1A15254325'
+PID 22F1A1 (14 bytes): 62F1A15254325
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1B13536304'
+        data cap:13 len:13 '62F1B13536304'
+PID 22F1B1 (14 bytes): 62F1B13536304
+
+Header 7E4 scan complete: 754 total responses, 51 significant (>10 bytes)
+
+========== SCAN: Header 7E5 ==========Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1004E45311:413033392020202:202020202020A'
+        data cap:48 len:48 '0130:62F1004E45311:413033392020202:202020202020A'
+PID 22F100 (49 bytes): 0130:62F1004E45311:413033392020202:202020202020A
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1504E45311:413033392020202:202020202020A'
+        data cap:48 len:48 '0130:62F1504E45311:413033392020202:202020202020A'
+PID 22F150 (49 bytes): 0130:62F1504E45311:413033392020202:202020202020A
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F151454E451:3145332D4944532:313452303030A'
+        data cap:48 len:48 '0130:62F151454E451:3145332D4944532:313452303030A'
+PID 22F151 (49 bytes): 0130:62F151454E451:3145332D4944532:313452303030A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1522024090'
+        data cap:13 len:13 '62F1522024090'
+PID 22F152 (14 bytes): 62F1522024090
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1533336341:303131584141302:202020202020A'
+        data cap:48 len:48 '0130:62F1533336341:303131584141302:202020202020A'
+PID 22F153 (49 bytes): 0130:62F1533336341:303131584141302:202020202020A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1542024090'
+        data cap:13 len:13 '62F1542024090'
+PID 22F154 (14 bytes): 62F1542024090
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1554641431:544F525900000'
+        data cap:32 len:32 '00D0:62F1554641431:544F525900000'
+PID 22F155 (33 bytes): 00D0:62F1554641431:544F525900000
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1562E03047'
+        data cap:13 len:13 '62F1562E03047'
+PID 22F156 (14 bytes): 62F1562E03047
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1571BF4094'
+        data cap:13 len:13 '62F1571BF4094'
+PID 22F157 (14 bytes): 62F1571BF4094
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00B0:62F1804E45491:4343553530AAA'
+        data cap:32 len:32 '00B0:62F1804E45491:4343553530AAA'
+PID 22F180 (33 bytes): 00B0:62F1804E45491:4343553530AAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1814E45311:413033392020202:2020AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1814E45311:413033392020202:2020AAAAAAAAA'
+PID 22F181 (49 bytes): 00F0:62F1814E45311:413033392020202:2020AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1873336341:3031315841413'
+        data cap:32 len:32 '00D0:62F1873336341:3031315841413'
+PID 22F187 (33 bytes): 00D0:62F1873336341:3031315841413
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F188454E451:3145332D4944532:313452303030A'
+        data cap:48 len:48 '0130:62F188454E451:3145332D4944532:313452303030A'
+PID 22F188 (49 bytes): 0130:62F188454E451:3145332D4944532:313452303030A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024072'
+        data cap:13 len:13 '62F18B2024072'
+PID 22F18B (14 bytes): 62F18B2024072
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0120:62F18C3234301:373232494330312:4130333836AAA'
+        data cap:48 len:48 '0120:62F18C3234301:373232494330312:4130333836AAA'
+PID 22F18C (49 bytes): 0120:62F18C3234301:373232494330312:4130333836AAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1913336341:3031315841413'
+        data cap:32 len:32 '00D0:62F1913336341:3031315841413'
+PID 22F191 (33 bytes): 00D0:62F1913336341:3031315841413
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1933336341:3031315841413'
+        data cap:32 len:32 '00D0:62F1933336341:3031315841413'
+PID 22F193 (33 bytes): 00D0:62F1933336341:3031315841413
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A04453313'
+        data cap:13 len:13 '62F1A04453313'
+PID 22F1A0 (14 bytes): 62F1A04453313
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15254324'
+        data cap:13 len:13 '62F1A15254324'
+PID 22F1A1 (14 bytes): 62F1A15254324
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F1B1454E451:3145332D4944532:313452303030A'
+        data cap:48 len:48 '0130:62F1B1454E451:3145332D4944532:313452303030A'
+PID 22F1B1 (49 bytes): 0130:62F1B1454E451:3145332D4944532:313452303030A
+
+Header 7E5 scan complete: 1011 total responses, 71 significant (>10 bytes)
+
+========== SCAN: Header 7E6 ==========Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02B0:62F1005053421:473435343120202:453139305F41453:323000454E45314:585858584C58455:3139585335EB566:FEAFAAAAAAAAA'
+        data cap:112 len:112 '02B0:62F1005053421:473435343120202:453139305F41453:323000454E45314:585858584C58455:3139585335EB566:FEAFAAAAAAAAA'
+PID 22F100 (113 bytes): 02B0:62F1005053421:473435343120202:453139305F41453:323000454E45314:585858584C58455:3139585335EB566:FEAFAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1805053421:4734353431202'
+        data cap:32 len:32 '00D0:62F1805053421:4734353431202'
+PID 22F180 (33 bytes): 00D0:62F1805053421:4734353431202
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1873432391:35312D313831312:3000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1873432391:35312D313831312:3000AAAAAAAAA'
+PID 22F187 (49 bytes): 00F0:62F1873432391:35312D313831312:3000AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1884531391:305F414532300'
+        data cap:32 len:32 '00D0:62F1884531391:305F414532300'
+PID 22F188 (33 bytes): 00D0:62F1884531391:305F414532300
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F1894531391:305F414532300'
+        data cap:32 len:32 '00D0:62F1894531391:305F414532300'
+PID 22F189 (33 bytes): 00D0:62F1894531391:305F414532300
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F18B2024071'
+        data cap:13 len:13 '62F18B2024071'
+PID 22F18B (14 bytes): 62F18B2024071
+Warning: SafeString( data, ...) passed unterminated buffer of length 65 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '01A0:62F18C3030301:32FFFF150724202:161533363234313:393336343933A'
+        data cap:64 len:64 '01A0:62F18C3030301:32FFFF150724202:161533363234313:393336343933A'
+PID 22F18C (65 bytes): 01A0:62F18C3030301:32FFFF150724202:161533363234313:393336343933A
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0140:62F190FFFFFF1:FFFFFFFFFFFFFF2:FFFFFFFFFFFFF'
+        data cap:48 len:48 '0140:62F190FFFFFF1:FFFFFFFFFFFFFF2:FFFFFFFFFFFFF'
+PID 22F190 (49 bytes): 0140:62F190FFFFFF1:FFFFFFFFFFFFFF2:FFFFFFFFFFFFF
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1913432391:35312D313831312:3000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1913432391:35312D313831312:3000AAAAAAAAA'
+PID 22F191 (49 bytes): 00F0:62F1913432391:35312D313831312:3000AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1923930301:323131303130342:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1923930301:323131303130342:0000AAAAAAAAA'
+PID 22F192 (49 bytes): 00F0:62F1923930301:323131303130342:0000AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62F1943231311:303130345353352:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62F1943231311:303130345353352:0000AAAAAAAAA'
+PID 22F194 (49 bytes): 00F0:62F1943231311:303130345353352:0000AAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F198FFFFFF1:FFFFFFFFFFFFF'
+        data cap:32 len:32 '00D0:62F198FFFFFF1:FFFFFFFFFFFFF'
+PID 22F198 (33 bytes): 00D0:62F198FFFFFF1:FFFFFFFFFFFFF
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F199FFFFFFF'
+        data cap:13 len:13 '62F199FFFFFFF'
+PID 22F199 (14 bytes): 62F199FFFFFFF
+Warning: SafeString( data, ...) passed unterminated buffer of length 33 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00D0:62F19AFFFFFF1:FFFFFFFFFFFFF'
+        data cap:32 len:32 '00D0:62F19AFFFFFF1:FFFFFFFFFFFFF'
+PID 22F19A (33 bytes): 00D0:62F19AFFFFFF1:FFFFFFFFFFFFF
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F19BFFFFFFF'
+        data cap:13 len:13 '62F19BFFFFFFF'
+PID 22F19B (14 bytes): 62F19BFFFFFFF
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0130:62F19C454E451:31585858584C582:453139585335A'
+        data cap:48 len:48 '0130:62F19C454E451:31585858584C582:453139585335A'
+PID 22F19C (49 bytes): 0130:62F19C454E451:31585858584C582:453139585335A
+Warning: SafeString( data, ...) passed unterminated buffer of length 14 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '62F1A15330343'
+        data cap:13 len:13 '62F1A15330343'
+PID 22F1A1 (14 bytes): 62F1A15330343
+Warning: SafeString( data, ...) passed unterminated buffer of length 240 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0830:62F1EF0000001:000000000000002:0000000000000003:000000000000004:000000000000005:000000000000006:000000000000007:000000000000008:000000000000009:00000000000000A:00000000000000B:00000000000000C:00000000000000D:00000000000000E:00000000000'
+        data cap:239 len:239 '0830:62F1EF0000001:000000000000002:0000000000000003:000000000000004:000000000000005:000000000000006:000000000000007:000000000000008:000000000000009:00000000000000A:00000000000000B:00000000000000C:00000000000000D:00000000000000E:00000000000'
+PID 22F1EF (240 bytes): 0830:62F1EF0000001:000000000000002:0000000000000003:000000000000004:000000000000005:000000000000006:000000000000007:000000000000008:000000000000009:00000000000000A:00000000000000B:00000000000000C:00000000000000D:00000000000000E:00000000000
+
+Header 7E6 scan complete: 1267 total responses, 89 significant (>10 bytes)
+
+========================================
+DIAGNOSTIC SCAN COMPLETE
+Total responses: 1267
+Significant responses (>20 bytes): 89
+========================================
+
+Results saved to SD card: /diagnostic_scan.txt
