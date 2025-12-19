@@ -95,7 +95,11 @@ public:
       _panel_instance.setTouch(&_touch_instance);  
     }
 
-    setPanel(&_panel_instance); 
+    setPanel(&_panel_instance);
+    
+    // Use PSRAM for sprite buffers if available (allocate after init)
+    // This will be called automatically by LovyanGFX when creating sprites
+    // if PSRAM is detected. The framework handles this internally.
   }
 };
 

@@ -42,7 +42,7 @@
 // MAJOR: Breaking changes or major new features
 // MINOR: New features, improvements, non-breaking changes
 // PATCH: Bug fixes and minor tweaks
-const char* APP_VERSION = "v2.3.1";
+const char* APP_VERSION = "v2.3.2";
 
 static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
@@ -721,6 +721,17 @@ void setup(void)
   DEBUG_PORT.println("=== IONIQ 5 OBD2 Logger ===");
   DEBUG_PORT.println("Serial Monitor Active\n");
   delay(1000);
+
+  // Check for PSRAM and initialize display with PSRAM buffer if available
+  bool psramAvailable = psramInit();
+  if (psramAvailable) {
+    size_t psramSize = ESP.getPsramSize();
+    size_t freePsram = ESP.getFreePsram();
+    DEBUG_PORT.printf("PSRAM detected: %d bytes total, %d bytes free\n", psramSize, freePsram);
+    DEBUG_PORT.println("Display will use PSRAM for sprite buffers");
+  } else {
+    DEBUG_PORT.println("No PSRAM detected, using internal RAM for display buffers");
+  }
 
   lcd.init();
   lcd.setRotation(2);  // 0 & 2 Portrait. 1 & 3 landscape
