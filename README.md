@@ -2,6 +2,8 @@
 
 ESP32-S3 (WT32-SC01-Plus) dashboard for Hyundai Ioniq 5 using BLE OBD (Vgate iCar Pro BT4.0), LovyanGFX display/touch, Google Sheets logging, and ELMDuino.
 
+**Current Version: v2.3.1**
+
 ## Environment
 
 - Framework: Arduino (ESP32 core 3.x) via PlatformIO
@@ -61,6 +63,9 @@ In VS Code (PlatformIO extension):
 
 - Adapter name expected: `IOS-Vlink` (set in `BLEClientSerial.cpp`).
 - Connection sequence handled in `BT_communication.h::ConnectToOBD2()`.
+- **BLE Signal Strength (RSSI)**: Displays signal strength during device scan and after connection for troubleshooting intermittent connections.
+- **Improved Connection UI**: 4-second countdown during device scan with clear "Device Found" (green) or "Device not found" (red) status.
+- **Device Selection**: Touch-based BLE device picker with pagination support (4 devices per page) and EEPROM persistence.
 
 ## SD Card Data Logging
 
@@ -69,6 +74,8 @@ In VS Code (PlatformIO extension):
 - **Automatic header**: Creates CSV header on first run if file doesn't exist.
 - **No SD card**: System continues normally if no card is detected (logs to Google Sheets only).
 - **Data**: Each row contains timestamp, SoC, power, temperatures, battery metrics, tire pressures, and all telemetry sent to Google Sheets.
+- **File size management**: Automatically archives files when they exceed 1MB, creating timestamped backups.
+- **12V Battery Monitoring**: Logs both new (PID 22E011) and legacy 12V voltage sources for comparison (AuxBattV and AuxBattV_old).
 
 ## Modified / Shim Files
 
@@ -130,11 +137,42 @@ pio run -t upload
 pio device monitor -b 115200
 ```
 
+## Features
+
+### Battery Monitoring
+- **12V Battery Auto-Alert**: Automatically switches to Battery Info screen when 12V battery SoC drops below 70% (with 75% hysteresis to prevent oscillation).
+- **Accurate 12V Voltage**: Corrected voltage extraction from PID 22E011 (Frame 2 Byte 6 + Frame 3 Byte 0).
+- **Cell Voltage Tracking**: Displays MAX/MIN cell voltages, cell numbers, and voltage differential.
+- **State of Health (SOH)**: Tracks battery degradation and estimated full capacity.
+
+### Display Screens
+- **Consumption Screen**: Real-time power usage, trip data, and efficiency metrics.
+- **Battery Info**: Detailed battery status including cell voltages, temperatures, and health.
+- **Energy Screen**: Energy flow visualization and statistics.
+- **Battery Info 2**: Additional battery diagnostics.
+
+### WiFi & Data
+- **WiFi Configuration**: Touch-based WiFi setup with on-screen keyboard.
+- **Google Sheets Integration**: Real-time data logging to Google Sheets.
+- **Dual Logging**: Simultaneous SD card and cloud logging with automatic failover.
+
+## Version History
+
+### v2.3.1 (December 19, 2025)
+- Added BLE signal strength (RSSI) display during connection and when connected
+- Improved BLE connection sequence with 4-second countdown timer
+- Fixed 12V battery voltage extraction from PID 22E011
+- Added AuxBattV_old to track legacy voltage source for comparison
+- Swapped Cell Vdiff and MINcellv positions in Battery Info screen
+- Reduced BLE scan time from 5 to 4 seconds
+- Removed repetitive connection attempt messages
+
 ## Next Ideas
 
 - Add OTA update flow.
 - Persist last trip metrics in NVS.
 - Add optional PSRAM use for large display buffers.
+- Implement trip history and statistics.
 
 ---
 
