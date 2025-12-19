@@ -148,7 +148,7 @@ bool BLEClientSerial::begin(char *localName)
     pBLEScan->setInterval(1349);
     pBLEScan->setWindow(449);
     pBLEScan->setActiveScan(true);
-    pBLEScan->start(5, false);
+    pBLEScan->start(4, false);
     return true;
 }
 
@@ -162,6 +162,15 @@ bool BLEClientSerial::begin(const char* localName)
 String BLEClientSerial::getDeviceName(void)
 {
     return String(targetDeviceName.c_str());
+}
+
+// Get the RSSI (signal strength) of the BLE device
+int BLEClientSerial::getRSSI(void)
+{
+    if (myDevice != nullptr) {
+        return myDevice->getRSSI();
+    }
+    return 0; // Return 0 if device not available
 }
 
 int BLEClientSerial::available(void)

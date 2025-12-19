@@ -1,0 +1,9 @@
+OBD2 connection attempt 9 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 10 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Timezone re-configured after WiFi connection
+Web server started at http://10.138.216.107

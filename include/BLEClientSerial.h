@@ -27,6 +27,7 @@ class BLEClientSerial: public Stream
         void flush();
         void end(void);
         String getDeviceName(void);
+        int getRSSI(void);
 
     private:
         BLERemoteCharacteristic* pTxCharacteristic;

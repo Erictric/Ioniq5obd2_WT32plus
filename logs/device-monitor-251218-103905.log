@@ -1,0 +1,1207 @@
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62B002E00000\r1:00FFB5006B2400\r2:0000AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B24'
+ OBD2 connected - displaying data
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:6201EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00021C8B0\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 
+[DEBUG] ELM RESPONSE > 5:0NSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E60002\r
+[DEBUG] ELM RESPONSE > 8:00006C6\r
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE4200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508500028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE4200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508500028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '42'
+ hex number  hexSubString cap:14 len:8 '00F75085'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[D5D00F0\r2:8F00F0FFFF0FFF\r6000FF\r5:FF00FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '61'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE 00000\r
+1C8B060606\r
+[DEBUG] ELM RESPONSE > 002EBE\r
+[DEBUG] ELM RESPONSE > 4:0CBE4200008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083000FA\r
+[DEBUG] ELM RESPONSE > 7:E600002\r
+[DEBUG] EL0000000006C6\r
+[DE>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:0CBE4200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508500028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:0CBE4200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508500028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '0C'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '42'
+ hex number  hexSubString cap:14 len:8 '00F75085'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0C00BF
+[DEBUG] ELM RESPONSE > 1:010000BE\r
+[DEBUG] ELM RESPONSE > 2:3A010000C23B01\r
+[DEBUG] ELM RESPONSE > 3:0000C03B010000\r
+[DEBUG] ELM RESPONSE B090B4\r
+[DEBUG] ELM RESPONSE > 5:90B4AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'C5'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'C2'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:2 'C0'
+ hex number  hexSubString cap:14 len:2 '3B'
+ OBD2 connected - displaying data
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00:620101EFFBE7\r
+:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00011C8B060606\r
+[DEBUG] ELM RESPONSE > 6060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:24BE9D00008D00\r
+[D:0164B200015C4C\r
+ESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPO7:E600F750860002\r
+[DE:DA0000000006C6\r
+[DEBUG] ELM RESPO\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:24BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508600028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:24BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508600028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '24'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75086'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RESPONSE > 1:F801010000006
+[DEBUG] ELM RESPONSE > 2:399D05781C938\r
+[DEBUG] ELM RESPONSE > 3:A\r
+[DEBUG] ELM RESPONSE > 0005\r
+[DEB:0000C90C070000\r
+[00000000000\r
+[DAAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006E2:399D05781C99383:AA80735C217C004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006E2:399D05781C99383:AA80735C217C004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPO03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > \r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:25BE7200008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001\r
+[DEBUG] ELM RESPONSE > 7:E600F750860002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:25BE7200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508600028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:25BE7200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508600028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '25'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F75086'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+2C01012C06\r
+[DEBUG] ELM RESPONSE > 2:0606060606065B\r
+[DEBUG] ELM RESPON3:92638C00005006\r
+[DEBUG] ELM RESPONSE > 4:0003E8B551D7007A000000000000\r
+[DEBUG] ELM RESPONSE > AA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+ hex number  hexSubString cap:14 len:4 '638C'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '92'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '51D7'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPO03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[D21C8B060606\r
+[DEBUG] EL06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:3DBE4200008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RE7:E600F750870002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:3DBE4200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508700028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:3DBE4200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508700028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '42'
+ hex number  hexSubString cap:14 len:8 '00F75087'
+[DEBUG] ELM RESPONSE > OK\r\r>
+SE > 1:00060006000000\r
+[DEBUG] ELM RESPONSE > 2:00000000000000\r
+:0000000300EA00\r
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:E7A0000000000\r
+0
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+:0DBE9D00008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F750870002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:0DBE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508700028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:0DBE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508700028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '0D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75087'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62BAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B24'
+ OBD2 connected - displaying data
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 0021C8B060606\r0606002EBE\r
+[DEBUG] ELM RESPONSE > 4:85BE9D00008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+:0001083D0000FA\r
+[DEBUG] ELM RESPONS7:E600F750870002\r
+[DEBUG] ELM RESPONSE > 8:DA00000004\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508700028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508700028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75087'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE07F9407\r1F0\r2:8F00F0FF\r32FFFFFFFFFFFF\r4:626000FF\r5:FF00FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '61'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG\r
+[DEBUG] ELM RESPONSE > 302EBE9D00008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSF750880002\r
+[DEBUG] EL\r
+[DEB>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:0DBE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508800028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:0DBE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508800028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '0D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75088'
+Button2 Touched
+Button2 set to ON
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFF\r
+[DEBUG] ELM RESPONSE > 1:80C53A010000BE\r
+3B01\r
+[DEBUG] ELM RESPONSE > 3:0000C03B010000\r
+[DEBUG] ELM RESPO4:FF8DB08DB090B4\r
+[DEBUG] ELM RESPON5:90BAAA\r
+r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'C5'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'C2'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:2 'C0'
+ hex number  hexSubString cap:14 len:2 '3B'
+ OBD2 connected - displaying data
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 20606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEB:25BE9D00008E00\r
+[DEBUG] ELM RES ELM RESPONSE > 6:0001083D0000FA\r
+:E600F75088000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508800028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508800028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '25'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75088'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RESPONSE > 1:F801010000006E\r
+[DEB:399C04521C9C38\r
+[DEBUG] ELM RESPONSE > 3:AC80735C217B00\r
+[DEBUG] ELM RESPONSE > 4:5D080101010005\r
+[DEBUG] ELM SE > 5:0000C90C070000\r
+[DEBUG] ELM RESPONSE > 6:00000000000000\r
+[DEBUG] ELM RESPONSE > 7:00AAAAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006E2:399C04521C9C383:AC80735C217B004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006E2:399C04521C9C383:AC80735C217B004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] ELM RESPONSE 0606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:3DBE9D00008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RE6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F750890002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:3DBE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508900028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:3DBE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508900028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75089'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\rSE > 1:0F012C01012C06\r
+[DEB005006\r
+[DEBUG] ELM RE4:0003E8B551D700\r
+[DEBUG] ELM RESPONSE > 5:7A000000000000\r
+[D0606AAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+ hex number  hexSubString cap:14 len:4 '638C'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '92'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '51D7'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:E60606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:25BE7600008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F750890002\r
+[DEBUG] ELM RESPONSE > 06C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE7600008E005:0164B200015C4C6:0001083D0000FA7:E600F7508900028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE7600008E005:0164B200015C4C6:0001083D0000FA7:E600F7508900028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '25'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '76'
+ hex number  hexSubString cap:14 len:8 '00F75089'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RE026\r0:62010617F811\r
+[DEBUG] ELM RES
+[DEBUG] ELM RESPONSE > 2:00000000000000\r
+[D:0000000300EA00\r
+[DEBUG] ELM RESPONSE >0000000000000\r
+AA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > E7\r
+:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00011C8B060606\r
+[DEBUG] ELMNSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:25BE9D00008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F7508A0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508A00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508A00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '25'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508A'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B24'
+ OBD2 connected - displaying data
+pid_counter: 4
+[DEBUG] ELM RESOK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00021C8B060606\r
+[DEBUG] ELM RESPONSE > 3:002EBE\r
+0ABE9D00008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+1083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F7508A0002\r
+C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:0ABE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508A00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:0ABE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508A00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '0A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508A'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00FFF\r3:B2FFFFFFFFFFFF\r4:FF497C626000FF\r5:FF00FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF615B5D00F02:8F01F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF615B5D00F02:8F01F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '61'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 000000\r
+[DEBUG] ELM606\r
+[DEBUG] ELM RESPONSE 06002EBE\r
+[DEBUG] ELM RESPONSE > 4:24BE4200[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F7508B0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:24BE4200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508B00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:24BE4200008D005:0164B200015C4C6:0001083D0000FA7:E600F7508B00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '24'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '42'
+ hex number  hexSubString cap:14 len:8 '00F7508B'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFF\r
+[DEBUG] ELM RESPONSE > 1:80C53A010000BE\r
+[DEBUG] ELM RE0C23B01\r
+[DEBUG] ELM RESPONSE > 3:0000C03B00\r
+[DEBUGAAAAAA\r
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'C5'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'C2'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:2 'C0'
+ hex number  hexSubString cap:14 len:2 '3B'
+Local time: 18-12-2025 10:39:09
+Saving event code to SD card
+Event code saved to SD card
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+ OBD2 connected - displaying data
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\rFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000B060606\r
+[DEBUG] ELM RED00C4C\r
+[DE0001083D0000A\r
+[DEBUG] ELM RESPONSE > 7:E600F7508B0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:24BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508B00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:24BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508B00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '24'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508B'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RESPONSE > 1:F801010000006E\r
+[DEBUG] ELM RESPONSE > 2:399E04A11C9A38\r
+[DEBUG] ELM RESPONSE > 
+[5\r
+[DEBUG] ELM RESPONSE > 5:0000C90C070000\r
+[DEBUG] ELM RESPONSE > 6:00000000000000\r
+[DEBUG] ELM RESPONSE > 7:00AAAAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006E2:399E04A11C9A383:AA80715C2178004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006E2:399E04A11C9A383:AA80715C2178004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+EF7A0000000000\r
+[DEBUG] EL21C8B060606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DE:24BE7200008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F7508C0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESP\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:24BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508C00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:24BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508C00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '24'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F7508C'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+[DEBUG] ELM RESPONSE > 012C01012C06\r
+SPONSE > 2:0606060606065B\r
+[DEBUG] ELM RESPONSE > 3:92638C00005006\r
+[DEBUG] ELM RESPONSE > 4:000\r
+[DEBUG] ELM RESAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+ hex number  hexSubString cap:14 len:4 '638C'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '92'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '51D7'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+20101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1] ELM RESPONSE > 2:00011C8B0606NSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:0DBE9D00008E00\r
+00015C4C\r
+[DEBUG] ELM RESPONSE > 6:0001FA\r
+[DEBUG] EL600F752\r
+0000000006C4\r
+[DEBUG] ELMPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:0DBE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508C00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:0DBE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508C00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '0D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508C'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 026\r0:62010617F811\r
+[DEBUG] ELM RESPONSE > 1:0006
+[000000000\r
+[DEBUG] ELM RESPONSE > 3:0000000300EA00\r
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00011C8B060606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEB:02BE9D00008E00\r
+[DEBUG] ELM RESPONSE > 5:0164B200015C4C\r
+> 7:E600F7508C0002\r
+[DEBUG] ELM RESPONSE 00000006C4\r
+[>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:02BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508C00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:02BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508C00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508C'
+[DEBUG] ELM RESPONSEOK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62B002E00000\r1:00FF000AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B24'
+ OBD2 connected - displaying data
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 0000\r
+[DEBUG] ELM RESPONSE > 2:00011C8B060606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RESE00\r
+[DEBUG] EL200014C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F7508D0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:55BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508D00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:55BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7508D00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '55'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508D'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RE027FFFFF\r4:FF497C626000FF\r5:FF00FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '61'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 0000\r
+[DEBUG] ELM RESPONSE > 2:6\r
+[DEBUG] ELM RESPONSE > 3:06060606002
+[DEBUG] ELM RESPONSE > 4:24BD0000FA\r
+[DEBUG] ELM RESPONSE > 7F7508D0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:24BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508D00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:24BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508D00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '24'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F7508D'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFF\r
+[DEBUG] ELM RESPONSE > 1:8
+[DEBUG] E2:3A010000C23B01\r
+[DE0003B010000\r
+[DEBUG] 4:FF8DB08DB090B4\r
+[DEBUG] ELM RESPOA\r
+[DEBUG] ELM RESPO\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80C53A010000BE2:3A010000C23B013:0000C03B0100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'C5'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3A'
+ hex number  hexSubString cap:14 len:2 'C2'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:2 'C0'
+ hex number  hexSubString cap:14 len:2 '3B'
+ OBD2 connected - displaying data
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > FFBE7\r
+:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00021C8B060606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG]164B200015C4C\r
+[:0001083D0000FA\r
+[DEBUG] EL0F7508E0002\r
+[DEBUG] ELM RESPO8:DA0000000006C4\r
+[DEBUG] ELM RESPO\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508E00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7508E00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F7508E'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RE\r
+[DEBUG] ELM RESPO99704851C9A38\r
+[DEBUG] ELM RESPONSE3:A6806F5C217A00\r
+[:5D080101010005\r
+[DEBUG] ELM RESPONSE > 5:0000C90C070000\r
+[DEBUG] ELM RESPONSE > 6:00000000000000\r
+[DEBUG] ELM RESPON0AAAAAAAAAAAA\r
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006E2:399704851C9A383:A6806F5C217A004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006E2:399704851C9A383:A6806F5C217A004:5D0801010100055:0000C90C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 1
+[DEBUG] ELM RESPONSEOK\r\r>
+[DEBUG] ELM RESPONSE > FFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] EL8B060606\r06002EBE\r
+[DEBUG] ELM RESPONSE > 4:0DBE9D00008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F7508E0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C4\r
+[D>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:0DBE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508E00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:0DBE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508E00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '0D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508E'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+1:0F012C0\r
+[:0606060606065B\r
+[DEBUG] ELM RESPONSE > 3:92638C00005006\r
+[DEBUG] ELM RESPONSE > 4:0003E8B551D700\r
+[DEBUG] ELM RESPONSE > 5:7A00000\r
+[DEBUG] ELM RESPONSE > A\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012C062:0606060606065B3:92638C000050064:0003E8B551D7005:7A0000000000006:0006060606AAA'
+ hex number  hexSubString cap:14 len:4 '638C'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '92'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '51D7'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00021C8B060606\r
+[DEBUG] ELM RESPONSE > 200015C4C\r
+[DEBUG] ELM RESPONSE > 6[DEBUG] ELM RESPONSE > 7:E600F7508F000:DA0000000006C6\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:24BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508F00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:24BE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508F00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '24'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508F'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 026\r0:62010617F811\r
+[DEBUG] ELM RESPONSE > 1:00060006000000\r
+[DEBUG] ELM RESPONSE > 2:00000000000000\r
+[DEBUG] ELM RESPONSE > 3:0000000300EA00\r
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000600060000002:000000000000003:0000000300EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '06'
+ OBD2 connected - displaying data
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE1:EF7A0000\r
+606\r
+[DEBUG] EL606002EBE\r
+[DEBUG] ELM RESPONSE > 4:3DBE9D00008D00\r
+[DEBUG] ELM RESPONSE > 5:0164B200C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:08F0002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C6\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:3DBE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508F00028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:3DBE9D00008D005:0164B200015C4C6:0001083D0000FA7:E600F7508F00028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8D'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '3D'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F7508F'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62B002E00000\r1:00FFB5006B2400\r
+[DEBUG] ELM RESPONSE > 2:0000AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB5006B24002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B24'
+ OBD2 connected - displaying data
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+3E\r0:620101EFFBE7\r
+[DEB00000\r
+606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RE4:85BE7200008E00\r:0164B2000C4C\r
+[DEBUG] ELM RESPONSE > 6:0001083D\r
+
+[DEBUG] EL0000000006C6\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7509000028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00021C8B0606063:06060606002EBE4:85BE7200008E005:0164B200015C4C6:0001083D0000FA7:E600F7509000028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '85'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F75090'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 8F00F0FFFF0FFF\r3:B2FFFFFFFFFFFF\r4:FF497C626000FF\r5:FF00FFFFFFAAAA\r
+[DEBUG] ELM> \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF615B5D00F02:8F00F0FFFF0FFF3:B2FFFFFFFFFFFF4:FF497C626000FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '61'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '00'
+ OBD2 connected - displaying data
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF7A0000000000\r
+[DEBUG] ELM RESPONSE > 2:00011C8B060606\r
+[DEBUG] ELM RESPONSE > 3:06060606002EBE\r
+[DEBUG] ELM RESPONSE > 4:25BE9D00008E00\r
+[DEBUG] ELM RESPONSE > 5:01640001083D0000FA\r
+[DEBUG] ELM RESPONSE > 7:E600F750900002\r
+[DEBUG] ELM RESPONSE > 8:DA0000000006C6\r
+[DEBUG] ELM RESP\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7509000028:DA0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EF7A00000000002:00011C8B0606063:06060606002EBE4:25BE9D00008E005:0164B200015C4C6:0001083D0000FA7:E600F7509000028:DA0000000006C'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '06'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1C8B'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '0001083D'
+ hex number  hexSubString cap:14 len:6 '0000FA'
+ hex number  hexSubString cap:14 len:2 'E6'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '0164B2'
+ hex number  hexSubString cap:14 len:8 '00015C4C'
+ hex number  hexSubString cap:14 len:2 '7A'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '25'
+ hex number  hexSubString cap:14 len:2 'BE'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F75090'
+[DEBUG] ELM RESPONSE > OK\r\r>

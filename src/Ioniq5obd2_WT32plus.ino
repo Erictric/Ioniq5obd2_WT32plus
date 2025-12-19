@@ -1,5 +1,5 @@
 /*  Ionic5obd2 for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
-    Version: v2.1.0
+    Version: v2.3.0
 
     SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
     Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
@@ -42,7 +42,7 @@
 // MAJOR: Breaking changes or major new features
 // MINOR: New features, improvements, non-breaking changes
 // PATCH: Bug fixes and minor tweaks
-const char* APP_VERSION = "v2.2.0";
+const char* APP_VERSION = "v2.3.1";
 
 static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
@@ -56,7 +56,7 @@ const char* socDecreaseFilename = "/ioniq5_soc_decrease.csv";
 const char* archiveDir = "/archive";
 
 // Archive settings
-const unsigned long MAX_FILE_SIZE = 5 * 1024 * 1024;  // 5MB max file size before archiving
+const unsigned long MAX_FILE_SIZE = 1 * 1024 * 1024;  // 1MB max file size before archiving
 const unsigned long MAX_FILE_AGE_DAYS = 30;  // Archive files older than 30 days
 bool autoArchiveEnabled = true;  // Enable automatic archiving
 
@@ -75,9 +75,11 @@ bool showSaveConfirmation = false;  // Flag to show save confirmation dialog
 bool showWiFiInfo = false;  // Flag to show WiFi information screen
 bool showOBD2FailScreen = false;  // Flag to show OBD2 connection failure screen
 bool showDeviceSelection = false;  // Flag to show BLE device selection screen
+bool lowBattAlertShown = false;  // Flag to track if low 12V battery alert has been shown
 char selectedBLEDevice[21] = "";  // Selected OBD2 device name (max 20 chars + null)
 char bleDeviceList[10][21] = { "" };  // Store up to 10 BLE devices found (max 20 chars + null)
 int bleDeviceCount = 0;  // Number of BLE devices found
+int bleDevicePageNumber = 0;  // Current page in BLE device list (0-based)
 bool bleScanning = false;  // Flag to indicate BLE scan in progress
 int wifiScreenPage = 0;  // 0=scan list, 1=keyboard for SSID, 2=keyboard for password
 char wifiSSIDList[20][17] = { "" };  // Store up to 20 WiFi networks (max 16 chars + null)
@@ -114,6 +116,7 @@ uint16_t nbr_saved = 0;
 float BattMinT;
 float BattMaxT;
 float AuxBattV;
+float AuxBattV_old;
 float BATTv;
 float BATTc;
 float MAXcellv;
@@ -633,7 +636,7 @@ void archiveAndRecreateFiles(bool forceArchive = false) {
     // Recreate main log file with header
     File file = SD.open(csvFilename, FILE_WRITE);
     if (file) {
-      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved");
+      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
       file.close();
       Serial.println("Main log file recreated with header");
     }
@@ -652,7 +655,7 @@ void archiveAndRecreateFiles(bool forceArchive = false) {
     // Recreate SoC decrease file with header
     File file = SD.open(socDecreaseFilename, FILE_WRITE);
     if (file) {
-      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved");
+      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
       file.close();
       Serial.println("SoC decrease file recreated with header");
     }
@@ -795,7 +798,7 @@ void setup(void)
   //initial_eeprom(); //if a new eeprom memory is used it needs to be initialize to something first
 
   /* uncomment if you need to display Safestring results on Serial Monitor */
-  //SafeString::setOutput(Serial);
+  SafeString::setOutput(Serial);
 
   /*/////////////////////////////////////////////////////////////////*/
   /*                    INITIALIZE SD CARD (SPI MODE)                */
@@ -828,7 +831,7 @@ void setup(void)
       if (!SD.exists(csvFilename)) {
         File file = SD.open(csvFilename, FILE_WRITE);
         if (file) {
-          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved");
+          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
           file.close();
           Serial.println("CSV header created");
         } else {
@@ -842,7 +845,7 @@ void setup(void)
       if (!SD.exists(socDecreaseFilename)) {
         File file = SD.open(socDecreaseFilename, FILE_WRITE);
         if (file) {
-          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved");
+          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
           file.close();
           Serial.println("SoC decrease CSV header created");
         } else {
@@ -1037,7 +1040,8 @@ void read_data() {
     } else {
       BattMaxT = BattMaxTraw;
     }
-    AuxBattV = convertToInt(results.frames[4], 6, 1) * 0.1;
+    // Old 12V battery voltage extraction (from different source for comparison)
+    AuxBattV_old = convertToInt(results.frames[4], 6, 1) * 0.1;
     BATTv = convertToInt(results.frames[2], 3, 2) * 0.1;
     int CurrentByte1 = convertToInt(results.frames[2], 1, 1);
     int CurrentByte2 = convertToInt(results.frames[2], 2, 1);
@@ -1067,7 +1071,7 @@ void read_data() {
   
   UpdateNetEnergy();  
   
-  if (pid_counter > 5){
+  if (pid_counter > 6){
     pid_counter = 0;
   }
   else if (OBDscanning){
@@ -1186,6 +1190,38 @@ void read_data() {
           TireRL_T = convertToInt(results.frames[2], 6, 1) - 50;
           TireRR_P = convertToInt(results.frames[3], 3, 1) * 0.2;
           TireRR_T = convertToInt(results.frames[3], 4, 1) - 50;
+        }        
+        break;
+        
+      case 6:
+        button();
+        myELM327.sendCommand("AT SH 7E5");  // Set Header for BMS
+        //myELM327.queryPID((char*)"22E021");
+        if (myELM327.queryPID("22E011")) {
+          delayMicroseconds(10); // 10 uSec delay between PID queries   
+        //if (myELM327.nb_rx_state ==  ELM_SUCCESS) {  
+          char* payload = myELM327.payload; 
+          size_t payloadLen = myELM327.recBytes;
+
+          processPayload(payload, payloadLen, results);
+          
+          // Extract 12V battery SoC (Frame 3, Byte 4)
+          AuxBatt_SoC = convertToInt(results.frames[3], 4, 1);
+          
+          // Extract 12V battery voltage (Frame 2 Byte 7 + Frame 3 Byte 1, 16-bit value / 1000)
+          AuxBattV = ((convertToInt(results.frames[2], 7, 1) << 8) + convertToInt(results.frames[3], 1, 1)) / 1000.0;
+                    
+          // Auto-switch to Batt. Info screen if AuxBatt_SoC falls below 70% (only once)
+          if (AuxBatt_SoC < 70 && !lowBattAlertShown) {
+            screenNbr = 1;
+            DrawBackground = true;
+            lowBattAlertShown = true;
+            Serial.printf("Low 12V battery SoC (%d%%), switching to Batt. Info screen\n", AuxBatt_SoC);
+          }
+          // Reset alert flag when battery recovers above 75% (hysteresis)
+          if (AuxBatt_SoC >= 75) {
+            lowBattAlertShown = false;
+          }
         }
         pid_counter = 0;
         data_ready = true;  // after all PIDs have been read, turn on flag for valid value from OBD2
@@ -1682,6 +1718,7 @@ bool saveToSD(const char* timestamp) {
   file.print(BATTv); file.print("\t");
   file.print(BATTc); file.print("\t");
   file.print(AuxBattV); file.print("\t");
+  file.print(AuxBatt_SoC); file.print("\t");
   file.print(CEC); file.print("\t");
   file.print(CED); file.print("\t");
   file.print(CDC); file.print("\t");
@@ -1713,9 +1750,11 @@ bool saveToSD(const char* timestamp) {
   file.print(TireFR_T); file.print("\t");
   file.print(TireRL_T); file.print("\t");
   file.print(TireRR_T); file.print("\t");
-  file.print(nbr_saved);
+  file.print(nbr_saved); file.print("\t");
+  file.print(AuxBattV_old);
   
-  file.println();  // End the line  file.close();
+  file.println();  // End the line
+  file.close();
   Serial.println("Data saved to SD card");
   
   // Trigger LED flash for SD card save
@@ -2144,6 +2183,7 @@ bool saveToSD_SoCDecrease(const char* timestamp) {
   file.print(BATTv); file.print("\t");
   file.print(BATTc); file.print("\t");
   file.print(AuxBattV); file.print("\t");
+  file.print(AuxBatt_SoC); file.print("\t");
   file.print(CEC); file.print("\t");
   file.print(CED); file.print("\t");
   file.print(CDC); file.print("\t");
@@ -2312,6 +2352,73 @@ void saveBLEDevice(const char* deviceName) {
   Serial.printf("BLE device saved to EEPROM: %s\n", deviceBuffer);
 }
 
+/*////// Draw BLE Device Selection UI with pagination //////////*/
+
+void drawBLEDeviceSelection() {
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.drawString("Select OBD2 Device", 160, 40);
+  
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_LIGHTGREY);
+  
+  if (bleDeviceCount == 0) {
+    lcd.drawString("No devices found", 160, 90);
+  } else {
+    lcd.drawString("Tap device to select:", 160, 90);
+  }
+  
+  // Calculate pagination: 4 devices per page
+  const int devicesPerPage = 4;
+  int totalPages = (bleDeviceCount + devicesPerPage - 1) / devicesPerPage;
+  if (totalPages == 0) totalPages = 1;
+  int startIdx = bleDevicePageNumber * devicesPerPage;
+  int endIdx = min(startIdx + devicesPerPage, bleDeviceCount);
+  
+  // Display devices for current page at y=120, 165, 210, 255
+  lcd.setFont(&FreeSans12pt7b);
+  const int deviceYPositions[] = {120, 165, 210, 255};
+  for (int i = 0; i < devicesPerPage && (startIdx + i) < bleDeviceCount; i++) {
+    int deviceIdx = startIdx + i;
+    int yPos = deviceYPositions[i];
+    bool isSelected = (strncmp(bleDeviceList[deviceIdx], selectedBLEDevice, 20) == 0);
+    lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
+    lcd.setTextColor(TFT_WHITE);
+    lcd.drawString(bleDeviceList[deviceIdx], 160, yPos + 20);
+  }
+  
+  // "Use Default" button at y=300
+  bool defaultSelected = (strncmp(selectedBLEDevice, "IOS-Vlink", 20) == 0);
+  lcd.fillRoundRect(20, 300, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.drawString("Use Default (IOS-Vlink)", 160, 320);
+  
+  // PREV/NEXT buttons at y=350-390 (only if multiple pages)
+  if (totalPages > 1) {
+    // PREV button
+    lcd.fillRoundRect(20, 350, 135, 40, 10, bleDevicePageNumber > 0 ? TFT_BLUE : TFT_DARKGREY);
+    lcd.setTextColor(TFT_WHITE);
+    lcd.drawString("PREV", 87, 370);
+    
+    // NEXT button
+    lcd.fillRoundRect(165, 350, 135, 40, 10, bleDevicePageNumber < totalPages - 1 ? TFT_BLUE : TFT_DARKGREY);
+    lcd.drawString("NEXT", 232, 370);
+  }
+  
+  // Bottom buttons at y=400-450: SCAN, BACK, OK
+  lcd.fillRoundRect(20, 400, 90, 50, 10, TFT_ORANGE);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.drawString("SCAN", 65, 425);
+  
+  lcd.fillRoundRect(115, 400, 90, 50, 10, TFT_RED);
+  lcd.drawString("BACK", 160, 425);
+  
+  lcd.fillRoundRect(210, 400, 90, 50, 10, TFT_GREEN);
+  lcd.drawString("OK", 255, 425);
+}
+
 /*//////Function to scan for available BLE devices //////////*/
 
 void scanBLEDevices() {
@@ -2332,7 +2439,7 @@ void scanBLEDevices() {
   pBLEScan->setWindow(99);
   
   Serial.println("Starting BLE scan for 8 seconds...");
-  BLEScanResults foundDevices = pBLEScan->start(8, false);
+  BLEScanResults foundDevices = pBLEScan->start(4, false);
   
   Serial.printf("Scan complete. Found %d devices total\n", foundDevices.getCount());
   
@@ -2516,54 +2623,8 @@ void button(){
         lcd.drawString("Looking for BLE devices", 160, 250);
         
         scanBLEDevices();
-        
-        // Draw device selection screen
-        lcd.fillScreen(TFT_BLACK);
-        lcd.setFont(&FreeSans18pt7b);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.drawString("Select OBD2 Device", 160, 40);
-        
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.setTextColor(TFT_LIGHTGREY);
-        
-        if (bleDeviceCount == 0) {
-          lcd.drawString("No devices found", 160, 90);
-        } else {
-          lcd.drawString("Tap device to select:", 160, 90);
-        }
-        
-        // Display found devices (up to 5 visible to leave room for "Use Default")
-        lcd.setFont(&FreeSans12pt7b);
-        for (int i = 0; i < bleDeviceCount && i < 5; i++) {
-          int yPos = 120 + (i * 45);
-          bool isSelected = (strncmp(bleDeviceList[i], selectedBLEDevice, 20) == 0);
-          lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
-          lcd.setTextColor(TFT_WHITE);
-          lcd.drawString(bleDeviceList[i], 160, yPos + 20);
-        }
-        
-        // Add "Use Default (IOS-Vlink)" option at the bottom
-        int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
-        bool defaultSelected = (strncmp(selectedBLEDevice, "IOS-Vlink", 20) == 0);
-        lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
-        lcd.setFont(&FreeSans12pt7b);
-        
-        // Scan Again button
-        lcd.fillRoundRect(20, 390, 90, 50, 10, TFT_ORANGE);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.drawString("SCAN", 65, 415);
-        
-        // Back button
-        lcd.fillRoundRect(120, 390, 90, 50, 10, TFT_RED);
-        lcd.drawString("BACK", 165, 415);
-        
-        // Connect button
-        lcd.fillRoundRect(220, 390, 80, 50, 10, TFT_GREEN);
-        lcd.drawString("OK", 260, 415);
+        bleDevicePageNumber = 0;  // Reset to first page
+        drawBLEDeviceSelection();
         
         return;
       }
@@ -2650,62 +2711,55 @@ void button(){
     if (showDeviceSelection && !TouchLatch) {
       TouchLatch = true;
       
-      // Check if any device button was touched (up to 5 devices visible)
-      for (int i = 0; i < bleDeviceCount && i < 5; i++) {
-        int yPos = 120 + (i * 45);
+      const int devicesPerPage = 4;
+      const int deviceYPositions[] = {120, 165, 210, 255};
+      int startIdx = bleDevicePageNumber * devicesPerPage;
+      
+      // Check if any device button was touched (4 devices per page at y=120, 165, 210, 255)
+      for (int i = 0; i < devicesPerPage && (startIdx + i) < bleDeviceCount; i++) {
+        int yPos = deviceYPositions[i];
         if (x >= 20 && x <= 300 && y >= yPos && y <= yPos + 40) {
-          strncpy(selectedBLEDevice, bleDeviceList[i], 20);
+          int deviceIdx = startIdx + i;
+          strncpy(selectedBLEDevice, bleDeviceList[deviceIdx], 20);
           selectedBLEDevice[20] = '\0';
           Serial.printf("Selected device: %s\n", selectedBLEDevice);
-          
-          // Redraw all device buttons with updated selection
-          lcd.setFont(&FreeSans12pt7b);
-          for (int j = 0; j < bleDeviceCount && j < 5; j++) {
-            int btnY = 120 + (j * 45);
-            bool isSelected = (j == i);
-            lcd.fillRoundRect(20, btnY, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
-            lcd.setTextColor(TFT_WHITE);
-            lcd.drawString(bleDeviceList[j], 160, btnY + 20);
-          }
-          
-          // Redraw "Use Default" button as unselected
-          int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
-          lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, TFT_BLUE);
-          lcd.setTextColor(TFT_WHITE);
-          lcd.setFont(&FreeSans9pt7b);
-          lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
-          
+          drawBLEDeviceSelection();  // Redraw entire screen with new selection
           return;
         }
       }
       
-      // Check "Use Default" button
-      int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
-      if (x >= 20 && x <= 300 && y >= defaultYPos && y <= defaultYPos + 40) {
+      // Check "Use Default" button at y=300
+      if (x >= 20 && x <= 300 && y >= 300 && y <= 340) {
         strncpy(selectedBLEDevice, "IOS-Vlink", 20);
         selectedBLEDevice[20] = '\0';
         Serial.println("Selected default device: IOS-Vlink");
-        
-        // Redraw all scanned devices as unselected
-        lcd.setFont(&FreeSans12pt7b);
-        for (int j = 0; j < bleDeviceCount && j < 5; j++) {
-          int btnY = 120 + (j * 45);
-          lcd.fillRoundRect(20, btnY, 280, 40, 8, TFT_DARKGREY);
-          lcd.setTextColor(TFT_WHITE);
-          lcd.drawString(bleDeviceList[j], 160, btnY + 20);
-        }
-        
-        // Redraw "Use Default" button as selected
-        lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, TFT_GREEN);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
-        
+        drawBLEDeviceSelection();  // Redraw entire screen with new selection
         return;
       }
       
-      // Scan Again button (20-110, 390-440)
-      if (x >= 20 && x <= 110 && y >= 390 && y <= 440) {
+      // PREV button (20-155, 350-390)
+      int totalPages = (bleDeviceCount + devicesPerPage - 1) / devicesPerPage;
+      if (totalPages > 1 && x >= 20 && x <= 155 && y >= 350 && y <= 390) {
+        if (bleDevicePageNumber > 0) {
+          bleDevicePageNumber--;
+          Serial.printf("Previous page: %d\n", bleDevicePageNumber);
+          drawBLEDeviceSelection();
+        }
+        return;
+      }
+      
+      // NEXT button (165-300, 350-390)
+      if (totalPages > 1 && x >= 165 && x <= 300 && y >= 350 && y <= 390) {
+        if (bleDevicePageNumber < totalPages - 1) {
+          bleDevicePageNumber++;
+          Serial.printf("Next page: %d\n", bleDevicePageNumber);
+          drawBLEDeviceSelection();
+        }
+        return;
+      }
+      
+      // Scan Again button (20-110, 400-450)
+      if (x >= 20 && x <= 110 && y >= 400 && y <= 450) {
         Serial.println("Scanning for BLE devices...");
         
         // Show scanning message
@@ -2718,68 +2772,26 @@ void button(){
         lcd.drawString("Looking for BLE devices", 160, 250);
         
         scanBLEDevices();
-        
-        // Redraw device selection screen with new results
-        lcd.fillScreen(TFT_BLACK);
-        lcd.setFont(&FreeSans18pt7b);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.drawString("Select OBD2 Device", 160, 40);
-        
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.setTextColor(TFT_LIGHTGREY);
-        
-        if (bleDeviceCount == 0) {
-          lcd.drawString("No devices found", 160, 90);
-        } else {
-          lcd.drawString("Tap device to select:", 160, 90);
-        }
-        
-        // Display found devices (up to 5)
-        lcd.setFont(&FreeSans12pt7b);
-        for (int i = 0; i < bleDeviceCount && i < 5; i++) {
-          int yPos = 120 + (i * 45);
-          bool isSelected = (bleDeviceList[i] == selectedBLEDevice);
-          lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
-          lcd.setTextColor(TFT_WHITE);
-          lcd.drawString(bleDeviceList[i], 160, yPos + 20);
-        }
-        
-        // Display "Use Default" button
-        int defaultYPos = (bleDeviceCount < 5) ? 120 + (bleDeviceCount * 45) : 120 + (5 * 45);
-        bool defaultSelected = (selectedBLEDevice == "IOS-Vlink");
-        lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
-        
-        // Redraw buttons
-        lcd.fillRoundRect(20, 390, 90, 50, 10, TFT_ORANGE);
-        lcd.setTextColor(TFT_WHITE);
-        lcd.setFont(&FreeSans9pt7b);
-        lcd.drawString("SCAN", 65, 415);
-        
-        lcd.fillRoundRect(120, 390, 90, 50, 10, TFT_RED);
-        lcd.drawString("BACK", 165, 415);
-        
-        lcd.fillRoundRect(220, 390, 80, 50, 10, TFT_GREEN);
-        lcd.drawString("OK", 260, 415);
+        bleDevicePageNumber = 0;  // Reset to first page after scan
+        drawBLEDeviceSelection();
         
         return;
       }
       
-      // Back button (120-210, 390-440)
-      if (x >= 120 && x <= 210 && y >= 390 && y <= 440) {
+      // Back button (115-205, 400-450)
+      if (x >= 115 && x <= 205 && y >= 400 && y <= 450) {
         Serial.println("Back from device selection");
         showDeviceSelection = false;
         showOBD2FailScreen = true;
+        bleDevicePageNumber = 0;  // Reset page
         
         // Redraw error screen
         drawBLEConnectionError(lcd);
         return;
       }
       
-      // Connect/OK button (220-300, 390-440)
-      if (x >= 220 && x <= 300 && y >= 390 && y <= 440) {
+      // Connect/OK button (210-300, 400-450)
+      if (x >= 210 && x <= 300 && y >= 400 && y <= 450) {
         if (selectedBLEDevice[0] == '\0') {
           Serial.println("No device selected!");
           return;
@@ -3578,22 +3590,22 @@ void page2() {
   strcpy(titre[1], "Full Ah");
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "SOH");
-  strcpy(titre[4], "12V Volt");
+  strcpy(titre[4], "AuxBatt_SoC");
   strcpy(titre[5], "BmsSoC");
   strcpy(titre[6], "BATTv");
-  strcpy(titre[7], "Cell Vdiff");
-  strcpy(titre[8], "MINcellv");
-  strcpy(titre[9], "degrad_ratio");
+  strcpy(titre[7], "MINcellv");
+  strcpy(titre[8], "Cell Vdiff");
+  strcpy(titre[9], "AuxBattV");
   value_float[0] = SoC;
   value_float[1] = EstFull_Ah;
   value_float[2] = MAXcellv;
   value_float[3] = SOH;
-  value_float[4] = AuxBattV;
+  value_float[4] = AuxBatt_SoC;
   value_float[5] = BmsSoC;
   value_float[6] = BATTv;
-  value_float[7] = CellVdiff;
-  value_float[8] = MINcellv;
-  value_float[9] = degrad_ratio;
+  value_float[7] = MINcellv;
+  value_float[8] = CellVdiff;
+  value_float[9] = AuxBattV;
   
   // set number of decimals for each value to display
   for (int i = 0; i < 10; i++) {  
@@ -3623,7 +3635,7 @@ void page3() {
   strcpy(titre[5], "Max Pwr");
   strcpy(titre[6], "MAX Temp");
   strcpy(titre[7], "Int. Energ");
-  strcpy(titre[8], "kWh Left");
+  strcpy(titre[8], "degrad_ratio");
   strcpy(titre[9], "Chauf. Batt.");  
   value_float[0] = Power;
   value_float[1] = BattMinT;
@@ -3633,7 +3645,7 @@ void page3() {
   value_float[5] = Max_Pwr;
   value_float[6] = BattMaxT;
   value_float[7] = acc_energy;
-  value_float[8] = left_kWh;
+  value_float[8] = degrad_ratio;
   value_float[9] = Heater;
 
   // set number of decimals for each value to display

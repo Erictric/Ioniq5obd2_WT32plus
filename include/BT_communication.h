@@ -73,11 +73,89 @@ void drawProtocolError(LGFX& lcd) {
   lcd.drawString("CONTINUE", 235, 410);
 }
 
+
 // Holds the selected BLE device name (max 20 chars + null terminator)
 extern char selectedBLEDevice[21];
 
+// --- BLE Device Selection UI Pagination ---
+
+#define BLE_DEVICES_PER_PAGE 4 // Only 4 devices per page, plus default
+
+// Function to draw BLE device selection screen with pagination (4 per page + default at bottom)
+void drawBLEDeviceSelection(LGFX& lcd, char deviceList[][21], int deviceCount, int page, int selectedIdx) {
+  lcd.fillScreen(TFT_BLACK);
+  lcd.setFont(&FreeSans18pt7b);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.drawString("Select OBD2 Device", 160, 40);
+
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_LIGHTGREY);
+  if (deviceCount == 0) {
+    lcd.drawString("No devices found", 160, 90);
+  } else {
+    lcd.drawString("Tap device to select:", 160, 90);
+  }
+
+  // Calculate which devices to show on this page
+  int startIdx = page * BLE_DEVICES_PER_PAGE;
+  int endIdx = startIdx + BLE_DEVICES_PER_PAGE;
+  if (endIdx > deviceCount) endIdx = deviceCount;
+
+  lcd.setFont(&FreeSans12pt7b);
+  // Show up to 4 devices per page (from startIdx)
+  // Device buttons at y = 120, 165, 210, 255 (matching touch handler coordinates)
+  for (int i = 0; i < BLE_DEVICES_PER_PAGE; ++i) {
+    int deviceIdx = startIdx + i;
+    if (deviceIdx >= deviceCount) break;
+    int yPos = 120 + (i * 45);
+    // The selectedIdx passed in should be relative to the current page:
+    // -1 = default, 0 = first device on page, 1 = second, etc.
+    bool isSelected = (selectedIdx == i);
+    lcd.fillRoundRect(20, yPos, 280, 40, 8, isSelected ? TFT_GREEN : TFT_DARKGREY);
+    lcd.setTextColor(TFT_WHITE);
+    lcd.drawString(deviceList[deviceIdx], 160, yPos + 20);
+  }
+
+  // Always show 'Default' option at the bottom (after devices)
+  // Default button at y = 300 (120 + 4*45)
+  int defaultYPos = 120 + (BLE_DEVICES_PER_PAGE * 45);
+  bool defaultSelected = (selectedIdx == -1);
+  lcd.fillRoundRect(20, defaultYPos, 280, 40, 8, defaultSelected ? TFT_GREEN : TFT_BLUE);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.drawString("Use Default (IOS-Vlink)", 160, defaultYPos + 20);
+
+  // Draw page navigation if needed (PREV/NEXT buttons at top: y=350-390)
+  if (deviceCount > BLE_DEVICES_PER_PAGE) {
+    int totalPages = (deviceCount + BLE_DEVICES_PER_PAGE - 1) / BLE_DEVICES_PER_PAGE;
+    if (page > 0) {
+      lcd.fillRoundRect(20, 350, 90, 40, 8, TFT_ORANGE);
+      lcd.setTextColor(TFT_WHITE);
+      lcd.drawString("PREV", 65, 370);
+    }
+    if (page < totalPages - 1) {
+      lcd.fillRoundRect(210, 350, 90, 40, 8, TFT_ORANGE);
+      lcd.setTextColor(TFT_WHITE);
+      lcd.drawString("NEXT", 255, 370);
+    }
+  }
+
+  // Always draw Scan, Back, and OK buttons at bottom (y=400-450)
+  lcd.fillRoundRect(20, 400, 90, 50, 10, TFT_ORANGE);
+  lcd.setTextColor(TFT_WHITE);
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.drawString("SCAN", 65, 425);
+  
+  lcd.fillRoundRect(120, 400, 90, 50, 10, TFT_RED);
+  lcd.drawString("BACK", 165, 425);
+  
+  lcd.fillRoundRect(220, 400, 80, 50, 10, TFT_GREEN);
+  lcd.drawString("OK", 260, 425);
+}
+
 void ConnectToOBD2(LGFX& lcd){
   char strRetries[2];
+  char deviceDisplay[64];
 
   // Only draw connection phase messages at the bottom, preserving the rest of the welcome display
   int msgY = 440; // Start below "OBD2: Connecting..."
@@ -87,51 +165,114 @@ void ConnectToOBD2(LGFX& lcd){
   // Clear only the area for connection messages
   lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
 
+  // Display device name below "OBD2: Connecting..."
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_DARKGREY);
+  snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s", selectedBLEDevice);
+  lcd.drawString(deviceDisplay, msgX, msgY - 5);
+
   // BLE initialization phase (use the same y as attempt messages)
   int attemptMsgY = msgY + 30;
   // Always clear the whole connection message area before each new message
   lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
-  lcd.setTextColor(TFT_LIGHTGREY);
-  lcd.drawString("BLE: Initializing...", msgX, attemptMsgY);
+  // Redraw device name after clearing
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_DARKGREY);
+  lcd.drawString(deviceDisplay, msgX, msgY - 5);
+  
+  // Start BLE scan without blocking
   if (!ELM_PORT.begin(selectedBLEDevice)) {
     Serial.println("BLE initialization failed");
     lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
+    lcd.setFont(&FreeSans9pt7b);
+    lcd.setTextColor(TFT_DARKGREY);
+    lcd.drawString(deviceDisplay, msgX, msgY - 5);
+    lcd.setFont(&FreeSans12pt7b);
     lcd.setTextColor(TFT_RED);
     lcd.drawString("BLE: Init Failed", msgX, attemptMsgY);
     OBD2connected = false;
     delay(2000);
-    // Optionally clear the message area again
     lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
     return;
   }
+  
+  // Display "looking for device" with countdown (4 seconds total)
+  for (int countdown = 4; countdown > 0; countdown--) {
+    lcd.fillRect(0, 420, lcd.width(), 180, TFT_BLACK);
+    lcd.setFont(&FreeSans9pt7b);
+    lcd.setTextColor(TFT_DARKGREY);
+    lcd.drawString(deviceDisplay, msgX, msgY - 5);
+    
+    lcd.setFont(&FreeSans12pt7b);
+    lcd.setTextColor(TFT_LIGHTGREY);
+    char scanMsg[40];
+    snprintf(scanMsg, sizeof(scanMsg), "Looking for device... %d", countdown);
+    lcd.drawString(scanMsg, msgX, attemptMsgY);
+    Serial.printf("Scanning for device... %d seconds remaining\n", countdown);
+    delay(1000);
+  }
+  
+  // Check if device was found after scan completes
+  int rssi = ELM_PORT.getRSSI();
+  lcd.fillRect(0, 420, lcd.width(), 180, TFT_BLACK);
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_DARKGREY);
+  
+  if (rssi != 0) {
+    // Device found
+    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", selectedBLEDevice, rssi);
+    lcd.drawString(deviceDisplay, msgX, msgY - 5);
+    lcd.setFont(&FreeSans12pt7b);
+    lcd.setTextColor(TFT_GREEN);
+    lcd.drawString("BLE: Device Found", msgX, attemptMsgY);
+    Serial.printf("Device found with RSSI: %d dBm\n", rssi);
+  } else {
+    // Device not found
+    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", selectedBLEDevice);
+    lcd.drawString(deviceDisplay, msgX, msgY - 5);
+    lcd.setFont(&FreeSans12pt7b);
+    lcd.setTextColor(TFT_RED);
+    lcd.drawString("BLE: Device not found", msgX, attemptMsgY);
+    Serial.println("Device not found");
+  }
+  delay(1500);
 
-  // OBD2 connection attempts
+  // OBD2 connection attempts (only if device was found)
   int retries = 0;
   bool connected = false;
+  
   for (retries = 0; retries < 4; retries++) {
-    // Always clear the whole connection message area before each new message
-    lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
-    char attemptMsg[32];
-    snprintf(attemptMsg, sizeof(attemptMsg), "OBD2: Attempt %d...", retries + 1);
-    lcd.setTextColor(TFT_LIGHTGREY);
-    lcd.drawString(attemptMsg, msgX, attemptMsgY);
-    Serial.printf("OBD2 connection attempt %d\n", retries + 1);
-    delay(600); // Give user time to see the message before connect attempt
+    Serial.printf("OBD2 connection attempt %d (RSSI: %d)\n", retries + 1, rssi);
+    
+    delay(1000); // Give user time to see the message before connect attempt
     if (ELM_PORT.connect()) {
       connected = true;
       break;
     }
-    delay(1500); // Give more time for connection to establish
+    delay(1000); // Give more time for connection to establish
   }
 
   // Check if connection failed after retries
   if (!connected) {
     Serial.println("Failed to connect to OBD2 device after retries");
-    // Always clear the whole connection message area before showing failure
-    lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
+    delay(500); // Brief pause after last attempt before showing failure
+    // Clear only the message area below the device name
+    lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
+    // Redraw device name with signal strength
+    lcd.setFont(&FreeSans9pt7b);
+    lcd.setTextColor(TFT_DARKGREY);
+    int rssi = ELM_PORT.getRSSI();
+    if (rssi != 0) {
+      snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", selectedBLEDevice, rssi);
+    } else {
+      snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", selectedBLEDevice);
+    }
+    lcd.drawString(deviceDisplay, msgX, msgY - 5);
+    // Show failure message
+    lcd.setFont(&FreeSans12pt7b);
     lcd.setTextColor(TFT_RED);
     lcd.drawString("OBD2: Connect Failed", msgX, attemptMsgY);
-    delay(1200); // Give user time to see the failure message
+    delay(1000); // Give user time to see the failure message
     OBD2connected = false;
     extern bool showOBD2FailScreen;
     showOBD2FailScreen = true;
@@ -140,8 +281,10 @@ void ConnectToOBD2(LGFX& lcd){
   }
 
   // Protocol initialization phase
+  delay(500); // Brief pause before protocol init
   lcd.setTextColor(TFT_LIGHTGREY);
   lcd.drawString("OBD2: Protocol Init...", msgX, msgY + 30 + 4 * 25);
+  delay(500); // Give time for display update
   if (!myELM327.begin(ELM_PORT)) // select protocol '6'
   {
     Serial.println("ELM327 protocol initialization failed");
@@ -154,30 +297,50 @@ void ConnectToOBD2(LGFX& lcd){
     return;
   }
 
-  // Success: update 'OBD2: Connecting...' to 'OBD2: Connected' in green, and show device name below
-  // Overwrite the 'OBD2: Connecting...' message area
+  // Success: clear the connection message area and show success
+  // Clear the message area below the device name
+  lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
+  // Redraw device name to ensure it's visible
+  lcd.setFont(&FreeSans9pt7b);
+  lcd.setTextColor(TFT_DARKGREY);
+  lcd.drawString(deviceDisplay, msgX, msgY - 5);
+  
+  // Overwrite the 'OBD2: Connecting...' message area with success message
+  lcd.setFont(&FreeSans12pt7b);
   lcd.setTextColor(TFT_BLACK);
   lcd.drawString("OBD2: Connecting...", msgX, 410); // Clear previous message
   lcd.setTextColor(TFT_GREEN);
   lcd.drawString("OBD2: Connected", msgX, 410);
 
-  // Show device name just below
+  // Show device name with signal strength on same line (reuse rssi from connection attempts)
   lcd.setFont(&FreeSans9pt7b);
   lcd.setTextColor(TFT_DARKGREY);
-  char deviceDisplay[64];
-  snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s", ELM_PORT.getDeviceName().c_str());
+  if (rssi != 0) {
+    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", ELM_PORT.getDeviceName().c_str(), rssi);
+    Serial.printf("Connected with RSSI: %d dBm\n", rssi);
+  } else {
+    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", ELM_PORT.getDeviceName().c_str());
+    Serial.printf("Connected with RSSI: N/A\n");
+  }
   lcd.drawString(deviceDisplay, msgX, 435);
+  
   lcd.setFont(&FreeSans12pt7b);
 
   OBD2connected = true;
 
-  // Update selectedBLEDevice to match the actual connected device and save to EEPROM
+  // Update selectedBLEDevice to match the actual connected device and save to EEPROM only if changed
   extern char selectedBLEDevice[21];
   extern void saveBLEDevice(const char* deviceName);
-  strncpy(selectedBLEDevice, ELM_PORT.getDeviceName().c_str(), 20);
-  selectedBLEDevice[20] = '\0'; // Ensure null-termination
-  saveBLEDevice(selectedBLEDevice);
-  Serial.printf("Successfully connected to: %s (saved to EEPROM)\n", selectedBLEDevice);
+  char newDeviceName[21];
+  strncpy(newDeviceName, ELM_PORT.getDeviceName().c_str(), 20);
+  newDeviceName[20] = '\0'; // Ensure null-termination
+  if (strncmp(selectedBLEDevice, newDeviceName, 21) != 0) {
+    strncpy(selectedBLEDevice, newDeviceName, 21);
+    saveBLEDevice(selectedBLEDevice);
+    Serial.printf("Successfully connected to: %s (saved to EEPROM)\n", selectedBLEDevice);
+  } else {
+    Serial.printf("Successfully connected to: %s (already saved)\n", selectedBLEDevice);
+  }
 
   delay(1500);
   // Optionally clear the message area again

@@ -1,0 +1,150 @@
+OBD2 connection attempt 1 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 4 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 5 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 6 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 7 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 8 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 9 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 10 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
+Timezone re-configured after WiFi connection
+Web server started at http://10.138.216.107
+Select Device pressed
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 17 devices total
+Device 0: Name='' Address=06:0f:75:49:61:69 RSSI=-89
+  -> Skipped (no name)
+Device 1: Name='' Address=20:15:de:41:b9:a7 RSSI=-85
+  -> Skipped (no name)
+Device 2: Name='Sba80e17ee7344734C' Address=28:3c:90:a2:3a:d4 RSSI=-86
+  -> Added to list as #0
+Device 3: Name='' Address=2a:53:e5:e3:3f:13 RSSI=-88
+  -> Skipped (no name)
+Device 4: Name='' Address=33:17:c7:b8:53:e2 RSSI=-47
+  -> Skipped (no name)
+Device 5: Name='' Address=3c:e6:fb:00:65:b3 RSSI=-8
+  -> Skipped (no name)
+Device 6: Name='' Address=64:4e:d7:82:33:44 RSSI=-90
+  -> Skipped (no name)
+Device 7: Name='' Address=64:e4:cd:34:5c:b4 RSSI=-92
+  -> Skipped (no name)
+Device 8: Name='' Address=6e:5c:b1:e1:c6:a5 RSSI=-59
+  -> Skipped (no name)
+Device 9: Name='WB837690' Address=94:34:69:05:13:7c RSSI=-88
+  -> Added to list as #1
+Device 10: Name='' Address=a8:80:55:c7:ce:2b RSSI=-70
+  -> Skipped (no name)
+Device 11: Name='' Address=c4:f7:c1:44:01:9b RSSI=-59
+  -> Skipped (no name)
+Device 12: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-86
+  -> Added to list as #2
+Device 13: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-89
+  -> Added to list as #3
+Device 14: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-82
+  -> Added to list as #4
+Device 15: Name='Govee_H6099_134A' Address=d2:2d:45:86:13:4a RSSI=-87
+  -> Added to list as #5
+Device 16: Name='' Address=ec:81:93:f2:58:0e RSSI=-90
+  -> Skipped (no name)
+Scan complete. Found 6 named devices.
+Selected device: Sba80e17ee7344734C
+Selected device: WB837690
+Selected device: ihoment_H5083_B374
+Selected device: ihoment_H5083_E29B
+Selected default device: IOS-Vlink
+Scanning for BLE devices...
+Scanning for BLE devices...
+Starting BLE scan for 8 seconds...
+Scan complete. Found 16 devices total
+Device 0: Name='' Address=06:0f:75:49:61:69 RSSI=-90
+  -> Skipped (no name)
+Device 1: Name='' Address=20:15:de:41:b9:a7 RSSI=-87
+  -> Skipped (no name)
+Device 2: Name='' Address=28:3c:90:a2:3a:d4 RSSI=-86
+  -> Skipped (no name)
+Device 3: Name='' Address=2a:53:e5:e3:3f:13 RSSI=-89
+  -> Skipped (no name)
+Device 4: Name='' Address=33:17:c7:b8:53:e2 RSSI=-47
+  -> Skipped (no name)
+Device 5: Name='' Address=3c:e6:fb:00:65:b3 RSSI=-9
+  -> Skipped (no name)
+Device 6: Name='' Address=64:4e:d7:82:33:44 RSSI=-92
+  -> Skipped (no name)
+Device 7: Name='' Address=6e:5c:b1:e1:c6:a5 RSSI=-59
+  -> Skipped (no name)
+Device 8: Name='WB837690' Address=94:34:69:05:13:7c RSSI=-90
+  -> Added to list as #0
+Device 9: Name='' Address=a8:80:55:c7:ce:2b RSSI=-68
+  -> Skipped (no name)
+Device 10: Name='' Address=c4:f7:c1:44:01:9b RSSI=-80
+  -> Skipped (no name)
+Device 11: Name='ihoment_H5083_B374' Address=d0:c9:07:22:b3:74 RSSI=-85
+  -> Added to list as #1
+Device 12: Name='ihoment_H5083_E29B' Address=d0:c9:07:22:e2:9b RSSI=-88
+  -> Added to list as #2
+Device 13: Name='ihoment_H5083_6CD3' Address=d0:c9:07:2e:6c:d3 RSSI=-79
+  -> Added to list as #3
+Device 14: Name='Govee_H6099_134A' Address=d2:2d:45:86:13:4a RSSI=-87
+  -> Added to list as #4
+Device 15: Name='' Address=ec:81:93:f2:58:0e RSSI=-90
+  -> Skipped (no name)
+Scan complete. Found 5 named devices.
+Back from device selection
+Continue without OBD2
+Dismissing WiFi info screen
+Retry OBD2 connection
+...Connection to OBDII...
+OBD2 connection attempt 1 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 2 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 3 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 4 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 5 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 6 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 7 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 8 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 9 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+OBD2 connection attempt 10 (RSSI: N/A - device not found)
+Forming a connection to 
+Error: No BLE device found! Make sure OBD is turned on.
+Failed to connect to OBD2 device after retries
