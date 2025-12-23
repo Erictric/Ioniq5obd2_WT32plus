@@ -1,0 +1,2019 @@
+WiFi connected in: 10.00 secs
+IP address: 10.138.216.107
+...Connection to OBDII...
+IOS-Vlink found.
+Scanning for device... 4 seconds remaining
+Scanning for device... 3 seconds remaining
+Scanning for device... 2 seconds remaining
+Scanning for device... 1 seconds remaining
+Device found with RSSI: -46 dBm
+OBD2 connection attempt 1 (RSSI: -46)
+Forming a connection to 
+dd:0d:30:48:0a:53
+[DEBUG] Service FFF0 found.
+[ 21928][E][BLERemoteCharacteristic.cpp:289] retrieveDescriptors(): esp_ble_gattc_get_all_descr: Unknown
+[DEBUG] CHAR rxUUID found.
+[DEBUG] canNotify 1
+[DEBUG] CHAR txUUID found.
+[DEBUG] canWrite 1
+[DEBUG] RX subscribed
+v2.1\r\r>
+[DEBUG] ELM RESPONSE > AT_E0
+[DEBUG] ELM RESPONSE > \r
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+Connected with RSSI: -46 dBm
+Successfully connected to: IOS-Vlink (already saved)
+Timezone re-configured after WiFi connection
+Web server started at http://10.138.216.107
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03FFBE7\r
+[DEBUG] ELM RESPONSE > 1:EF00001E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA3B00\r
+[DEBUG] ELM RESPONSE > 5:01674300[D010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44A0003\r
+[DEBUG] ELM RESPONSE > 8:090000000006C8\r
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44A00038:090000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44A00038:090000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:8 '00F8E44A'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+[DEBUG] ELM RESPONSE > 1:0F012C000FF00FF00FF1A\r
+[DEBUG] ELM RESPONSE > 3:01616200005001\r
+[DEBUG] ELM RESPONSE > 4:0003E8B57D0200\r
+[DEBUG] ELM RESPONSE > 5:B5000000000000\r
+[DEBUG] ELM RESPONSE > 6:0000FF0000AAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CFF2:00FF00FF00FF1A3:016162000050014:0003E8B57D02005:B50000000000006:0000FF0000AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CFF2:00FF00FF00FF1A3:016162000050014:0003E8B57D02005:B50000000000006:0000FF0000AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '1A'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '7D02'
+ hex number  hexSubString cap:14 len:2 '01'
+Turning Display ON
+Display going ON
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00031E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008A00\r
+[DEBUG1674300015D9A\r
+[DEBUG] EL0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44A0003\r
+[DEBUG] ELM RESPONSE > 8:090000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44A00038:090000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44A00038:090000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44A'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEB26\r0:62010617F811\r
+[DEBUG] ELM RESPONSE > 1:000100\r
+[DEBUG] ELM RESPONSE > 2:00000000000000\r
+[DEBUG] ELM RESPONSE 0000800EA00\r
+[DEBUG] ELM RESPO000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000100030000002:000000000000003:0000000800EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000100030000002:000000000000003:0000000800EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '01'
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPO03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00041E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA3B00008A00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RE7:DA00F8E44B0003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44B00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44B00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:8 '00F8E44B'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62B002E00000\r1:00FFB1006B8A00\r2:0000AAAAAAAAAA\r
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B8A'
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00041E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPON4:01CA4500008A00\r
+[15D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEB:DA00F8E44B0003\r
+[DEBUG] ELM RESPONSE 8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44B00038:090000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44B00038:090000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44B'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 027\r0:6207\r1:C8FF60455700EF\r:8E01F0FFFF10FF\r3:B2FFFFFFFFFF2F7C665E0:FF00AAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF60455700EF2:8E01F0FFFF10FF3:B2FFFFFFFFFFFF4:FF2F7C665E00FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF60455700EF2:8E01F0FFFF10FF3:B2FFFFFFFFFFFF4:FF2F7C665E00FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '60'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008A00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE 10A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44C0003\r
+[DEBUG] ELM RESPONSE >000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44C00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44C00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44C'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFF\r
+[DEBUG] 0[DEBUG] ELM RESPONSE > 2:37010000BB3302\r
+[DEBUG] ELM RESPONSE > 3:0000B835020000\r
+[DEBUG] ELM RESPONSE > 4:FF8DB08DB090B4\r
+4AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000B8350200004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000B8350200004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '32'
+ hex number  hexSubString cap:14 len:2 'BC'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '33'
+ hex number  hexSubString cap:14 len:2 'B8'
+ hex number  hexSubString cap:14 len:2 '35'
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 0000000000\r
+[DEBUG] ELM RESPONSE > 2:00031E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA3B00008A00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44C0000[DEBUG] ELM RESPONSE\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44C00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44C00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:8 '00F8E44C'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RES0006D\r
+[DEBUG] ELM RESPONSE > 2C37\r
+[DEBUG] ELM RESPONSE > 3:2A80035D200E00\r
+[DEBUG] ELM RESPONSE > [DEBUG] ELM RESPONSE > 000\r
+[DEBUG] ELM RESPONSE > 6:0000000\r
+[DEBUG] ELM RESPONSE >AAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006D2:384807B61E7C373:2A80035D200E004:520801010100075:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006D2:384807B61E7C373:2A80035D200E004:520801010100075:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '5D'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 '2A'
+pid_counter: 7
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEB000\r
+[DE031E0FE00\r
+[DEBUG] ELM[DEBUG] ELM RESPONSE > 4:01CA3B00008A00\r
+[DEBUG] ELM RESPONSE 6:00010A2C0000FB\r
+[DEBUG] EL8E44D0003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44D00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44D00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:8 '00F8E44D'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RE\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Trip Reset
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[:00031E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008A00\r
+[DEBUG] ELM RESPONSE > 5:016743000
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44D0003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44D00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44D00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44D'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+[DEBUG] ELM RESPONSE > 1:0F012C0FF\r
+[DEBUG] ELM RESPONSE > 20FF00FF00FE > 3:20001\r
+[DEBUG] ELD0[DEBUG] ELM RESPONSE > 5:B5000000000000\r
+[DEBUG] ELM RESPONSE > 6:0000FF0000AAAA\r
+[>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CFF2:00FF00FF00FF1A3:016162000050014:0003E8B57D02005:B50000000000006:0000FF0000AAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CFF2:00FF00FF00FF1A3:016162000050014:0003E8B57D02005:B50000000000006:0000FF0000AAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '1A'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '7D02'
+ hex number  hexSubString cap:14 len:2 '01'
+saving
+value saved to EEPROM
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00041E5D00FE00\r
+[DEBUG] ELM RESPONSE > 
+[DEBUG] ELM RESPONSE > 4:0[DEBUG] ELM RESPONSE > 6:00010AB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44E0003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44E00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA3B00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44E00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '3B'
+ hex number  hexSubString cap:14 len:8 '00F8E44E'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 026\r0:62010617F811\r
+[DEBUG] ELM RESPONSE > 1:00010003000000\r
+[DEBUG] EL000000\r
+[DEBUG] ELM RESPONSE > 3:00000800EA00\r
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000100030000002:000000000000003:0000000800EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000100030000002:000000000000003:0000000800EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '01'
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00041E5D00FE00\r
+[DE:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008A00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+:DA00F8E44E0003\r
+[DEBU8:0A0000000006C8\r
+[DEBUG] ELM RESPONSE\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44E00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44E00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44E'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62B002E00000\AA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B8A'
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00031E5D00FE00\r
+[DEBUG] ELM RESPONSE > A\r
+[DEBUG] ELM RESPONSE > 08A00\r
+[DEB:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44F0003\r
+[DEBUG] ELM RESPONSE > 8:090000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44F00038:090000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00031E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44F00038:090000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44F'
+Screen Touched
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F0FFFF10FF\r3:B1FFFFFFFFFFFF\r4:FF2F7C665E000FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF60455700EF2:8E00F0FFFF10FF3:B1FFFFFFFFFFFF4:FF2F7C665E00FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF60455700EF2:8E00F0FFFF10FF3:B1FFFFFFFFFFFF4:FF2F7C665E00FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '60'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB100000000\r
+[D00041E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+00008A0[DEBUG] ELM RESPONSE > 5:0167430009A\r
+[DE00FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8E44F0003\r
+[DEBUG] ELM RESPONSE8:0006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44F00038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E44F00038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E44F'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C\r
+[DEBUG] ELM RESPONSE > 2:37010000BB3302\r
+[DEBUG] ELM RESPONSE > 3:0000B835020000\r
+[DEBUG] ELM RESPONSE > 4:FF8DB08DB090B4\r
+[DEBUG] ELM RESPONSE > 5:90B4AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000B8350200004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000B8350200004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '32'
+ hex number  hexSubString cap:14 len:2 'BC'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '33'
+ hex number  hexSubString cap:14 len:2 'B8'
+ hex number  hexSubString cap:14 len:2 '35'
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00041E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG] ELM RESPONSE > 1CA9D00008A00\r
+67430001[DEBUG] ELM RESPONSE > 6A2C0000FB\r
+[DEB:DA00F8E4500003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA9D00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E45000038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA9D00008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E45000038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F8E450'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RESPONSE > 1:F801010000006D\r
+[DEBUG] ELM RESPONSE > 2:384907C61E7237\r
+:2C80025D200A00\r
+[DEBUG] ELM RESP4:52080101010007\r
+[DEBUG] ELM RESPON5:0000CB0C070000\r
+[DEBUG] ELM RESPONSE > 6:00000000000000\r
+[DEBUG] ELM RESPONSE > 7:00AAAAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006D2:384907C61E72373:2C80025D200A004:520801010100075:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006D2:384907C61E72373:2C80025D200A004:520801010100075:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '5D'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 '2C'
+pid_counter: 7
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > E7\r
+[DEBUG] ELM RESPONSE > 1:EFB10000000000\r
+[DEBUG] ELM RESPONSE > 2:00041E5D00FE00\r
+[DEBUG] ELM RESPONSE > 3:0000FF00002BCA\r
+[DEBUG]A4500008A00\r
+[DEBUG] ELM RESPONSE > 55D9A\r
+[DEBUG] ELM RESPONSE > 6:DEBUG] ELM RESPONSE > 8:090000000006C8\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E45000038:090000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB100000000002:00041E5D00FE003:0000FF00002BCA4:01CA4500008A005:01674300015D9A6:00010A2C0000FB7:DA00F8E45000038:090000000006C'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8A'
+ hex number  hexSubString cap:14 len:4 '1E5D'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '04'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B1'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8E450'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+
+========================================
+DIAGNOSTIC SCAN STARTED (7C6 CLU)
+========================================
+OBD2 Connected: YES
+Scan Range: 22B001-22B200
+Header: 7C6 (CLU)
+========================================
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 62B00100000000\r
+[DEBUG] ELM RESPO\r>
+
+>>> FOUND: PID 22B001 @ 7C6 (CLU) - 14 bytes
+Response: 36 32 42 30 30 31 30 30 30 30 30 30 30 30 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\r0:62B002E00000\r1:00FFB1006B8A00\r2:000
+[DEBUG] ELM RESPONS\r>
+
+Response (49 bytes)
+Raw payload: 00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAAA
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB1006B8A002:0000AAAAAAAAA'
+Parsed frames:
+  Frame 0: 62B002E00000
+  Frame 1: 00FFB1006B8A00
+  Frame 2: 0000AAAAAAAAA
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2278\r
+>
+
+>>> FOUND: PID 22B003 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 37 38 
+[7C6] Scanning PID: 22B004
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > NO_DATA\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B005 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B006 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\>
+[DEB2\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B007 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B008
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B008 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B009 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B00A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B00B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B00C
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DE>
+
+>>> FOUND: PID 22B00C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE2\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B00D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B00E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B00F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B010
+[DEBUG] ELM RESPONSE > OK\r\r>
+222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B010 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B011 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RES7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B012 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B013 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B014
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B014 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B015 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B016 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B017 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B018
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B018 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B019 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B01A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSEOK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B01B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B01C
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEF2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B01C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B01D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONS\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B01E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPON\r>
+
+>>> FOUND: PID 22B01F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B020
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B020 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B021 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B022 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RE7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B023 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B024
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B024 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RES\r>
+
+>>> FOUND: PID 22B025 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEB
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B026 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B027 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B028
+K\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B028 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEB
+[DEBUG] ELMONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B029 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B02A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RES\r>
+
+>>> FOUND: PID 22B02B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B02C
+[DEBUG] ELM RESPONS\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B02C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+K\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B02D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPOOK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B02E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESP\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B02F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B030
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B030 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B031 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+SE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B032 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B033 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B034
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEB>
+
+>>> FOUND: PID 22B034 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B035 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B036 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B037 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B038
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B038 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B039 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > [DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B03A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B03B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B03C
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B03C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B03D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B03E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B03F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B040
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B040 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[>
+
+>>> FOUND: PID 22B041 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B042 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B043 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B044
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B044 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B045 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B046 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B047 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B048
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B048 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+\r>
+
+>>> FOUND: PID 22B049 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B04A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B04B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B04C
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B04C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPOOK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B04D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B04E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B04F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B050
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B050 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B051 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B052 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2222\r
+[D>
+
+>>> FOUND: PID 22B053 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B054
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+>
+
+>>> FOUND: PID 22B054 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[DEBUG] ELM RESPONSE > OK\r\r>
+ ELM RESPONSE > 7F2222\r
+pair status = fail E (65042) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B055 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (65072) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (65147) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (65252) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON\r>
+
+>>> FOUND: PID 22B056 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (65282) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (65357) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (65462) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B057 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B058
+E (65492) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (65582) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (65657) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B058 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (65702) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (65792) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (65867) BT_BTM: BTM_GetSecurityFlags false
+
+r>
+
+>>> FOUND: PID 22B059 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (65897) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OE (65987) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (66092) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B05A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (66122) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (66197) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (66272) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B05B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B05C
+E (66302) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (66407) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (66482) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B05C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (66512) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (66587) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (66677) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B05D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (66722) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (66812) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (66887) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B05E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (66932) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM REOK\r\r>
+E (66992) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (67097) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B05F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B060
+E (67127) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (67217) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RE2222\r
+E (67322) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B060 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (67352) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (67412) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (67502) BT_BTM: BTM_GetSecurityFlags false
+
+>
+
+>>> FOUND: PID 22B061 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (67547) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (67622) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE22\r
+E (67712) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B062 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (67742) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (67832) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 22\r
+E (67937) BT_BTM: BTM_GetSecurityFlags false
+
+[DE
+>>> FOUND: PID 22B063 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B064
+E (67967) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (68042) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (68117) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B064 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (68147) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (68237) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (68327) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B065 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (68357) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (68432) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (68522) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B066 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (68552) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (68657) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F22
+E (68732) BT_BTM: BTM_GetSecurityFlags false
+
+>
+
+>>> FOUND: PID 22B067 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B068
+E (68762) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (68852) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (68942) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B068 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (68972) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (69047) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (69122) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B069 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (69152) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (69228) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (69302) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B06A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (69377) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM REOK\r\r>
+E (69452) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (69557) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B06B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B06C
+E (69587) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (69662) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (69752) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B06C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (69797) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (69872) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (69962) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B06D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (69992) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (70082) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (70172) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B06E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (70202) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (70292) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (70367) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B06F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B070
+E (70397) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (70502) BT_BTM: BTM_GetSecurityFlags false
+
+2222\r
+E (70577) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B070 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (70622) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (70697) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (70787) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B071 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (70832) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (70907) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (70982) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B072 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (71027) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (71117) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (71192) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B073 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B074
+E (71222) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (71327) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (71417) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B074 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (71492) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (71552) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS7F2222\r
+E (71642) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B075 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (71702) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (71807) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (71852) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B076 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (71927) BT_BTM: BTM_GetSecurityFlags false
+
+\r>
+E (72032) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r
+E (72107) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B077 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B078
+E (72137) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (72212) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (72302) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B078 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (72332) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (72422) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (72482) BT_BTM: BTM_GetSecurityFlags false
+
+
+>>> FOUND: PID 22B079 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (72512) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (72572) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (72662) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B07A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (72722) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (72782) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (72872) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B07B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B07C
+E (72932) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (72992) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (73082) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B07C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (73127) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBK\r\r>
+E (73187) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (73277) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B07D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (73337) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r\r>
+E (73397) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 
+E (73487) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B07E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (73517) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (73592) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (73667) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B07F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B080
+E (73697) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (73772) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (73847) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B080 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (73892) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (73982) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP7F2222\r
+E (74057) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B081 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (74087) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (74192) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (74267) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B082 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (74297) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\rE (74372) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (74462) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B083 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B084
+E (74507) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (74597) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > E (74672) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B084 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (74702) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (74777) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (74882) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B085 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (74912) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (75002) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (75077) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B086 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (75122) BT_BTM: BTM_GetSecurityFlags false
+
+[DE
+E (75197) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (75287) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B087 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B088
+E (75317) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM REOK\r\r>
+E (75422) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 22\r
+E (75497) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B088 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (75527) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (75617) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (75692) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B089 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (75737) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (75827) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (75902) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B08A @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (75932) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (76007) BT_BTM: BTM_GetSecurityFlags false
+
+E (76112) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B08B @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B08C
+E (76142) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (76202) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (76292) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B08C @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (76323) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (76412) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (76472) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE\r>
+
+>>> FOUND: PID 22B08D @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (76502) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (76577) BT_BTM: BTM_GetSecurityFlags false
+
+SE > 7F2222\r
+E (76652) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B08E @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (76712) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (76817) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222E (76862) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RE\r>
+
+>>> FOUND: PID 22B08F @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B090
+E (76922) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (76982) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONS22\r
+E (77072) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB>
+
+>>> FOUND: PID 22B090 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (77147) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (77208) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (77327) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B091 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (77372) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (77462) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (77537) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B092 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (77582) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (77672) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (77747) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B093 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B094
+E (77777) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (77837) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (77942) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B094 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (77987) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (78077) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (78152) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B095 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (78182) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPOK\r\r>
+E (78272) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2222\r
+E (78362) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B096 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+E (78392) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (78497) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (78587) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22B097 @ 7C6 (CLU) - 6 bytes
+Response: 37 46 32 32 32 32 
+[7C6] Scanning PID: 22B098
+E (78617) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>

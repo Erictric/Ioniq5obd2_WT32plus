@@ -1,0 +1,1779 @@
+[DEBUG\rELM327_v2.1\r\r>
+[DEBUG] ELM RESPONSE > AT
+[DEBUG] ELM RESPONSE > _
+[DEBUG] ELM RESPONSE > E
+[DEBUG
+[DEBUG] ELM RESPONSE > \r
+[DEBUG] ELM RESPONSE >[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > OK\r\r>
+Connected with RSSI: -63 dBm
+Successfully connected to: IOS-Vlink (already saved)
+Timezone re-configured after WiFi connection
+Web server started at http://10.138.216.107
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00021E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPO4:01CA4500008E00\r
+[DEBUG] EL300015D9A\r
+[DEBU:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:03\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22200038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22200038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8C222'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+[DEBUG:0F012C01012DFDFDFD16\r
+[DEBUG] ELM RESPONSE > 3:79616200004BFE\r
+0003E8B57D6600\r
+[DEBUG] ELM RESPONSE 5:B6000000000000\r
+[DEBUG00FEFDFEFEAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CFD2:FDFDFDFDFDFD163:79616200004BFE4:0003E8B57D66005:B60000000000006:00FEFDFEFEAAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CFD2:FDFDFDFDFDFD163:79616200004BFE4:0003E8B57D66005:B60000000000006:00FEFDFEFEAAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '16'
+ hex number  hexSubString cap:14 len:2 '79'
+ hex number  hexSubString cap:14 len:2 'B6'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '7D66'
+ hex number  hexSubString cap:14 len:2 'FE'
+Turning Display ON
+Display going ON
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA4D00008E00\r
+[DEBUG] ELM RESPONSE > 5:01679A\r
+[DEBUG] ELM RESPONSE 00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2220003\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4D00008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22200038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4D00008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22200038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F8C222'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 026\r0:62010617F811\r
+[DEBUG] ELM RESPONSE > 1:00FF0000000000\r
+[DEBU00\r
+[DEBUG] ELM RESPONSE > 3:0000000500EA00\r
+[DEBUG] ELM RESPONSE > 4:000000
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00FF00000000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00FF00000000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'FF'
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00011E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008E00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2230003\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22300038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22300038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8C223'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[62B002E00000\r1:00FFB6006B8A00\r
+[DEBUG] ELM RESPONSE > 2:0000AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB6006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB6006B8A002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B8A'
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00021E67FEFCFF\r
+:FEFEFDFE002[DEBUG] ELA4D00008E00\r:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A[DEBUG] ELM RESPONSE > 7:DA00F8C2230003\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBUG>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4D00008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22300038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4D00008E005:01674300015D9A6:00010A2C0000FB7:DA00F8C22300038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8E'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '4D'
+ hex number  hexSubString cap:14 len:8 '00F8C223'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 027\r0:6201007F9407\rF34A5300FF\r5:FF00FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF54454E00EF2:8E00F0FFFF10FF3:B2FFFFFFFFFFFF4:FF347C5A5300FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF54454E00EF2:8E00F0FFFF10FF3:B2FFFFFFFFFFFF4:FF347C5A5300FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '54'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00021E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2240003\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBU
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22400038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22400038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F8C224'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFFSPO[DEBUG] ELM RESPONSE > 2:37010000BB3302\r
+[DEBUG] ELM RESPONSE > 3:0039010000\r
+[DE4:FF8DB08DB090B4\r
+[DEBUG] ELAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000BD390100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000BD390100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '32'
+ hex number  hexSubString cap:14 len:2 'BC'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '33'
+ hex number  hexSubString cap:14 len:2 'BD'
+ hex number  hexSubString cap:14 len:2 '39'
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00021E67FEFCFF\r
+[DEBUG] ELM RESPO:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA9D00008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2240003\r
+[DEBUG] ELM RESPONSE > 8:006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22400038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22400038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F8C224'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RESPO1:F8010100000067\r
+[DEBUG] ELM RESPONSE > 2:39FF043C8\r
+[:F380C25B21D100\r
+[DEBUG] ELM RESPONSE > 4:4B08010101000A\r
+[DEBUG] ELM RESPONSE > 5:0000CB0C070000\r
+[DEBUG] ELM RESPONSE > 6:00000000000000\r
+[DEBUG] ELM RESPONSE > 7:00AAAAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F80101000000672:39FF043C1E82383:F380C25B21D1004:4B08010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F80101000000672:39FF043C1E82383:F380C25B21D1004:4B08010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '38'
+ hex number  hexSubString cap:14 len:2 'F3'
+pid_counter: 7
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00021E67FEFCFF\r
+[DEBUG] ELM RESEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008F00\r
+[DEBUG] ELM RESPO5:9A\r
+[DEBUG] E10A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2250003\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22500038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22500038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8C225'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUGF2231\r
+[DEBUG>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Trip Reset
+pid_counter: 1
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPON2:00011E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+00010A2C00[DEBM RESPONSE > 7:DA00F8C2250003\r
+:0C06C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22500038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22500038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F8C225'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+[DEBUG] ELM RESPONSE > 1:0F012C01012CFD\r
+[DEBUG] ELM RESPONSE > 2:FDFCFDFDFDFD16\r
+[DEBUG] ELM RESPONSE > 3:79616200004BFE\r
+[DEBUG] ELM RESPONSE > 4:0003E8B57D6600\r
+[DEBUG] ELM RESPONSE > 5:B6000000000000\r
+[DEBUG] ELM RESPONSE > 6:00FEFDF\r
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CFD2:FDFCFDFDFDFD163:79616200004BFE4:0003E8B57D66005:B60000000000006:00FEFDFEFEAAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CFD2:FDFCFDFDFDFD163:79616200004BFE4:0003E8B57D66005:B60000000000006:00FEFDFEFEAAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '16'
+ hex number  hexSubString cap:14 len:2 '79'
+ hex number  hexSubString cap:14 len:2 'B6'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '7D66'
+ hex number  hexSubString cap:14 len:2 'FE'
+saving
+value saved to EEPROM
+pid_counter: 2
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00011E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA7200008F00\r
+[DEBUG] ELM RESPONSE > 5:0D9A\r
+[DEBU:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2260003\r
+[DEBUG] ELM RESPONSE >C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22600038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22600038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F8C226'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 026\r0:62010617F811\r
+[DEBUG] ELM RESPONSE >1:00FF0000000000\r
+[DEBUG] ELM RESPO2:00000000000000\r
+[DEBUG] ELM RESPONSE > 3:0000000500EA00\r
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+[DEBUG] ELM RESPO\r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:00FF00000000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:00FF00000000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 'FF'
+pid_counter: 3
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG:00021E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA4500008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUFB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2260003\r
+6C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22600038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22600038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8C226'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 00F\AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE >
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006B8A002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B8A'
+pid_counter: 4
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00011E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA7600008F00\r
+[DEBUG] ELM RESPONSE > 5:01674G] ELM RESPONSE > 7:DA00F8C2270003\r
+[DEBUG] ELM RESPONSE > 800006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA7600008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22700038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA7600008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22700038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '76'
+ hex number  hexSubString cap:14 len:8 '00F8C227'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 027\r0:6201007F9407E01F0FFFF10FF\r3:B2FFFFFFFFF\r4:F5300FF00FFFFFFAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF54454E00EF2:8E01F0FFFF10FF3:B2FFFFFFFFFFFF4:FF347C5A5300FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF54454E00EF2:8E01F0FFFF10FF3:B2FFFFFFFFFFFF4:FF347C5A5300FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '54'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 5
+[DEBUG] ELM RESPONSE > OK\r\r>
+[7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DE:00031E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:
+:01CA7200008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:DA00F8C2270003\r
+[DEBUG] ELM RESPONSE > 8:0C0000000006C5\r
+[DEBUG>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00031E67FEFCFF3:FEFEFDFE0029CA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22700038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00031E67FEFCFF3:FEFEFDFE0029CA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22700038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '03'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F8C227'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFF\r
+[DEBUG] ELM RESPONSE > 1:80BB320200RESPONSE > 2:37010000BB3302\r
+[DEBUG] ELM RESPON3:0000BD39010000\r
+[DEBUG:FF8DB08DB090B4\r
+[DEBUG] EL90B4AAAAAAAAAA\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000BD390100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000BD390100004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '32'
+ hex number  hexSubString cap:14 len:2 'BC'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '33'
+ hex number  hexSubString cap:14 len:2 'BD'
+ hex number  hexSubString cap:14 len:2 '39'
+Screen Touched
+pid_counter: 6
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00021E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:0F00\r
+[DEBUG] ELM RESPONSE > 5D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUG] ELM RESPONSE > 7:8C2280003\r
+[DEBUG] ELM RESPONSE >0000006C5\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22800038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00021E67FEFCFF3:FEFEFDFE0029CA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22800038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '02'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8C228'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+[DEBUG] ELM RESPONSE > 1:F8010100000067\r
+[DEBUG] ELM RESPONSE > 2:3A0E048D1E7C39\r
+:0480C10\r
+[DEBUG] ELM RESPONSE > 4:4B08010101000A\r
+:0000CB0C070000\r
+:00000000000000\r
+[DEBUG] ELM RESPONSE > 
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F80101000000672:3A0E048D1E7C393:0480C15B21E6004:4B08010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F80101000000672:3A0E048D1E7C393:0480C15B21E6004:4B08010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '5B'
+ hex number  hexSubString cap:14 len:2 '39'
+ hex number  hexSubString cap:14 len:2 '04'
+pid_counter: 7
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00011E67FEFCFF\r
+[DEBUG] ELM RESPONSE > 3:FEFEFDFE0029CA\r
+[DEBUG] ELM RESPONSE > 4:01CA7200008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+[DEBUA00F8C23\r
+] ELM RESPONSE > 8:0C0000000006C5\r
+[D>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22800038:0C0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00011E67FEFCFF3:FEFEFDFE0029CA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8C22800038:0C0000000006C'
+ hex number  hexSubString cap:14 len:2 'FC'
+ hex number  hexSubString cap:14 len:2 'FE'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E67'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F8C228'
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+
+========================================
+PID SCAN STARTED
+========================================
+OBD2 Connected: YES
+Scan Range: 220000-220200, then 22B001-22E200
+Headers: 7E2(VCU), 7EA(MCU), 7C6(CLU), 7E4(BMS), 7B3(AIRCON), 7A0(BCM)
+========================================
+
+Local time: 20-12-2025 12:03:21
+Saving event code to SD card
+Event code saved to SD card
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220000 (0/512 - 0.0%)
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220000 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 12:03:31
+Saving event code to SD card
+Event code saved to SD card
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220001 (1/512 - 0.2%)
+[DEBUG] ELM RESPONSE > OK\r\r>
+[DEBUG] ELM RESPONSE > 7F2231\r
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220001 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+pair status = fail E (52183) BT_BTM: Device not found
+
+Local time: 20-12-2025 12:03:41
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220002 (2/512 - 0.4%)
+emoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46801][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46807][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46814][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46820][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46827][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46833][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46839][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46846][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 46852][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47877][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47884][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47890][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47896][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47903][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47909][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 47916][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48932][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48938][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48944][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48951][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48957][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48964][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48970][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48976][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48983][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 48989][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50015][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50022][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50028][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50034][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50041][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50047][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 50054][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51070][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51076][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51082][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51089][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51095][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51102][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51108][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51114][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51121][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 51127][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52153][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52160][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52166][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52172][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52179][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52185][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 52192][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53208][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53214][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53220][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53227][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53233][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53240][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53246][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53252][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53259][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 53265][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54291][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54297][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54304][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54310][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54317][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54323][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 54330][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55346][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55352][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55358][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55365][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55371][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55378][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55384][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55390][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55397][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 55403][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56429][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56436][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56442][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56448][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56455][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56461][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 56468][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57484][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57490][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57496][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57503][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57509][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57516][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57522][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57528][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57535][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 57541][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58567][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58574][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58580][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58586][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58593][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58599][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 58606][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:04:01
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220003 (3/512 - 0.6%)
+[ 66791][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66798][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66804][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66810][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66817][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66823][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66830][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66836][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66842][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 66849][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67874][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67881][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67887][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67893][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67900][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67906][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 67913][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68929][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68935][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68941][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68948][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68954][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68961][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68967][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68973][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68980][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 68986][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70012][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70019][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70025][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70031][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70038][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70044][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 70051][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71067][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71073][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71079][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71086][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71092][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71099][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71105][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71111][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71118][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 71124][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72150][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72157][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72163][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72169][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72176][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72182][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 72189][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73205][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73211][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73217][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73224][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73230][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73237][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73243][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73249][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73256][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 73262][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74288][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74295][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74301][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74307][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74314][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74320][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 74327][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75343][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75349][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75355][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75362][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75368][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75375][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75381][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75387][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75394][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 75400][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76426][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76433][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76439][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76445][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76452][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76458][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 76465][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77481][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77487][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77493][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77500][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77506][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77513][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77519][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77525][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77532][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 77538][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78564][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78571][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78577][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78583][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78590][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78596][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 78603][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:04:21
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220004 (4/512 - 0.8%)
+[ 86793][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86800][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86806][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86813][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86819][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86825][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86832][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86838][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86845][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 86851][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87876][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87883][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87889][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87895][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87902][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87908][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 87915][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88931][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88937][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88943][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88950][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88956][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88963][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88969][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88975][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88982][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 88988][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90014][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90020][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90027][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90033][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90040][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90046][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 90053][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91069][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91075][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91081][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91088][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91094][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91101][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91107][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91113][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91120][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 91126][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92152][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92159][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92165][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92171][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92178][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92184][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 92191][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93207][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93213][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93219][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93226][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93232][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93239][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93245][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93251][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93258][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 93264][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94290][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94297][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94303][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94309][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94316][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94322][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 94329][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95345][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95351][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95357][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95364][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95370][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95377][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95383][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95389][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95396][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 95402][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96428][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96435][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96441][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96447][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96454][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96460][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 96467][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97483][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97489][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97495][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97502][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97508][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97515][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97521][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97527][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97534][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 97540][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98566][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98573][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98579][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98585][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98592][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98598][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[ 98605][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:04:41
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220005 (5/512 - 1.0%)
+[106793][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106800][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106806][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106813][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106819][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106825][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106832][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106838][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106845][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[106851][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107876][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107883][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107889][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107895][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107902][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107908][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[107915][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108931][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108937][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108943][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108950][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108956][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108963][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108969][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108975][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108982][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[108988][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110014][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110021][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110027][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110033][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110040][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110046][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[110053][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111069][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111075][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111081][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111088][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111094][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111101][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111107][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111113][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111120][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[111126][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112152][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112159][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112165][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112171][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112178][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112184][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[112191][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113207][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113213][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113219][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113226][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113232][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113239][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113245][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113251][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113258][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[113264][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114290][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114296][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114303][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114309][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114316][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114322][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[114329][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115345][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115351][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115357][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115364][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115370][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115377][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115383][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115389][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115396][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[115402][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116428][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116435][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116441][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116447][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116454][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116460][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[116467][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117483][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117489][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117495][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117502][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117508][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117515][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117521][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117527][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117534][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[117540][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118566][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118573][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118579][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118585][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118592][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118598][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[118605][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:05:01
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220006 (6/512 - 1.2%)
+[126791][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126798][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126804][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126810][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126817][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126823][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126830][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126836][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126842][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[126849][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127874][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127881][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127887][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127893][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127900][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127906][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[127913][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128929][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128935][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128941][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128948][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128954][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128961][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128967][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128973][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128980][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[128986][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130012][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130019][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130025][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130031][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130038][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130044][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[130051][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131067][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131073][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131079][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131086][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131092][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131099][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131105][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131111][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131118][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[131124][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132150][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132157][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132163][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132169][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132176][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132182][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[132189][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133205][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133211][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133217][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133224][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133230][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133237][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133243][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133249][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133256][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[133262][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134288][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134295][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134301][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134307][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134314][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134320][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[134327][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135343][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135349][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135355][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135362][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135368][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135375][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135381][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135387][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135394][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[135400][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136426][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136433][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136439][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136445][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136452][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136458][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[136464][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137481][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137487][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137493][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137500][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137506][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137513][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137519][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137525][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137532][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[137538][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138564][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138571][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138577][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138583][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138590][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138596][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[138603][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:05:21
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220007 (7/512 - 1.4%)
+[146793][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146800][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146806][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146813][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146819][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146825][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146832][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146838][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146845][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[146851][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147876][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147883][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147889][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147895][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147902][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147908][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[147915][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148931][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148937][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148943][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148950][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148956][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148963][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148969][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148975][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148982][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[148988][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150013][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150020][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150026][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150032][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150039][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150045][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[150052][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151068][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151074][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151080][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151087][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151093][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151100][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151106][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151112][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151119][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[151125][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152151][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152158][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152164][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152170][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152177][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152183][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[152190][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153206][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153212][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153218][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153225][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153231][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153238][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153244][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153250][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153257][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[153263][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154289][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154296][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154302][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154308][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154315][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154321][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[154328][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155344][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155350][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155356][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155363][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155369][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155376][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155382][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155388][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155395][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[155401][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156427][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156434][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156440][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156446][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156453][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156459][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[156466][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157482][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157488][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157494][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157501][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157507][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157514][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157520][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157526][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157533][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[157539][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158565][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158572][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158578][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158584][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158591][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158597][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[158604][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:05:41
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220008 (8/512 - 1.6%)
+[166793][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166800][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166806][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166813][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166819][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166825][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166832][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166838][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166845][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[166851][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167877][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167884][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167890][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167896][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167903][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167909][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[167916][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168932][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168938][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168944][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168951][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168957][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168964][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168970][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168976][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168983][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[168989][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170015][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170022][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170028][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170034][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170041][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170047][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[170054][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171070][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171076][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171082][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171089][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171095][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171102][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171108][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171114][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171121][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[171127][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172153][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172160][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172166][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172172][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172179][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172185][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[172192][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173208][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173214][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173220][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173227][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173233][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173240][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173246][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173252][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173259][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[173265][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174290][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174297][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174303][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174309][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174316][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174322][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[174329][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175345][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175351][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175357][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175364][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175370][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175377][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175383][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175389][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175396][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[175402][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176428][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176435][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176441][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176447][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176454][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176460][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[176467][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177483][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177489][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177495][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177502][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177508][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177515][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177521][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177527][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177534][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[177540][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178566][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178573][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178579][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178585][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178592][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178598][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[178605][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:06:01
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 220009 (9/512 - 1.8%)
+[186791][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186798][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186804][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186810][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186817][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186823][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186830][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186836][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186842][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[186849][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187874][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187881][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187887][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187893][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187900][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187906][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[187912][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188929][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188935][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188941][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188948][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188954][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188961][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188967][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188973][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188980][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[188986][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190012][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190019][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190025][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190031][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190038][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190044][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[190051][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191067][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191073][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191079][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191086][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191092][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191099][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191105][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191111][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191118][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[191124][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192150][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192157][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192163][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192169][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192176][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192182][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[192189][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193205][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193211][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193217][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193224][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193230][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193237][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193243][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193249][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193256][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[193262][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194288][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194295][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194301][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194307][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194314][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194320][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[194327][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195343][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195349][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195355][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195362][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195368][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195375][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195381][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195387][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195394][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[195400][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196426][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196433][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196439][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196445][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196452][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196458][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[196465][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197481][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197487][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197493][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197500][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197506][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197513][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197519][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197525][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197532][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[197538][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198564][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198571][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198577][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198583][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198590][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198596][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[198603][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:06:21
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 22000A (10/512 - 2.0%)
+[206794][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206800][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206806][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206813][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206819][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206826][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206832][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206838][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206845][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[206851][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207877][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207884][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207890][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207896][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207903][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207909][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[207916][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208932][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208938][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208944][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208951][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208957][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208964][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208970][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208976][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208983][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[208989][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210015][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210022][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210028][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210034][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210041][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210047][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[210054][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211070][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211076][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211082][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211089][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211095][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211102][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211108][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211114][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211121][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[211127][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212153][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212160][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212166][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212172][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212179][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212185][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[212192][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213208][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213214][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213220][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213227][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213233][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213240][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213246][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213252][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213259][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[213265][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214291][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214298][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214304][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214310][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214317][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214323][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[214330][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215346][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215352][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215358][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215365][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215371][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215378][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215384][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215390][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215397][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[215403][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216429][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216436][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216442][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216448][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216455][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216461][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[216468][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217484][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217490][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217496][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217503][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217509][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217516][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217522][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217528][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217535][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[217541][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218567][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218574][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218580][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218586][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218593][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218599][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[218606][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+Local time: 20-12-2025 12:06:41
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1] Scanning PID: 22000B (11/512 - 2.1%)
+[226796][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226803][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226809][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226815][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226822][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226828][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226835][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226841][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226847][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[226854][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227879][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227886][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227892][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227898][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227905][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227911][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[227918][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228934][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228940][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228946][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228953][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228959][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228966][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228972][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228978][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228985][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[228991][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230017][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230024][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230030][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230036][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230043][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230049][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[230056][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231072][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231078][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231084][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231091][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231097][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231104][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231110][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231116][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231123][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[231129][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232155][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232162][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232168][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232174][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232181][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232187][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[232194][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233210][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233216][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233223][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233229][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233235][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233242][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233248][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233254][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233261][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[233267][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234293][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234300][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234306][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234312][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234319][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234325][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[234332][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235348][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235354][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235360][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235367][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235373][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235380][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235386][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235392][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235399][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[235405][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236431][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236438][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236444][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236450][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236457][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236463][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[236470][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237486][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237492][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237498][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237505][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237511][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237518][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237524][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237530][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237537][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[237543][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238569][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238576][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238582][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238588][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238595][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238601][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected
+[238608][E][BLERemoteCharacteristic.cpp:581] writeValue(): Disconnected

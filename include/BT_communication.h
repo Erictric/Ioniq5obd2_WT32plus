@@ -159,7 +159,7 @@ void ConnectToOBD2(LGFX& lcd){
 
   // Only draw connection phase messages at the bottom, preserving the rest of the welcome display
   int msgY = 440; // Start below "OBD2: Connecting..."
-  lcd.setFont(&FreeSans12pt7b);
+  //lcd.setFont(&FreeSans12pt7b);
   int msgX = lcd.width() / 2;
   int clearHeight = 160; // Height for connection messages area
   // Clear only the area for connection messages
@@ -172,17 +172,12 @@ void ConnectToOBD2(LGFX& lcd){
   lcd.drawString(deviceDisplay, msgX, msgY - 5);
 
   // BLE initialization phase (use the same y as attempt messages)
-  int attemptMsgY = msgY + 30;
-  // Always clear the whole connection message area before each new message
-  lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
-  // Redraw device name after clearing
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_DARKGREY);
-  lcd.drawString(deviceDisplay, msgX, msgY - 5);
+  int attemptMsgY = msgY + 30;  
   
-  // Start BLE scan without blocking
+  // Start BLE intialisation on ESP32-S3  
   if (!ELM_PORT.begin(selectedBLEDevice)) {
     Serial.println("BLE initialization failed");
+    // Clear all the area for connection messages including device name
     lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
     lcd.setFont(&FreeSans9pt7b);
     lcd.setTextColor(TFT_DARKGREY);
@@ -191,14 +186,16 @@ void ConnectToOBD2(LGFX& lcd){
     lcd.setTextColor(TFT_RED);
     lcd.drawString("BLE: Init Failed", msgX, attemptMsgY);
     OBD2connected = false;
-    delay(2000);
+    delay(1000);
     lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
     return;
   }
   
   // Display "looking for device" with countdown (4 seconds total)
+  int rssi;
+  bool deviceFound = false;
   for (int countdown = 4; countdown > 0; countdown--) {
-    lcd.fillRect(0, 420, lcd.width(), 180, TFT_BLACK);
+    lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
     lcd.setFont(&FreeSans9pt7b);
     lcd.setTextColor(TFT_DARKGREY);
     lcd.drawString(deviceDisplay, msgX, msgY - 5);
@@ -210,140 +207,148 @@ void ConnectToOBD2(LGFX& lcd){
     lcd.drawString(scanMsg, msgX, attemptMsgY);
     Serial.printf("Scanning for device... %d seconds remaining\n", countdown);
     delay(1000);
-  }
-  
-  // Check if device was found after scan completes
-  int rssi = ELM_PORT.getRSSI();
-  lcd.fillRect(0, 420, lcd.width(), 180, TFT_BLACK);
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_DARKGREY);
-  
-  if (rssi != 0) {
-    // Device found
-    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", selectedBLEDevice, rssi);
-    lcd.drawString(deviceDisplay, msgX, msgY - 5);
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.setTextColor(TFT_GREEN);
-    lcd.drawString("BLE: Device Found", msgX, attemptMsgY);
-    Serial.printf("Device found with RSSI: %d dBm\n", rssi);
-  } else {
-    // Device not found
-    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", selectedBLEDevice);
-    lcd.drawString(deviceDisplay, msgX, msgY - 5);
-    lcd.setFont(&FreeSans12pt7b);
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("BLE: Device not found", msgX, attemptMsgY);
-    Serial.println("Device not found");
-  }
-  delay(1500);
-
-  // OBD2 connection attempts (only if device was found)
-  int retries = 0;
-  bool connected = false;
-  
-  for (retries = 0; retries < 4; retries++) {
-    Serial.printf("OBD2 connection attempt %d (RSSI: %d)\n", retries + 1, rssi);
-    
-    delay(1000); // Give user time to see the message before connect attempt
-    if (ELM_PORT.connect()) {
-      connected = true;
+    // Check if device was found after scan completes
+    rssi = ELM_PORT.getRSSI();
+    if (rssi != 0) {
+      // Device found
+      lcd.fillRect(0, 420, lcd.width(), clearHeight, TFT_BLACK);
+      lcd.setFont(&FreeSans9pt7b);
+      lcd.setTextColor(TFT_DARKGREY);
+      snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", selectedBLEDevice, rssi);
+      lcd.drawString(deviceDisplay, msgX, msgY - 5);
+      lcd.setFont(&FreeSans12pt7b);
+      lcd.setTextColor(TFT_GREEN);
+      lcd.drawString("BLE: Device Found", msgX, attemptMsgY);
+      //delay(1000);
+      Serial.printf("Device found with RSSI: %d dBm\n", rssi);  
+      deviceFound = true;
+      delay(1500);
       break;
+    } 
+  } 
+  if (deviceFound) {
+    // Proceed to OBD2 connection attempts  
+    int retries = 0;
+    bool connected = false;
+    
+    for (retries = 0; retries < 4; retries++) {
+      Serial.printf("OBD2 connection attempt %d (RSSI: %d)\n", retries + 1, rssi);      
+      delay(500); // Give user time to see the message before connect attempt
+      if (ELM_PORT.connect()) {
+        connected = true;
+        lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
+        lcd.setFont(&FreeSans12pt7b);
+        lcd.setTextColor(TFT_GREEN);
+        lcd.drawString("BLE: Connected", msgX, attemptMsgY);
+        delay(250);
+        break;
+      }
     }
-    delay(1000); // Give more time for connection to establish
-  }
-
-  // Check if connection failed after retries
-  if (!connected) {
-    Serial.println("Failed to connect to OBD2 device after retries");
-    delay(500); // Brief pause after last attempt before showing failure
-    // Clear only the message area below the device name
+    delay(500); // Give more time for connection to establish
+      
+    lcd.setTextColor(TFT_LIGHTGREY);
     lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
-    // Redraw device name with signal strength
+    lcd.drawString("OBD2: Protocol Init...", msgX, attemptMsgY);
+    delay(500); // Give time for display update
+    if (!myELM327.begin(ELM_PORT)) // select protocol '6'
+    {
+      Serial.println("ELM327 protocol initialization failed");
+      lcd.setTextColor(TFT_RED);
+      lcd.fillRect(0, 420, lcd.width(), 60, TFT_BLACK);
+      lcd.drawString("OBD2: Protocol Fail", msgX, attemptMsgY);
+      delay(1000); // Brief pause after last attempt before showing failure
+      OBD2connected = false;
+      extern bool showOBD2FailScreen;
+      showOBD2FailScreen = true;
+      drawProtocolError(lcd);
+      return;
+    }
+    lcd.setTextColor(TFT_GREEN);
+    lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
+    lcd.drawString("Init. Completed", msgX, attemptMsgY);
+    delay(1000);
+
+    // Success: clear the connection message area and show success
+    // Clear the message area below the device name
+    lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
+    
+    rssi = ELM_PORT.getRSSI();
+        
+    // Overwrite the 'OBD2: Connecting...' message area with success message
+    lcd.setFont(&FreeSans12pt7b);    
+    lcd.fillRect(0, msgY - 45, lcd.width(), 180, TFT_BLACK);
+    lcd.setTextColor(TFT_GREEN);
+    lcd.drawString("OBD2: Connected", msgX, 410);
+
+    // Show device name with signal strength on same line (reuse rssi from connection attempts)
     lcd.setFont(&FreeSans9pt7b);
     lcd.setTextColor(TFT_DARKGREY);
+    if (rssi != 0) {
+      snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", ELM_PORT.getDeviceName().c_str(), rssi);
+      Serial.printf("Connected with RSSI: %d dBm\n", rssi);
+    } else {
+      snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", ELM_PORT.getDeviceName().c_str());
+      Serial.printf("Connected with RSSI: N/A\n");
+    }
+    lcd.drawString(deviceDisplay, msgX, 435);
+    
+    OBD2connected = true;
+
+    // Update selectedBLEDevice to match the actual connected device and save to EEPROM only if changed
+    extern char selectedBLEDevice[21];
+    extern void saveBLEDevice(const char* deviceName);
+    char newDeviceName[21];
+    strncpy(newDeviceName, ELM_PORT.getDeviceName().c_str(), 20);
+    newDeviceName[20] = '\0'; // Ensure null-termination
+    if (strncmp(selectedBLEDevice, newDeviceName, 21) != 0) {
+      strncpy(selectedBLEDevice, newDeviceName, 21);
+      saveBLEDevice(selectedBLEDevice);
+      Serial.printf("Successfully connected to: %s (saved to EEPROM)\n", selectedBLEDevice);
+    } else {
+      Serial.printf("Successfully connected to: %s (already saved)\n", selectedBLEDevice);
+    }
+
+  delay(1000);
+  // Optionally clear the message area again
+  // lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
+
+  }
+  else {
+    // Device not found
+    lcd.fillRect(0, 420, lcd.width(), 180, TFT_BLACK);
     int rssi = ELM_PORT.getRSSI();
     if (rssi != 0) {
       snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", selectedBLEDevice, rssi);
     } else {
       snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", selectedBLEDevice);
     }
+    // Redraw device name with signal strength
+    lcd.setFont(&FreeSans9pt7b);
+    lcd.setTextColor(TFT_DARKGREY);      
     lcd.drawString(deviceDisplay, msgX, msgY - 5);
+    lcd.setFont(&FreeSans12pt7b);
+    lcd.setTextColor(TFT_RED);
+    lcd.drawString("BLE: Device not found", msgX, attemptMsgY);
+    Serial.println("Device not found");
+    delay(1500);
+
+    Serial.println("Failed to connect to OBD2 device after retries");
+    delay(500); // Brief pause after last attempt before showing failure
+    // Clear only the message area below the device name
+    lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);    
+    
     // Show failure message
+    lcd.fillRect(0, 440, lcd.width(), 40, TFT_BLACK);
     lcd.setFont(&FreeSans12pt7b);
     lcd.setTextColor(TFT_RED);
     lcd.drawString("OBD2: Connect Failed", msgX, attemptMsgY);
-    delay(1000); // Give user time to see the failure message
+    delay(2000); // Give user time to see the failure message
     OBD2connected = false;
     extern bool showOBD2FailScreen;
     showOBD2FailScreen = true;
     drawBLEConnectionError(lcd);
     return;
-  }
 
-  // Protocol initialization phase
-  delay(500); // Brief pause before protocol init
-  lcd.setTextColor(TFT_LIGHTGREY);
-  lcd.drawString("OBD2: Protocol Init...", msgX, msgY + 30 + 4 * 25);
-  delay(500); // Give time for display update
-  if (!myELM327.begin(ELM_PORT)) // select protocol '6'
-  {
-    Serial.println("ELM327 protocol initialization failed");
-    lcd.setTextColor(TFT_RED);
-    lcd.drawString("OBD2: Protocol Fail", msgX, msgY + 30 + 5 * 25);
-    OBD2connected = false;
-    extern bool showOBD2FailScreen;
-    showOBD2FailScreen = true;
-    drawProtocolError(lcd);
-    return;
-  }
-
-  // Success: clear the connection message area and show success
-  // Clear the message area below the device name
-  lcd.fillRect(0, msgY + 15, lcd.width(), clearHeight - 20, TFT_BLACK);
-  // Redraw device name to ensure it's visible
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_DARKGREY);
-  lcd.drawString(deviceDisplay, msgX, msgY - 5);
-  
-  // Overwrite the 'OBD2: Connecting...' message area with success message
-  lcd.setFont(&FreeSans12pt7b);
-  lcd.setTextColor(TFT_BLACK);
-  lcd.drawString("OBD2: Connecting...", msgX, 410); // Clear previous message
-  lcd.setTextColor(TFT_GREEN);
-  lcd.drawString("OBD2: Connected", msgX, 410);
-
-  // Show device name with signal strength on same line (reuse rssi from connection attempts)
-  lcd.setFont(&FreeSans9pt7b);
-  lcd.setTextColor(TFT_DARKGREY);
-  if (rssi != 0) {
-    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: %d dBm", ELM_PORT.getDeviceName().c_str(), rssi);
-    Serial.printf("Connected with RSSI: %d dBm\n", rssi);
-  } else {
-    snprintf(deviceDisplay, sizeof(deviceDisplay), "Device: %s  Signal: N/A", ELM_PORT.getDeviceName().c_str());
-    Serial.printf("Connected with RSSI: N/A\n");
-  }
-  lcd.drawString(deviceDisplay, msgX, 435);
-  
-  lcd.setFont(&FreeSans12pt7b);
-
-  OBD2connected = true;
-
-  // Update selectedBLEDevice to match the actual connected device and save to EEPROM only if changed
-  extern char selectedBLEDevice[21];
-  extern void saveBLEDevice(const char* deviceName);
-  char newDeviceName[21];
-  strncpy(newDeviceName, ELM_PORT.getDeviceName().c_str(), 20);
-  newDeviceName[20] = '\0'; // Ensure null-termination
-  if (strncmp(selectedBLEDevice, newDeviceName, 21) != 0) {
-    strncpy(selectedBLEDevice, newDeviceName, 21);
-    saveBLEDevice(selectedBLEDevice);
-    Serial.printf("Successfully connected to: %s (saved to EEPROM)\n", selectedBLEDevice);
-  } else {
-    Serial.printf("Successfully connected to: %s (already saved)\n", selectedBLEDevice);
-  }
-
-  delay(1500);
-  // Optionally clear the message area again
-  // lcd.fillRect(0, msgY - 5, lcd.width(), clearHeight, TFT_BLACK);
+  }  
 }
 #endif

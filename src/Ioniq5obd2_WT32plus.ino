@@ -1,5 +1,5 @@
 /*  Ionic5obd2 for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
-    Version: v2.3.0
+    Version: v2.3.3
 
     SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
     Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
@@ -42,7 +42,7 @@
 // MAJOR: Breaking changes or major new features
 // MINOR: New features, improvements, non-breaking changes
 // PATCH: Bug fixes and minor tweaks
-const char* APP_VERSION = "v2.3.2";
+const char* APP_VERSION = "v2.3.3";
 
 static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
@@ -70,6 +70,7 @@ uint16_t drawLvl[10] = {100, 170, 240, 310, 380, 100, 170, 240, 310, 380}; // an
 #define N_km 10        //variable for the calculating kWh/100km over a N_km
 
 boolean ResetOn = true;
+float transTest = 0;
 int screenNbr = 0;
 bool showSaveConfirmation = false;  // Flag to show save confirmation dialog
 bool showWiFiInfo = false;  // Flag to show WiFi information screen
@@ -1078,7 +1079,15 @@ void read_data() {
   }
   if (BmsSoC > 0) {
     OBDscanning = true;
-  }  
+  }
+
+  if (Speed > 0) {
+    SpdSelect = 'D';    
+  }
+  else {   
+    SpdSelect = 'P';    
+  }
+
   
   UpdateNetEnergy();  
   
@@ -1150,6 +1159,9 @@ void read_data() {
   
           processPayload(payload, payloadLen, results);
           Odometer = convertToInt(results.frames[1], 4, 3);
+          TransSelByte = convertToInt(results.frames[1], 3, 1); // Extract byte that contain transmission selection bits
+          //Serial.print("SelByte: "); Serial.println(TransSelByte, 1);                    
+                  
         }
         break;
   
@@ -1171,13 +1183,7 @@ void read_data() {
           Integrat_speed();
           if (BATTc < 0 && Speed == 0) {
             Charging = true;
-          }
-          if (Speed > 0) {
-            SpdSelect = 'D';    
-          }
-          else {   
-            SpdSelect = 'P';    
-          }
+          }          
         }
         break;
   
@@ -2449,7 +2455,7 @@ void scanBLEDevices() {
   pBLEScan->setInterval(100);
   pBLEScan->setWindow(99);
   
-  Serial.println("Starting BLE scan for 8 seconds...");
+  Serial.println("Starting BLE scan for 4 seconds...");
   BLEScanResults foundDevices = pBLEScan->start(4, false);
   
   Serial.printf("Scan complete. Found %d devices total\n", foundDevices.getCount());
@@ -3684,7 +3690,7 @@ void page4() {
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "Max_Reg");
   strcpy(titre[4], "distance");
-  strcpy(titre[5], "dist_save");
+  strcpy(titre[5], "transTest");
   strcpy(titre[6], "Cell nbr");
   strcpy(titre[7], "Cell nbr");
   strcpy(titre[8], "OUT temp");
@@ -3694,7 +3700,7 @@ void page4() {
   value_float[2] = MAXcellv;
   value_float[3] = Max_Reg;
   value_float[4] = distance;
-  value_float[5] = dist_save;
+  value_float[5] = TransSelByte;
   value_float[6] = MINcellvNb;
   value_float[7] = MAXcellvNb;
   value_float[8] = OUTDOORtemp;

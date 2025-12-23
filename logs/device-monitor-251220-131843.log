@@ -1,0 +1,1482 @@
+pid_counter: 6
+E (47503) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (47563) BT_BTM: BTM_GetSecurityFlags false
+
+G] ELM RESPONSE > 03E0:620101EFFBE7\r
+E (47578) BT_BTM: BTM_GetSecurityFlags false
+
+E (47579) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU:EFB20000000000\r
+001E6300FD00\r
+E (47593) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFEFF002ACA\r
+E (47608) BT_BTM: BTM_GetSecurityFlags false
+
+E (47609) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:01[DEBUG] ELM RESPONSE > 5:00015D9A\r
+E (47623) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON000FB\r
+E (47638) BT_BTM: BTM_GetSecurityFlags false
+
+E (47639) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU:DA00F8D3D20003\r
+[DEBUG] ELM RESPONS0A0000000006C7\r
+E (47683) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D200038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D200038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D2'
+E (47714) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (47803) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 031\r0:62E011FFFFFF\r
+E (47833) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP:F801010000006A\r
+E (47848) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 2:3AE7639\r
+E (47863) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:1F7FF85C21FC00\r
+E (47893) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:500000A\r
+E (47938) BT_BTM: BTM_GetSecurityFlags false
+
+E (47939) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 5:0000CB0C070000\r
+[DEBUG] ELM RESPONSE > 6:00000000000000\r
+E (47953) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPAAAAAAAAAA\r
+E (47998) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006A2:3A15050B1E76393:1F7FF85C21FC004:5008010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006A2:3A15050B1E76393:1F7FF85C21FC004:5008010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '5C'
+ hex number  hexSubString cap:14 len:2 '39'
+ hex number  hexSubString cap:14 len:2 '1F'
+pid_counter: 7
+E (48043) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\rE (48103) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPO:620101FBE7\r
+E (48118) BT_BTM: BTM_GetSecurityFlags false
+
+E (48119) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPNSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00001EFD00\r
+E (48133) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFEFF002ACA\r
+E (48148) BT_BTM: BTM_GetSecurityFlags false
+
+E (48149) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:010008F00\r
+[DEBUG] 74300015D9E (48163) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 6:00000FB\r
+E (48178) BT_BTM: BTM_GetSecurityFlags false
+
+E (48179) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7:A00F8D3D20003\r
+0A0000000006C7\r
+E (48223) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D200038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D200038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D2'
+E (48268) BT_BTM: BTM_GetSecurityFlags false
+
+K\r\r>
+E (48358) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (48388) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+E (48463) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU22E (48493) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+pid_counter: 1
+E (48523) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (48598) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU:620101EFFBE7\r
+E (48613) BT_BTM: BTM_GetSecurityFlags false
+
+E (48614) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:EFB\r
+[DEBUG] ELM RESPONSE > 2:00001E6300FD00\r
+E (48628) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFEFF002ACA\r
+E (48643) BT_BTM: BTM_GetSecurityFlags false
+
+E (48644) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP4:18CA4500008F00\r
+[DEBUG] EL674300015D9A\r
+E (48658) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 6:00010A2C0FB\r
+E (48673) BT_BTM: BTM_GetSecurityFlags false
+
+E (48674) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7:DA00F8D3D30003\r
+[8:0A0000000006E (48718) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:18CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D300038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:18CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D300038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '18'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D3'
+E (48749) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (48808) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFE (48823) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:0F012C01012CFE\r
+E (48838) BT_BTM: BTM_GetSecurityFlags false
+
+E (48839) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 2:FFFEFFFEFFFE17\r
+[DEBUG] ELM RESPONSE > 3:D5616200\r
+E (48853) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:0C900\r
+E (48868) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 5:B6000000000000\r
+E (48883) BT_BTM: BTM_GetSecurityFlags false
+
+00FFFEFFFFAAA\r
+E (48913) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUWarning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CFE2:FFFEFFFEFFFE173:D56162000050004:0003E8B57DC9005:B60000000000006:00FFFEFFFFAAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CFE2:FFFEFFFEFFFE173:D56162000050004:0003E8B57DC9005:B60000000000006:00FFFEFFFFAAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '17'
+ hex number  hexSubString cap:14 len:2 'D5'
+ hex number  hexSubString cap:14 len:2 'B6'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '7DC9'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 2
+E (48973) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (49033) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:6EFFBE7\r
+E (49078) BT_BTM: BTM_GetSecurityFlags false
+
+E (49080) BT_BTM: BTM_GetSecurityFlags false
+
+E (49081) BT_BTM: BTM_GetSecurityFlags false
+
+E (49081) BT_BTM: BTM_GetSecurityFlags false
+
+E (49084) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP1000\r
+[0001E6300FD00\r
+FFFEFF002ACA\r
+[DEBUG] ELM RESPONSE > 4:01CA72\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+E (49108) BT_BTM: BTM_GetSecurityFlags false
+
+E (49109) BT_BTM: BTM_GetSecurityFlags false
+
+E (49110) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 0A2C0000FB\r
+[DEBUG:DA0003\r
+[DEBUG] ELM RESPONSE :0B000000\r
+E (49168) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D300038:0B0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D300038:0B0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F8D3D3'
+E (49198) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUK\r\r>
+E (49258) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 026\r0:10617F811\r
+E (49273) BT_BTM: BTM_GetSecurityFlags false
+
+E (49274) BT_BTM: BTM_GetSecurityFlags false
+
+002000000\r
+[DEBUG] ELM RESPONSE > 2:00000000000000\r
+E (49288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU00000500EA00\r
+E (49303) BT_BTM: BTM_GetSecurityFlags false
+
+E (49304) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+[DEBUG] ELM RESPONSE > 5:00000000AAAAAA\r
+E (49348) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000000020000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000000020000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 3
+E (49423) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (49483) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:6E7\r
+E (49498) BT_BTM: BTM_GetSecurityFlags false
+
+E (49499) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 0000000000\r
+[DEBUG] ELM RESPONSE > 2001E6300FD00\r
+E (49513) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFEFF002ACA\r
+E (49528) BT_BTM: BTM_GetSecurityFlags false
+
+E (49529) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > DEBUG] 00015D9A\r
+E (49543) BT_BTM: BTM_GetSecurityFlags false
+
+00FB\r
+E (49588) BT_BTM: BTM_GetSecurityFlags false
+
+E (49589) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE >D3D40003\r
+[DEBUG] ELM RESPONSE 0000000006C7\r
+E (49618) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D400038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D400038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D4'
+E (49648) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (49723) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU02E00000\r1:00FFB7006B8A00\r2:0000AAAAAAAAAA\r
+E (49798) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006B8A002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B8A'
+pid_counter: 4
+E (49843) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (49903) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+E (49918) BT_BTM: BTM_GetSecurityFlags false
+
+E (49919) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:00001E630D00\r
+E (49933) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFEFF002ACA\r
+E (49948) BT_BTM: BTM_GetSecurityFlags false
+
+E (49949) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:01CA4500008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+E (49963) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+E (50008) BT_BTM: BTM_GetSecurityFlags false
+
+E (50009) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 8D3D40003\r
+[DEBUG] ELC7\r
+E (50038) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D400038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D400038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D4'
+E (50083) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUK\r\r>
+E (50145) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 300EF\r2:8E00F0FFFF10FF\r3:B2FFFFFFFFFFFF\r4:FF32FF\r5:FF00FFFFFFAAAA\r
+E (50203) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0270:6201007F94071:C8FF58455300EF2:8E00F0FFFF10FF3:B2FFFFFFFFFFFF4:FF327C5F5800FF5:FF00FFFFFFAAA'
+        data cap:96 len:96 '0270:6201007F94071:C8FF58455300EF2:8E00F0FFFF10FF3:B2FFFFFFFFFFFF4:FF327C5F5800FF5:FF00FFFFFFAAA'
+ hex number  hexSubString cap:14 len:2 '58'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 5
+E (50233) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (50293) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+E (50308) BT_BTM: BTM_GetSecurityFlags false
+
+E (50309) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:EFB200000000\r
+[DEBUG] ELM RESPONSE > 2:00001E6300FD00\r
+E (50323) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFEFF002ACA\r
+E (50338) BT_BTM: BTM_GetSecurityFlags false
+
+E (50339) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:01CA9D00008F00\r
+[DEBUG] ELM RESPONSE > 5:0167430009A\r
+E (50353) BT_BTM: BTM_GetSecurityFlags false
+
+010A2C0000FB\r
+E (50368) BT_BTM: BTM_GetSecurityFlags false
+
+E (50369) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7:DA00F8D3D50003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C7\r
+E (50413) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D500038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D500038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F8D3D5'
+E (50443) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (50518) BT_BTM: BTM_GetSecurityFlags false
+
+E (50519) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 024\r0:62C00BFFFFFF\r
+[DEB80BB32020000BC\r
+E (50533) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 2:3701002\r
+E (50548) BT_BTM: BTM_GetSecurityFlags false
+
+E (50549) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] 5020000\r
+[DEBUG] ELM RESPONSE > 4:FF8DB08DB090B4\r
+E (50563) BT_BTM: BTM_GetSecurityFlags false
+
+\r
+E (50608) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000B8350200004:FF8DB08DB090B45:90B4AAAAAAAAA'
+        data cap:96 len:96 '0240:62C00BFFFFFF1:80BB32020000BC2:37010000BB33023:0000B8350200004:FF8DB08DB090B45:90B4AAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '32'
+ hex number  hexSubString cap:14 len:2 'BC'
+ hex number  hexSubString cap:14 len:2 '37'
+ hex number  hexSubString cap:14 len:2 'BB'
+ hex number  hexSubString cap:14 len:2 '33'
+ hex number  hexSubString cap:14 len:2 'B8'
+ hex number  hexSubString cap:14 len:2 '35'
+pid_counter: 6
+E (50638) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (50698) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+E (50713) BT_BTM: BTM_GetSecurityFlags false
+
+E (50714) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:EFB20000000000\r
+[DEBUG] ELM RESPONSE > 2:0001E6300FD00\r
+E (50728) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFF002ACA\r
+E (50744) BT_BTM: BTM_GetSecurityFlags false
+
+E (50744) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:01CA7200008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+E (50758) BT_BTM: BTM_GetSecurityFlags false
+
+A0FB\r
+E (50773) BT_BTM: BTM_GetSecurityFlags false
+
+E (50774) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7:DA00F8D3D50003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C7\r
+E (50818) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D500038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D500038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F8D3D5'
+E (50848) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (50923) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 031\r0:E011FFFFFF\r
+E (50968) BT_BTM: BTM_GetSecurityFlags false
+
+E (50969) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:F801010000006A\r
+[DEBUG] ELM RESPONSE > 2:3A1604DB1E8539\r
+E (50983) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:1B7FF85C21FC00\r
+E (51013) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:5008010101000A\r
+E (51028) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 5:0000CB0C070000\r
+E (51043) BT_BTM: BTM_GetSecurityFlags false
+
+0000000000\r
+E (51073) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPOAAAAAAAA\r
+E (51133) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 129 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0310:62E011FFFFFF1:F801010000006A2:3A1604DB1E85393:1B7FF85C21FC004:5008010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+        data cap:128 len:128 '0310:62E011FFFFFF1:F801010000006A2:3A1604DB1E85393:1B7FF85C21FC004:5008010101000A5:0000CB0C0700006:000000000000007:00AAAAAAAAAAA'
+ hex number  hexSubString cap:14 len:2 '5C'
+ hex number  hexSubString cap:14 len:2 '39'
+ hex number  hexSubString cap:14 len:2 '1B'
+pid_counter: 7
+E (51163) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (51238) BT_BTM: BTM_GetSecurityFlags false
+
+E (51240) BT_BTM: BTM_GetSecurityFlags false
+
+E (51240) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE > 1:EFB200000\r
+[DEBD00\r
+E (51268) BT_BTM: BTM_GetSecurityFlags false
+
+E (51269) BT_BTM: BTM_GetSecurityFlags false
+
+E (51270) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELPONSE > 3:FFFFFEFF002ACA\r
+F00\r
+[DEBUG] ELM RESPONS:0315D9A\r
+E (51283) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 0FB\r
+E (51328) BT_BTM: BTM_GetSecurityFlags false
+
+E (51329) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7:DA008D3D50003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C7\r
+E (51373) BT_BTM: BTM_GetSecurityFlags false
+
+ESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D500038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D500038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D5'
+Screen Touched
+E (51418) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP\r\r>
+E (51478) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (51523) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+E (51598) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (51628) BT_BTM: BTM_GetSecurityFlags false
+
+Warning: SafeString( data, ...) passed unterminated buffer of length 6 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '7F223'
+        data cap:5 len:5 '7F223'
+Local time: 20-12-2025 13:18:44
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+pid_counter: 1
+E (51763) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (51868) BT_BTM: BTM_GetSecurityFlags false
+
+E (51870) BT_BTM: BTM_GetSecurityFlags false
+
+E (51871) BT_BTM: BTM_GetSecurityFlags false
+
+E (51871) BT_BTM: BTM_GetSecurityFlags false
+
+E (51874) BT_BTM: BTM_GetSecurityFlags false
+
+E (51878) BT_BTM: BTM_GetSecurityFlags false
+
+E (51883) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+[DEBUG] ELM RESPONSE >00\r
+[DEBUG]001EFD00\r
+[DEBUG] ELM RESPONSE > EFF002CA\r
+[DEBUG] EL00\r
+[DEBSPONSE > 5:016743000159A\r
+\r
+E (51898) BT_BTM: BTM_GetSecurityFlags false
+
+E (51899) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7:DA00F8D3D60003\r
+[DE (51973) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D600038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA7200008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D600038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '72'
+ hex number  hexSubString cap:14 len:8 '00F8D3D6'
+E (52003) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (52078) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 02E\r0:620105FFFB74\r
+E (52093) BT_BTM: BTM_GetSecurityFlags false
+
+E (52094) BT_BTM: BTM_GetSecurityFlags false
+
+12C01012CFE\r
+[DEBUG] ELM RESPONSE > 2:FFFEFFFEFFFE17\r
+E (52108) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPOD5616200005000\r
+E (52153) BT_BTM: BTM_GetSecurityFlags false
+
+E (52154) BT_BTM: BTM_GetSecurityFlags false
+
+E (52155) BT_BTM: BTM_GetSecurityFlags false
+
+C900\r
+BUG] ELMEFFFFAAAA\r
+E (52198) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 113 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '02E0:620105FFFB741:0F012C01012CFE2:FFFEFFFEFFFE173:D56162000050004:0003E8B57DC9005:B60000000000006:00FFFEFFFFAAA'
+        data cap:112 len:112 '02E0:620105FFFB741:0F012C01012CFE2:FFFEFFFEFFFE173:D56162000050004:0003E8B57DC9005:B60000000000006:00FFFEFFFFAAA'
+ hex number  hexSubString cap:14 len:4 '6162'
+ hex number  hexSubString cap:14 len:2 '17'
+ hex number  hexSubString cap:14 len:2 'D5'
+ hex number  hexSubString cap:14 len:2 'B6'
+ hex number  hexSubString cap:14 len:4 '03E8'
+ hex number  hexSubString cap:14 len:2 'B5'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:4 '7DC9'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 2
+E (52243) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (52303) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:620101EFFBE7\r
+E (52318) BT_BTM: BTM_GetSecurityFlags false
+
+E (52319) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 1:EFB20000\[DEBUG] ELM RESPONSE D00\r
+E (52333) BT_BTM: BTM_GetSecurityFlags false
+
+FFFFFEFF002ACA\r
+E (52348) BT_BTM: BTM_GetSecurityFlags false
+
+E (52349) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:01CA9D00008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+E (52363) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPON010A2C0000FB\r
+E (52378) BT_BTM: BTM_GetSecurityFlags false
+
+E (52379) BT_BTM: BTM_GetSecurityFlags false
+
+D70003\r
+[DEBUG] 0A00000000C7\r
+E (52423) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D700038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA9D00008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D700038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '9D'
+ hex number  hexSubString cap:14 len:8 '00F8D3D7'
+E (52483) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (52543) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 026\r0:62010617F811\r
+E (52558) BT_BTM: BTM_GetSecurityFlags false
+
+E (52559) BT_BTM: BTM_GetSecurityFlags false
+
+000\r
+[DEBUG] ELM RES0000000\r
+E (52573) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:0000000500EA00\r
+E (52588) BT_BTM: BTM_GetSecurityFlags false
+
+E (52589) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 4:00000000000000\r
+000000AA\r
+E (52663) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 97 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '0260:62010617F8111:000000020000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+        data cap:96 len:96 '0260:62010617F8111:000000020000002:000000000000003:0000000500EA004:000000000000005:00000000AAAAA'
+ hex number  hexSubString cap:14 len:2 '00'
+pid_counter: 3
+E (52708) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (52813) BT_BTM: BTM_GetSecurityFlags false
+
+E (52815) BT_BTM: BTM_GetSecurityFlags false
+
+E (52815) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 03E\r0:617\r
+[DEBUG] ELM RESPONSE :00001E6300FD00\r
+E (52828) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 3:FFFFFEFF002ACA\r
+E (52843) BT_BTM: BTM_GetSecurityFlags false
+
+E (52844) BT_BTM: BTM_GetSecurityFlags false
+
+[DE:01CA4500008F00\r
+[DEBUG] ELM RESPONSE > 5:01674300015D9A\r
+E (52858) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 6:00010A2C0000FB\r
+E (52873) BT_BTM: BTM_GetSecurityFlags false
+
+E (52874) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUA00F8D3D70003\r
+[DEBUG] ELM RESPONSE > 8:0A0000000006C7\r
+E (52918) BT_BTM: BTM_GetSecurityFlags false
+
+>
+Warning: SafeString( data, ...) passed unterminated buffer of length 145 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D700038:0A0000000006C'
+        data cap:144 len:144 '03E0:620101EFFBE71:EFB200000000002:00001E6300FD003:FFFFFEFF002ACA4:01CA4500008F005:01674300015D9A6:00010A2C0000FB7:DA00F8D3D700038:0A0000000006C'
+ hex number  hexSubString cap:14 len:2 'FD'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '8F'
+ hex number  hexSubString cap:14 len:4 '1E63'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:8 '00010A2C'
+ hex number  hexSubString cap:14 len:6 '0000FB'
+ hex number  hexSubString cap:14 len:2 'DA'
+ hex number  hexSubString cap:14 len:2 '00'
+ hex number  hexSubString cap:14 len:6 '016743'
+ hex number  hexSubString cap:14 len:8 '00015D9A'
+ hex number  hexSubString cap:14 len:2 'B2'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '01'
+ hex number  hexSubString cap:14 len:2 'CA'
+ hex number  hexSubString cap:14 len:2 '45'
+ hex number  hexSubString cap:14 len:8 '00F8D3D7'
+
+========================================
+DIAGNOSTIC SCAN STARTED (7E2 VCU)
+========================================
+OBD2 Connected: YES
+Scan Range: 220000-220200, then 22A001-22D001
+Header: 7E2 (VCU)
+========================================
+
+E (52963) BT_BTM: BTM_GetSecurityFlags false
+
+K\r\r>
+E (53053) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 62B002E00000\r1:00FFB7006B8A00\r2:0000AAAAA\r
+E (53068) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+Warning: SafeString( data, ...) passed unterminated buffer of length 49 to createSafeStringFromCharPtrWithSize.
+        Truncated value saved is '00F0:62B002E000001:00FFB7006B8A002:0000AAAAAAAAA'
+        data cap:48 len:48 '00F0:62B002E000001:00FFB7006B8A002:0000AAAAAAAAA'
+ hex number  hexSubString cap:14 len:6 '006B8A'
+Local time: 20-12-2025 13:18:54
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1 @ 7E2] Scanning PID: 220000
+E (61303) BT_BTM: BTM_GetSecurityFlags false
+
+
+E (61393) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG31\r
+E (61468) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220000 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:19:04
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (71308) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (71383) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (71443) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220001 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:19:14
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (81283) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (81358) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (81418) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220002 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:19:24
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (91288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (91378) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7E (91423) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220003 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:19:34
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (101293) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (101368) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (101413) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220004 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:19:44
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (111298) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (111373) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (111433) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220005 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:19:54
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (121304) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (121423) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (121483) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220006 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:20:04
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (131308) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (131383) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (131443) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB>
+
+>>> FOUND: PID 220007 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:20:14
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (141283) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (141373) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (141418) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220008 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:20:24
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (151288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (151378) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (151423) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220009 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:20:34
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (161353) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (161443) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (161488) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22000A @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:20:44
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (171283) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (171373) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB1\r
+E (171433) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22000B @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:20:54
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (181288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (181363) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (181408) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22000C @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:21:04
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (191338) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (191443) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (191518) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22000D @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:21:14
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (201343) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (201403) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (201463) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22000E @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:21:24
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (211288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (211363) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (211408) BT_BTM: BTM_GetSecurityFlags false
+
+[DEB>
+
+>>> FOUND: PID 22000F @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:21:34
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+[Phase 1 @ 7E2] Scanning PID: 220010
+E (221308) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (221398) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (221428) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220010 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:21:44
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (231298) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (231388) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESP
+E (231448) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220011 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:21:54
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (241288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPOK\r\r>
+E (241393) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (241408) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220012 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:22:04
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (251293) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (251383) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (251428) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220013 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:22:14
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (261298) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (261388) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (261448) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220014 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:22:24
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (271318) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE >OK\r\r>
+E (271393) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (271438) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220015 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:22:34
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (281308) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (281383) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (281428) BT_BTM: BTM_GetSecurityFlags false
+
+
+>>> FOUND: PID 220016 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:22:44
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (291298) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (291388) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBU1\r
+E (291433) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220017 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:22:54
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (301288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (301393) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (301423) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220018 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:23:04
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (311308) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (311383) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > 7F2231\r
+E (311428) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 220019 @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:23:14
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (321298) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (321388) BT_BTM: BTM_GetSecurityFlags false
+
+1\r
+E (321448) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22001A @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:23:24
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (331288) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (331378) BT_BTM: BTM_GetSecurityFlags false
+
+31\r
+E (331408) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22001B @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:23:34
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
+E (341308) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > OK\r\r>
+E (341383) BT_BTM: BTM_GetSecurityFlags false
+
+[E (341428) BT_BTM: BTM_GetSecurityFlags false
+
+[DEBUG] ELM RESPONSE > \r>
+
+>>> FOUND: PID 22001C @ 7E2 (VCU) - 6 bytes
+Response: 37 46 32 32 33 31 
+Local time: 20-12-2025 13:23:44
+saveToSD called, sdCardAvailable: 1
+Opening file: /ioniq5_log.csv
+File opened, writing data...
+Data saved to SD card
