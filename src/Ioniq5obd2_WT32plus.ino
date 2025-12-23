@@ -1,5 +1,5 @@
 /*  Ionic5obd2 for Hyundai Ioniq 5 + OBD Vgate iCar Pro BT4.0 + WT32-SC01 3.5" display
-    Version: v2.3.3
+    Version: v2.3.4
 
     SafeString by Matthew Ford: https://www.forward.com.au/pfod/ArduinoProgramming/SafeString/index.html
     Elmduino by PowerBroker2: https://github.com/PowerBroker2/ELMduino
@@ -42,7 +42,7 @@
 // MAJOR: Breaking changes or major new features
 // MINOR: New features, improvements, non-breaking changes
 // PATCH: Bug fixes and minor tweaks
-const char* APP_VERSION = "v2.3.3";
+const char* APP_VERSION = "v2.3.4";
 
 static LGFX lcd;            // declare display variable
 extern ELM327 myELM327;     // declare ELM327 object
@@ -167,7 +167,7 @@ float TireRL_T;
 float TireRR_T;
 float Power;
 
-float AuxBatt_SoC = 0;              // 12V battery State of Charge (%)
+float AuxBattSoC = 0;              // 12V battery State of Charge (%)
 float CurrInitOdo = 0;
 float CurrInitCEC = 0;
 float CurrInitCED = 0;
@@ -538,8 +538,9 @@ bool archiveFile(const char* filename) {
   char timestamp[32];
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
-    Serial.println("Failed to obtain time");
-    strcpy(timestamp, "unknown");
+    Serial.println("Failed to obtain time, using millis()");
+    // Use millis() as fallback timestamp instead of "unknown"
+    snprintf(timestamp, sizeof(timestamp), "%lu", millis());
   } else {
     strftime(timestamp, sizeof(timestamp), "%Y%m%d_%H%M%S", &timeinfo);
   }
@@ -637,7 +638,7 @@ void archiveAndRecreateFiles(bool forceArchive = false) {
     // Recreate main log file with header
     File file = SD.open(csvFilename, FILE_WRITE);
     if (file) {
-      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
+      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tAuxBattSoC\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
       file.close();
       Serial.println("Main log file recreated with header");
     }
@@ -656,7 +657,7 @@ void archiveAndRecreateFiles(bool forceArchive = false) {
     // Recreate SoC decrease file with header
     File file = SD.open(socDecreaseFilename, FILE_WRITE);
     if (file) {
-      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
+      file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tAuxBattSoC\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
       file.close();
       Serial.println("SoC decrease file recreated with header");
     }
@@ -843,7 +844,7 @@ void setup(void)
       if (!SD.exists(csvFilename)) {
         File file = SD.open(csvFilename, FILE_WRITE);
         if (file) {
-          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
+          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tAuxBattSoC\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
           file.close();
           Serial.println("CSV header created");
         } else {
@@ -857,7 +858,7 @@ void setup(void)
       if (!SD.exists(socDecreaseFilename)) {
         File file = SD.open(socDecreaseFilename, FILE_WRITE);
         if (file) {
-          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
+          file.println("Timestamp\tSoC\tBmsSoC\tPower\tTripOdo\tBattMinT\tBattMaxT\tHeater\tOUTDOORtemp\tINDOORtemp\tNet_kWh\tNet_kWh2\tacc_energy\tNet_Ah\tacc_Ah\tEstFull_Ah\tMax_Pwr\tMax_Reg\tMAXcellv\tMINcellv\tMAXcellvNb\tMINcellvNb\tBATTv\tBATTc\tAuxBattV\tAuxBattSoC\tCEC\tCED\tCDC\tCCC\tSOH\tused_kWh\tleft_kWh\tfull_kWh\tstart_kWh\tPID_kWhLeft\tdegrad_ratio\tInitSoC\tLastSoC\tPIDkWh_100\tkWh_100km\tspan_kWh_100km\tTrip_dist\tdistance\tSpeed\tOdometer\tOPtimemins\tTripOPtime\tCurrOPtime\tTireFL_P\tTireFR_P\tTireRL_P\tTireRR_P\tTireFL_T\tTireFR_T\tTireRL_T\tTireRR_T\tnbr_saved\tAuxBattV_old");
           file.close();
           Serial.println("SoC decrease CSV header created");
         } else {
@@ -1223,20 +1224,20 @@ void read_data() {
           processPayload(payload, payloadLen, results);
           
           // Extract 12V battery SoC (Frame 3, Byte 4)
-          AuxBatt_SoC = convertToInt(results.frames[3], 4, 1);
+          AuxBattSoC = convertToInt(results.frames[3], 4, 1);
           
           // Extract 12V battery voltage (Frame 2 Byte 7 + Frame 3 Byte 1, 16-bit value / 1000)
           AuxBattV = ((convertToInt(results.frames[2], 7, 1) << 8) + convertToInt(results.frames[3], 1, 1)) / 1000.0;
                     
-          // Auto-switch to Batt. Info screen if AuxBatt_SoC falls below 70% (only once)
-          if (AuxBatt_SoC < 70 && !lowBattAlertShown) {
+          // Auto-switch to Batt. Info screen if AuxBattSoC falls below 70% (only once)
+          if (AuxBattSoC < 70 && !lowBattAlertShown) {
             screenNbr = 1;
             DrawBackground = true;
             lowBattAlertShown = true;
-            Serial.printf("Low 12V battery SoC (%d%%), switching to Batt. Info screen\n", AuxBatt_SoC);
+            Serial.printf("Low 12V battery SoC (%d%%), switching to Batt. Info screen\n", AuxBattSoC);
           }
           // Reset alert flag when battery recovers above 75% (hysteresis)
-          if (AuxBatt_SoC >= 75) {
+          if (AuxBattSoC >= 75) {
             lowBattAlertShown = false;
           }
         }
@@ -1735,7 +1736,7 @@ bool saveToSD(const char* timestamp) {
   file.print(BATTv); file.print("\t");
   file.print(BATTc); file.print("\t");
   file.print(AuxBattV); file.print("\t");
-  file.print(AuxBatt_SoC); file.print("\t");
+  file.print(AuxBattSoC); file.print("\t");
   file.print(CEC); file.print("\t");
   file.print(CED); file.print("\t");
   file.print(CDC); file.print("\t");
@@ -2200,7 +2201,7 @@ bool saveToSD_SoCDecrease(const char* timestamp) {
   file.print(BATTv); file.print("\t");
   file.print(BATTc); file.print("\t");
   file.print(AuxBattV); file.print("\t");
-  file.print(AuxBatt_SoC); file.print("\t");
+  file.print(AuxBattSoC); file.print("\t");
   file.print(CEC); file.print("\t");
   file.print(CED); file.print("\t");
   file.print(CDC); file.print("\t");
@@ -3374,7 +3375,11 @@ void DisplayPage() {
         drawRoundedRect(btnBoff);
         drawRoundedRect(btnCoff);
         lcd.setTextSize(1);
-        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setFreeFont(&FreeSans18pt7b);
+        // Shadow
+        lcd.setTextColor(TFT_DARKGREY, TFT_BLACK);
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2 + 2, 24);
+        // Main text
         lcd.setTextColor(MainTitleColor, TFT_BLACK);                
         lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22); 
         break; 
@@ -3384,7 +3389,11 @@ void DisplayPage() {
         drawRoundedRect(btnBon);
         drawRoundedRect(btnCoff);
         lcd.setTextSize(1);
-        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setFreeFont(&FreeSans18pt7b);
+        // Shadow
+        lcd.setTextColor(TFT_DARKGREY, TFT_BLACK);
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2 + 2, 24);
+        // Main text
         lcd.setTextColor(MainTitleColor, TFT_BLACK);                
         lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22); 
         break;
@@ -3394,7 +3403,11 @@ void DisplayPage() {
         drawRoundedRect(btnBoff);
         drawRoundedRect(btnCon);
         lcd.setTextSize(1);
-        lcd.setFreeFont(&FreeSans18pt7b);        
+        lcd.setFreeFont(&FreeSans18pt7b);
+        // Shadow
+        lcd.setTextColor(TFT_DARKGREY, TFT_BLACK);
+        lcd.drawString(Maintitre[screenNbr], lcd.width() / 2 + 2, 24);
+        // Main text
         lcd.setTextColor(MainTitleColor, TFT_BLACK);
         lcd.drawString(Maintitre[screenNbr], lcd.width() / 2, 22);
         break;
@@ -3607,7 +3620,7 @@ void page2() {
   strcpy(titre[1], "Full Ah");
   strcpy(titre[2], "MAXcellv");
   strcpy(titre[3], "SOH");
-  strcpy(titre[4], "AuxBatt_SoC");
+  strcpy(titre[4], "AuxBattSoC");
   strcpy(titre[5], "BmsSoC");
   strcpy(titre[6], "BATTv");
   strcpy(titre[7], "MINcellv");
@@ -3617,7 +3630,7 @@ void page2() {
   value_float[1] = EstFull_Ah;
   value_float[2] = MAXcellv;
   value_float[3] = SOH;
-  value_float[4] = AuxBatt_SoC;
+  value_float[4] = AuxBattSoC;
   value_float[5] = BmsSoC;
   value_float[6] = BATTv;
   value_float[7] = MINcellv;
